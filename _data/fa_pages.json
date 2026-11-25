@@ -1,0 +1,394 @@
+{
+ "de": {
+  "slugs": {
+   "about": "wer-wir-sind",
+   "about2": "wer-wir-sind-2",
+   "areas": "taetigkeitsgebiete",
+   "lawyers": "anwaeltinnen-anwaelte",
+   "contact": "kontakt",
+   "disclaimer": "disclaimer"
+  },
+  "title": {
+   "about": "Wer wir sind",
+   "about2": "Wer wir sind",
+   "areas": "Tätigkeitsgebiete",
+   "lawyers": "Anwältinnen / Anwälte",
+   "contact": "Kontakt",
+   "disclaimer": "Disclaimer"
+  },
+  "nav": [
+   "Wer wir sind",
+   "Tätigkeitsgebiete",
+   "Anwältinnen / Anwälte",
+   "Kontakt",
+   "Disclaimer"
+  ],
+  "brand": "Fachanwältinnen Fachanwälte SAV",
+  "banner": "\n  <h1>\n    Fachanwältinnen<br />\n    & Fachanwälte SAV\n    <b>Arbeitsrecht</b>\n  </h1>\n",
+  "about": [
+   "<h1>Rechtsanwälte und Rechtsanwältinnen mit dem Titel «Fachanwalt SAV Arbeitsrecht / Fachanwältin SAV Arbeitsrecht» sind ausgewiesene Experten beziehungsweise Expertinnen auf dem Gebiet des Arbeitsrechts.</h1>",
+   "<p>Um Rechtssuchenden die Suche nach einem qualifizierten Rechtsbeistand zu erleichtern, führte der Schweizerische Anwaltsverband SAV im Jahr 2006 mit dem Titel «Fachanwalt SAV/Fachanwältin SAV» ein neues Gütesiegel ein, dies in den Bereichen Arbeitsrecht, Erbrecht, Bau- und Immobilienrecht, Familienrecht sowie Haftpflicht- und Versicherungsrecht.</p> <p><br />Den Titel «Fachanwalt SAV/Fachanwältin SAV im Arbeitsrecht» erhält nur, wer bestimmte Voraussetzungen erfüllt. Nebst überdurchschnittlicher Erfahrung im Arbeitsrecht und mehrjähriger Berufserfahrung als Rechtsanwalt oder Rechtsanwältin sind das Absolvieren einer intensiven und praxisorientierten Weiterbildung sowie das Bestehen einer schriftlichen Prüfung und eines Fachgespräches notwendig. Nach Erlangung des Titels besteht für Fachanwälte und Fachanwältinnen zudem eine Pflicht zur regelmässigen Weiterbildung.</p>"
+  ],
+  "about2": [
+   "<h1></h1>",
+   "<h1>Vorteile für den Klienten und die Klientin</h1> <p>Die Klientinnen und Klienten profitieren bei komplexen Rechtsfragen stark von der erhöhten Kompetenz der Fachanwältinnen und Fachanwälte, denn dank ihrer besonderen Kenntnisse und ihrer langjährigen Praxis können sie die Vorgaben der Klienten häufig schneller und effektiver umsetzen.</p> <p> </p> <h1>Breites Wissen, grosse Erfahrung</h1> <p>Der Fachanwalt/die Fachanwältin bleibt aber Generalist und übernimmt alle Aufgaben eines Rechtsanwalts, denn Fachanwältinnen und Fachanwälte verfügen nach wie vor über breites Wissen und grosse Erfahrung im Schweizer Rechtssystem. Nebst ihrer Spezialisierung können sie so Rechtsuchende in allen anderen Fachbereichen kompetent und umfassend beraten.</p> <p> </p>"
+  ],
+  "areas": [
+   "<h1>Die Fachanwältinnen und Fachanwälte beraten<br />Sie in allen oder einzelnen Gebieten des Arbeits-<br />rechts, namentlich in den folgenden Bereichen:</h1>",
+   "<ul class=\"special_list\"> <li>Privates Arbeitsrecht (Einzelarbeitsvertragsrecht)</li> <li>Kollektives Arbeitsrecht (Gesamtarbeitsverträge)</li> <li>Öffentliches Arbeitsrecht (Personalrecht)</li> <li>Internationales Arbeitsrecht, Ausländerrecht</li> <li>Arbeitsschutz, Mitwirkungsrechte</li> <li>Gleichstellungsrecht</li> <li>Datenschutzrecht, unlauterer Wettbewerb und Urheberrecht</li> <li>Versicherungen (BVG, Sozialversicherungen, Privatversicherungen)</li> <li>Arbeitsvermittlung</li> <li>Prozessrecht</li> <li>Steuerrecht, Schuldbetreibungs- und Konkursrecht</li> </ul>"
+  ],
+  "form": {
+   "lastname": "Name",
+   "firstname": "Vorname",
+   "canton": "Kanton",
+   "gender": "Geschlecht",
+   "result_type_1": "Zufällige Auswahl mit max. 8 Einträgen",
+   "result_type_2": "Gesamte Resultatliste",
+   "intro": "Wählen Sie je nach Ihren Bedürfnissendie geeignete Fachanwältin oder den geeignetenFachanwalt:",
+   "cantons": {
+    "ZH": "Zürich",
+    "BE": "Bern",
+    "LU": "Luzern",
+    "UR": "Uri",
+    "SZ": "Schwyz",
+    "OW": "Obwalden",
+    "NW": "Nidwalden",
+    "GL": "Glarus",
+    "ZG": "Zug",
+    "FR": "Freiburg",
+    "SO": "Solothurn",
+    "BS": "Basel-Stadt",
+    "BL": "Basel-Landschaft",
+    "SH": "Schaffhausen",
+    "AR": "Appenzell Ausserrhoden",
+    "AI": "Appenzell Innerrhoden",
+    "SG": "St. Gallen",
+    "GR": "Graubünden",
+    "AG": "Aargau",
+    "TG": "Thurgau",
+    "TI": "Tessin",
+    "VD": "Waadt",
+    "VS": "Wallis",
+    "NE": "Neuenburg",
+    "GE": "Genf",
+    "JU": "Jura"
+   },
+   "genders": {
+    "m": "Männlich",
+    "f": "Weiblich"
+   },
+   "radios": [
+    "Zufällige Auswahl mit max. 8 Einträgen",
+    "Gesamte Resultatliste"
+   ],
+   "buttons": [
+    "Zurücksetzen",
+    "Suchen"
+   ]
+  },
+  "lawyers": [
+   "<h1>Wählen Sie je nach Ihren Bedürfnissen<br />die geeignete Fachanwältin oder den geeigneten<br />Fachanwalt:</h1>"
+  ],
+  "contact": [
+   "<p> </p>",
+   "<p>Aus organisatorischen Gründen bitten wir Sie, die Fachanwältinnen /<br />Fachanwälte direkt zu kontaktieren. Diese finden Sie unter dem<br />Navigationspunkt Anwältinnen / Anwälte.</p>"
+  ],
+  "disclaimer": [
+   "<p><span style=\"font-size: 11px;\">Unsere Website dient ausschliesslich Informationszwecken. Das Abrufen von Informationen auf unserer Website oder die erstmalige Kontaktaufnahme über E-Mail begründen noch keinen Auftrag. Der Inhalt dieser Webseite kann ohne vorherige Ankündigung ergänzt, verändert und aktualisiert werden. Obwohl mit aller Sorgfalt um die Richtigkeit und Aktualität der veröffentlichten Informationen geachtet wird, kann in Bezug auf die inhaltliche Richtigkeit, Genauigkeit, Aktualität, Zuverlässigkeit und Vollständigkeit der Informationen keine Gewährleistung übernommen werden. Haftungsansprüche für Schaden materieller oder immaterieller Art, welche aus der Nutzung der Informationen entstanden sind, werden ausgeschlossen. Für den Inhalt von fremden Webseiten besteht keine Verantwortlichkeit. Jegliche Haftung für Webseiten Dritter lehnen wir ab, auch wenn darauf verwiesen wird.</span></p> <p><span style=\"font-size: 11px;\"> </span></p> <p><span style=\"font-size: 11px;\">E-Mail</span></p> <p><span style=\"font-size: 11px;\">Die Rechtsanwältinnen und Rechtsanwälte kommunizieren gerne mit Ihnen per E-Mail. Wir weisen jedoch darauf hin, dass die Vertraulichkeit mittels E-Mail-Kommunikation nicht gewährleistet ist und gehen davon aus, dass Sie die Risiken betreffend Vertraulichkeit und Möglichkeiten der Manipulation durch unbefugte Dritte kennen, wenn Sie uns per E-Mail kontaktieren.</span></p> <p><span style=\"font-size: 11px;\"> </span></p> <p><span style=\"font-size: 11px;\">Urheberrechte</span></p> <p><span style=\"font-size: 11px;\">Die Urheber- und alle anderen Rechte an Inhalten, Bildern, Fotos oder anderen Dateien auf diesen Webseiten gehören ausschliesslich den Betreibern der Webseiten bzw. weiteren Rechteinhaberinnen und Rechteinhabern. Jede Verwendung des Inhalts dieser Webseiten, mit Ausnahme für den persönlichen Gebrauch, ist ohne vorherige schriftliche Zustimmung durch die Betreiber dieser Webseiten untersagt.</span></p>"
+  ]
+ },
+ "fr": {
+  "slugs": {
+   "about": "portrait",
+   "about2": "portrait-2",
+   "areas": "domaines-dactivite",
+   "lawyers": "avocates-avocats",
+   "contact": "contact",
+   "disclaimer": "exclusion-de-responsabilite"
+  },
+  "title": {
+   "about": "Portrait",
+   "about2": "Portrait",
+   "areas": "Domaines d’activité",
+   "lawyers": "Avocates / Avocats",
+   "contact": "Contact",
+   "disclaimer": "Exclusion de responsabilité"
+  },
+  "nav": [
+   "Portrait",
+   "Domaines d’activité",
+   "Avocates / Avocats",
+   "Contact",
+   "Exclusion de responsabilité"
+  ],
+  "brand": "Avocates et avocats spécialistes FSA en droit du travail",
+  "banner": "\n  <h1>\n    Avocates et avocats spécialistes FSA en <b>droit du travail</b>\n  </h1>\n",
+  "about": [
+   "<h1>Les avocates et les avocats portant le titre d«avocate spécialiste FSA droit du travail» ou d‘«avocat spécialiste FSA droit du travail» sont des expert(e)s certifié(e)s dans le domaine du droit du travail.</h1>",
+   "<p>Afin de faciliter aux justiciables la recherche d’un conseil juridique qualifié, la Fédération Suisse des Avocats FSA a introduit, en 2006, avec le titre d’«Avocate / Avocat spécialiste FSA», un nouveau label de qualité, et ce dans les domaines du droit du travail, du droit des successions, du droit de la construction et de l’immobilier, du droit de la famille ainsi que de la responsabilité civile et du droit des assurances.</p> <p><br /> Le titre «Avocate / Avocat spécialiste FSA droit du travail» ne peut être obtenu que par celle ou celui qui remplit des conditions déterminées. Outre une expérience supérieure à la moyenne en matière de droit du travail et une expérience professionnelle de plusieurs années en qualité d’avocate ou d’avocat, il est nécessaire d’accomplir une formation continue intense et axée sur la pratique, suivie d‘un examen écrit ainsi qu’un colloque. Suite à l‘obtention du titre, les avocates et les avocats spécialistes doivent se soumettre, au surplus, à un perfectionnement régulier.</p>"
+  ],
+  "about2": [
+   "<h1></h1>",
+   "<h1>Les avantages pour la cliente et le client</h1> <p>Les clientes et les clients confronté(e)s à des questions juridiques complexes tirent un grand profit de la compétence accrue, car les avocates et avocats spécialistes, grâce à leurs connaissances spécifiques, peuvent souvent mettre en œuvre les exigences de la clientèle avec davantage de célérité et d’effectivité.</p> <p> </p> <h1>Un savoir étendu et une grande expérience</h1> <p>Les avocates et avocats spécialistes demeurent toutefois des généralistes et prennent en charge toutes les tâches inhérentes à une avocate ou un avocat, car ils continuent à disposer d’un savoir étendu et d’une grande expérience dans le système juridique suisse. En dépit de leur spécialisation, ils peuvent ainsi fournir aux justiciables des conseils compétents et complets dans toutes les autres disciplines.</p> <p> </p>"
+  ],
+  "areas": [
+   "<h1>Les avocates et avocats spécialistes vous conseillent dans tous les domaines ou dans certains secteurs du droit du travail, notamment dans ceux portant sur:</h1>",
+   "<ul class=\"special_list\"> <li>le droit privé du travail (contrat individuel de travail)</li> <li>le droit collectif du travail (conventions collectives de travail)</li> <li>le droit public du travail (règles applicables de la fonction publique)</li> <li>le droit international du travail et les règles applicables aux étrangers</li> <li>la protection de l'employé et les droits de participation</li> <li>les règles applicables à l’égalité entre hommes et femmes</li> <li>le droit régissant la protection des données, la concurrence déloyale et le droit d’auteur</li> <li>les assurances (prévoyance professionnelle, assurances sociales et privées)</li> <li>le service de placement</li> <li>le droit de procédure</li> <li>le droit fiscal ainsi que le droit de la poursuite pour dettes et de la faillite</li> </ul>"
+  ],
+  "form": {
+   "lastname": "Nom",
+   "firstname": "Prénom",
+   "canton": "Canton",
+   "gender": "Sexe",
+   "result_type_1": "Sélection aléatoire avec 8 entrées au plus",
+   "result_type_2": "Liste complète des résultats",
+   "intro": "Choisissez, selon vos besoins, l’avocat(e) spécialiste approprié(e):",
+   "cantons": {
+    "ZH": "Zurich",
+    "BE": "Berne",
+    "LU": "Lucerne",
+    "UR": "Uri",
+    "SZ": "Schwytz",
+    "OW": "Obwald",
+    "NW": "Nidwald",
+    "GL": "Glaris",
+    "ZG": "Zoug",
+    "FR": "Fribourg",
+    "SO": "Soleure",
+    "BS": "Bâle-Ville",
+    "BL": "Bâle-Campagne",
+    "SH": "Schaffhouse",
+    "AR": "Appenzell Rhodes-Extérieures",
+    "AI": "Appenzell Rhodes-Intérieures",
+    "SG": "Saint-Gall",
+    "GR": "Grisons",
+    "AG": "Argovie",
+    "TG": "Thurgovie",
+    "TI": "Tessin",
+    "VD": "Vaud",
+    "VS": "Valais",
+    "NE": "Neuchâtel",
+    "GE": "Genève",
+    "JU": "Jura"
+   },
+   "genders": {
+    "m": "Mâle",
+    "f": "Féminin"
+   },
+   "radios": [
+    "Sélection aléatoire avec 8 entrées au plus",
+    "Liste complète des résultats"
+   ],
+   "buttons": [
+    "Rétablir",
+    "Rechercher"
+   ]
+  },
+  "lawyers": [
+   "<h1>Choisissez, selon vos besoins, l’avocat(e) spécialiste approprié(e):</h1>"
+  ],
+  "contact": [
+   "<p> </p>",
+   "<p>Pour des raisons d’organisation, nous vous prions de contacter directement les avocates et les avocats spécialistes. Vous les trouverez sous le point de navigation «Avocates / Avocats».</p>"
+  ],
+  "disclaimer": [
+   "<p>Notre site Web est exclusivement destiné à des fins d’information. La recherche d’informations sur notre site Web ou la première prise de contact par courrier électronique ne sont pas constitutives d’un mandat. Le contenu du présent site Web est susceptible d’être complété, modifié et actualisé sans préavis. Bien qu’il soit veillé avec le plus grand soin à l’exactitude et à l’actualité des informations publiées, il ne peut être assumé de garantie quant à l’exactitude, la précision, l’actualité, la fiabilité et l’intégralité du contenu des informations. Toutes prétentions en responsabilité pour des dommages de nature matérielle ou immatérielle, résultant de l’utilisation des informations, sont exclues. Aucune responsabilité n’est assumée pour le contenu de sites Web de tiers. Nous déclinons toute responsabilité pour des sites Web de tiers, et ce même s’il y est fait référence.</p> <p> </p> <p>Courrier électronique</p> <p>Les avocates et les avocats communiquent volontiers avec vous par le biais du courrier électronique. Nous vous signalons toutefois que la confidentialité au moyen de la communication par courrier électronique n’est pas garantie, et procédons de ce que vous avez connaissance des risques relatifs à la confidentialité ainsi que des possibilités de manipulation par des tiers non autorisés lorsque vous nous contactez par courrier électronique.</p> <p> </p> <p>Droits d’auteur</p> <p>Les droits d’auteur et tous autres droits sur les contenus, images, photographies ou autres fichiers sur ces sites Web appartiennent exclusivement aux exploitants desdits sites Web et/ou à d’autres ayants droit. Toute utilisation du contenu de ces sites Web – sauf pour l’usage personnel – est interdite en l’absence de tout consentement préalable écrit des exploitants desdits sites Web.</p>"
+  ]
+ },
+ "it": {
+  "slugs": {
+   "about": "chi-siamo",
+   "about2": "chi-siamo-2",
+   "areas": "campi-di-attivita",
+   "lawyers": "elenco-degli-avvocati",
+   "contact": "contatti",
+   "disclaimer": "disclaimer-41"
+  },
+  "title": {
+   "about": "Chi siamo",
+   "about2": "Chi siamo",
+   "areas": "Campi di attività",
+   "lawyers": "Elenco degli avvocati",
+   "contact": "Contatti",
+   "disclaimer": "Disclaimer"
+  },
+  "nav": [
+   "Chi siamo",
+   "Campi di attività",
+   "Elenco degli avvocati",
+   "Contatti",
+   "Disclaimer"
+  ],
+  "brand": "Avvocati specialisti FSA in diritto del lavoro",
+  "banner": "\n  <h1>\n    Avvocati specialisti FSA in <b>diritto del lavoro</b>\n  </h1>\n",
+  "about": [
+   "<h1>Gli avvocati che possiedono il titolo di «avvocato specialista FSA in diritto del lavoro» sono esperti di comprovate capacità nel campo del diritto del lavoro.</h1>",
+   "<p>Per facilitare i cittadini nella ricerca di un patrocinatore qualificato, nel 2006 la Federazione Svizzera degli Avvocati FSA ha introdotto, con il titolo di «avvocato specialista FSA», un nuovo marchio di qualità in diversi ambiti: diritto del lavoro, diritto successorio, diritto della costruzione e immobiliare, diritto di famiglia e diritto della responsabilità civile e delle assicurazioni.</p> <p><br />Gli avvocati che hanno ottenuto il titolo di «avvocato specialista FSA in diritto del lavoro» adempiono precise condizioni: oltre a vantare un’esperienza pratica superiore alla media nel settore e una pluriennale esperienza nell’esercizio dell’avvocatura, hanno assolto un corso di specializzazione intensivo e di indirizzo pragmatico e hanno superato un esame scritto e un colloquio professionale. Una volta ottenuto il titolo, hanno inoltre l’obbligo di partecipare a corsi periodici di formazione permanente.</p>"
+  ],
+  "about2": [
+   "<h1></h1>",
+   "<h1>Vantaggi per i clienti</h1> <p>Di fronte a questioni giuridiche complesse, i clienti traggono enorme vantaggio dalla grande competenza dell’avvocato specialista, il quale è spesso in grado, grazie alle conoscenze specifiche che possiede, di fornire ai suoi assistiti un aiuto più pronto ed efficace.</p> <p> </p> <h1>Profonde conoscenze, vasta esperienza</h1> <p> L’avvocato specialista è comunque anche un generalista e in quanto tale è in grado di svolgere tutte le funzioni di un comune avvocato, poiché possiede sempre profonde conoscenze ed una vasta esperienza riguardo all’ordinamento giuridico svizzero. A parte della sua specializzazione, è in grado di fornire ai suoi assistiti un appoggio completo anche in tutti gli altri campi del diritto.</p> <p> </p>"
+  ],
+  "areas": [
+   "<h1>Gli avvocati specialisti consigliano i loro clienti in un ambito preciso o in tutti gli ambiti del diritto del lavoro, in particolare nei seguenti settori:</h1>",
+   "<p>Gli avvocati specialisti consigliano i loro clienti in un ambito preciso o in tutti gli ambiti del diritto del lavoro, in particolare nei seguenti campi:</p> <p> </p> <ul class=\"special_list\"> <li>diritto privato del lavoro (contratto individuale di lavoro)</li> <li>diritto collettivo del lavoro (contratti collettivi di lavoro)</li> <li>diritto pubblico del lavoro (diritto del personale)</li> <li>diritto internazionale del lavoro, diritto degli stranieri</li> <li>tutela dei lavoratori, diritti di partecipazione </li> <li>pari opportunità</li> <li>protezione dei dati, concorrenza sleale, diritti d’autore </li> <li>assicurazioni (LPP, assicurazioni sociali, assicurazioni private)</li> <li>collocamento</li> <li>diritto processuale</li> <li>diritto fiscale, esecuzione e fallimenti </li> </ul>"
+  ],
+  "form": {
+   "lastname": "Cognome",
+   "firstname": "Nome",
+   "canton": "Cantone",
+   "gender": "Sesso",
+   "result_type_1": "Scelta casuale, al massimo 8 risposte",
+   "result_type_2": "Tutti i risultati",
+   "intro": "Scelga l’avvocato specialista in funzione delle sue esigenze:",
+   "cantons": {
+    "ZH": "Zurigo",
+    "BE": "Berna",
+    "LU": "Lucerna",
+    "UR": "Uri",
+    "SZ": "Svitto",
+    "OW": "Obvaldo",
+    "NW": "Nidvaldo",
+    "GL": "Glarona",
+    "ZG": "Zugo",
+    "FR": "Friburgo",
+    "SO": "Soletta",
+    "BS": "Basilea Città",
+    "BL": "Basilea Campagna",
+    "SH": "Sciaffusa",
+    "AR": "Appenzello Esterno",
+    "AI": "Appenzello Interno",
+    "SG": "San Gallo",
+    "GR": "Grigioni",
+    "AG": "Argovia",
+    "TG": "Turgovia",
+    "TI": "Ticino",
+    "VD": "Vaud",
+    "VS": "Vallese",
+    "NE": "Neuchâtel",
+    "GE": "Ginevra",
+    "JU": "Giura"
+   },
+   "genders": {
+    "m": "Maschio",
+    "f": "Femmina"
+   },
+   "radios": [
+    "Scelta casuale, al massimo 8 risposte",
+    "Tutti i risultati"
+   ],
+   "buttons": [
+    "Azzera",
+    "Cerca"
+   ]
+  },
+  "lawyers": [
+   "<h1>Scelga l’avvocato specialista in funzione delle sue esigenze:</h1>"
+  ],
+  "contact": [
+   "<p> </p>",
+   "<p>Per ragioni organizzative, La preghiamo di mettersi direttamente in contatto con l’avvocato specialista di Sua scelta. I recapiti degli avvocati specialisti sono indicati nella rubrica “Elenco degli avvocati”.</p>"
+  ],
+  "disclaimer": [
+   "<p>Il nostro sito internet è stato creato soltanto a scopo informativo. La ricerca di informazioni nel sito o un primo contatto per e-mail non costituisce ancora un mandato. Il contenuto del sito può essere completato, modificato e aggiornato senza alcun preavviso. Nonostante tutte le premure usate per garantire l’esattezza e l’attualità delle informazioni pubblicate nel sito, non possiamo assumere alcuna responsabilità per quanto riguarda l’esattezza, la precisione, l’attualità, l’attendibilità e la completezza delle informazioni in esso contenute. Si esclude qualsiasi pretesa di risarcimento per danni materiali o immateriali derivanti dall’uso delle informazioni. Non si assume alcuna responsabilità per il contenuto dei siti internet altrui. Si declina ogni responsabilità anche per quanto riguarda i siti internet altrui ai quali si rimanda nel presente sito.</p> <p> </p> <p>e-mail</p> <p>Gli avvocati specialisti comunicano volentieri per e-mail con gli interessati. Tuttavia, occorre tener presente che la confidenzialità delle informazioni trasmesse per posta elettronica non può essere garantita; se ci contatta per e-mail presumiamo pertanto che Lei sia al corrente del possibile rischio di violazione della confidenzialità e delle possibilità di manipolazione da parte di terzi non autorizzati insiti nella corrispondenza per posta elettronica.</p> <p> </p> <p>Diritti d’autore</p> <p>I diritti d’autore e altri diritti sui contenuti, le immagini, le fotografie o altri dati contenuti nel presente sito internet appartengono esclusivamente ai gestori del sito o ad altri aventi diritto. Il contenuto del sito è destinato esclusivamente ad uso privato. Per qualsiasi altro uso è richiesto il previo consenso scritto del gestore.</p>"
+  ]
+ },
+ "en": {
+  "slugs": {
+   "about": "who-we-are",
+   "about2": "who-we-are-2",
+   "areas": "spheres-of-activity",
+   "lawyers": "lawyers",
+   "contact": "contact-48",
+   "disclaimer": "disclaimer-49"
+  },
+  "title": {
+   "about": "Who we are",
+   "about2": "Who we are",
+   "areas": "Spheres of activity",
+   "lawyers": "Lawyers",
+   "contact": "Contact",
+   "disclaimer": "Disclaimer"
+  },
+  "nav": [
+   "Who we are",
+   "Spheres of activity",
+   "Lawyers",
+   "Contact",
+   "Disclaimer"
+  ],
+  "brand": "Certified Specialists SBA in Labour Law",
+  "banner": "\n  <h1>\n    Certified Specialists SBA in <b>Labour Law</b>\n  </h1>\n",
+  "about": [
+   "<h1>Lawyers holding the title of a “Certified Specialist SBA Labour Law” are qualified experts in the field of Labour Law.</h1>",
+   "<p>In order to facilitate the search for a qualified lawyer for persons seeking legal advice, the Swiss Bar Association SBA introduced in 2006, with the title of a “Certified Specialist SBA”, a new quality label in the fields of Labour Law, Inheritance Law, Construction and Real Estate Law, Family Law as well as Torts and Insurance Law.</p> <p> </p> <p>The title “Certified Specialist SBA Labour Law” may be obtained only by a lawyer meeting defined requirements. Apart from an above-average experience in the area of Labour Law and several years of professional experience as a lawyer, it is necessary to accomplish an intensiv and practice-oriented continuing education followed by a written exam and a colloquium. Subsequent to obtaining the title, certified specialists must furthermore undergo a regular continuing education.</p>"
+  ],
+  "about2": [
+   "<h1></h1>",
+   "<h1>Advantages for clients</h1> <p>Clients facing complex legal questions benefit widely from the increased competence of the certified specialists. Due to his or her specific knowledge, certified specialists may often implement the clients’ requirements with more swiftness and effectiveness.</p> <p> </p> <h1>A broad knowledge and a great experience</h1> <p>A certified specialist nevertheless remains familiar with general practice and assumes all duties inherent to a lawyer, as certified specialists continue to have a broad knowledge and a great experience in the Swiss legal system. Apart from their specialisation, they are consequently in a position to provide persons seeking legal services with competent and complete advice in all other areas of law.</p> <p> </p>"
+  ],
+  "areas": [
+   "<h1>Specialised lawyers give you advice in all fields or in certain areas of Labour Law, in particular in those relating to:</h1>",
+   "<ul class=\"special_list\"> <li>Private Labour Law (individual employment contracts)</li> <li>Collective Labour Law (collective labour agreements)</li> <li>Public Labour Law (Law applying to Staff of Public Bodies)</li> <li>International Labour Law and Foreigners Law</li> <li>Labour protection and Participation Law</li> <li>Gender Equality Law</li> <li>Data Protection Law, Unfair Competition Law and Intellectual Property Law</li> <li>Insurances Law (occupational benefit plans, social and private insurances)</li> <li>Placement Service Law</li> <li>Procedure Law</li> <li>Tax Law as well as Debt Collection and Bankruptcy Law</li> </ul>"
+  ],
+  "form": {
+   "lastname": "Surname",
+   "firstname": "First name",
+   "canton": "Canton",
+   "gender": "Sex",
+   "result_type_1": "Random selection with a maximum of 8 entries",
+   "result_type_2": "Full result list",
+   "intro": "Select the appropriate specialised lawyer meeting your requirements:",
+   "cantons": {
+    "ZH": "Zurich",
+    "BE": "Bern",
+    "LU": "Lucerne",
+    "UR": "Uri",
+    "SZ": "Schwyz",
+    "OW": "Obwalden",
+    "NW": "Nidwalden",
+    "GL": "Glarus",
+    "ZG": "Zug",
+    "FR": "Freiburg",
+    "SO": "Solothurn",
+    "BS": "Basel-Stadt",
+    "BL": "Basel-Landschaft",
+    "SH": "Schaffhausen",
+    "AR": "Appenzell Ausserrhoden",
+    "AI": "Appenzell Innerrhoden",
+    "SG": "St. Gallen",
+    "GR": "Graubünden",
+    "AG": "Aargau",
+    "TG": "Thurgau",
+    "TI": "Ticino",
+    "VD": "Vaud",
+    "VS": "Valais",
+    "NE": "Neuchâtel",
+    "GE": "Geneva",
+    "JU": "Jura"
+   },
+   "genders": {
+    "m": "Male",
+    "f": "Female"
+   },
+   "radios": [
+    "Random selection with a maximum of 8 entries",
+    "Full result list"
+   ],
+   "buttons": [
+    "Reset",
+    "Search"
+   ]
+  },
+  "lawyers": [
+   "<h1>Select the appropriate specialised lawyer meeting your requirements:</h1>"
+  ],
+  "contact": [
+   "<p> </p>",
+   "<p>For organisational reasons, we kindly ask you to contact the specialised lawyers directly. You will find them under navigation point “Lawyers”.</p>"
+  ],
+  "disclaimer": [
+   "<p>Our Website is exclusively intended for information purposes. The search for information on our Website or the first entering into contact by e-mail do not constitute any mandate yet. The present Website’s contents are likely to be completed, modified and updated without prior notice. Alt-hough the published information’s accuracy and actuality is ensured with utmost care, no guarantee as to accuracy, precision, actuality, reliability and entirety of the information’s contents can be taken over. Any liability claim for a prejudice of a material or immaterial nature, resulting from the information’s use, is excluded. No liability is assumed for the con-tents of third parties’ websites. We disclaim any liability for third parties’ Websites, even if reference is made thereto.</p> <p> </p> <p>Electronic Mail</p> <p>Lawyers appreciate to communicate with you by e-mail. We however point out to you that confidentiality by means of e-mail communication is not guaranteed, and proceed from the fact that you are aware of the risks relating to confidentiality as well as of the possibilities of a manipu-lation by unauthorized third parties when you contact us by e-mail.</p> <p> </p> <p>Copyrights</p> <p>Copyrights and any other rights to contents, pictures, photographs or other files on these Websites exclusively belong to the operators of said Websites and/or other persons entitled. Any utilization of these Websites’ contents – except for personal use – is forbidden in the absence of any prior consent in writing of the said Websites’ operators.</p>"
+  ]
+ }
+}

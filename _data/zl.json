@@ -1,0 +1,672 @@
+{
+ "de": {
+  "nav": [
+   "Dienstleistungen",
+   "Beurkundungen",
+   "Team",
+   "Publikationen",
+   "Kontakt",
+   "Mitgliedschaften"
+  ],
+  "quote": "<header> <nav> <div></div> <div> <a href=\"/\"> <img src=\"/site/assets/files/1034/zanetti_logo.svg\" alt=\"Logo\"> </a> <button type=\"button\" aria-controls=\"navbarTogglerDemo02\" aria-expanded=\"false\" aria-label=\"Toggle navigation\"> <div> <span></span> <span></span> <span></span> </div> </button> <div> <div> <div class='language-wrapper'><a class='language' title='Deutsch' href='/'>D</a></div><div class='language-wrapper'><a class='language' title='Englisch' href='/en/'>E</a></div> </div> <ul> <li class='nav-item '><a class=' ' href='/dienstleistung/' title='Dienstleistungen'>Dienstleistungen</a></li><li class='nav-item '><a class=' ' href='/beurkundungen/' title='Beurkundungen'>Beurkundungen</a></li><li class='nav-item '><a class=' ' href='/team/' title='Team'>Team</a></li><li class='nav-item '><a class=' ' href='/publikationen/' title='Publikationen'>Publikationen</a></li><li class='nav-item '><a class=' ' href='/kontakt/' title='Kontakt'>Kontakt</a></li><li class='nav-item '><a class=' ' href='/mitgliedschaften/' title='Mitgliedschaften'>Mitgliedschaften</a></li> <div> <div class='language-wrapper'><a class='language' title='Deutsch' href='/'>D</a></div><div class='language-wrapper'><a class='language' title='Englisch' href='/en/'>E</a></div> </div> </ul> </div> </div> </nav> </header> <header> <div> <picture> <source src=\"/site/assets/files/1/zanetti_home_mobile.jpg\" srcset=\"/site/assets/files/1/zanetti_home_mobile.jpg\" media=\"(max-width: 575px)\"> <source src=\"/site/assets/files/1/zanetti_home_2x-2.jpg\" srcset=\"/site/assets/files/1/zanetti_home_2x-2.jpg\"> <img src=\"/site/assets/files/1/zanetti_home_2x-2.jpg\" srcset=\"/site/assets/files/1/zanetti_home_2x-2.jpg\" alt=\"\"> </picture> <div> <h3>«Wenn du im Recht bist,<br /> kannst du es dir leisten,<br /> die Ruhe zu bewahren;<br /> und wenn du im Unrecht bist,<br /> kannst du es dir nicht leisten,<br /> sie zu verlieren.»</h3> <p>Mahatma Gandhi (1869 – 1948)</p> </div> </div> </header>",
+  "home_title": "Zanetti Rechtsanwälte ist ein gewachsener\nZusammenschluss erfahrener und spezialisierter\nRechtsanwälte.",
+  "widgets": [
+   {
+    "title": "Unsere Arbeitsweise",
+    "html": "<p>Unsere fachkundige Expertise ist die handwerkliche Basis, auf der wir für unsere Klienten einen wirtschaftlichen Mehrwert erarbeiten. Es freut uns, möglichst frühzeitig mit der Strukturierung der Aufgaben mandatiert zu werden, denn in diesem frühen Stadium der Beratung führt unsere Tätigkeit erfahrungsgemäss zum grössten Nutzen für unsere Klienten.</p> <p><br /> 2019, 2022, 2023, 2024 und 2025 wurden wir von Bilanz und Le Temps (2019 und 2022) bzw. Bilanz und PME (2023, 2024 und 2025) als «Top Anwaltskanzlei» ausgezeichnet.</p>",
+    "img": "/site/assets/files/1037/pme_bilanz_takch2026_logo_de_ausgabe.jpg"
+   },
+   {
+    "title": "Wir denken unternehmerisch",
+    "html": "<p>Aufgrund der Gegebenheit, dass unsere Anwälte und Notare eng mit Unternehmungen kollaborieren (und als Organe in Gesellschaften tätig sind), werden Sie in uns einen konstruktiven und unternehmerisch denkenden Partner für Ihr Vorhaben gewinnen können. Wir verfügen über eine umfangreiche Erfahrung bei der Behandlung komplexer Prozesse in mannigfaltigen Bereichen des Rechts – sei es bei der Beratung in Fragen des Gesellschaftsrechts, des Arbeits- und Mietrechts, des Vertragsrechts, des Familienrechts, des Strafrechts, des Versicherungs- und Haftpflichtrechts sowie auf dem Gebiet der Sozialversicherungen.</p>",
+    "img": "/site/assets/files/1038/pme_bilanz_takch2025_logo_de_ausgabe_zugeschnitten.jpg"
+   },
+   {
+    "title": "Experten – auch vor Gericht",
+    "html": "<p>Unsere forensisch tätigen Anwälte verfügen über einen soliden forensischen Erfahrungsschatz, sei dies im Rahmen von Zivilprozessen, Strafverfahren, im Bereich der Schiedsgerichtsbarkeit oder der Verwaltungsrechtspflege. Sollte eine gerichtliche Auseinandersetzung unausweichlich sein, vertreten wir unsere Klienten vor Gericht und sind bestrebt, aufgrund unserer prozessualen Expertise den grösstmöglichen Gewinn zu erzielen.</p>",
+    "img": "/site/assets/files/1039/pme_bilanz_takch2024_logo_de_ausgabe.png"
+   }
+  ],
+  "footer": "<footer> <div> <div> <div> <p>Zug</p> <p>Zanetti Rechtsanwälte AG<br /> Blegistrasse 9<br /> 6340 Baar</p> <p>T + 41 41 766 35 85<br /> F + 41 41 766 35 80<br /> <a href=\"mailto:info@zanettilaw.ch\">info@zanettilaw.ch</a></p> </div> <div> <p>Zürich</p> <p>Zanetti Rechtsanwälte AG<br /> Allmendstrasse 2<br /> 8105 Regensdorf Zürich</p> <p>T + 41 41 766 35 85<br /> F + 41 41 766 35 80<br /> <a href=\"mailto:info@zanettilaw.ch\">info@zanettilaw.ch</a></p> </div> <div> <p>Schwyz</p> <p>Zanetti Rechtsanwälte AG<br /> Dorfplatz 2b<br /> 6405 Immensee</p> <p>T + 41 41 766 35 85<br /> F + 41 41 766 35 80<br /> <a href=\"mailto:info@zanettilaw.ch\">info@zanettilaw.ch</a></p> </div> <div> <p>Links</p> <p><br /> <a href=\"/impressum/\">Impressum</a><br /> <a href=\"/datenschutz/\">Datenschutz</a></p> <p><br /> &copy;2026 Zanetti Rechtsanwälte<br /> Webmaster: <a href=\"https://silentstudio.ch\">silentstudio.ch</a></p> </div> </div> </div>",
+  "services_title": "Unsere Dienstleistungen",
+  "services_groups": [
+   [
+    "Beratung",
+    [
+     "arbeitsrecht",
+     "familienrecht",
+     "familienrecht",
+     "vertragsrecht",
+     "gesellschaftsrecht",
+     "strafrecht",
+     "steuerrecht",
+     "notariat"
+    ]
+   ]
+  ],
+  "services": [
+   {
+    "group": "beratung",
+    "id": "arbeitsrecht",
+    "title": "Arbeitsrecht und Sozialversicherungen",
+    "html": "<p>Unsere Anwälte beraten Gesellschaften und Privatpersonen in allen Bereichen des Individualarbeitsrechts und des kollektiven Arbeitsrechts. Wir sind den Unternehmen dabei behilflich, strukturelle Herausforderungen zu meistern und tragen bei wiederkehrenden Fragestellungen und strukturellen Herausforderungen dazu bei, akkurate, massgeschneiderte und erprobte Lösungen zu präsentieren.<br /> <br /> Aufgrund unserer oft langjährigen Beziehungen zu unseren Klienten ist es uns möglich, die Besonderheiten der jeweiligen Situation zu erfassen und praxistaugliche Lösungen zu erarbeiten, die individuell auf die Bedürfnisse unserer Klienten zugeschnitten sind. Gerne unterstützen wir unsere Klienten in jedem Stadium eines Arbeitsverhältnisses, von der Ausarbeitung von Einzelarbeitsverträgen bis hin zum Aufhebungsvertrag. Auch bei der Ausgestaltung von Personalreglementen, Provisions- und Arbeitszeitreglementen helfen wir gerne mit.<br /> <br /> Gestützt auf den hohen Spezialisierungsgrad unserer Anwälte beraten wir unsere Klienten auch bei komplexen arbeitsrechtlichen Fragen, bei denen vorab internationalprivatrechtliche Vorfragen zu klären sind und die einen Nexus zum Steuer- oder Sozialversicherungsrecht aufweisen, zumal unsere Experten auch auf diesen Fachgebiete über langjährige Erfahrung verfügen. <br /> <br /> Ein wichtiger Schwerpunkt unserer arbeitsrechtlichen Tätigkeit stellt das Konfliktmanagement dar. Unsere Anwälte verfügen über die nötige forensische Expertise und Praxiserfahrung, um auch bei komplexen arbeitsrechtlichen Verfahren die Interessen unserer in- und ausländischen Klienten wahren zu können, sei dies bei der Durchsetzung von Konkurrenzverboten oder bei Ansprüchen, die infolge einer Kündigung entstehen können. Auch bei Sachverhalten mit länderübergreifenden Auswirkungen sind unsere Fachleute imstande, adäquate Lösungswege aufzuzeigen. </p> </div> </div>"
+   },
+   {
+    "group": "beratung",
+    "id": "familienrecht",
+    "title": "Familienrecht",
+    "html": "<p>Wir beraten unsere Klienten bei den mannigfaltigen Fragestellungen, die sich im Familienrecht stellen. Unter Umständen ist es bereits bei Beginn einer Ehe sinnvoll, von einem Anwalt begleitet zu werden, insbesondere wenn die Klienten die ehevertragliche Regelung der Verhältnisse wünschen. Bei einer Scheidung stellen sich diverse Fragekomplexe (Unterhalt, Sorgerecht, Vorsorgeausgleich, güterrechtliche Auseinandersetzung), bei denen es höchst ratsam ist, anwaltliche Hilfe in Anspruch zu nehmen.</p> <h1>Scheidung – Ihr kompetenter Partner im Scheidungs­recht</h1> <p>Eine Scheidung stellt oft eine tiefgreifende Veränderung dar, die viele Aspekte des täglichen Lebens beeinflusst. Wir verstehen, dass eine Scheidung eine der herausforderndsten Lebensphasen sein kann. Unsere Rechtsanwälte stehen Ihnen zur Seite und bieten Ihnen umfassende rechtliche Beratung und Unterstützung. Wir sind darauf spezialisiert, Ihnen bei der Bewältigung aller rechtlichen Aspekte Ihrer Scheidung zu helfen, damit Sie sich auf das Wesentliche konzentrieren können: Ihren Neuanfang. Mit unserer langjährigen Erfahrung und unserem tiefen Verständnis für die Herausforderungen einer Scheidung sind wir bestens vorbereitet, um Ihnen maßgeschneiderte Lösungen und eine vertrauensvolle Begleitung anzubieten.</p> <h1>Trennung</h1> <p>Bis es zu einer Trennung kommt, sind meistens unüberbrückbare Differenzen vorausgegangen. Die Entscheidung, eine Beziehung zu beenden, ist mit Emotionen und Unsicherheiten verbunden und erfordert viel Kraft. Für manchen Menschen mag die Trennung eine grosse Erleichterung sein, während sie bei anderen viel Schmerz verursacht. Nebst dem Wechselbad von Gefühlen, sind beide Parteien gefordert, sich mit juristischen und finanziellen Fragen auseinanderzusetzen.</p> <h1>Ehevertrag</h1> <p>Ein Ehevertrag wird häufig als unromantisch empfunden, da er rechtliche und finanzielle Aspekte in eine Beziehung einbringt, die eigentlich auf Liebe und Vertrauen basieren sollte. Jedoch kann diese Sichtweise dazu führen, dass die tatsächlichen Vorteile eines Ehevertrages übersehen werden.</p> <p>Der Ehevertrag kann helfen, den anderen Ehegatten besserzustellen, indem ihm im Todesfall die gesamte Errungenschaft zugewendet wird. Das grösste Vermögen der Ehegatten liegt oft in der Errungenschaft, also dem, was sie während der Ehe gemeinsam gespart und gekauft haben – zum Beispiel eine Liegenschaft. Insbesondere auch Ehegatten mit gemeinsamen minderjährigen Kindern können ein Interesse daran haben, dass die gesamte Errungenschaft dem anderen Ehegatten zugewiesen wird, damit der hinterbliebene Ehegatte nicht in finanzielle Schwierigkeiten gerät, weil er seine erbberechtigten (allenfalls minderjährigen) Kinder auszahlen muss.</p> <p>Wenn ein Ehegatte ein eigenes Unternehmen hat, ist ein Ehevertrag ebenfalls sehr empfehlenswert. Im Falle einer Scheidung kann es nämlich vorkommen, dass ein erfolgreiches KMU verkauft, liquidiert oder Anteile am Unternehmen dem anderen Ehegatten übertragen werden müssen, weil dem unternehmenseigenen Ehegatten die notwendige Liquidität fehlt, um den anderen auszuzahlen. Mit einem Ehevertrag können Unternehmensanteile als Eigengut festgelegt werden und die aus diesen Anteilen erzielten Gewinne von der Errungenschaft ausgeschlossen werden.</p> <p>Nebst einem Ehevertrag ist es ratsam, sich auch mit erbrechtlichen Bestimmungen zu befassen, um den Nachlass im Todesfall nach den individuellen Wünschen und Bedürfnissen zu gestalten. Mit einem Testament oder einem Erbvertrag können die Ehegatten solche Regelungen festlegen. Beispielsweise kann der andere Ehegatte erbrechtlich maximal begünstigt werden, indem er als Universalerbe eingesetzt und die Kinder auf den Pflichtteil gesetzt werden.</p> <p>Für weitere Informationen <a href=\"https://scheidungsanwaltzug.ch/\">https://scheidungsanwaltzug.ch/</a></p> </div> </div>"
+   },
+   {
+    "group": "beratung",
+    "id": "familienrecht",
+    "title": "Erbrecht, Sachenrecht",
+    "html": "<p>Eine akkurate Nachlassplanung setzt voraus, dass der involvierte Berater die ökonomischen und persönlichen Umstände des Klienten und dessen Zielsetzung minutiös eruiert. Unsere Anwälte verfügen auf dem Gebiet des Erbrechts über langjährige Erfahrung bei der Beratung von Privatpersonen und Familienunternehmen. Den komplexen Fragen, die sich mithin auch im Schnittbereich zum internationalen Steuer- und Vorsorgerecht stellen, tragen wir gebührend Rechnung. Als Willensvollstrecker sind unsere Anwälte darum bemüht, dass den Wünschen der Klienten entsprochen wird. Wenn nötig, vertreten Sie unsere Anwälte auch forensisch, beispielsweise bei erbrechtlichen Klagen im Zusammenhang mit verletzten Pflichtteilen, ungültigen letztwilligen Verfügungen oder bei Erbteilungsklagen.<br /> <br /> Bei Fragestellungen im Bereich des Sachenrechts stehen wir unseren Klienten ebenfalls zur Seite: Sei dies bei der Ausgestaltung von Immobilenkaufverträgen, der Klärung komplexer Fragen im Zusammenhang mit beschränkten dinglichen Rechten und wenn der Schutz Ihres Eigentums im Vordergrund steht.</p> </div> </div>"
+   },
+   {
+    "group": "beratung",
+    "id": "vertragsrecht",
+    "title": "Vertragsrecht",
+    "html": "<p>Unsere Anwälte beschäftigen sich intensiv mit dem Ausgestalten von Verträgen aus allen Bereichen des Obligationenrechts. Wir unterstützen unsere Klienten bei der Redaktion von Verträgen aus den Bereichen des Mietrechts, Kaufrechts, Auftragsrechts, aber auch bei Werkverträgen und Innominatvertägen (vorab Leasing, Factoring, Franchising). Wir beraten schwergewichtig kleine und mittlere Unternehmen, aber auch grössere Dienstleistungsunternehmen und Finanzinstitute.<br /> <br /> Gerne unterstützen wir unsere Klienten im Rahmen von Vertragsverhandlungen. Wir verfügen über praktische Erfahrung und einen hohen Grad an Spezialisierung, sodass wir den hohen Ansprüchen unserer Kienten im In- und Ausland gerecht werden können. Ausserdem agieren unsere Urkundspersonen stilsicher, um jene Rechtsgeschäfte abwickeln zu können, die zu ihrer Gültigkeit der öffentlichen Beurkundung bedürfen.<br /> <br /> Die intensive Tätigkeit im Vertragsrecht erlaubt es unseren Anwälten auch bei komplexen Verträgen sicher aufzutreten, auch bei Sachverhalten, die einen intensiven Auslandsbezug aufweisen und deshalb einer international-privatrechtlichen Qualifikation und Weichenstellung bedürfen.</p> </div> </div>"
+   },
+   {
+    "group": "beratung",
+    "id": "gesellschaftsrecht",
+    "title": "Gesellschaftsrecht",
+    "html": "<p>Ein wichtiger Schwerpunkt unserer Tätigkeit liegt in der fachlichen Beratung von Gesellschaften, Unternehmern und natürlichen Personen im Bereich des Gesellschaftsrechts. Unser Bestreben ist es, Gesellschaften, Gesellschaftsinhaber und Gesellschaftsorgane praxisnah, umfassend und zielführend zu beraten.<br /> <br /> Wir begleiten Sie gerne bei Fragen rund um die Gründung, Umwandlung oder Strukturierung einer Gesellschaft, sei dies bei Sitzverlegungen oder bei der Planung und der praktischen Durchführung von Fusionen, Unternehmenskäufen, Abspaltungen, Management Buyouts (MBO) und ähnlichen Vorgängen. Weiter unterstützen wir Sie bei der Ausgestaltung massgeschneiderter Organisationsformen.<br /> Zu dieser Arbeit gehört mithin auch die Redaktion von Organisationsreglementen, die den Bedürfnissen unserer Klienten Rechnung tragen. Ebenso gerne beraten wir unsere Klienten beim Entwerfen und Ausgestalten von massgeschneiderten Aktionärbindungsverträgen und helfen bei deren konkreter Durchsetzung. Die Mehrzahl unserer Anwälte fungiert als Organe (Verwaltungsräte, Stiftungsräte, etc.) und setzt auf diese Weise die praktische Erfahrung in den Dienst unserer Klienten.<br /> <br /> Wir unterstützen unsere Klienten auch bei der prozessualen Durchsetzung gesellschaftsrechtlicher Ansprüche, beispielsweise bei bei der Wahrung der Aktionärsrechte als auch bei der Abwehr von Verantwortlichkeitsklagen.</p> </div> </div>"
+   },
+   {
+    "group": "beratung",
+    "id": "strafrecht",
+    "title": "Strafrecht",
+    "html": "<p>Auf keinem anderen Rechtsgebiet sind die Machtverhältnisse derart ungleich verteilt wie auf dem Gebiet des Strafrechts. Um dieser Tatsache entgegenzuwirken, beraten und betreuen wir unsere Klienten in Strafuntersuchungen und verteidigen sie vor den Strafgerichten aller Instanzen. Wir vertreten Opfer und stehen Privatklägern bei der Durchsetzung ihrer Ansprüche im Strafverfahren unterstützend zur Seite.<br /> <br /> Im Bereich des Strassenverkehrsrechts verteidigen wir Sie in den damit zusammenhängenden Strafverfahren und vertreten Sie im Administrativverfahren rund um den drohenden Führerausweisentzug vor den Verwaltungs- und Gerichtsbehörden.<br /> <br /> Neben der Individualverteidigung beraten wir präventiv auch Unternehmen und übernehmen die Betreuung während laufender Ermittlung und im Strafprozess - sei es gegen das Unternehmen selbst oder gegen einzelne Mitarbeitende. Zudem bieten wir unseren Klienten diskrete Unterstützung bei firmeninternen Untersuchungen an.</p> </div> </div>"
+   },
+   {
+    "group": "beratung",
+    "id": "steuerrecht",
+    "title": "Steuerrecht",
+    "html": "<p>Die kontinuierliche Veränderung und die - trotz internationaler Koordinationsbestrebungen - stetig wachsende Komplexität der Steuersysteme erhöht die Bedeutung und den Wert einer kompetenten Beratung in Steuerangelegenheiten. Beinahe jede unternehmerische und kaufmännische Weichenstellung wirkt sich auf die Steuerbelastung aus. Aus diesem Grund bilden steuerrechtliche Vorfragen einen wesentlichen Aspekt der Beratung natürlicher und juristischer Personen.<br /> <br /> Unsere Spezialisten unterstützen unsere Klienten bei sämtlichen Fragen rund um das Steuerrecht. Wir helfen unseren Klienten insbesondere bei Fragen im Zusammenhang mit Gewinnsteuern, Quellensteuern, Mehrwertsteuern, Einkommenssteuern und Grundstückgewinnsteuern. Dies auch bei Angelegenheiten, die einen länderübergreifenden Bezug aufweisen. Wir unterstützen unsere Klienten auch bei allfälligen Verhandlungen mit den Steuerbehörden, indem wir verbindliche Vorbescheide einholen und vertreten unsere Klienten im Zusammenhang mit steuerrechtlichen Verfahren (Einsprachen, Rekurse und Beschwerden). Gerne unterstützen wir sowohl Unternehmen als auch Privatpersonen bei der Steueroptimierung.<br /> <br /> Unsere Spezialisten verfügen über eine langjährige Erfahrung bei der Durchführung von Unternehmenszusammenschlüssen, Unternehmenskäufen, Abspaltungen, Management Buyouts und ähnlichen Transaktionen. Fundierte Vorabklärungen (im Rahmen einer sog. Due-Diligence-Prüfung) sind hierbei ebenso unabdingbar wie die massgeschneiderte Strukturierung solcher Tranksaktionen.</p> </div> </div>"
+   },
+   {
+    "group": "beratung",
+    "id": "notariat",
+    "title": "Notariat",
+    "html": "<p>Unsere Anwälte (RA Werner Räber, RAin Sandra Kammerbauer, RA Joël Brochon und RA Alessandro Gerlach) sind Urkundspersonen der Kantone Schwyz (W. Räber) und Zug (S. Kammerbauer, J. Brochon und A. Gerlach). Wir beraten unsere Klienten stilsicher, gestalten gesellschaftsrechtliche Vorgänge mit und bringen sie effizient zum Abschluss. Darüber hinaus beraten Sie unsere Urkundspersonen auch im Hinblick auf zu redigierende ehe- und erbrechtliche Verträge.</p> </div> </div>"
+   },
+   {
+    "group": "prozess",
+    "id": "zivilprozess",
+    "title": "Zivilprozess",
+    "html": "<p>Neben unserer beratenden Tätigkeit vertreten wir unsere Klienten auch vor den Zivil- und Verwaltungsgerichten.<br /> <br /> Unsere Prozesspraxis umfasst alle Bereiche des Wirtschafts- und Gesellschaftsrechts und der angrenzenden Rechtsgebiete. Dazu gehören insbesondere das Arbeitsrecht, das Mietrecht, das Vertragsrecht, Erbrecht und sämtliche konkursrechtlichen Verfahren. Neben der Führung ordentlicher Zivilprozesse sind alle Vollstreckungs- und Massnahmeverfahren (Arrestverfahren und andere vorsorgliche Massnahmen), die internationale Rechtshilfe sowie die Anerkennung und Vollstreckung ausländischer Entscheide Bestandteil unserer forensischen Tätigkeiten.<br /> <br /> Wir beraten unsere Klienten, indem wir den rechtlich relevanten Sachverhalt eruieren, zeigen das mögliche Vorgehen und die damit verbundenen Chancen und Risiken eines Verfahrens auf. Auf Wunsch unserer Klienten schätzen wir bei komplexen Verfahren die voraussichtlich anfallenden Prozess- und Anwaltskosten, damit unsere Klienten (vorab die juristischen Personen) den anfallenden Aufwand budgetieren und die nötigen Rückstellungen vornehmen können.<br /> <br /> Wenn eine vorprozessuale Einigung nicht möglich ist, legen wir mit unseren Klienten die Prozessstrategie fest und leiten bei der zuständigen Instanz das Verfahren ein. Während der gerichtlichen Auseinandersetzung analysieren wir die Vorbringen der Gegenpartei und passen die Strategie, falls nötig und möglich, den veränderten Gegebenheiten an. </p> </div> </div>"
+   },
+   {
+    "group": "prozess",
+    "id": "schuldbetreibung",
+    "title": "Schuldbetreibung und Konkurs",
+    "html": "<p>Auf dem Gebiet des Zwangsvollstreckungsrechts stellen wir sicher, dass unsere Klienten ihre Rechte rasch und erfolgreich wahren können.<br /> <br /> Unsere Anwälte verfügen auf dem Gebiet des Schuldbetreibungs- und Konkursrechts und des Internationalen Privatrechts über langjährige Erfahrung. Wir sind unseren Klienten behilflich, deren Forderungen zu sichern und durchzusetzen, sei dies bei einer Betreibung auf Pfändung oder im Rahmen eines Konkursverfahrens.<br /> <br /> Von besonderer Bedeutung sind hierbei Arrestverfahren, von besonderer Komplexität namentlich Betreibungen auf Pfandverwertung und Wechselbetreibungen mit Auslandsberührung. Falls die Voraussetzungen gegeben sind, sind unsere Anwälte unseren Klienten dabei behilflich, paulianische Anfechtungsklagen durchzusetzen und begleiten diese bei Nachlassverfahren.</p> </div> </div>"
+   },
+   {
+    "group": "prozess",
+    "id": "schiedsverfahren",
+    "title": "Schiedsverfahren",
+    "html": "<p>Wir beraten und vertreten unsere Klienten bei Schiedsgerichtsverfahren und damit einhergehenden Vollstreckungsverfahren. Unsere Anwälte sind sowohl bei sog. ad hoc- als auch bei institutionellen Schiedsverfahren tätig, die vor anerkannten nationalen oder internationalen Schiedsinstitutionen (Internationale Handelskammer (ICC) oder den schweizerischen Handelskammern) geführt werden. Unsere Anwälte stehen auch zur Wahl, wenn es um die Besetzung von Schiedsgerichten geht. Unsere Expertise befähigt unsere Anwälte, auch komplexere Fälle zu betreuen. Auch werden unsere Anwälte bei Schiedsgerichtsverfahren hinzugezogen, die ihren Ursprung in komplexen internationalen Transaktionen haben.</p> </div> </div> </article> <!-- </div>--> </div> </div>"
+   }
+  ],
+  "notary": "</nav> </header> <header> <div> <picture> <source src=\"/site/assets/files/1198/shutterstock_364368866-1.jpg\" srcset=\"/site/assets/files/1198/shutterstock_364368866-1.jpg\" media=\"(max-width: 575px)\"> <source src=\"/site/assets/files/1198/shutterstock_364368866.jpg\" srcset=\"/site/assets/files/1198/shutterstock_364368866.jpg\"> <img src=\"/site/assets/files/1198/shutterstock_364368866.jpg\" srcset=\"/site/assets/files/1198/shutterstock_364368866.jpg\" alt=\"\"> </picture> </div> </header> <section> <div> <div> <div> <h2>Gesellschaftsgründungen leicht gemacht – </h2> <h2>Ihre Experten für Gründungen und Beurkundungen</h2> </div> <div> <p>Als erfahrene Anwaltskanzlei bieten wir Ihnen kompetente und unkomplizierte Unterstützung bei der Gründung von Gesellschaften sowie bei sämtlichen notariellen Beurkundungen. Von der ersten rechtlichen Beratung bis hin zur finalen Beurkundung begleiten wir Sie zuverlässig durch den gesamten Prozess und sorgen dafür, dass alle gesetzlichen Anforderungen erfüllt sind.</p> <p>Ob GmbH, AG, Stiftung oder eine andere Rechtsform – wir stehen Ihnen mit unserer Fachkompetenz und langjährigen Erfahrung als verlässlicher Partner zur Seite. Unser Ziel ist es, Ihre Gründung effizient, rechtssicher und individuell auf Ihre Bedürfnisse zugeschnitten umzusetzen.</p> <p><strong>Unsere Leistungen im Überblick:</strong></p> <p><strong>Gesellschaftsrecht und Unternehmensgründung</strong></p> <ul> <li>Gründung von Aktiengesellschaften (AG), Gesellschaften mit beschränkter Haftung (GmbH), Genossenschaften und Stiftungen</li> <li>Beurkundung gesellschaftsrechtlicher Vorgänge wie: <ul> <li>Statutenänderungen (Firmaänderung, Sitzverlegung, Zweckänderung etc.)</li> <li>Kapitalerhöhungen</li> <li>Übertragung von Aktien/Stammanteilen</li> <li>Umwandlungen (z. B. GmbH in AG)</li> <li>Vermögensübertragungen</li> <li>Liquidationen</li> </ul> </li> </ul> <p><strong>Ehe- und Erbrecht</strong></p> <ul> <li>Erstellung und Beurkundung von Eheverträgen</li> <li>Erbverträge, auf Wunsch kombiniert mit Eheverträgen (z. B. zur Meistbegünstigung des Ehepartners)</li> <li>Testamente (letztwillige Verfügungen)</li> <li>Vorsorgeaufträge, Patientenverfügung</li> </ul> <p><strong>Weitere notarielle Dienstleistungen</strong></p> <ul> <li>Bürgschaftserklärungen</li> <li>Beglaubigungen (Unterschriften, Kopien etc.)</li> </ul> <p>Vertrauen Sie auf unsere Expertise. </p> </div> <div> </div> </div> </div> </section> </main>",
+  "team_title": "Unser Team",
+  "team": [
+   {
+    "name": "Gianni F. Zanetti",
+    "img": "/site/assets/files/1057/gianni_zanetti-1.jpg",
+    "role": "lic. iur., Rechtsanwalt, Fachanwalt SAV Arbeitsrecht, CAS Finanz- und Rechnungswesen für Juristen, CAS Prozessführung – Civil Litigation, Managing Partner, ",
+    "email": "zanetti@zanettilaw.ch",
+    "teaser": "<p>CAS Prozessführung – Civil Litigation (2025)<br /> CAS Finanz- und Rechnungswesen für Juristen (2023)<br /> CAS und Fachanwalt SAV Arbeitsrecht (2011)<br /> Zürcher Rechtsanwaltspatent (2005)<br /> Lizentiat Universität Zürich (2000)</p>",
+    "bio": "<h4>Ausbildung</h4> <ul> <li>CAS Prozessführung – Civil Litigation (2025)</li> <li>CAS Finanz- und Rechnungswesen für Juristen (2023)</li> <li>CAS und Fachanwalt SAV Arbeitsrecht (2011)</li> <li>Zürcher Rechtsanwaltspatent (2005)</li> </ul> <h4>Berufserfahrung</h4> <ul> <li>Rechtsanwalt und Managing Partner bei Zanetti Rechtsanwälte (seit 2014)</li> <li>Rechtsanwalt und Partner bei Furrer, Landtwing &amp; Zanetti (seit 2010)</li> <li>Dozent für Internationales Privatrecht, Straf- und Strafprozessrecht sowie Zivilprozessrecht, Lehrgang MAS International Property Eidgenössische Technische Hochschule (ETH) Zürich (2007)</li> <li>Rechtsanwalt bei grosser Wirtschaftskanzlei in Zürich (Staiger, Schwald &amp; Partner), Team Litigation, Leiter Abteilung Miet- und Arbeitsrecht (2007–2009)</li> <li>Dozent für Zivil- und Handelsrecht Handelsschule Oerlikon (2003–2004)</li> <li>Anwaltssubstitut, später Rechtsanwalt bei mittelgrosser, international ausgerichteter Anwaltskanzlei in Zürich (Barandun, Hess von Graffenried; 2003–2007)</li> <li>Schadenjurist Fortuna Rechtsschutz Versicherungsgesellschaft (2002–2003)</li> <li>Jurist bei UBS AG, Wealth Management, Private Banking, Financial Planning International (2001–2002)</li> <li>Auditor und juristischer Sekretär Bezirksgericht Zürich (2000-2001)</li> </ul> <h4>Spezialgebiete</h4> <p>Arbeitsrecht, Mietrecht, Werkvertragsrecht, Auftragsrecht, Gesellschaftsrecht Zivilprozess,<br /> Zwangsvollstreckung und Internationales Privatrecht, Erbrecht, Sachenrecht</p> <h4>Sprachen</h4> <p>Deutsch, Englisch, Französisch, Italienisch, Spanisch</p> <h4>Weitere Tätigkeiten</h4> <p>Diverse Verwaltungsratsmandate</p> <h4>Mitgliedschaften</h4> <p>Schweizerischer Anwaltsverband (SAV), Advokatenverein des Kantons Zug, Italienische Handelskammer für die Schweiz</p> <h4>Hobbies</h4> <p>Asiatische Kampfkünste, Schach, Philosophie</p>"
+   },
+   {
+    "name": "Sandra M. Kammerbauer",
+    "img": "/site/assets/files/1060/philipboeni_0007_bearbeitet.jpg",
+    "role": "MLaw, Rechtsanwältin und Urkundsperson des Kantons Zug, , Fachanwältin SAV Arbeitsrecht, Partnerin, ",
+    "email": "kammerbauer@zanettilaw.ch",
+    "teaser": "<p>Fachanwältin SAV Arbeitsrecht (2023)<br /> Anwalts- und Notariatspatent Kanton Zug (2017)<br /> Master of Law (2015)<br /> Bachelor of Law (2013)</p>",
+    "bio": "<h4>Ausbildung</h4> <ul> <li>Fachanwältin SAV Arbeitsrecht (2023)</li> <li>Anwalts- und Notariatspatent Kanton Zug (2017)</li> <li>Master of Law (2015)</li> <li>Bachelor of Law (2013)</li> </ul> <h4>Berufserfahrung</h4> <ul> <li>Rechtsanwältin und Notarin bei Zanetti Rechtsanwälte AG (seit 2017)</li> <li>Auditorin am Verwaltungsgericht des Kantons Zug (2016)</li> <li>Substitutin/Juristin bei Zanetti Rechtsanwälte (2015)</li> <li>Assistentin Rechts- Unternehmensberatung einer Luzerner Anwaltskanzlei (2014)</li> </ul> <h4>Sprachen</h4> <p>Deutsch, Englisch, Französisch, Spanisch</p>"
+   },
+   {
+    "name": "Thomas Locher",
+    "img": "/site/assets/files/1059/thomas_locher-1.jpg",
+    "role": "lic. iur., Rechtsanwalt, CAS IRP-HSG Versicherungs- und, Haftpflichtrecht, Sozialversicherungs-Fachmann mit eidgenössischem, Fachausweis, Partner, ",
+    "email": "locher@zanettilaw.ch",
+    "teaser": "<p>Sozialversicherungs-Fachmann mit eidg. Fachausweis (2010)<br /> CAS IRP-HSG Versicherungs- u. Haftpflichtrecht (2009)<br /> Zürcher Rechtsanwaltspatent (2005)<br /> Lizentiat Universität Zürich (1998)</p>",
+    "bio": "<h4>Ausbildung</h4> <ul> <li>Sozialversicherungs-Fachmann mit eidgenössischem Fachausweis (2010)</li> <li>CAS IRP-HSG in Versicherungs- und Haftpflichtrecht (2009)</li> <li>Zürcher Rechtsanwaltspatent (2005)</li> <li>Lizentiat Universität Zürich (1998)</li> </ul> <h4>Berufserfahrung</h4> <ul> <li>Rechtsanwalt und Partner bei Zanetti Rechtsanwälte (seit 2014)</li> <li>Rechtsanwalt Rechtsdienst Personenschaden Assekuranz (seit 2006)</li> <li>Schadenjurist Fortuna Rechtsschutz Versicherungsgesellschaft (2001-2003)</li> <li>Auditor Bezirksgericht Zürich (2000-2001)</li> <li>Konkurssachbearbeiter mbA Inspektorat für die Notariate, Grundbuch- und Konkursämter des Kantons Zürich (1999-2000)</li> </ul> <h4>Spezialgebiete</h4> <p>Arbeitsrecht, Sozialversicherungs- und Versicherungsrecht, Haftpflichtrecht, Vertragsrecht</p> <h4>Sprachen</h4> <p>Deutsch</p> <h4>Hobbies</h4> <p>Sport, Kultur, Reisen, Familie</p>"
+   },
+   {
+    "name": "Joël E. Brochon",
+    "img": "/site/assets/files/1062/joel_brochon-1.jpg",
+    "role": "MLaw, Rechtsanwalt und Urkundsperson des Kantons Zug, Partner, ",
+    "email": "brochon@zanettilaw.ch",
+    "teaser": "<p>Anwalts- und Notariatspatent des Kantons Zug (2018)<br /> Master of Law (2016)<br /> Bachelor of Law (2013)</p>",
+    "bio": "<h4>Ausbildung</h4> <ul> <li>Anwalts- und Notariatspatent Kanton Zug (2018)</li> <li>Master of Law (2016)</li> <li>Bachelor of Law (2013)</li> </ul> <h4>Berufserfahrung</h4> <ul> <li>Rechtsanwalt und Notar bei Zanetti Rechtsanwälte (seit 2019)</li> <li>Substitut/Jurist bei Zanetti Rechtsanwälte (2016)</li> </ul> <h4>Sprachen</h4> <p>Deutsch, Englisch, Französisch</p>"
+   },
+   {
+    "name": "Claudia Schuler-Villiger",
+    "img": "/site/assets/files/1153/claudia_villiger_028_bearbeitet.jpg",
+    "role": "MLaw, Rechtsanwältin",
+    "email": "villiger@zanettilaw.ch",
+    "teaser": "<p>Anwaltspatent des Kantons Aargau (2020)<br /> Master of Law (2017)<br /> Bachelor of Law (2015)</p>",
+    "bio": "<p><strong>Ausbildung</strong></p> <ul> <li>Anwaltspatent des Kantons Aargau (2020)</li> <li>Master of Law (2017)</li> <li>Bachelor of Law (2015)</li> </ul> <p><strong>Berufserfahrung</strong></p> <ul> <li>Rechtsanwältin bei Zanetti Rechtsanwälte (2021)</li> <li>Substitutin bei einer Aargauer Anwaltskanzlei (10/2018 – 09/2019)</li> <li>Rechtspraktikantin beim Bezirksgericht Bremgarten (10/2017 – 09/2018)</li> </ul> <p><strong>Sprachen</strong></p> <p>Deutsch, Englisch, Französisch</p>"
+   },
+   {
+    "name": "Alessandro L. Gerlach",
+    "img": "/site/assets/files/1140/alessandro_gerlach.jpg",
+    "role": "MLaw, Rechtsanwalt und Urkundsperson des Kantons Zug",
+    "email": "gerlach@zanettilaw.ch",
+    "teaser": "<p>Anwalts- und Notariatspatent des Kantons Zug (2022)<br /> Master of Law (2020)<br /> Bachelor of Law (2019)</p>",
+    "bio": "<h4>Ausbildung</h4> <ul> <li>Anwalts- und Notariatspatent des Kantons Zug (2022)</li> <li>Master of Law (2020)</li> <li>Bachelor of Law (2019)</li> </ul> <h4>Berufserfahrung</h4> <ul> <li>Rechtsanwalt bei Zanetti Rechtsanwälte (2022)</li> <li>Substitut/Juristischer Mitarbeiter bei Zanetti Rechtsanwälte (Oktober 2020 - Dezember 2021)</li> <li>Juristischer Mitarbeiter in einer Aargauer Anwaltskanzlei (2019-2020)</li> <li>Assistent in einer Zürcher Anwaltskanzlei (2016-2019)</li> </ul> <h4>Sprachen</h4> <ul> <li>Deutsch, Englisch</li> </ul>"
+   },
+   {
+    "name": "Gregor A. Zaugg",
+    "img": "/site/assets/files/1196/formatiertimg_9417-2_1.jpg",
+    "role": "MLaw, Rechtsanwalt",
+    "email": "zaugg@zanettilaw.ch",
+    "teaser": "<p>Anwaltspatent des Kantons Luzern (2025)</p> <p>Master of Law (2023)</p> <p>Bachelor of Law (2021)</p>",
+    "bio": "<p><strong>Ausbildung </strong></p> <ul> <li>Anwaltspatent des Kantons Luzern (2025)</li> <li>Master of Law (2023)</li> <li>Bachelor of Law (2021)</li> </ul> <p><strong>Berufserfahrung </strong></p> <ul> <li>Rechtsanwalt bei Zanetti Rechtsanwälte (2025)</li> <li>Jurist bei einer Luzerner Anwaltskanzlei (01/2025 – 03/2025)</li> <li>Substitut bei einer Luzerner Anwaltskanzlei (07/2023 – 12/2024)</li> <li>Rechtspraktikant bei der Staatsanwaltschaft Luzern, Abteilung 4 Spezialdelikte (04/2023 – 06/2023)</li> <li>Vorstandsmitglied bei Legalis Consilium Luzern (01/2022 – 01/2023)</li> <li>Sekretär und juristischer Mitarbeiter bei einer Luzerner Anwaltskanzlei (07/2019 – 01/2023)</li> </ul> <p><strong>Sprachen </strong></p> <p>Deutsch, Englisch, Grundzüge in Französisch</p>"
+   },
+   {
+    "name": "Lara Surer",
+    "img": "/site/assets/files/1180/img_1528.jpg",
+    "role": "MLaw, Rechtsanwältin und Urkundsperson des Kantons Zug",
+    "email": "surer@zanettilaw.ch",
+    "teaser": "<p>Anwalts- und Notariatspatent des Kantons Zug (2025)</p> <p>Master of Law (2021)</p> <p>Bachelor of Law (2018)</p>",
+    "bio": "<p><strong>Ausbildung</strong></p> <ul> <li>Master of Law (2021)</li> <li>Bachelor of Law (2018)</li> </ul> <p><strong>Berufserfahrung</strong></p> <ul> <li>Auditorin beim Kantonsgericht Zug (05/2023 – 10/2023)</li> <li>Juristin beim Generalsekretariat einer schweizerischen Krankenversicherung (Helsana Versicherungen AG) (03/2021 – 01/2023)</li> </ul> <p><strong>Sprachen</strong></p> <p>Deutsch, Englisch, Koreanisch, Französisch, Italienisch</p>"
+   },
+   {
+    "name": "Zacharias Ziegler",
+    "img": "/site/assets/files/1209/ziegler_zacharias-01_neu.jpg",
+    "role": "MLaw, Rechtsanwalt, Fachanwalt SAV Familienrecht/CAS Familienrecht",
+    "email": "",
+    "teaser": "<p>Fachanwalt SAV Familienrecht/CAS Familienrecht (2025)</p> <p>Anwaltspatent des Kantons Uri (2014)</p> <p>Master of Law (2010)</p> <p>Bachelor of Law (2008)</p>",
+    "bio": "<p><strong>Ausbildung </strong></p> <ul> <li>Fachanwalt SAV Familienrecht/CAS Familienrecht (2025)</li> <li>Anwaltspatent des Kantons Uri (2014)</li> <li>Master of Law (2010)</li> <li>Bachelor of Law (2008)</li> </ul> <p><strong>Berufserfahrung</strong></p> <ul> <li>Rechtsanwalt bei Zanetti Rechtsanwälte (2026)</li> <li>Rechtsanwalt bei Wild Dubach AG (03/2018 – 06/2026)</li> <li>Rechtsanwalt bei Brücker Bilger Rechtsanwälte und Notare (06/2014 – 02/2018)</li> <li>Juristischer Mitarbeiter bei Brücker Bilger Rechtsanwälte und Notare (03/2013 – 05/2014)</li> <li>Anwaltspraktikum des Kantons Uri (08/2011 – 02/2013)</li> </ul> <p><strong>Sprachen </strong></p> <p>Deutsch, Englisch, gute Kenntnisse in Französisch, Spanisch und Slowakisch</p>"
+   },
+   {
+    "name": "Daniel Isenegger",
+    "img": "/site/assets/files/1061/daniel_isenegger-1.jpg",
+    "role": "Treuhänder mit eidg. Fachausweis, dipl. Treuhandexperte, ",
+    "email": "isenegger@zanettilaw.ch",
+    "teaser": "<p>dipl. Treuhandexperte (2002)<br /> Treuhänder mit eidg. Fachausweis (1999)<br /> Kaufmännische Berufsschule, Luzern</p>",
+    "bio": "<h4>Ausbildung</h4> <ul> <li>dipl. Treuhandexperte (2002)</li> <li>Treuhänder mit eidg. Fachausweis (1999)</li> <li>Kaufmännische Berufsschule, Luzern</li> </ul> <h4>Berufserfahrung</h4> <ul> <li>Seit 2012 zudem Geschäftsführender Partner der Xantrium Consulting AG, Baar</li> <li>Seit 1998 bei der Dr. Thomas Fischer &amp; Partner AG, Baar, ab 2003 als Partner, ab 2011 als Seniorpartner</li> <li>Sachbearbeiter Rechnungswesen/Steuern bei der Balmer-Etienne AG in Luzern</li> <li>Sachbearbeiter im Bereich Buchhaltung/Steuern bei der Partner Treuhand AG in Hochdorf und Sursee</li> </ul> <h4>Spezialgebiete</h4> <ul> <li>Steuerberatung von natürlichen und juristischen Personen</li> <li>Strukturplanungen und Nachfolgeregelungen</li> <li>Unternehmensbewertungen, Unternehmensberatung</li> <li>Finanz- und Rechnungswesen</li> </ul> <h4>Sprachen</h4> <p>Deutsch, Englisch</p> <h4>Weitere Tätigkeiten</h4> <ul> <li>Diverse Verwaltungsratsmandate</li> <li>Referententätigkeit im Bereich Steuern und Vorsorge</li> <li>Mitgliedschaften</li> <li>Treuhand|Suisse Zentralschweiz</li> <li>Lions-Club Luzern-Hof (Kassier)</li> <li>Golfclub Rastenmoos</li> </ul> <h4>Hobbies</h4> <p>Familie, Golf, Joggen, Kochen, Essen und Weine</p>"
+   },
+   {
+    "name": "Camille Gottraux",
+    "img": "/site/assets/files/1203/formatiertimg_9585-3.jpg",
+    "role": "MLaw, Juristische Mitarbeiterin",
+    "email": "gottraux@zanettilaw.ch",
+    "teaser": "<p>Master of Law (2025), zweisprachig (DE/FR)</p> <p>Bachelor of Law (2024)</p>",
+    "bio": "<p><strong>Ausbildung</strong></p> <ul> <li>Master of Law (2025), zweisprachig (DE/FR)</li> <li>Bachelor of Law (2024)</li> </ul> <p><strong>Berufserfahrung</strong></p> <ul> <li>Kurzpraktikantin bei Lenz &amp; Staehelin in Zürich (01/2024-02/2024)</li> <li>Mitarbeitende Sportbereich Freiruum Zug (10/2019-02/2025)</li> </ul> <p><strong>Sprachen</strong></p> <p>Deutsch, Französisch, Englisch, Spanisch</p>"
+   },
+   {
+    "name": "Marco Näpflin",
+    "img": "/site/assets/files/1159/final_quer-img_6783.jpg",
+    "role": "Juristischer Mitarbeiter, ",
+    "email": "naepflin@zanettilaw.ch",
+    "teaser": "<p>BSc in Wirtschaftsrecht, ZHAW Winterthur (2024)<br /> Kaufmännische Berufsschule mit Berufsmaturität (2016)</p>",
+    "bio": "<p><strong>Ausbildung</strong></p> <ul> <li>BSc in Wirtschaftsrecht, ZHAW Winterthur (2024)</li> <li>Kaufmännische Berufsschule mit Berufsmaturität (2016)</li> </ul> <p><strong>Berufserfahrung</strong></p> <ul> <li>Legal Assistant / Paralegal (seit 2021)</li> <li>Sachbearbeiter, Amt für Gesundheit und Soziales, Schwyz (2020-2021)</li> <li>Anwalts- und Notariatsassistent, Zanetti Rechtsanwälte AG, Baar (2018-2020)</li> <li>Kaufmännischer Praktikant, Boostgroup AG, Steinhausen (2017-2018)</li> <li>KV-Lehre, Kantonale Verwaltung Schwyz, Schwyz (2012-2015)</li> </ul> <p><strong>Sprachen</strong></p> <p>Deutsch, Englisch, Französisch</p>"
+   },
+   {
+    "name": "Vera Suter",
+    "img": "/site/assets/files/1157/vera_sutter_067_bearbeitet.jpg",
+    "role": "Office Managerin, ",
+    "email": "suter@zanettilaw.ch",
+    "teaser": "<p>CAS Paralegal (2025)</p> <p>MAS in Schulischer Heilpädagogik (2012)<br /> Primarlehrdiplom (2001)</p>",
+    "bio": "<h4>Ausbildung</h4> <ul> <li>CAS Paralegal (2025)</li> <li>MAS in Schulischer Heilpädagogik (2012)</li> <li>Primarlehrdiplom (2001)</li> </ul> <h4>Berufserfahrung</h4> <ul> <li>Schulische Heilpädagogin an der Primarschule Baar (2009 – 2021)</li> <li>Primarlehrerin an verschiedenen Regelschulen (2001 – 2009)</li> </ul> <h4>Sprachen</h4> <p>Deutsch, Englisch, Italienisch, Französisch</p>"
+   },
+   {
+    "name": "Delvina Kuci",
+    "img": "/site/assets/files/1178/portraitdk.jpg",
+    "role": "Rechtsanwalts- und Notariatsassistentin, ",
+    "email": "kuci@zanettilaw.ch",
+    "teaser": "<p>Direktionsassistentin mit eidgenössischem Fachausweis (2022)</p> <p>Kaufmännische Ausbildung EFZ</p>",
+    "bio": "<p><strong>Ausbildung</strong></p> <ul> <li>Direktionsassistentin mit eidgenössischem Fachausweis (2022)</li> <li>Kaufmännische Ausbildung EFZ</li> </ul> <p><strong>Berufserfahrung</strong></p> <ul> <li>Sachbearbeiterin in einer Zuger Bürogestaltungsfirma (2019-2023)</li> </ul> <p><strong>Sprachen</strong></p> <p>Deutsch, Englisch, Albanisch</p>"
+   },
+   {
+    "name": "Ramona Gaudio",
+    "img": "/site/assets/files/1064/ramona_palatucci_033_bearbeitet.jpg",
+    "role": "Verantwortliche Buchhaltung und Personalwesen, ",
+    "email": "palatucci@zanettilaw.ch",
+    "teaser": "<p>BSc in Betriebswirtschaft, ZHAW Winterthur (2020)</p> <p>Kaufmännische Berufsschule, Zug (2015)</p>",
+    "bio": "<h4>Ausbildung</h4> <ul> <li>BSc in Betriebswirtschaft, ZHAW Winterthur (2020)</li> <li>Kaufmännische Berufsschule mit Berufsmaturität</li> </ul> <h4>Berufserfahrung</h4> <ul> <li>Verkaufsassistentin, Sachbearbeiterin, AMAG Automobil- und Motoren AG, Rain, Zürich (2015-2017)</li> <li>KV-Lehre, AMAG Automobil- und Motoren AG, Cham (2012-2015)</li> </ul> <h4>Sprachen</h4> <p>Deutsch, Englisch, Französisch, Italienisch</p>"
+   }
+  ],
+  "pubs_title": "Einige ausgewählte Publikationen",
+  "pubs": [
+   {
+    "name": "Gianni F. Zanetti",
+    "items": [
+     [
+      "2025",
+      "Sanierungskündigung und Auszugsgarantie",
+      "Mietrechtspraxis (mp 3/2025)"
+     ],
+     [
+      "2024",
+      "Das Arbeitsrechtliche Konkurrenzverbot - Mit Fokus auf die persönlichen Eigenschaften des Arbeitnehmers",
+      "Anwaltsrevue 1/2024"
+     ],
+     [
+      "2022",
+      "Qualifikation des «Bonus»: Lohn oder Gratifikation?",
+      "in: Digitaler Rechtsprechungs-Kommentar (dRSK), Ausgabe 131, April 2022"
+     ],
+     [
+      "2017",
+      "Reziproke Zugeständnisse bei Aufhebungsverträgen (Kommentar zum Urteil BGer 4A_673/2016 vom 3. Juli 2017)",
+      "in: Digitaler Rechtsprechungs-Kommentar (dRSK), Ausgabe 78, November 2017"
+     ],
+     [
+      "2015",
+      "Das arbeitsrechtliche Konkurrenzverbot",
+      "Zuger Steuer Praxis Nr. 59"
+     ],
+     [
+      "2012",
+      "Der arbeitsrechtliche Aufhebungsvertrag",
+      "(Anwaltsrevue 2/2012)"
+     ],
+     [
+      "2011",
+      "Ausgewählte Aspekte der Rohbaumiete",
+      "Mietrechtspraxis (mp 2/2011)"
+     ],
+     [
+      "2010",
+      "Arbeitsverhältnisse im internationalen Kontext",
+      "Zuger Steuer Praxis, Nr. 45"
+     ],
+     [
+      "2009",
+      "Neuerungen bei der Bekämpfung der Schwarzarbeit",
+      "Newsletter Staiger, Schwald & Partner"
+     ],
+     [
+      "2009",
+      "Neuerungen im Mietrecht",
+      "Newsletter Staiger, Schwald & Partner"
+     ],
+     [
+      "2009",
+      "Der Aufhebungsvertrag",
+      "Mietrechtspraxis (mp 2/2009)"
+     ]
+    ]
+   },
+   {
+    "name": "Sandra M. Kammerbauer",
+    "items": [
+     [
+      "2024",
+      "Das Arbeitsrechtliche Konkurrenzverbot - Mit Fokus auf die persönlichen Eigenschaften des Arbeitnehmers",
+      "Anwaltsrevue 1/2024"
+     ],
+     [
+      "2022",
+      "Qualifikation des «Bonus»: Lohn oder Gratifikation?",
+      "in: Digitaler Rechtsprechungs-Kommentar (dRSK), Ausgabe 131, April 2022"
+     ],
+     [
+      "2017",
+      "Reziproke Zugeständnisse bei Aufhebungsverträgen (Kommentar zum Urteil BGer 4A_673/2016 vom 3. Juli 2017)",
+      "in: Digitaler Rechtsprechungs-Kommentar, Ausgabe 78, November 2017"
+     ]
+    ]
+   },
+   {
+    "name": "Alessandro L. Gerlach",
+    "items": [
+     [
+      "2025",
+      "Sanierungskündigung und Auszugsgarantie",
+      "Mietrechtspraxis (mp 3/2025)"
+     ]
+    ]
+   }
+  ],
+  "contact": "</nav> </header> <header> <div> <picture> <source src=\"/site/assets/files/1032/zanetti_kontakt_mobile.jpg\" srcset=\"/site/assets/files/1032/zanetti_kontakt_mobile.jpg\" media=\"(max-width: 575px)\"> <source src=\"/site/assets/files/1032/zanetti_kontakt_2x-1.jpg\" srcset=\"/site/assets/files/1032/zanetti_kontakt_2x-1.jpg\"> <img src=\"/site/assets/files/1032/zanetti_kontakt_2x-1.jpg\" srcset=\"/site/assets/files/1032/zanetti_kontakt_2x-1.jpg\" alt=\"\"> </picture> </div> </header> <section> <div> <div> <div> <h2>Unsere Standorte</h2> </div> <div> <p>Sie erreichen uns wie folgt: </p> <p><strong>Head Office Zug</strong><br /> Zanetti Rechtsanwälte AG<br /> Blegistrasse 9<br /> 6340 Baar, Zug<br /> T + 41 41 766 35 85<br /> F + 41 41 766 35 80<br /> <a href=\"mailto:info@zanettilaw.ch\">info@zanettilaw.ch</a> </p> <p>(oder über die E-Mailadresse der Mitarbeitenden)</p> <p><strong>Office Zürich</strong><br /> Zanetti Rechtsanwälte AG<br /> Allmendstrasse 2<br /> 8105 Regensdorf, Zürich</p> <p><strong>Office Schwyz</strong><br /> Zanetti Rechtsanwälte AG<br /> Dorfplatz 2b<br /> 6405 Immensee</p> </div> <div> <iframe src=\"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10840.119222836278!2d8.5708996!3d47.2159991!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xa08f4c2cdbca22ee!2sZanetti+Rechtsanw%C3%A4lte+AG!5e0!3m2!1sde!2sch!4v1552574030713\" width=\"100%\" height=\"100%\" frameborder=\"0\" allowfullscreen></iframe> </div> </div> </div> </section> </main>",
+  "members": "</nav> </header> <header> <div> <picture> <source src=\"/site/assets/files/1033/zanetti_mitgliedschaften_mobile.jpg\" srcset=\"/site/assets/files/1033/zanetti_mitgliedschaften_mobile.jpg\" media=\"(max-width: 575px)\"> <source src=\"/site/assets/files/1033/zanetti_mitgliedschaften_2x.jpg\" srcset=\"/site/assets/files/1033/zanetti_mitgliedschaften_2x.jpg\"> <img src=\"/site/assets/files/1033/zanetti_mitgliedschaften_2x.jpg\" srcset=\"/site/assets/files/1033/zanetti_mitgliedschaften_2x.jpg\" alt=\"\"> </picture> </div> </header> <section> <div> <div> <div> <h2>Wir sind Mitglied in verschiedenen Netzwerken<br /> und Verbänden </h2> </div> <div> <p><strong>Legal Netlink Alliance</strong><br /> Zanetti Rechtsanwälte AG ist Mitglied von Legal Netlink Alliance (LNA). Legal Netlink Alliance ist ein weltweit präsenter Zusammenschluss akkurat ausgewählter mittelgrosser, forensisch und beratend tätiger Anwaltssozietäten, die aufgrund ihrer hohen Qualität und Integrität ausgewählt wurden. Die Klienten der Mitgliedskanzleien erhalten dank diesem Netzwerk und aufgrund der Mitgliedschaft hochwertiger Anwaltssozietäten den Mehrwert, bei Bedarf weltweit juristisch hochwertig vertreten zu werden.</p> <p><a href=\"http://www.legalnetlink.net\">www.legalnetlink.net</a></p> <p><img alt=\"\" src=\"/site/assets/files/1033/lna_logo_500px.180x0-is.jpg\" width=\"180\" /></p> </div> <div> <div> <div> <p>Advokatenverein des Kantons Zug</p> <p><a href=\"http://www.advokaten-zug.ch\">www.advokaten-zug.ch</a></p> </div> <div> <img src=\"/site/assets/files/1114/advokatenverein_500px.jpg\" alt=\"\"> </div> </div> <div> <div> <p>Schweizerischer Anwaltsverband</p> <p><a href=\"http://www.sav-fsa.ch\">www.sav-fsa.ch/en</a></p> </div> <div> <img src=\"/site/assets/files/1115/sav_fsa_logo_500px.jpg\" alt=\"\"> </div> </div> <div> <div> <p>Zürcher Anwaltsverband</p> <p><a href=\"http://www.zav.ch\">www.zav.ch/en</a></p> </div> <div> <img src=\"/site/assets/files/1116/zuercher_anwaltsverband_500px.jpg\" alt=\"\"> </div> </div> </div> </div> </div> </section> </main>",
+  "imprint": "</nav> </header> <!-- <header> <div> <picture> <source src=\"\" srcset=\"\" media=\"(max-width: 575px)\"> <source src=\"\" srcset=\"\"> <img src=\"\" srcset=\"\" alt=\"\"> </picture> </div> </header> --> <section> <div> <div> <div> <h2>Impressum</h2> </div> <div> <p><strong>Gesamtverantwortung</strong><br /> Zanetti Rechtsanwälte AG<br /> Blegistrasse 9<br /> 6340 Baar</p> <p>T +41 41 766 35 85<br /> F + 41 41 766 35 80<br /> <a href=\"mailto:info@zanettilaw.ch\">info@zanettilaw.ch</a></p> <p><strong>Design &amp; Entwicklung</strong><br /> silent studio AG<br /> Sinserstrasse 2<br /> 6330 Cham</p> <p>T +41 41 541 55 60<br /> <a href=\"mailto:info@silentstudio.ch\">info@silentstudio.ch</a></p> </div> </div> </div> </section> </main>",
+  "privacy": "</nav> </header> <!-- <header> <div> <picture> <source src=\"\" srcset=\"\" media=\"(max-width: 575px)\"> <source src=\"\" srcset=\"\"> <img src=\"\" srcset=\"\" alt=\"\"> </picture> </div> </header> --> <section> <div> <div> <div> <h2>Datenschutz</h2> </div> <div> <p><strong>Erhebung, Verarbeitung und Nutzung personenbezogener Daten</strong><br /> Bei einem Besuch dieser Website erheben wir keine personenbezogenen Daten von Ihnen. Personenbezogene Daten werden nur erhoben, wenn Sie uns diese selbst über unser Kontaktformular mitteilen. Diese Daten werden ausschliesslich zur Beantwortung Ihres Anliegens genutzt und danach wieder gelöscht.</p> <p><strong>Server-Log-Dateien</strong><br /> Wie bei jeder Verbindung mit einem Webserver protokolliert und speichert der Server unseres Webhosting-Anbieters cyon in Basel, Schweiz, bestimmte technische Daten. Zu diesen Daten gehören die IP-Adresse und das Betriebssystem Ihres Geräts, die Daten, die Zugriffszeit, die Art des Browsers sowie die Browser-Anfrage inklusive der Herkunft der Anfrage (Referrer). Dies ist aus technischen Gründen erforderlich, um Ihnen unsere Website zur Verfügung zu stellen. Der Webhosting-Anbieter schützt diese Daten mit technischen und organisatorischen Massnahmen vor unerlaubten Zugriffen und gibt sie nicht an Dritte weiter. Soweit wir dabei personenbezogene Daten verarbeiten, tun wir dies aufgrund unseres Interesses, Ihnen die bestmögliche Nutzererfahrung zu bieten und die Sicherheit und Stabilität unserer Systeme zu gewährleisten.</p> <p><strong>Ihre Rechte</strong><br /> Ihnen stehen grundsätzlich die Rechte auf Auskunft, Berichtigung, Löschung, Einschränkung, Datenübertragbarkeit, Widerruf und Widerspruch zu. Wenn Sie glauben, dass die Verarbeitung Ihrer Daten gegen das Datenschutzrecht verstösst oder Ihre datenschutzrechtlichen Ansprüche sonst in einer Weise verletzt worden sind, können Sie sich bei der Aufsichtsbehörde beschweren.</p> </div> </div> </div> </section> </main>"
+ },
+ "en": {
+  "nav": [
+   "Services",
+   "Notarization & Certification Law",
+   "Team",
+   "Publications",
+   "Contact",
+   "Memberships"
+  ],
+  "quote": "<header> <nav> <div></div> <div> <a href=\"/en/\"> <img src=\"/site/assets/files/1034/zanetti_logo.svg\" alt=\"Logo\"> </a> <button type=\"button\" aria-controls=\"navbarTogglerDemo02\" aria-expanded=\"false\" aria-label=\"Toggle navigation\"> <div> <span></span> <span></span> <span></span> </div> </button> <div> <div> <div class='language-wrapper'><a class='language' title='Deutsch' href='/'>D</a></div><div class='language-wrapper'><a class='language' title='Englisch' href='/en/'>E</a></div> </div> <ul> <li class='nav-item '><a class=' ' href='/en/services/' title='Services'>Services</a></li><li class='nav-item '><a class=' ' href='/en/memberships-1/' title='Notarization &amp; Certification Law'>Notarization &amp; Certification Law</a></li><li class='nav-item '><a class=' ' href='/en/team/' title='Team'>Team</a></li><li class='nav-item '><a class=' ' href='/en/publications/' title='Publications'>Publications</a></li><li class='nav-item '><a class=' ' href='/en/contact/' title='Contact'>Contact</a></li><li class='nav-item '><a class=' ' href='/en/memberships/' title='Memberships'>Memberships</a></li> <div> <div class='language-wrapper'><a class='language' title='Deutsch' href='/'>D</a></div><div class='language-wrapper'><a class='language' title='Englisch' href='/en/'>E</a></div> </div> </ul> </div> </div> </nav> </header> <header> <div> <picture> <source src=\"/site/assets/files/1/zanetti_home_mobile.jpg\" srcset=\"/site/assets/files/1/zanetti_home_mobile.jpg\" media=\"(max-width: 575px)\"> <source src=\"/site/assets/files/1/zanetti_home_2x-2.jpg\" srcset=\"/site/assets/files/1/zanetti_home_2x-2.jpg\"> <img src=\"/site/assets/files/1/zanetti_home_2x-2.jpg\" srcset=\"/site/assets/files/1/zanetti_home_2x-2.jpg\" alt=\"\"> </picture> <div> <h3>«When you are in the right,<br /> you can afford to keep your cool;<br /> and when you are wrong,<br /> you cannot afford to lose it.»</h3> <p>Mahatma Gandhi (1869 – 1948)</p> </div> </div> </header>",
+  "home_title": "Zanetti Attorneys at Law is an established\nassociation of experienced and specialised\nlawyers.",
+  "widgets": [
+   {
+    "title": "Our way of working:",
+    "html": "<p>Our professional expertise is the basis on which we create economic added value for our clients. We are pleased to be mandated with structuring tasks as early as possible, because experience shows that our work leads to the greatest benefit for our clients at this early stage of the advisory process.<br /> <br /> In 2019, 2022, 2023, 2024 and 2025, we were named a \"Top Law Firm\" by Bilanz and Le Temps (2019 and 2022) resp. Bilanz and PME (2023, 2024 und 2025).</p>",
+    "img": "/site/assets/files/1037/pme_bilanz_takch2026_logo_de_ausgabe.jpg"
+   },
+   {
+    "title": "We think entrepreneurially:",
+    "html": "<p>Due to the fact that our lawyers, notaries and tax advisors work closely with companies (and act as directors in companies), you will find us to be a constructive and entrepreneurial partner for your project. We have extensive experience in handling complex litigation in a wide range of areas of law - whether advising on corporate law, labour law, tenancy law, contract law, family law, criminal law, insurance and liability law, or in the field of social security.</p>",
+    "img": "/site/assets/files/1038/pme_bilanz_takch2025_logo_de_ausgabe_zugeschnitten.jpg"
+   },
+   {
+    "title": "Experts - also in court",
+    "html": "<p>Our forensic lawyers have a wealth of solid forensic experience, whether in civil litigation, criminal proceedings, arbitration or administrative procedure. Should a legal dispute be unavoidable, we represent our clients in court and strive to achieve the greatest possible profit based on our procedural expertise.</p>",
+    "img": "/site/assets/files/1039/pme_bilanz_takch2024_logo_de_ausgabe.png"
+   }
+  ],
+  "footer": "<footer> <div> <div> <div> <p>Zug</p> <p>Zanetti Rechtsanwälte AG<br /> Blegistrasse 9<br /> 6340 Baar</p> <p>T + 41 41 766 35 85<br /> F + 41 41 766 35 80<br /> <a href=\"mailto:info@zanettilaw.ch\">info@zanettilaw.ch</a></p> </div> <div> <p>Zurich</p> <p>Zanetti Rechtsanwälte AG<br /> Allmendstrasse 2<br /> 8105 Regensdorf Zürich</p> <p>T + 41 41 766 35 85<br /> F + 41 41 766 35 80<br /> <a href=\"mailto:info@zanettilaw.ch\">info@zanettilaw.ch</a></p> </div> <div> <p>Schwyz</p> <p>Zanetti Rechtsanwälte AG<br /> Dorfplatz 2b<br /> 6405 Immensee</p> <p>T + 41 41 766 35 85<br /> F + 41 41 766 35 80<br /> <a href=\"mailto:info@zanettilaw.ch\">info@zanettilaw.ch</a></p> </div> <div> <p>Links</p> <p><br /> <a href=\"/en/imprint/\">Impressum</a><br /> <a href=\"/en/data-protection/\">Datenschutz</a></p> <p><br /> &copy;2026 Zanetti Rechtsanwälte<br /> Webmaster: <a href=\"https://silentstudio.ch\">silentstudio.ch</a></p> </div> </div> </div>",
+  "services_title": "Our Services",
+  "services_groups": [
+   [
+    "Beratung",
+    [
+     "labourlaw",
+     "familienrecht",
+     "familylaw",
+     "contractlaw",
+     "corporatelaw",
+     "criminallaw",
+     "taxlaw",
+     "notary"
+    ]
+   ]
+  ],
+  "services": [
+   {
+    "group": "beratung",
+    "id": "labourlaw",
+    "title": "Labour law and social insurances",
+    "html": "<p>Our lawyers advise companies and individuals in all areas of individual and collective labour law. We assist companies in overcoming structural challenges and help present accurate, tailored and proven solutions to recurring issues and structural challenges.</p> <p>Due to our often long-standing relationships with our clients, we are able to grasp the specifics of each situation and develop practical solutions that are individually tailored to our clients' needs. We are happy to support our clients at any stage of an employment relationship, from the drafting of individual employment contracts to termination agreements. We are also delighted to assist in the drafting of personnel regulations, commission and working time regulations.</p> <p>Based on the high degree of specialisation of our lawyers, we also advise our clients on complex labour law issues, where preliminary questions of international private law need to be clarified and which have a nexus to tax or social security law, especially as our experts also have many years of experience in these specialist areas. </p> <p>Conflict management is an important focus of our labour law practice. Our lawyers have the necessary forensic expertise and practical experience to protect the interests of our domestic and foreign clients even in complex labour law proceedings, be it the enforcement of non-competition clauses or claims that may arise as a result of a dismissal. Even in cases with transnational implications, our experts manage to find adequate solutions.</p> </div> </div>"
+   },
+   {
+    "group": "beratung",
+    "id": "familienrecht",
+    "title": "Familienrecht",
+    "html": "<p>Wir beraten unsere Klienten bei den mannigfaltigen Fragestellungen, die sich im Familienrecht stellen. Unter Umständen ist es bereits bei Beginn einer Ehe sinnvoll, von einem Anwalt begleitet zu werden, insbesondere wenn die Klienten die ehevertragliche Regelung der Verhältnisse wünschen. Bei einer Scheidung stellen sich diverse Fragekomplexe (Unterhalt, Sorgerecht, Vorsorgeausgleich, güterrechtliche Auseinandersetzung), bei denen es höchst ratsam ist, anwaltliche Hilfe in Anspruch zu nehmen.</p> <h1>Scheidung – Ihr kompetenter Partner im Scheidungs­recht</h1> <p>Eine Scheidung stellt oft eine tiefgreifende Veränderung dar, die viele Aspekte des täglichen Lebens beeinflusst. Wir verstehen, dass eine Scheidung eine der herausforderndsten Lebensphasen sein kann. Unsere Rechtsanwälte stehen Ihnen zur Seite und bieten Ihnen umfassende rechtliche Beratung und Unterstützung. Wir sind darauf spezialisiert, Ihnen bei der Bewältigung aller rechtlichen Aspekte Ihrer Scheidung zu helfen, damit Sie sich auf das Wesentliche konzentrieren können: Ihren Neuanfang. Mit unserer langjährigen Erfahrung und unserem tiefen Verständnis für die Herausforderungen einer Scheidung sind wir bestens vorbereitet, um Ihnen maßgeschneiderte Lösungen und eine vertrauensvolle Begleitung anzubieten.</p> <h1>Trennung</h1> <p>Bis es zu einer Trennung kommt, sind meistens unüberbrückbare Differenzen vorausgegangen. Die Entscheidung, eine Beziehung zu beenden, ist mit Emotionen und Unsicherheiten verbunden und erfordert viel Kraft. Für manchen Menschen mag die Trennung eine grosse Erleichterung sein, während sie bei anderen viel Schmerz verursacht. Nebst dem Wechselbad von Gefühlen, sind beide Parteien gefordert, sich mit juristischen und finanziellen Fragen auseinanderzusetzen.</p> <h1>Ehevertrag</h1> <p>Ein Ehevertrag wird häufig als unromantisch empfunden, da er rechtliche und finanzielle Aspekte in eine Beziehung einbringt, die eigentlich auf Liebe und Vertrauen basieren sollte. Jedoch kann diese Sichtweise dazu führen, dass die tatsächlichen Vorteile eines Ehevertrages übersehen werden.</p> <p>Der Ehevertrag kann helfen, den anderen Ehegatten besserzustellen, indem ihm im Todesfall die gesamte Errungenschaft zugewendet wird. Das grösste Vermögen der Ehegatten liegt oft in der Errungenschaft, also dem, was sie während der Ehe gemeinsam gespart und gekauft haben – zum Beispiel eine Liegenschaft. Insbesondere auch Ehegatten mit gemeinsamen minderjährigen Kindern können ein Interesse daran haben, dass die gesamte Errungenschaft dem anderen Ehegatten zugewiesen wird, damit der hinterbliebene Ehegatte nicht in finanzielle Schwierigkeiten gerät, weil er seine erbberechtigten (allenfalls minderjährigen) Kinder auszahlen muss.</p> <p>Wenn ein Ehegatte ein eigenes Unternehmen hat, ist ein Ehevertrag ebenfalls sehr empfehlenswert. Im Falle einer Scheidung kann es nämlich vorkommen, dass ein erfolgreiches KMU verkauft, liquidiert oder Anteile am Unternehmen dem anderen Ehegatten übertragen werden müssen, weil dem unternehmenseigenen Ehegatten die notwendige Liquidität fehlt, um den anderen auszuzahlen. Mit einem Ehevertrag können Unternehmensanteile als Eigengut festgelegt werden und die aus diesen Anteilen erzielten Gewinne von der Errungenschaft ausgeschlossen werden.</p> <p>Nebst einem Ehevertrag ist es ratsam, sich auch mit erbrechtlichen Bestimmungen zu befassen, um den Nachlass im Todesfall nach den individuellen Wünschen und Bedürfnissen zu gestalten. Mit einem Testament oder einem Erbvertrag können die Ehegatten solche Regelungen festlegen. Beispielsweise kann der andere Ehegatte erbrechtlich maximal begünstigt werden, indem er als Universalerbe eingesetzt und die Kinder auf den Pflichtteil gesetzt werden.</p> <p>Für weitere Informationen <a href=\"https://scheidungsanwaltzug.ch/\">https://scheidungsanwaltzug.ch/</a></p> </div> </div>"
+   },
+   {
+    "group": "beratung",
+    "id": "familylaw",
+    "title": "Family Law, Law of succession, Property Law",
+    "html": "<p>We advise our clients on the manifold questions that arise in family law. Under certain circumstances, it makes sense to be assisted by a lawyer right from the beginning of a marriage, especially if the client wishes to have the circumstances regulated by a marriage contract. In the case of divorce, various issues arise (maintenance, custody, equalisation of pension rights, property law disputes) for which it is highly advisable to seek legal assistance.<br /> <br /> Accurate estate planning requires that the advisor involved meticulously ascertains the client's economic and personal circumstances and objectives. In the field of law of succession, our lawyers have many years of experience in advising private individuals and family businesses. We take due account of the complex issues that also arise in the area of intersection with international tax and pension law. As executors of wills, our lawyers strive to ensure that clients' wishes are complied with. If necessary, our lawyers will also represent you forensically, for example in inheritance law actions in connection with violated compulsory portions, invalid testamentary dispositions or in inheritance division actions.<br /> <br /> We also assist our clients in matters of property law: be it in the drafting of real estate purchase agreements, the clarification of complex issues in connection with limited rights in rem and when the protection of your property is of primary importance.</p> </div> </div>"
+   },
+   {
+    "group": "beratung",
+    "id": "contractlaw",
+    "title": "Contract Law",
+    "html": "<p>Our lawyers are intensively involved in drafting contracts from all areas of the Code of Obligations. We support our clients in drafting contracts in the areas of tenancy law, sales law, contract law, but also contracts for work and services and innominate contracts (in particular leasing, factoring, franchising). We mainly advise small and medium-sized enterprises, but also larger service companies and financial institutions.</p> <p>We are delighted to support our clients in contract negotiations. We have practical experience and a high degree of specialisation, which enables us to meet the high demands of our clients in Switzerland and abroad. In addition, our notaries act in a stylistically confident manner in order to be able to handle those legal transactions that require public notarisation in order to be valid.</p> <p>The intensive activity in contract law allows our lawyers to act confidently even in complex situations, including matters that have an intensive foreign connection and therefore require international private law qualification and setting of the course.</p> </div> </div>"
+   },
+   {
+    "group": "beratung",
+    "id": "corporatelaw",
+    "title": "Corporate Law",
+    "html": "<p>An important focus of our work is providing professional advice to companies, entrepreneurs and individuals in the area of corporate law. Our aim is to advise companies, company owners and corporate bodies in a practical, comprehensive and targeted manner.</p> <p>We will be pleased to assist you in all matters relating to the formation, transformation or structuring of a company, be it the relocation of its registered office or the planning and practical implementation of mergers, acquisitions, spin-offs, management buyouts (MBO) and similar processes. Furthermore, we support you in designing tailor-made organisational forms.<br /> This work also includes the drafting of organisational regulations that take into account the needs of our clients. We are also happy to advise our clients on the drafting and structuring of tailor-made shareholders' agreements and help with their concrete enforcement. The majority of our lawyers act as corporate bodies (boards of directors, foundation boards, etc.) and thus put their practical experience at the service of our clients.</p> <p>We also support our clients in the procedural enforcement of corporate law claims, for example in the protection of shareholders' rights as well as in the defence against liability claims.</p> </div> </div>"
+   },
+   {
+    "group": "beratung",
+    "id": "criminallaw",
+    "title": "Criminal Law",
+    "html": "<p>In no other area of law are the power relationships so unequally distributed as in the field of criminal law. To counteract this fact, we advise and assist our clients in criminal investigations and defend them before the criminal courts of all instances. We represent victims and assist private plaintiffs in asserting their claims in criminal proceedings.</p> <p>In the area of road traffic law, we defend you in the related criminal proceedings and represent you in administrative proceedings before the administrative and judicial authorities concerning the impending withdrawal of your driving licence.</p> <p>In addition to individual defence, we also provide preventive advice to companies and take care of them during ongoing investigations and criminal proceedings - whether against the company itself or against individual employees. We also offer our clients discreet support in internal company investigations.</p> </div> </div>"
+   },
+   {
+    "group": "beratung",
+    "id": "taxlaw",
+    "title": "Tax Law",
+    "html": "<p>The continuous change and - despite international coordination efforts - constantly growing complexity of tax systems increases the importance and value of competent advice in tax matters. Almost every entrepreneurial and commercial decision has an impact on the tax burden. For this reason, preliminary tax issues form an essential aspect of the advice provided to natural persons and legal entities.</p> <p>Our specialists support our clients in all matters relating to tax law. In particular, we help our clients with questions relating to taxes on profits, withholding taxes, value added taxes, income taxes and property gains taxes. This also applies to matters with cross-border implications. We also support our clients in any negotiations with the tax authorities by obtaining binding preliminary rulings and represent our clients in connection with tax law proceedings (objections, appeals and complaints). We are happy to assist both companies and private individuals with tax optimisation.</p> <p>Our specialists have many years of experience in the execution of mergers, acquisitions, spin-offs, management buyouts and similar transactions. Sound preliminary clarifications (within the framework of a so-called due diligence review) are just as indispensable here as the tailor-made structuring of such transactions.</p> </div> </div>"
+   },
+   {
+    "group": "beratung",
+    "id": "notary",
+    "title": "Notary",
+    "html": "<p>Our lawyers (Werner Räber, Sandra Kammerbauer, Joël Brochon and Alessandro Gerlach) are notary publics in the cantons of Schwyz (W. Räber) and Zug (S. Kammerbauer, J. Brochon and A. Gerlach). We advise our clients in a stylistically confident manner, help to shape corporate law processes and bring them to a conclusion efficiently. In addition, our notary publics also advise you with regard to contracts under matrimonial and inheritance law that need to be drafted.</p> </div> </div>"
+   },
+   {
+    "group": "prozess",
+    "id": "civilproceedings",
+    "title": "Civil proceedings",
+    "html": "<p>In addition to our advisory work, we also represent our clients before the civil and administrative courts.</p> <p>Our litigation practice covers all areas of commercial and corporate law and related fields of law. This includes, in particular, labour law, tenancy law, contract law, inheritance law and all bankruptcy proceedings. In addition to conducting ordinary civil proceedings, all enforcement and measure proceedings (attachment proceedings and other precautionary measures), international legal assistance and the recognition and enforcement of foreign decisions are part of our forensic activities.</p> </div> </div>"
+   },
+   {
+    "group": "prozess",
+    "id": "debtcollection",
+    "title": "Debt collection and insolvency",
+    "html": "<p>In the field of foreclosure law, we ensure that our clients can protect their rights quickly and successfully.</p> <p>Our lawyers have many years of experience in the field of debt enforcement and bankruptcy law and private international law. We help our clients to secure and enforce their claims, be it in the case of an attachment order or in the context of bankruptcy proceedings.</p> <p>Of particular importance are attachment proceedings, and of particular complexity are debt enforcement proceedings for the enforcement of pledges and bills of exchange with foreign implications. If the prerequisites are met, our lawyers assist our clients in enforcing paulian rescission actions and accompany them in probate proceedings.</p> </div> </div>"
+   },
+   {
+    "group": "prozess",
+    "id": "arbitration",
+    "title": "Arbitration",
+    "html": "<p>We advise and represent our clients in arbitration and related enforcement proceedings. Our lawyers are active in both so-called ad hoc and institutional arbitration proceedings conducted before recognised national or international arbitral institutions (International Chamber of Commerce (ICC) or the Swiss Chambers of Commerce). Our lawyers are also available for appointment to arbitration tribunals. Our expertise enables our lawyers to handle more complex cases. Our lawyers are also called upon in arbitration proceedings that have their origins in complex international transactions.</p> </div> </div> </article> <!-- </div>--> </div> </div>"
+   }
+  ],
+  "notary": "</nav> </header> <header> <div> <picture> <source src=\"/site/assets/files/1198/shutterstock_364368866-1.jpg\" srcset=\"/site/assets/files/1198/shutterstock_364368866-1.jpg\" media=\"(max-width: 575px)\"> <source src=\"/site/assets/files/1198/shutterstock_364368866.jpg\" srcset=\"/site/assets/files/1198/shutterstock_364368866.jpg\"> <img src=\"/site/assets/files/1198/shutterstock_364368866.jpg\" srcset=\"/site/assets/files/1198/shutterstock_364368866.jpg\" alt=\"\"> </picture> </div> </header> <section> <div> <div> <div> <h2>Company Formation Made Easy –</h2> <h2>Your Experts for Incorporation and Notarization</h2> </div> <div> <p>Company Formation and Notarial Services – Professional and Straightforward Legal Support</p> <p>As an experienced law firm, we offer competent and straightforward support in the formation of companies as well as in all types of notarial certifications. From the initial legal consultation to the final notarization, we guide you reliably through the entire process, ensuring that all legal requirements are met.</p> <p>Whether you are forming a limited liability company (GmbH), stock corporation (AG), foundation, or another legal entity – we are your trusted partner, offering expert advice and years of experience. Our goal is to ensure your formation is efficient, legally compliant, and tailored to your specific needs.</p> <p><strong>Our Services briefly: </strong></p> <p><strong>Corporate and Company Law </strong></p> <ul> <li>Formation of <strong>stock corporations (AG)</strong>, <strong>limited liability companies (GmbH)</strong>, <strong>cooperatives</strong>, and <strong>foundations</strong></li> </ul> <p>Notarization of corporate law matters, such as:</p> <ul> <li> <ul> <li>Amendments to articles of association (e.g. company name, registered office, purpose)</li> <li>Capital increases</li> <li>Transfer of shares (registered shares or capital contributions)</li> <li>Legal transformations (e.g. GmbH to AG)</li> <li>Asset transfers</li> <li>Liquidations</li> </ul> </li> </ul> <p><strong>Marriage and Inheritance Law</strong></p> <ul> <li>Drafting and notarization of <strong>marriage contracts</strong></li> <li>Inheritance agreements, optionally combined with marriage contracts (e.g. for spousal benefit arrangements)</li> <li>Wills (last wills and testaments)</li> <li>Advance care directives and living wills</li> </ul> <p><strong>Other Notarial Services </strong></p> <ul> <li>Guarantee declarations</li> <li>Certifications (e.g. of signatures, copies, documents)</li> </ul> <p><strong>Put your trust in our expertise.</strong></p> </div> <div> </div> </div> </div> </section> </main>",
+  "team_title": "Our Team",
+  "team": [
+   {
+    "name": "Gianni F. Zanetti",
+    "img": "/site/assets/files/1057/gianni_zanetti-1.jpg",
+    "role": "lic. iur., Attorney-at-law, SAV Labour Law Specialist, CAS Finance and Accounting for Lawyers, Managing Partner, ",
+    "email": "zanetti@zanettilaw.ch",
+    "teaser": "<p>CAS Finance and Accounting for Lawyers (2023)<br /> CAS and SAV Labour Law Specialist Examination (2011)<br /> Zurich Bar Examination (2005)<br /> Licentiate University of Zurich (2000)</p>",
+    "bio": "<h4>Education</h4> <ul> <li>CAS Finance and Accounting for Lawyers</li> <li>CAS und SAV Labour Law Specialist Examination (2011)</li> <li>Zurich Bar Examination (2005)</li> </ul> <h4>Career</h4> <ul> <li>Attorney-at-law and Managing Partner at Zanetti Attorneys at Law (since 2014)</li> <li>Attorney-at-law and partner at Furrer, Landtwing &amp; Zanetti (since 2010)</li> <li>Lecturer in Private International Law, Criminal and Criminal Procedure Law and Civil Procedure Law, MAS International Property course Swiss Federal Institute of Technology (ETH) Zurich (2007)</li> <li>Attorney-at-law at a large commercial law firm in Zurich (Staiger, Schwald &amp; Partner), Litigation Team, Head of Tenancy and Labour Law Department (2007-2009)</li> <li>Lecturer in civil and commercial law at the Commercial School Oerlikon (2003-2004)</li> <li>Trainee lawyer, later Attorney-at-law at a medium-sized, internationally oriented law firm in Zurich (Barandun, Hess von Graffenried; 2003-2007)</li> <li>Lawyer at Fortuna Legal Protection Insurance Company (2002-2003)</li> <li>Lawyer at UBS AG, Wealth Management, Private Banking, Financial Planning International (2001-2002)</li> <li>Auditor and legal secretary Zurich District Court (2000-2001)</li> </ul> <h4>Areas of expertise</h4> <p>Labour Law, Tenancy Law, Work contract Law, Contract Law, Corporate Law, Civil Procedure,<br /> Enforcement and Private International Law, Law of Succession, Property Law</p> <h4>Languages</h4> <p>German, English, French, Italian, Spanish</p> <h4>Other activities</h4> <p>Various board of directors mandates</p> <h4>Professional Memberships</h4> <p>Swiss Bar Association (SAV), Advocates' Association of the Canton of Zug, Italian Chamber of Commerce for Switzerland</p> <h4>Hobbies</h4> <p>Asian martial arts, chess, philosophy</p>"
+   },
+   {
+    "name": "Sandra M. Kammerbauer",
+    "img": "/site/assets/files/1060/philipboeni_0007_bearbeitet.jpg",
+    "role": "MLaw, Attorney-at-law and Notary public of Zug, SAV Labour Law Specialist, Partner, ",
+    "email": "kammerbauer@zanettilaw.ch",
+    "teaser": "<p>SAV Labour Law Specialist (2023)<br /> Admitted to the bar and notary's office of the Canton of Zug (2017)<br /> Master of Law (2015)<br /> Bachelor of Law (2013)</p>",
+    "bio": "<h4>Education</h4> <ul> <li>SAV Labour Law Specialist Examination (2023)</li> <li>Admitted to the bar and notary's office of the Canton of Zug (2017)</li> <li>Master of Law (2015)</li> <li>Bachelor of Law (2013)</li> </ul> <h4>Career</h4> <ul> <li>Attorney-at-law and notary at Zanetti Attorneys at Law (since 2017)</li> <li>Auditor at the Administrative Court of the Canton of Zug (2016)</li> <li>Substitute/lawyer at Zanetti Attorneys at Law (2015)</li> <li>Assistant legal counsel and consulting at a Law firm in Lucerne (2014)</li> </ul> <h4>Languages</h4> <p>German, English, French, Spanish</p>"
+   },
+   {
+    "name": "Thomas Locher",
+    "img": "/site/assets/files/1059/thomas_locher-1.jpg",
+    "role": "lic. iur., Attorney-at-law, CAS IRP-HSG insurance and liability law, social insurance specialist with federal certificate, Partner, ",
+    "email": "locher@zanettilaw.ch",
+    "teaser": "<p>Social insurance specialist with federal certificate (2010)<br /> CAS IRP-HSG in Insurance and Liability Law (2009)<br /> Zurich Bar Examination (2005)<br /> Licentiate University of Zurich (1998)</p>",
+    "bio": "<h4>Education</h4> <ul> <li>Social insurance specialist with federal certificate (2010)</li> <li>CAS IRP-HSG in Insurance and Liability Law (2009)</li> <li>Zurich Bar Examination (2005)</li> <li>Licentiate University of Zurich (1998)</li> </ul> <h4>Career</h4> <ul> <li>Attorney-at-law and partner at Zanetti Attorneys at Law (since 2014)</li> <li>Attorney-at-law, Legal Services, Personal Injury Insurance Company (since 2006)</li> <li>Claims lawyer Fortuna Legal Protection Insurance Company (2001-2003)</li> <li>Auditor Zurich District Court (2000-2001)</li> <li>Bankruptcy clerk mbA Inspectorate for the notary's offices, land registry and bankruptcy offices of the Canton of Zurich (1999-2000)</li> </ul> <h4>Areas of expertise</h4> <p>Labour Law, Social Security and Insurance Law, Liability Law, Contract Law</p> <h4>Languages</h4> <p>German</p> <h4>Hobbies</h4> <p>Sports, Culture, Travelling, Family</p>"
+   },
+   {
+    "name": "Joël E. Brochon",
+    "img": "/site/assets/files/1062/joel_brochon-1.jpg",
+    "role": "MLaw, Attorney-at-law and Notary public of Zug, Partner, ",
+    "email": "brochon@zanettilaw.ch",
+    "teaser": "<p>Admitted to the bar and notary's office of the Canton of Zug (2018)<br /> Master of Law (2016)<br /> Bachelor of Law (2013)</p>",
+    "bio": "<h4>Education</h4> <ul> <li>Admitted to the bar and notary's office of the Canton of Zug (2018)</li> <li>Master of Law (2016)</li> <li>Bachelor of Law (2013)</li> </ul> <h4>Career</h4> <ul> <li>Attorney-at-law and notary at Zanetti Attorneys at Law (since 2019)</li> <li>Substitute/lawyer at Zanetti Attorneys at Law (2016)</li> </ul> <h4>Languages</h4> <p>German, English, French</p>"
+   },
+   {
+    "name": "Claudia Schuler-Villiger",
+    "img": "/site/assets/files/1153/claudia_villiger_028_bearbeitet.jpg",
+    "role": "MLaw, Attorney-at-law",
+    "email": "villiger@zanettilaw.ch",
+    "teaser": "<p>Admitted to the bar office of the Canton of Aargau (2020)<br /> Master of Law (2017)<br /> Bachelor of Law (2015)</p>",
+    "bio": "<p><strong>Education</strong></p> <ul> <li>Admitted to the bar office of the Canton of Aargau (2020)</li> <li>Master of Law (2017)</li> <li>Bachelor of Law (2015)</li> </ul> <p><strong>Career</strong></p> <ul> <li>Attorney-at-law at Zanetti Attorneys at Law (2021)</li> <li>Trainee at a law firm in Aargau (10/2018 - 09/2019)</li> <li>Legal trainee at the District Court of Bremgarten (10/2017 - 09/2018)</li> </ul> <p><strong>Languages</strong></p> <p>German, English, French</p>"
+   },
+   {
+    "name": "Alessandro L. Gerlach",
+    "img": "/site/assets/files/1140/alessandro_gerlach.jpg",
+    "role": "MLaw, Attorney-at-law and Notary public of Zug",
+    "email": "gerlach@zanettilaw.ch",
+    "teaser": "<p>Admitted to the bar and notary's office of the Canton of Zug (2022)<br /> Master of Law (2020)<br /> Bachelor of Law (2019)</p>",
+    "bio": "<h4>Education</h4> <ul> <li>Admitted to the bar and notary's office of the Canton of Zug (2022)</li> <li>Master of Law (2020)</li> <li>Bachelor of Law (2019)</li> </ul> <h4>Career</h4> <ul> <li>Attorney-at-law at Zanetti Attorneys at Law (2022)</li> <li>Substitute/Legal Assistant at Zanetti Attorneys at Law (October 2020 - December 2021)</li> <li>Legal Assistant in a law firm in Aargau (2019-2020)</li> <li>Legal Assistant in a Zurich law firm (2016-2019)</li> </ul> <h4>Languages</h4> <p>German, English, Spanish</p>"
+   },
+   {
+    "name": "Gregor A. Zaugg",
+    "img": "/site/assets/files/1196/formatiertimg_9417-2_1.jpg",
+    "role": "MLaw, Lawyer",
+    "email": "zaugg@zanettilaw.ch",
+    "teaser": "<p>Lawyer's licence for the Canton of Lucerne (2025)</p> <p>Master of Law (2023)</p> <p>Bachelor of Law (2021)</p>",
+    "bio": "<p>Lawyer at Zanetti Attorneys at Law (2025)</p> <p>Legal advisor at a Lucerne law firm (01/2025 – 03/2025)</p> <p>Trainee lawyer at a Lucerne law firm (07/2023 – 12/2024)</p> <p>Legal intern at the Lucerne Public Prosecutor's Office, Department 4 Special Offences (04/2023 – 06/2023)</p> <p>Board member at Legalis Consilium Lucerne (01/2022 – 01/2023)</p> <p>Secretary and legal assistant at a law firm in Lucerne (07/2019 – 01/2023)</p> <p>Translated with DeepL.com (free version)</p>"
+   },
+   {
+    "name": "Lara Surer",
+    "img": "/site/assets/files/1180/img_1528.jpg",
+    "role": "MLaw, Rechtsanwältin und Urkundsperson des Kantons Zug",
+    "email": "surer@zanettilaw.ch",
+    "teaser": "<p>Anwalts- und Notariatspatent des Kantons Zug (2025)</p> <p>Master of Law (2021)</p> <p>Bachelor of Law (2018)</p>",
+    "bio": "<p><strong>Ausbildung</strong></p> <ul> <li>Master of Law (2021)</li> <li>Bachelor of Law (2018)</li> </ul> <p><strong>Berufserfahrung</strong></p> <ul> <li>Auditorin beim Kantonsgericht Zug (05/2023 – 10/2023)</li> <li>Juristin beim Generalsekretariat einer schweizerischen Krankenversicherung (Helsana Versicherungen AG) (03/2021 – 01/2023)</li> </ul> <p><strong>Sprachen</strong></p> <p>Deutsch, Englisch, Koreanisch, Französisch, Italienisch</p>"
+   },
+   {
+    "name": "Zacharias Ziegler",
+    "img": "/site/assets/files/1209/ziegler_zacharias-01_neu.jpg",
+    "role": "MLaw, Rechtsanwalt, Fachanwalt SAV Familienrecht/CAS Familienrecht",
+    "email": "",
+    "teaser": "<p>Fachanwalt SAV Familienrecht/CAS Familienrecht (2025)</p> <p>Anwaltspatent des Kantons Uri (2014)</p> <p>Master of Law (2010)</p> <p>Bachelor of Law (2008)</p>",
+    "bio": "<p><strong>Ausbildung </strong></p> <ul> <li>Fachanwalt SAV Familienrecht/CAS Familienrecht (2025)</li> <li>Anwaltspatent des Kantons Uri (2014)</li> <li>Master of Law (2010)</li> <li>Bachelor of Law (2008)</li> </ul> <p><strong>Berufserfahrung</strong></p> <ul> <li>Rechtsanwalt bei Zanetti Rechtsanwälte (2026)</li> <li>Rechtsanwalt bei Wild Dubach AG (03/2018 – 06/2026)</li> <li>Rechtsanwalt bei Brücker Bilger Rechtsanwälte und Notare (06/2014 – 02/2018)</li> <li>Juristischer Mitarbeiter bei Brücker Bilger Rechtsanwälte und Notare (03/2013 – 05/2014)</li> <li>Anwaltspraktikum des Kantons Uri (08/2011 – 02/2013)</li> </ul> <p><strong>Sprachen </strong></p> <p>Deutsch, Englisch, gute Kenntnisse in Französisch, Spanisch und Slowakisch</p>"
+   },
+   {
+    "name": "Daniel Isenegger",
+    "img": "/site/assets/files/1061/daniel_isenegger-1.jpg",
+    "role": "Fiduciary with federal certificate, certified fiduciary expert",
+    "email": "isenegger@zanettilaw.ch",
+    "teaser": "<p>Certified fiduciary expert (2002)<br /> Fiduciary with federal certificate (1999)<br /> Commercial vocational school, Lucerne</p>",
+    "bio": "<h4>Education</h4> <ul> <li>Certified fiduciary expert (2002)</li> <li>Fiduciary with federal certificate (1999)</li> <li>Commercial vocational school, Lucerne</li> </ul> <h4>Career</h4> <ul> <li>Since 2012 also Managing Partner of Xantrium Consulting AG, Baar</li> <li>Since 1998 with Dr. Thomas Fischer &amp; Partner AG, Baar, from 2003 as partner, from 2011 as senior partner</li> <li>Accounting/Tax Administrator at Balmer-Etienne AG in Lucerne</li> <li>Accounting/Tax clerk at Partner Treuhand AG in Hochdorf and Sursee</li> </ul> <h4>Areas of expertise</h4> <ul> <li>Tax consulting for individuals and legal entities</li> <li>Structural planning and succession planning</li> <li>Business valuations, management consulting</li> <li>Finance and accounting</li> </ul> <h4>Languages</h4> <p>German, English</p> <h4>Other activities</h4> <ul> <li>Various board of directors mandates</li> <li>Lecturer in the field of taxes and pensions</li> <li>Memberships</li> <li>Trust|Suisse Central Switzerland</li> <li>Lions Club Lucerne-Hof (Treasurer)</li> <li>Golf Club Rastenmoos</li> </ul> <h4>Hobbies</h4> <p>Family, golf, jogging, cooking, food and wines</p>"
+   },
+   {
+    "name": "Camille Gottraux",
+    "img": "/site/assets/files/1203/formatiertimg_9585-3.jpg",
+    "role": "MLaw, Juristische Mitarbeiterin",
+    "email": "gottraux@zanettilaw.ch",
+    "teaser": "<p>Master of Law (2025), zweisprachig (DE/FR)</p> <p>Bachelor of Law (2024)</p>",
+    "bio": "<p><strong>Ausbildung</strong></p> <ul> <li>Master of Law (2025), zweisprachig (DE/FR)</li> <li>Bachelor of Law (2024)</li> </ul> <p><strong>Berufserfahrung</strong></p> <ul> <li>Kurzpraktikantin bei Lenz &amp; Staehelin in Zürich (01/2024-02/2024)</li> <li>Mitarbeitende Sportbereich Freiruum Zug (10/2019-02/2025)</li> </ul> <p><strong>Sprachen</strong></p> <p>Deutsch, Französisch, Englisch, Spanisch</p>"
+   },
+   {
+    "name": "Marco Näpflin",
+    "img": "/site/assets/files/1159/final_quer-img_6783.jpg",
+    "role": "Legal Employee, ",
+    "email": "naepflin@zanettilaw.ch",
+    "teaser": "<p>BSc in Business Law, ZHAW Winterthur (2024)<br /> Commercial vocational school with vocational baccalaureate (2016)</p>",
+    "bio": "<p><strong>Education</strong></p> <ul> <li>BSc in Business Law, ZHAW Winterthur (2024)</li> <li>Commercial vocational school with vocational baccalaureate (2016)</li> </ul> <p><strong>Career</strong></p> <ul> <li>Legal Assistant / Paralegal (since 2021)</li> <li>Clerk, Office for Health and Social Affairs, Schwyz (2020-2021)</li> <li>Legal and Notary Assistant, Zanetti Attorneys at Law AG, Baar (2018-2020)</li> <li>Commercial trainee, Boostgroup AG, Steinhausen (2017-2018)</li> <li>Commercial apprenticeship, Cantonal Administration Schwyz, Schwyz (2012-2015)</li> </ul> <p><strong>Languages</strong></p> <p>German, English, French</p>"
+   },
+   {
+    "name": "Vera Suter",
+    "img": "/site/assets/files/1157/vera_sutter_067_bearbeitet.jpg",
+    "role": "Office Manager, ",
+    "email": "suter@zanettilaw.ch",
+    "teaser": "<p>MAS in Special Education (2012)<br /> Primary teaching diploma (2001)</p>",
+    "bio": "<h4>Education</h4> <ul> <li>MAS in Special Education (2012)</li> <li>Primary teaching diploma (2001)</li> </ul> <h4>Career</h4> <ul> <li>School remedial teacher at the elementary school Baar (2009 - 2021)</li> <li>Primary teacher at various regular schools (2001 - 2009)</li> </ul> <h4>Languages</h4> <p>German, English, Italian, French</p>"
+   },
+   {
+    "name": "Delvina Kuci",
+    "img": "/site/assets/files/1178/portraitdk.jpg",
+    "role": "Rechtsanwalts- und Notariatsassistentin, ",
+    "email": "kuci@zanettilaw.ch",
+    "teaser": "<p>Direktionsassistentin mit eidgenössischem Fachausweis (2022)</p> <p>Kaufmännische Ausbildung EFZ</p>",
+    "bio": "<p><strong>Ausbildung</strong></p> <ul> <li>Direktionsassistentin mit eidgenössischem Fachausweis (2022)</li> <li>Kaufmännische Ausbildung EFZ</li> </ul> <p><strong>Berufserfahrung</strong></p> <ul> <li>Sachbearbeiterin in einer Zuger Bürogestaltungsfirma (2019-2023)</li> </ul> <p><strong>Sprachen</strong></p> <p>Deutsch, Englisch, Albanisch</p>"
+   },
+   {
+    "name": "Ramona Gaudio",
+    "img": "/site/assets/files/1064/ramona_palatucci_033_bearbeitet.jpg",
+    "role": "Responsible for accounting and human resources",
+    "email": "palatucci@zanettilaw.ch",
+    "teaser": "<p>BSc in Business Administration, ZHAW Winterthur (2020)<br /> Commercial Vocational School, Zug (2015)</p>",
+    "bio": "<h4>Education</h4> <ul> <li>BSc in Business Administration, ZHAW Winterthur (2020)</li> <li>Commercial Vocational School, Zug (2015)</li> </ul> <h4>Career</h4> <ul> <li>Sales assistant, clerk, AMAG Automobil- und Motoren AG, Rain, Zurich (2015-2017)</li> <li>Commercial apprenticeship, AMAG Automobil- und Motoren AG, Cham (2012-2015)</li> </ul> <h4>Languages</h4> <p>English, French, German, Italian</p>"
+   }
+  ],
+  "pubs_title": "Some selected publications",
+  "pubs": [
+   {
+    "name": "Gianni F. Zanetti",
+    "items": [
+     [
+      "2025",
+      "Renovation leave and guarantee by the tenant to move out",
+      "Tenancy law practice (mp 3/2025)"
+     ],
+     [
+      "2024",
+      "The non-competition clause under labour law - with a focus on the employee's personal characteristics",
+      "Anwaltsrevue 1/2024"
+     ],
+     [
+      "2017",
+      "Qualification of the \"bonus\": salary or gratuity?",
+      "in: Digitaler Rechtsprechungs-Kommentar (dRSK), Issue 131, April 2022"
+     ],
+     [
+      "2017",
+      "Reciprocal concessions in termination agreements (commentary on the BGer 4A_673/2016 ruling of 3 July 2017)",
+      "in: Digitaler Rechtsprechungs-Kommentar (dRSK), Issue 78, November 2017"
+     ],
+     [
+      "2015",
+      "The prohibition of competition under labour law",
+      "Tax Practice of the Canton of Zug, No. 59"
+     ],
+     [
+      "2012",
+      "The termination agreement under labour law",
+      "(Lawyers' Review 2/2012)"
+     ],
+     [
+      "2011",
+      "Selected aspects of the raw construction rent",
+      "Tenancy law practice (mp 2/2011)"
+     ],
+     [
+      "2010",
+      "Labour relations in an international context",
+      "Tax Practice of the Canton of Zug, No. 45"
+     ],
+     [
+      "2009",
+      "Innovations in the fight against undeclared work",
+      "Newsletter Staiger, Schwald & Partner"
+     ],
+     [
+      "2009",
+      "Innovations in tenancy law",
+      "Newsletter Staiger, Schwald & Partner"
+     ],
+     [
+      "2009",
+      "The termination agreement",
+      "Tenancy law practice (mp 2/2009)"
+     ]
+    ]
+   },
+   {
+    "name": "Sandra M. Kammerbauer",
+    "items": [
+     [
+      "2024",
+      "The non-competition clause under labour law - with a focus on the employee's personal characteristics",
+      "Anwaltsrevue 1/2024"
+     ],
+     [
+      "2022",
+      "Qualification of the \"bonus\": salary or gratuity?",
+      "in: Digitaler Rechtsprechungs-Kommentar (dRSK), Issue 131, April 2022"
+     ],
+     [
+      "2017",
+      "Reciprocal concessions in termination agreements (commentary on the BGer 4A_673/2016 ruling of 3 July 2017)",
+      "in: Digitaler Rechtsprechungs-Kommentar (dRSK), Issue 78, November 2017"
+     ]
+    ]
+   },
+   {
+    "name": "Alessandro L. Gerlach",
+    "items": [
+     [
+      "2025",
+      "Renovation leave and guarantee by the tenant to move out",
+      "Tenancy law practice (mp 3/2025)"
+     ]
+    ]
+   }
+  ],
+  "contact": "</nav> </header> <header> <div> <picture> <source src=\"/site/assets/files/1032/zanetti_kontakt_mobile.jpg\" srcset=\"/site/assets/files/1032/zanetti_kontakt_mobile.jpg\" media=\"(max-width: 575px)\"> <source src=\"/site/assets/files/1032/zanetti_kontakt_2x-1.jpg\" srcset=\"/site/assets/files/1032/zanetti_kontakt_2x-1.jpg\"> <img src=\"/site/assets/files/1032/zanetti_kontakt_2x-1.jpg\" srcset=\"/site/assets/files/1032/zanetti_kontakt_2x-1.jpg\" alt=\"\"> </picture> </div> </header> <section> <div> <div> <div> <h2>Our locations</h2> </div> <div> <p>You can reach us as follows:</p> <p><strong>Head Office Zug</strong><br /> Zanetti Rechtsanwälte AG<br /> Blegistrasse 9<br /> 6340 Baar, Zug<br /> T + 41 41 766 35 85<br /> F + 41 41 766 35 80<br /> <a href=\"mailto:info@zanettilaw.ch\">info@zanettilaw.ch</a> </p> <p>(or via the e-mail address of the employees)</p> <p><strong>Office Zürich</strong><br /> Zanetti Rechtsanwälte AG<br /> Allmendstrasse 2<br /> 8105 Regensdorf, Zürich</p> <p><strong>Office Schwyz</strong><br /> Zanetti Rechtsanwälte AG<br /> Glorihöchi 4<br /> 6403 Küssnacht am Rigi, Schwyz</p> </div> <div> <iframe src=\"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10840.119222836278!2d8.5708996!3d47.2159991!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xa08f4c2cdbca22ee!2sZanetti+Rechtsanw%C3%A4lte+AG!5e0!3m2!1sde!2sch!4v1552574030713\" width=\"100%\" height=\"100%\" frameborder=\"0\" allowfullscreen></iframe> </div> </div> </div> </section> </main>",
+  "members": "</nav> </header> <header> <div> <picture> <source src=\"/site/assets/files/1033/zanetti_mitgliedschaften_mobile.jpg\" srcset=\"/site/assets/files/1033/zanetti_mitgliedschaften_mobile.jpg\" media=\"(max-width: 575px)\"> <source src=\"/site/assets/files/1033/zanetti_mitgliedschaften_2x.jpg\" srcset=\"/site/assets/files/1033/zanetti_mitgliedschaften_2x.jpg\"> <img src=\"/site/assets/files/1033/zanetti_mitgliedschaften_2x.jpg\" srcset=\"/site/assets/files/1033/zanetti_mitgliedschaften_2x.jpg\" alt=\"\"> </picture> </div> </header> <section> <div> <div> <div> <h2>We are a member of various<br /> networks and associations</h2> </div> <div> <p><strong>Legal Netlink Alliance</strong><br /> Zanetti Attorneys at Law Ltd. is a member of Legal Netlink Alliance (LNA). Legal Netlink Alliance is a global network of carefully selected mid-sized forensic and advisory law firms, chosen for their high quality and integrity. Thanks to this network and the membership of high-quality law firms, the clients of the member firms receive the added value of high-quality legal representation worldwide when needed.</p> <p><a href=\"http://www.legalnetlink.net\">www.legalnetlink.net</a></p> <p><img alt=\"\" src=\"/site/assets/files/1033/lna_logo_500px.180x0-is.jpg\" width=\"180\" /></p> </div> <div> <div> <div> <p>Advocates&#039; Association of the Canton of Zug</p> <p><a href=\"http://www.advokaten-zug.ch\">www.advokaten-zug.ch</a></p> </div> <div> <img src=\"/site/assets/files/1114/advokatenverein_500px.jpg\" alt=\"\"> </div> </div> <div> <div> <p>Swiss Bar Association</p> <p><a href=\"http://www.sav-fsa.ch\">www.sav-fsa.ch</a></p> </div> <div> <img src=\"/site/assets/files/1115/sav_fsa_logo_500px.jpg\" alt=\"\"> </div> </div> <div> <div> <p>Zurich Bar Association</p> <p><a href=\"http://www.zav.ch\">www.zav.ch</a></p> </div> <div> <img src=\"/site/assets/files/1116/zuercher_anwaltsverband_500px.jpg\" alt=\"\"> </div> </div> </div> </div> </div> </section> </main>",
+  "imprint": "</nav> </header> <!-- <header> <div> <picture> <source src=\"\" srcset=\"\" media=\"(max-width: 575px)\"> <source src=\"\" srcset=\"\"> <img src=\"\" srcset=\"\" alt=\"\"> </picture> </div> </header> --> <section> <div> <div> <div> <h2>Imprint</h2> </div> <div> <p><strong>Overall responsibility</strong><br /> Zanetti Rechtsanwälte AG<br /> Blegistrasse 9<br /> 6340 Baar</p> <p>T +41 41 766 35 85<br /> F + 41 41 766 35 80<br /> <a href=\"mailto:info@zanettilaw.ch\">info@zanettilaw.ch</a></p> <p><strong>Design &amp; Development</strong><br /> silent studio AG<br /> Sinserstrasse 2<br /> 6330 Cham</p> <p>T +41 41 541 55 60<br /> <a href=\"mailto:info@silentstudio.ch\">info@silentstudio.ch</a></p> </div> </div> </div> </section> </main>",
+  "privacy": "</nav> </header> <!-- <header> <div> <picture> <source src=\"\" srcset=\"\" media=\"(max-width: 575px)\"> <source src=\"\" srcset=\"\"> <img src=\"\" srcset=\"\" alt=\"\"> </picture> </div> </header> --> <section> <div> <div> <div> <h2>Data protection</h2> </div> <div> <p><strong>Collection, processing and use of personal data</strong><br /> We do not collect any personal data from you when you visit this website. Personal data is only collected if you provide it to us yourself via our contact form. This data will only be used to answer your request and will be deleted afterwards.</p> <p><strong>Server log files</strong><br /> As with any connection to a web server, the server of our web hosting provider cyon in Basel, Switzerland, logs and stores certain technical data. This data includes the IP address and the operating system of your device, the data, the access time, the type of browser and the browser request including the origin of the request (referrer). This is necessary for technical reasons in order to provide you with our website. The web hosting provider protects this data from unauthorised access with technical and organisational measures and does not pass it on to third parties. Where we process personal data in the process, we do so because of our interest in providing you with the best possible user experience and ensuring the security and stability of our systems.</p> <p><strong>Your rights</strong><br /> You are generally entitled to the rights of access, rectification, erasure, restriction, data portability, revocation and objection. If you believe that the processing of your data violates data protection law or your data protection rights have otherwise been violated in some way, you can complain to the supervisory authority.</p> </div> </div> </div> </section> </main>"
+ }
+}
