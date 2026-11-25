@@ -78,3 +78,9 @@ ol.cards .acard { min-height: 150px; justify-content: space-between; }
 .pc-role { font-size: .9rem; color: var(--on-dark-2); line-height: 1.35; }
 .pc-city { margin-top: auto; padding-top: 10px; font-size: .85rem; color: var(--accent); }
 .rail { grid-auto-columns: minmax(250px, 1fr); }
+
+.made { display: inline-flex; align-items: center; gap: 10px; text-decoration: none !important; opacity: .85; transition: opacity .2s; }
+.made:hover { opacity: 1; }
+.made span { font-size: .82rem; }
+.made img { height: 26px; width: auto; }
+.foot-legal { align-items: center; }

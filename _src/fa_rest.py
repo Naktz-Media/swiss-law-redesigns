@@ -1,3 +1,4 @@
+MADE_BY = {'de': 'Gestaltet von', 'fr': 'Conçu par', 'it': 'Realizzato da', 'en': 'Designed by'}
 X = {
  'de': dict(spec='Fachanwälte', cant='Kantone', langs_n='Sprachen', profile='Profil', open='Profil ansehen', all='Alle anzeigen',
             certified='Zertifiziert durch den Schweizerischen Anwaltsverband SAV', why='Was eine Fachanwältin, einen Fachanwalt auszeichnet',
@@ -126,7 +127,7 @@ def footer(l, page_key, profile=False):
     <nav aria-label="{e(UI[l]['bycanton'])}"><h3>{e(UI[l]['bycanton'])}</h3>{cl}</nav>
     <nav aria-label="{UI[l]['lang']}"><h3>{UI[l]['lang']}</h3>{langs}</nav>
   </div>
-  <div class="foot-legal"><p>© 2026 {e(UI[l]['law'])}</p><p><a href="{url(l,'disclaimer')}">{e(nav[4])}</a> · <a href="{url(l,'contact')}">{e(nav[3])}</a></p></div>
+  <div class="foot-legal"><p>© 2026 {e(UI[l]['law'])}</p><p><a href="{url(l,'disclaimer')}">{e(nav[4])}</a> · <a href="{url(l,'contact')}">{e(nav[3])}</a></p><a class="made" href="https://naktz.com/" rel="noopener"><span>{MADE_BY[l]}</span><img src="../assets/naktz-logo.png" alt="Naktz Media" width="105" height="30"></a></div>
   {credits_html(l)}
   <p class="foot-word" aria-hidden="true">{e(BIG[l])}</p>
 </footer>

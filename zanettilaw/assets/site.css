@@ -267,3 +267,9 @@ textarea.inp { min-height: 120px; resize: vertical; }
   .mini span { display: none; }
   .about-text p { font-size: .97rem; }
 }
+
+.made { display: inline-flex; align-items: center; gap: 10px; text-decoration: none !important; opacity: .85; transition: opacity .2s; }
+.made:hover { opacity: 1; }
+.made span { font-size: .82rem; }
+.made img { height: 26px; width: auto; }
+.foot-legal { align-items: center; }

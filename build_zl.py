@@ -85,6 +85,7 @@ def nav_labels(l):
     return dict(zip(KEYS, D[l]['nav']))
 
 
+MADE_BY = {'de': 'Gestaltet von', 'fr': 'Conçu par', 'it': 'Realizzato da', 'en': 'Designed by'}
 CAL = '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2" y="3" width="12" height="11" rx="1.5"/><path d="M2 6.5h12M5.5 1.5v3M10.5 1.5v3"/></svg>'
 CHEV = '<svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3 5l4 4 4-4"/></svg>'
 PLAY = '<svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M5 3l8 5-8 5z"/></svg>'
@@ -199,7 +200,7 @@ def footer(pg):
       <div><h3>{e(X[l]['our_offices'])}</h3><div class="foot-offs">{offs}</div></div>
       <nav aria-label="{UI[l]['lang']}"><h3>{UI[l]['lang']}</h3><a href="{pg.href(pg.key, 'de')}" lang="de">Deutsch</a><a href="{pg.href(pg.key, 'en')}" lang="en">English</a></nav>
     </div>
-    <div class="foot-legal"><p>© 2026 {e(UI[l]['name'])}</p><p><a href="{pg.href('imprint')}">{e(UI[l]['imprint'])}</a> · <a href="{pg.href('privacy')}">{e(UI[l]['privacy'])}</a></p></div>
+    <div class="foot-legal"><p>© 2026 {e(UI[l]['name'])}</p><p><a href="{pg.href('imprint')}">{e(UI[l]['imprint'])}</a> · <a href="{pg.href('privacy')}">{e(UI[l]['privacy'])}</a></p><a class="made" href="https://naktz.com/" rel="noopener"><span>{MADE_BY[l]}</span><img src="{pg.b}img/naktz-logo.png" alt="Naktz Media" width="105" height="30"></a></div>
     {credits_html(pg)}
   </div>
 </footer>
