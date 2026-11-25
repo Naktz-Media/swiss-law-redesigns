@@ -98,16 +98,16 @@ def credits_html(l):
 
 MADE_BY = {'de': 'Gestaltet von', 'fr': 'Conçu par', 'it': 'Realizzato da', 'en': 'Designed by'}
 X = {
- 'de': dict(spec='Fachanwälte', cant='Kantone', langs_n='Sprachen', profile='Profil', open='Profil ansehen', all='Alle anzeigen',
+ 'de': dict(brand='Fachanwälte SAV', spec='Fachanwälte', cant='Kantone', langs_n='Sprachen', profile='Profil', open='Profil ansehen', all='Alle anzeigen',
             certified='Zertifiziert durch den Schweizerischen Anwaltsverband SAV', why='Was eine Fachanwältin, einen Fachanwalt auszeichnet',
             team='Spezialistinnen und Spezialisten aus der ganzen Schweiz', pick='Kanton wählen', site='Seiten', search='Suche'),
- 'fr': dict(spec='Spécialistes', cant='Cantons', langs_n='Langues', profile='Profil', open='Voir le profil', all='Tout afficher',
+ 'fr': dict(brand='Spécialistes FSA', spec='Spécialistes', cant='Cantons', langs_n='Langues', profile='Profil', open='Voir le profil', all='Tout afficher',
             certified='Certifiés par la Fédération Suisse des Avocats FSA', why='Ce qui distingue une avocate ou un avocat spécialiste',
             team='Des spécialistes dans toute la Suisse', pick='Choisir un canton', site='Pages', search='Recherche'),
- 'it': dict(spec='Specialisti', cant='Cantoni', langs_n='Lingue', profile='Profilo', open='Vedi il profilo', all='Mostra tutti',
+ 'it': dict(brand='Specialisti FSA', spec='Specialisti', cant='Cantoni', langs_n='Lingue', profile='Profilo', open='Vedi il profilo', all='Mostra tutti',
             certified='Certificati dalla Federazione Svizzera degli Avvocati FSA', why='Che cosa contraddistingue un avvocato specialista',
             team='Specialisti in tutta la Svizzera', pick='Scegliere un cantone', site='Pagine', search='Ricerca'),
- 'en': dict(spec='Specialists', cant='Cantons', langs_n='Languages', profile='Profile', open='View profile', all='Show all',
+ 'en': dict(brand='Specialists SBA', spec='Specialists', cant='Cantons', langs_n='Languages', profile='Profile', open='View profile', all='Show all',
             certified='Certified by the Swiss Bar Association SBA', why='What sets a certified specialist apart',
             team='Specialists across Switzerland', pick='Choose a canton', site='Pages', search='Search'),
 }
@@ -124,7 +124,7 @@ for _l, _d in {
 }.items():
     ALT[_l].update(_d)
 
-PAGEIMG = dict(about='contract', areas='workers', lawyers='plenar', contact='lausanne', disclaimer='court')
+PAGEIMG = dict(about='workers', areas='ribbon', lawyers='plenar', contact='lausanne', disclaimer='court')
 
 
 def url(l, key, frm=None):
@@ -168,13 +168,13 @@ def head(l, title, desc, extra=''):
 
 def bar(l, active, page_key, profile=False):
     nav = P[l]['nav']
-    keys = ['about', 'areas', 'lawyers', 'contact', 'disclaimer']
+    keys = ['about', 'areas', 'lawyers', 'contact']
     links = ''.join(f'<a href="{url(l,k)}"{" aria-current=\"page\"" if k == active else ""}>{e(n)}</a>' for k, n in zip(keys, nav))
     langs = ''.join(
         f'<a href="../{x}/{(PROFILE[x] + ".html") if profile else url(x, page_key)}" hreflang="{x}" lang="{x}" data-keepquery title="{LANG_LABEL[x]}"{" aria-current=\"true\"" if x == l else ""}>{x.upper()}</a>'
         for x in LANGS)
     return f'''<div class="bar">
-    <a class="brand" href="{url(l,'about')}"><img src="../assets/favicon.svg" alt="" width="40" height="40"><span>{e(BIG[l])}<small>FSA · SAV</small></span></a>
+    <a class="brand" href="{url(l,'about')}"><img src="../assets/logo.svg" alt="" width="40" height="40"><span>{e(BIG[l])}<small>{e(X[l]["brand"])}</small></span></a>
     <nav class="pills" id="menu" aria-label="{e(UI[l]['law'])}">{links}</nav>
     <div class="bar-right">
       <nav class="langs" aria-label="{UI[l]['lang']}">{langs}</nav>
@@ -220,14 +220,13 @@ def footer(l, page_key, profile=False):
     <a class="btn light" href="{url(l,'lawyers')}" data-reveal>{e(UI[l]['find'])}<span class="arr">{ARR}</span></a>
   </div>
   <div class="foot-grid">
-    <div><h3>{e(UI[l]['law'])}</h3><p>{e(UI[l]['count'].format(n=len(L), k=len(cc)))}. {e(X[l]['certified'])}.</p></div>
+    <div><img class="foot-logo" src="../assets/logo.svg" alt="" width="48" height="48"><h3>{e(UI[l]['law'])}</h3><p>{e(UI[l]['count'].format(n=len(L), k=len(cc)))}. {e(X[l]['certified'])}.</p></div>
     <nav aria-label="{e(X[l]['site'])}"><h3>{e(X[l]['site'])}</h3>{links}</nav>
     <nav aria-label="{e(UI[l]['bycanton'])}"><h3>{e(UI[l]['bycanton'])}</h3>{cl}</nav>
     <nav aria-label="{UI[l]['lang']}"><h3>{UI[l]['lang']}</h3>{langs}</nav>
   </div>
   <div class="foot-legal"><p>© 2026 {e(UI[l]['law'])}</p><p><a href="{url(l,'disclaimer')}">{e(nav[4])}</a> · <a href="{url(l,'contact')}">{e(nav[3])}</a></p><a class="made" href="https://naktz.com/" rel="noopener"><span>{MADE_BY[l]}</span><img src="../assets/naktz-logo.png" alt="Naktz Media" width="105" height="30"></a></div>
   {credits_html(l)}
-  <p class="foot-word" aria-hidden="true">{e(BIG[l])}</p>
 </footer>
 <script src="../assets/site.js" defer></script>
 </body>
@@ -293,9 +292,9 @@ def page_about(l):
     s = head(l, title, lead)
     s += '<body class="home">\n' + f'<a class="skip" href="#main">{UI[l]["skip"]}</a>\n'
     s += f'''<header class="hero">
-  <div class="hero-bg">{img(l,'contract','', 1920, 1440, False)}</div>
+  <div class="hero-bg">{img(l,'workers','', 1920, 1440, False)}</div>
   {bar(l, 'about', 'about')}
-  <div class="hero-main"><h1 id="h1" class="hero-h h-xl">{lines(banner_small(l))}<span class="l"><span style="--i:3" class="hl">{e(BIG[l])}</span></span></h1></div>
+  <div class="hero-main"><h1 id="h1" class="hero-h h-xl home-h"><span class="l"><span style="--i:0">{e(banner_small(l))}</span></span> <span class="l"><span style="--i:1" class="hl">{e(BIG[l])}</span></span></h1></div>
   <div class="hero-foot">
     <p class="hero-sub" data-load>{e(lead)}</p>
     <div class="widget-wrap" data-load>
@@ -304,7 +303,6 @@ def page_about(l):
         <label for="q-canton" class="vh">{e(p['form']['canton'])}</label>
         {canton_select(l, 'q-canton', True)}
         <button class="w-row w-main" type="submit" data-label-all="{e(UI[l]['show'])}" data-label-c="{e(UI[l]['showc'])}" data-total="{len(L)}"><span class="ic">{SEARCH}</span><span class="t">{e(UI[l]['show'].format(n=len(L)))}</span>{ARR}</button>
-        <a class="w-row" href="{url(l,'lawyers')}?result_type=rand">{e(p['form']['radios'][0])}{ARR}</a>
       </form>
     </div>
     <div class="hero-right" data-load>
@@ -367,9 +365,9 @@ def page_about(l):
       <p class="lead" data-reveal>{e(areas_lead)}</p>
       <a class="btn" href="{url(l,'areas')}" data-reveal>{e(p['nav'][1])}<span class="arr">{ARR}</span></a>
     </div>
-    <div class="cards two">
-      {''.join(f'<a class="acard" href="{url(l,"areas")}#a{k}" data-reveal><span class="ac-top"><h3>{e(t)}</h3><span class="circ">{ARR}</span></span></a>' for k, t in enumerate(areas[:6]))}
-    </div>
+    <ul class="alist">
+      {''.join(f'<li data-reveal><a href="{url(l,"areas")}#a{k}">{e(t)}<span class="arr">{ARR}</span></a></li>' for k, t in enumerate(areas[:6]))}
+    </ul>
   </div>
 </section>
 
@@ -400,7 +398,7 @@ def page_areas(l):
 <section class="panel" aria-label="{e(p['nav'][1])}">
   <div class="row-head"><h2 class="h-l" data-reveal>{e(UI[l]['law'])}</h2><p class="muted" data-reveal>{len(items)} {e(p['nav'][1])}</p></div>
   <ol class="cards">
-    {''.join(f'<li class="acard" id="a{k}" data-reveal><span class="ac-top"><span class="ac-num">{k+1:02d}</span></span><h3>{e(t)}</h3></li>' for k, t in enumerate(items))}
+    {''.join(f'<li class="acard" id="a{k}" data-reveal><h3>{e(t)}</h3></li>' for k, t in enumerate(items))}
   </ol>
 </section>
 <section class="panel soft" aria-label="{e(UI[l]['find'])}">
@@ -475,10 +473,10 @@ def page_profile(l):
 <main id="main">
 <article class="panel profile" id="profile" data-labels='{e(json.dumps({k: UI[l][k] for k in ("phone","fax","email","web","back","notfound","addr","canton_title")}, ensure_ascii=False))}'>
   <h1 class="h-l" id="p-name">{e(p['nav'][2])}</h1>
-  <p><a class="btn" href="{url(l,'lawyers')}">{e(UI[l]['back'])}<span class="arr">{ARR}</span></a></p>
+  <p><a class="back" href="{url(l,'lawyers')}">{LEFT}{e(UI[l]['back'])}</a></p>
 </article>
 </main>
-<script>window.PEOPLE={json.dumps(full, ensure_ascii=False)};window.CANTONS={json.dumps(p['form']['cantons'], ensure_ascii=False)};window.LIST="{url(l,'lawyers')}";window.ARR='{ARR}';</script>
+<script>window.PEOPLE={json.dumps(full, ensure_ascii=False)};window.CANTONS={json.dumps(p['form']['cantons'], ensure_ascii=False)};window.LIST="{url(l,'lawyers')}";window.ARR='{ARR}';window.LEFT='{LEFT}';</script>
 '''
     s += footer(l, 'lawyers', profile=True)
     return s

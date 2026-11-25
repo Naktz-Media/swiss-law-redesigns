@@ -105,9 +105,13 @@
     if (x.fax) dl += item(lab.fax, esc(x.fax));
     if (x.email) dl += item(lab.email, '<a href="mailto:' + esc(x.email) + '">' + esc(x.email) + '</a>');
     if (x.web) dl += item(lab.web, '<a href="' + esc(x.web) + '" rel="noopener">' + esc(x.web.replace(/^https?:\/\//, '').replace(/\/$/, '')) + '</a>');
+    var acts = '';
+    if (x.phone) acts += '<a class="btn" href="tel:' + x.phone.replace(/[^\d+]/g, '') + '">' + esc(x.phone) + '<span class="arr">' + ARR + '</span></a>';
+    if (x.email) acts += '<a class="btn line" href="mailto:' + esc(x.email) + '">' + esc(lab.email) + '<span class="arr">' + ARR + '</span></a>';
+    if (acts) acts = '<p class="p-acts">' + acts + '</p>';
     prof.innerHTML = '<div>' + photo + '</div>' +
       '<div class="p-body"><h1 class="h-l">' + esc(x.name) + '</h1>' + (x.title ? '<p class="p-title">' + esc(x.title) + '</p>' : '') +
-      '<p class="p-firm">' + esc(x.firm) + '</p><dl class="p-dl">' + dl + '</dl>' +
-      '<p><a class="btn" href="' + LIST + '">' + esc(lab.back) + '<span class="arr">' + ARR + '</span></a></p></div>';
+      '<p class="p-firm">' + esc(x.firm) + '</p>' + acts + '<dl class="p-dl">' + dl + '</dl>' +
+      '<p><a class="back" href="' + LIST + '">' + (window.LEFT || '') + esc(lab.back) + '</a></p></div>';
   }
 })();
