@@ -86,6 +86,10 @@ _r = random.Random(7)
 FEATURED = _r.sample(WITH_PHOTO, 10)
 
 
+import hashlib as _h, time as _t
+VER = _h.md5(b''.join(open(os.path.join(ROOT, f), 'rb').read() for f in ('avocat-droit-du-travail/assets/site.js', '_src/law.css', '_src/fa.css', '_src/fa_rest.py'))).hexdigest()[:8]
+
+
 def head(l, title, desc, extra=''):
     alts = ''.join(f'<link rel="alternate" hreflang="{x}" href="../{x}/">' for x in LANGS)
     return f'''<!doctype html>
@@ -100,7 +104,7 @@ def head(l, title, desc, extra=''):
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/site.css">
+<link rel="stylesheet" href="../assets/site.css?v={VER}">
 <script>document.documentElement.classList.add('js')</script>
 {extra}
 </head>
@@ -169,7 +173,7 @@ def footer(l, page_key, profile=False):
   <div class="foot-legal"><p>© 2026 {e(UI[l]['law'])}</p><p><a href="{url(l,'disclaimer')}">{e(nav[4])}</a> · <a href="{url(l,'contact')}">{e(nav[3])}</a></p><a class="made" href="https://naktz.com/" rel="noopener"><span>{MADE_BY[l]}</span><img src="../assets/naktz-logo.png" alt="Naktz Media" width="105" height="30"></a></div>
   {credits_html(l)}
 </footer>
-<script src="../assets/site.js" defer></script>
+<script src="../assets/site.js?v={VER}" defer></script>
 </body>
 </html>
 '''
