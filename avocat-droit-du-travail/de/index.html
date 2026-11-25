@@ -9,89 +9,126 @@
 <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders:wght@800&family=Public+Sans:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../assets/site.css">
 <script>document.documentElement.classList.add('js')</script>
 
 </head>
 <body class="home">
 <a class="skip" href="#main">Zum Inhalt</a>
-<header class="top">
-  <a class="mark" href="wer-wir-sind.html"><span>Fachanwältinnen &amp; Fachanwälte SAV</span> <b>Arbeitsrecht</b></a>
-  <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu">Menü</button>
-  <div class="menu" id="menu">
-    <nav class="nav" aria-label="Fachanwältinnen und Fachanwälte SAV Arbeitsrecht"><a href="wer-wir-sind.html" aria-current="page">Wer wir sind</a><a href="taetigkeitsgebiete.html">Tätigkeitsgebiete</a><a href="anwaeltinnen-anwaelte.html">Anwältinnen / Anwälte</a><a href="kontakt.html">Kontakt</a><a href="disclaimer.html">Disclaimer</a></nav>
-    <nav class="langs" aria-label="Sprache"><a href="../fr/portrait.html" hreflang="fr" lang="fr" data-keepquery title="Français">FR</a><a href="../de/wer-wir-sind.html" hreflang="de" lang="de" data-keepquery title="Deutsch" aria-current="true">DE</a><a href="../it/chi-siamo.html" hreflang="it" lang="it" data-keepquery title="Italiano">IT</a><a href="../en/who-we-are.html" hreflang="en" lang="en" data-keepquery title="English">EN</a></nav>
+<header class="hero">
+  <div class="hero-bg"><img src="../assets/contract.jpg" alt="Arbeitsvertrag mit Füllfederhalter" width="1920" height="1440" decoding="async"></div>
+  <div class="bar">
+    <a class="brand" href="wer-wir-sind.html"><img src="../assets/favicon.svg" alt="" width="40" height="40"><span>Arbeitsrecht<small>FSA · SAV</small></span></a>
+    <nav class="pills" id="menu" aria-label="Fachanwältinnen und Fachanwälte SAV Arbeitsrecht"><a href="wer-wir-sind.html" aria-current="page">Wer wir sind</a><a href="taetigkeitsgebiete.html">Tätigkeitsgebiete</a><a href="anwaeltinnen-anwaelte.html">Anwältinnen / Anwälte</a><a href="kontakt.html">Kontakt</a><a href="disclaimer.html">Disclaimer</a></nav>
+    <div class="bar-right">
+      <nav class="langs" aria-label="Sprache"><a href="../fr/portrait.html" hreflang="fr" lang="fr" data-keepquery title="Français">FR</a><a href="../de/wer-wir-sind.html" hreflang="de" lang="de" data-keepquery title="Deutsch" aria-current="true">DE</a><a href="../it/chi-siamo.html" hreflang="it" lang="it" data-keepquery title="Italiano">IT</a><a href="../en/who-we-are.html" hreflang="en" lang="en" data-keepquery title="English">EN</a></nav>
+      <a class="btn small light" href="anwaeltinnen-anwaelte.html">Fachanwalt finden<span class="arr"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3 11L11 3M4.5 3H11v6.5"/></svg></span></a>
+      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu">Menü</button>
+    </div>
+  </div>
+  <div class="hero-main"><h1 id="h1" class="hero-h h-xl"><span class="l"><span style="--i:0">Fachanwältinnen &amp;</span></span><span class="l"><span style="--i:1">Fachanwälte SAV</span></span><span class="l"><span style="--i:3" class="hl">Arbeitsrecht</span></span></h1></div>
+  <div class="hero-foot">
+    <p class="hero-sub" data-load>Rechtsanwälte und Rechtsanwältinnen mit dem Titel «Fachanwalt SAV Arbeitsrecht / Fachanwältin SAV Arbeitsrecht» sind ausgewiesene Experten beziehungsweise Expertinnen auf dem Gebiet des Arbeitsrechts.</p>
+    <div class="widget-wrap" data-load>
+      <form class="widget glass quick" action="anwaeltinnen-anwaelte.html" method="get">
+        <p class="w-label">Wählen Sie je nach Ihren Bedürfnissendie geeignete Fachanwältin oder den geeignetenFachanwalt:</p>
+        <label for="q-canton" class="vh">Kanton</label>
+        <select id="q-canton" name="canton"><option value="">Alle Kantone</option><option value="ZH">Zürich (89)</option><option value="BE">Bern (8)</option><option value="LU">Luzern (5)</option><option value="UR">Uri (0)</option><option value="SZ">Schwyz (0)</option><option value="OW">Obwalden (0)</option><option value="NW">Nidwalden (0)</option><option value="GL">Glarus (0)</option><option value="ZG">Zug (3)</option><option value="FR">Freiburg (4)</option><option value="SO">Solothurn (1)</option><option value="BS">Basel-Stadt (14)</option><option value="BL">Basel-Landschaft (2)</option><option value="SH">Schaffhausen (0)</option><option value="AR">Appenzell Ausserrhoden (0)</option><option value="AI">Appenzell Innerrhoden (0)</option><option value="SG">St. Gallen (8)</option><option value="GR">Graubünden (2)</option><option value="AG">Aargau (5)</option><option value="TG">Thurgau (5)</option><option value="TI">Tessin (2)</option><option value="VD">Waadt (27)</option><option value="VS">Wallis (1)</option><option value="NE">Neuenburg (2)</option><option value="GE">Genf (24)</option><option value="JU">Jura (0)</option></select>
+        <button class="w-row w-main" type="submit" data-label-all="{n} Fachanwältinnen und Fachanwälte anzeigen" data-label-c="{n} in {c} anzeigen" data-total="202"><span class="ic"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="7" cy="7" r="5"/><path d="M11 11l3.5 3.5"/></svg></span><span class="t">202 Fachanwältinnen und Fachanwälte anzeigen</span><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3 11L11 3M4.5 3H11v6.5"/></svg></button>
+        <a class="w-row" href="anwaeltinnen-anwaelte.html?result_type=rand">Zufällige Auswahl mit max. 8 Einträgen<svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3 11L11 3M4.5 3H11v6.5"/></svg></a>
+      </form>
+    </div>
+    <div class="hero-right" data-load>
+      <div class="avatars glass chip"><span class="faces"><img src="../img/lawyers/68.jpg" alt="" width="38" height="38"><img src="../img/lawyers/225.jpg" alt="" width="38" height="38"><img src="../img/lawyers/77.jpg" alt="" width="38" height="38"><img src="../img/lawyers/50.jpg" alt="" width="38" height="38"></span><span>202 · 17 Kantone</span></div>
+      <p>Zertifiziert durch den Schweizerischen Anwaltsverband SAV.</p>
+    </div>
   </div>
 </header>
 <main id="main">
-<section class="hero" aria-labelledby="h1">
-  <h1 id="h1" class="hero-h"><span class="hero-small mask"><span>Fachanwältinnen &amp; Fachanwälte SAV</span></span><span class="hero-big mask"><span>Arbeitsrecht</span></span></h1>
-  <div class="hero-foot">
-    <p class="hero-sub" data-load>Wählen Sie je nach Ihren Bedürfnissendie geeignete Fachanwältin oder den geeignetenFachanwalt:</p>
-    <form class="quick" action="anwaeltinnen-anwaelte.html" method="get" data-load>
-      <label for="q-canton" class="vh">Kanton</label>
-      <select id="q-canton" name="canton"><option value="">Alle Kantone</option><option value="ZH">Zürich (89)</option><option value="BE">Bern (8)</option><option value="LU">Luzern (5)</option><option value="UR">Uri (0)</option><option value="SZ">Schwyz (0)</option><option value="OW">Obwalden (0)</option><option value="NW">Nidwalden (0)</option><option value="GL">Glarus (0)</option><option value="ZG">Zug (3)</option><option value="FR">Freiburg (4)</option><option value="SO">Solothurn (1)</option><option value="BS">Basel-Stadt (14)</option><option value="BL">Basel-Landschaft (2)</option><option value="SH">Schaffhausen (0)</option><option value="AR">Appenzell Ausserrhoden (0)</option><option value="AI">Appenzell Innerrhoden (0)</option><option value="SG">St. Gallen (8)</option><option value="GR">Graubünden (2)</option><option value="AG">Aargau (5)</option><option value="TG">Thurgau (5)</option><option value="TI">Tessin (2)</option><option value="VD">Waadt (27)</option><option value="VS">Wallis (1)</option><option value="NE">Neuenburg (2)</option><option value="GE">Genf (24)</option><option value="JU">Jura (0)</option></select>
-      <button class="btn btn-ink" type="submit" data-label-all="{n} Fachanwältinnen und Fachanwälte anzeigen" data-label-c="{n} in {c} anzeigen" data-total="202">202 Fachanwältinnen und Fachanwälte anzeigen</button>
-    </form>
+<section class="panel" aria-labelledby="ab-h">
+  <div class="sec-head">
+    <h2 id="ab-h" class="h-l" data-reveal>Was eine Fachanwältin, einen Fachanwalt auszeichnet</h2>
+    <p class="lead center" data-reveal>Um Rechtssuchenden die Suche nach einem qualifizierten Rechtsbeistand zu erleichtern, führte der Schweizerische Anwaltsverband SAV im Jahr 2006 mit dem Titel «Fachanwalt SAV/Fachanwältin SAV» ein neues Gütesiegel ein, dies in den Bereichen Arbeitsrecht, Erbrecht, Bau- und Immobilienrecht, Familienrecht sowie Haftpflicht- und Versicherungsrecht.</p>
+  </div>
+  <div class="bento">
+    <figure class="photo" data-reveal><img src="../assets/plenar.jpg" alt="Plenarsaal des Bundesgerichts" width="1920" height="1269" loading="lazy" decoding="async">
+      <div class="stats">
+        <div class="stat glass"><b>202</b><span>Fachanwälte</span></div>
+        <div class="stat glass"><b>17</b><span>Kantone</span></div>
+        <div class="stat glass"><b>4</b><span>Sprachen</span></div>
+      </div>
+    </figure>
+    <div class="quote-card" data-reveal>
+      <blockquote class="long"><p>Den Titel «Fachanwalt SAV/Fachanwältin SAV im Arbeitsrecht» erhält nur, wer bestimmte Voraussetzungen erfüllt. Nebst überdurchschnittlicher Erfahrung im Arbeitsrecht und mehrjähriger Berufserfahrung als Rechtsanwalt oder Rechtsanwältin sind das Absolvieren einer intensiven und praxisorientierten Weiterbildung sowie das Bestehen einer schriftlichen Prüfung und eines Fachgespräches notwendig. Nach Erlangung des Titels besteht für Fachanwälte und Fachanwältinnen zudem eine Pflicht zur regelmässigen Weiterbildung.</p></blockquote>
+      <div class="who"><span class="mono">SAV</span><span><b>Fachanwältinnen und Fachanwälte SAV Arbeitsrecht</b><span>Wer wir sind</span></span></div>
+    </div>
+    <a class="photo" href="anwaeltinnen-anwaelte.html" data-reveal><img src="../assets/schweizerisches-bundesgericht-roter-saal-ca-1990.jpg" alt="Roter Saal des Schweizerischen Bundesgerichts in Lausanne" width="1920" height="1276" loading="lazy" decoding="async"><span class="tag">Anwältinnen / Anwälte<i><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3 11L11 3M4.5 3H11v6.5"/></svg></i></span><span class="ph-in"><span class="ph-name">Fachanwalt finden</span><span class="ph-role">202 Fachanwältinnen und Fachanwälte in 17 Kantonen</span></span></a>
   </div>
 </section>
 
-<section class="stairs-sec" aria-label="Wer wir sind">
-  <p class="stairs-text" data-reveal><span class="stair s0">Rechtsanwälte und Rechtsanwältinnen mit dem</span><span class="stair s1">Titel «Fachanwalt SAV Arbeitsrecht /</span><span class="stair s2">Fachanwältin SAV Arbeitsrecht» sind ausgewiesene</span><span class="stair s3">Experten beziehungsweise Expertinnen auf dem</span><span class="stair s4">Gebiet des Arbeitsrechts.</span></p>
-  <figure class="stairs-pics" data-reveal>
-    <img class="pic" src="../assets/winterthurer-bibliotheken-071824-sennhof-spinnerei-buehler-f.jpg" alt="Belegschaft der Spinnerei Bühler in Sennhof, historische Fotografie" width="1920" height="1299" loading="lazy" decoding="async">
-    <img class="pic" src="../assets/fotografie-bandfabrik-binderei.jpg" alt="Arbeiterin in einer Bandfabrik, historische Fotografie" width="1938" height="1280" loading="lazy" decoding="async">
-  </figure>
-</section>
-
-<section class="sav" aria-labelledby="sav-h">
-  <h2 id="sav-h" class="h2" data-reveal>Wer wir sind</h2>
-  <div class="sav-cols">
-    <p data-reveal>Um Rechtssuchenden die Suche nach einem qualifizierten Rechtsbeistand zu erleichtern, führte der Schweizerische Anwaltsverband SAV im Jahr 2006 mit dem Titel «Fachanwalt SAV/Fachanwältin SAV» ein neues Gütesiegel ein, dies in den Bereichen Arbeitsrecht, Erbrecht, Bau- und Immobilienrecht, Familienrecht sowie Haftpflicht- und Versicherungsrecht.</p><p data-reveal>Den Titel «Fachanwalt SAV/Fachanwältin SAV im Arbeitsrecht» erhält nur, wer bestimmte Voraussetzungen erfüllt. Nebst überdurchschnittlicher Erfahrung im Arbeitsrecht und mehrjähriger Berufserfahrung als Rechtsanwalt oder Rechtsanwältin sind das Absolvieren einer intensiven und praxisorientierten Weiterbildung sowie das Bestehen einer schriftlichen Prüfung und eines Fachgespräches notwendig. Nach Erlangung des Titels besteht für Fachanwälte und Fachanwältinnen zudem eine Pflicht zur regelmässigen Weiterbildung.</p>
+<section class="panel" aria-labelledby="st-h">
+  <div class="steps">
+    <figure class="photo" data-reveal><img src="../assets/scales1.jpg" alt="Justitia mit Waage" width="1920" height="1440" loading="lazy" decoding="async"></figure>
+    <div class="steps-mid">
+      <div class="sec-head left" style="margin:0">
+        <h2 id="st-h" class="h-m" data-reveal>Fachanwältinnen und Fachanwälte SAV Arbeitsrecht</h2>
+        
+      </div>
+      <div class="bignum" data-reveal><b>202</b><span>202 Fachanwältinnen und Fachanwälte in 17 Kantonen</span></div>
+    </div>
+    <div class="acc" data-reveal>
+      <details open><summary>Vorteile für den Klienten und die Klientin<span class="pm" aria-hidden="true"></span></summary><div class="acc-body"><p>Die Klientinnen und Klienten profitieren bei komplexen Rechtsfragen stark von der erhöhten Kompetenz der Fachanwältinnen und Fachanwälte, denn dank ihrer besonderen Kenntnisse und ihrer langjährigen Praxis können sie die Vorgaben der Klienten häufig schneller und effektiver umsetzen.</p></div></details><details><summary>Breites Wissen, grosse Erfahrung<span class="pm" aria-hidden="true"></span></summary><div class="acc-body"><p>Der Fachanwalt/die Fachanwältin bleibt aber Generalist und übernimmt alle Aufgaben eines Rechtsanwalts, denn Fachanwältinnen und Fachanwälte verfügen nach wie vor über breites Wissen und grosse Erfahrung im Schweizer Rechtssystem. Nebst ihrer Spezialisierung können sie so Rechtsuchende in allen anderen Fachbereichen kompetent und umfassend beraten.</p></div></details>
+    </div>
   </div>
 </section>
 
-<div class="fields">
-  <section class="field f-dark " aria-labelledby="f0">
-    <p class="field-text" data-reveal>Die Klientinnen und Klienten profitieren bei komplexen Rechtsfragen stark von der erhöhten Kompetenz der Fachanwältinnen und Fachanwälte, denn dank ihrer besonderen Kenntnisse und ihrer langjährigen Praxis können sie die Vorgaben der Klienten häufig schneller und effektiver umsetzen.</p>
-    <h2 id="f0" class="field-h" data-reveal>Vorteile für den Klienten und die Klientin</h2>
-  </section>
-  <section class="field f-accent mirror" aria-labelledby="f1">
-    <p class="field-text" data-reveal>Der Fachanwalt/die Fachanwältin bleibt aber Generalist und übernimmt alle Aufgaben eines Rechtsanwalts, denn Fachanwältinnen und Fachanwälte verfügen nach wie vor über breites Wissen und grosse Erfahrung im Schweizer Rechtssystem. Nebst ihrer Spezialisierung können sie so Rechtsuchende in allen anderen Fachbereichen kompetent und umfassend beraten.</p>
-    <h2 id="f1" class="field-h" data-reveal>Breites Wissen, grosse Erfahrung</h2>
-  </section>
-  <section class="field f-surface " aria-labelledby="f2">
-    <p class="field-text" data-reveal>Die Fachanwältinnen und Fachanwälte beraten Sie in allen oder einzelnen Gebieten des Arbeits- rechts, namentlich in den folgenden Bereichen: <a class="field-link" href="taetigkeitsgebiete.html">Tätigkeitsgebiete →</a></p>
-    <h2 id="f2" class="field-h" data-reveal>Tätigkeitsgebiete</h2>
-  </section>
-</div>
-<figure class="band" data-reveal><img class="pic band-img" src="../assets/bibliothek-des-schweizerischen-bundesgerichts-ca-1990.jpg" alt="Bibliothek des Schweizerischen Bundesgerichts" width="1920" height="1253" loading="lazy" decoding="async"></figure>
-
-<section class="cantons" aria-labelledby="ct-h">
-  <div class="cantons-col">
-    <h2 id="ct-h" class="h3" data-reveal>Nach Kanton</h2>
-    <ul class="rows">
-      <li data-reveal><a href="anwaeltinnen-anwaelte.html?canton=ZH"><span class="code">ZH</span><span class="name">Zürich</span><span class="val">89</span></a></li><li data-reveal><a href="anwaeltinnen-anwaelte.html?canton=BE"><span class="code">BE</span><span class="name">Bern</span><span class="val">8</span></a></li><li data-reveal><a href="anwaeltinnen-anwaelte.html?canton=LU"><span class="code">LU</span><span class="name">Luzern</span><span class="val">5</span></a></li><li data-reveal><a href="anwaeltinnen-anwaelte.html?canton=ZG"><span class="code">ZG</span><span class="name">Zug</span><span class="val">3</span></a></li><li data-reveal><a href="anwaeltinnen-anwaelte.html?canton=FR"><span class="code">FR</span><span class="name">Freiburg</span><span class="val">4</span></a></li><li data-reveal><a href="anwaeltinnen-anwaelte.html?canton=SO"><span class="code">SO</span><span class="name">Solothurn</span><span class="val">1</span></a></li><li data-reveal><a href="anwaeltinnen-anwaelte.html?canton=BS"><span class="code">BS</span><span class="name">Basel-Stadt</span><span class="val">14</span></a></li><li data-reveal><a href="anwaeltinnen-anwaelte.html?canton=BL"><span class="code">BL</span><span class="name">Basel-Landschaft</span><span class="val">2</span></a></li><li data-reveal><a href="anwaeltinnen-anwaelte.html?canton=SG"><span class="code">SG</span><span class="name">St. Gallen</span><span class="val">8</span></a></li><li data-reveal><a href="anwaeltinnen-anwaelte.html?canton=GR"><span class="code">GR</span><span class="name">Graubünden</span><span class="val">2</span></a></li><li data-reveal><a href="anwaeltinnen-anwaelte.html?canton=AG"><span class="code">AG</span><span class="name">Aargau</span><span class="val">5</span></a></li><li data-reveal><a href="anwaeltinnen-anwaelte.html?canton=TG"><span class="code">TG</span><span class="name">Thurgau</span><span class="val">5</span></a></li><li data-reveal><a href="anwaeltinnen-anwaelte.html?canton=TI"><span class="code">TI</span><span class="name">Tessin</span><span class="val">2</span></a></li><li data-reveal><a href="anwaeltinnen-anwaelte.html?canton=VD"><span class="code">VD</span><span class="name">Waadt</span><span class="val">27</span></a></li><li data-reveal><a href="anwaeltinnen-anwaelte.html?canton=VS"><span class="code">VS</span><span class="name">Wallis</span><span class="val">1</span></a></li><li data-reveal><a href="anwaeltinnen-anwaelte.html?canton=NE"><span class="code">NE</span><span class="name">Neuenburg</span><span class="val">2</span></a></li><li data-reveal><a href="anwaeltinnen-anwaelte.html?canton=GE"><span class="code">GE</span><span class="name">Genf</span><span class="val">24</span></a></li>
-    </ul>
+<section class="panel dark" aria-labelledby="tm-h">
+  <div class="row-head">
+    <div class="sec-head left" style="margin:0"><h2 id="tm-h" class="h-l" data-reveal>Spezialistinnen und Spezialisten aus der ganzen Schweiz</h2></div>
+    <div class="rail-ctl"><button type="button" data-rail="-1" aria-label="‹"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M9 2L4 7l5 5"/></svg></button><button type="button" data-rail="1" aria-label="›"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 2l5 5-5 5"/></svg></button></div>
   </div>
-  <figure class="cantons-pic" data-reveal><img class="pic" src="../assets/schweizerisches-bundesgericht-roter-saal-ca-1990.jpg" alt="Roter Saal des Schweizerischen Bundesgerichts in Lausanne" width="1920" height="1276" loading="lazy" decoding="async"></figure>
+  <div class="rail" id="rail"><a class="pcard" href="anwaeltinnen-anwaelte-profil.html?id=68"><span class="pc-top"><img src="../img/lawyers/68.jpg" alt="" width="96" height="120" loading="lazy"><span class="circ"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3 11L11 3M4.5 3H11v6.5"/></svg></span></span><span class="pc-name">Meyer Thomas M. lic.iur.</span><span class="pc-role">Meyer &amp; Wipf</span><span class="pc-city">Zürich · ZH</span></a><a class="pcard" href="anwaeltinnen-anwaelte-profil.html?id=225"><span class="pc-top"><img src="../img/lawyers/225.jpg" alt="" width="96" height="120" loading="lazy"><span class="circ"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3 11L11 3M4.5 3H11v6.5"/></svg></span></span><span class="pc-name">Geel Gian lic. iur., LL.M.</span><span class="pc-role">Reichenbach Rechtsanwälte AG</span><span class="pc-city">Zürich · ZH</span></a><a class="pcard" href="anwaeltinnen-anwaelte-profil.html?id=77"><span class="pc-top"><img src="../img/lawyers/77.jpg" alt="" width="96" height="120" loading="lazy"><span class="circ"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3 11L11 3M4.5 3H11v6.5"/></svg></span></span><span class="pc-name">Raess-Eichenberger Susanne Dr. iur.</span><span class="pc-role">Nötzli Raess Bächtold Rechtsanwälte</span><span class="pc-city">Zürich · ZH</span></a><a class="pcard" href="anwaeltinnen-anwaelte-profil.html?id=50"><span class="pc-top"><img src="../img/lawyers/50.jpg" alt="" width="96" height="120" loading="lazy"><span class="circ"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3 11L11 3M4.5 3H11v6.5"/></svg></span></span><span class="pc-name">Binder Erich</span><span class="pc-role">Binder Sutter Mumenthaler Wiget</span><span class="pc-city">Zürich · ZH</span></a><a class="pcard" href="anwaeltinnen-anwaelte-profil.html?id=48"><span class="pc-top"><img src="../img/lawyers/48.jpg" alt="" width="96" height="120" loading="lazy"><span class="circ"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3 11L11 3M4.5 3H11v6.5"/></svg></span></span><span class="pc-name">Bächtold Rahel lic. iur.</span><span class="pc-role">Nötzli Raess Bächtold Rechtsanwälte</span><span class="pc-city">Zürich · ZH</span></a><a class="pcard" href="anwaeltinnen-anwaelte-profil.html?id=35"><span class="pc-top"><img src="../img/lawyers/35.jpg" alt="" width="96" height="120" loading="lazy"><span class="circ"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3 11L11 3M4.5 3H11v6.5"/></svg></span></span><span class="pc-name">Chavanne Michel</span><span class="pc-role">r &amp; associés, avocats</span><span class="pc-city">Lausanne · VD</span></a><a class="pcard" href="anwaeltinnen-anwaelte-profil.html?id=71"><span class="pc-top"><img src="../img/lawyers/71.jpg" alt="" width="96" height="120" loading="lazy"><span class="circ"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3 11L11 3M4.5 3H11v6.5"/></svg></span></span><span class="pc-name">Nötzli Harry F. Dr. iur.</span><span class="pc-role">Nötzli Raess Bächtold Rechtsanwälte</span><span class="pc-city">Zürich · ZH</span></a><a class="pcard" href="anwaeltinnen-anwaelte-profil.html?id=100"><span class="pc-top"><img src="../img/lawyers/100.jpg" alt="" width="96" height="120" loading="lazy"><span class="circ"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3 11L11 3M4.5 3H11v6.5"/></svg></span></span><span class="pc-name">Bonard Aline</span><span class="pc-role">CBWM &amp; Associés</span><span class="pc-city">Lausanne · VD</span></a><a class="pcard" href="anwaeltinnen-anwaelte-profil.html?id=46"><span class="pc-top"><img src="../img/lawyers/46.jpg" alt="" width="96" height="120" loading="lazy"><span class="circ"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3 11L11 3M4.5 3H11v6.5"/></svg></span></span><span class="pc-name">Wyler Rémy</span><span class="pc-role">CBWM &amp; Associés</span><span class="pc-city">Lausanne · VD</span></a><a class="pcard" href="anwaeltinnen-anwaelte-profil.html?id=60"><span class="pc-top"><img src="../img/lawyers/60.jpg" alt="" width="96" height="120" loading="lazy"><span class="circ"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3 11L11 3M4.5 3H11v6.5"/></svg></span></span><span class="pc-name">Heller Heinz Dr.iur.</span><span class="pc-role">Heller Rechtsanwälte AG</span><span class="pc-city">Zürich · ZH</span></a></div>
+  <p style="margin-top:28px"><a class="btn light" href="anwaeltinnen-anwaelte.html">202 Fachanwältinnen und Fachanwälte anzeigen<span class="arr"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3 11L11 3M4.5 3H11v6.5"/></svg></span></a></p>
+</section>
+
+<section class="panel" aria-labelledby="ar-h">
+  <div class="split top">
+    <div class="sec-head left" style="margin:0">
+      <h2 id="ar-h" class="h-l" data-reveal>Tätigkeitsgebiete</h2>
+      <p class="lead" data-reveal>Die Fachanwältinnen und Fachanwälte beraten Sie in allen oder einzelnen Gebieten des Arbeits- rechts, namentlich in den folgenden Bereichen:</p>
+      <a class="btn" href="taetigkeitsgebiete.html" data-reveal>Tätigkeitsgebiete<span class="arr"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3 11L11 3M4.5 3H11v6.5"/></svg></span></a>
+    </div>
+    <div class="cards two">
+      <a class="acard" href="taetigkeitsgebiete.html#a0" data-reveal><span class="ac-top"><h3>Privates Arbeitsrecht (Einzelarbeitsvertragsrecht)</h3><span class="circ"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3 11L11 3M4.5 3H11v6.5"/></svg></span></span></a><a class="acard" href="taetigkeitsgebiete.html#a1" data-reveal><span class="ac-top"><h3>Kollektives Arbeitsrecht (Gesamtarbeitsverträge)</h3><span class="circ"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3 11L11 3M4.5 3H11v6.5"/></svg></span></span></a><a class="acard" href="taetigkeitsgebiete.html#a2" data-reveal><span class="ac-top"><h3>Öffentliches Arbeitsrecht (Personalrecht)</h3><span class="circ"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3 11L11 3M4.5 3H11v6.5"/></svg></span></span></a><a class="acard" href="taetigkeitsgebiete.html#a3" data-reveal><span class="ac-top"><h3>Internationales Arbeitsrecht, Ausländerrecht</h3><span class="circ"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3 11L11 3M4.5 3H11v6.5"/></svg></span></span></a><a class="acard" href="taetigkeitsgebiete.html#a4" data-reveal><span class="ac-top"><h3>Arbeitsschutz, Mitwirkungsrechte</h3><span class="circ"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3 11L11 3M4.5 3H11v6.5"/></svg></span></span></a><a class="acard" href="taetigkeitsgebiete.html#a5" data-reveal><span class="ac-top"><h3>Gleichstellungsrecht</h3><span class="circ"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3 11L11 3M4.5 3H11v6.5"/></svg></span></span></a>
+    </div>
+  </div>
+</section>
+
+<section class="panel soft" aria-labelledby="ct-h">
+  <div class="split">
+    <figure class="photo" data-reveal><img src="../assets/lausanne.jpg" alt="Gebäude des Bundesgerichts in Lausanne" width="1920" height="1280" loading="lazy" decoding="async"><span class="ph-in"><span class="ph-name">Gebäude des Bundesgerichts in Lausanne</span></span></figure>
+    <div class="sec-head left" style="margin:0">
+      <h2 id="ct-h" class="h-l" data-reveal>Nach Kanton</h2>
+      <p class="lead" data-reveal>202 Fachanwältinnen und Fachanwälte in 17 Kantonen</p>
+      <div class="chips" data-reveal><a href="anwaeltinnen-anwaelte.html?canton=ZH">Zürich<b>89</b></a><a href="anwaeltinnen-anwaelte.html?canton=BE">Bern<b>8</b></a><a href="anwaeltinnen-anwaelte.html?canton=LU">Luzern<b>5</b></a><a href="anwaeltinnen-anwaelte.html?canton=ZG">Zug<b>3</b></a><a href="anwaeltinnen-anwaelte.html?canton=FR">Freiburg<b>4</b></a><a href="anwaeltinnen-anwaelte.html?canton=SO">Solothurn<b>1</b></a><a href="anwaeltinnen-anwaelte.html?canton=BS">Basel-Stadt<b>14</b></a><a href="anwaeltinnen-anwaelte.html?canton=BL">Basel-Landschaft<b>2</b></a><a href="anwaeltinnen-anwaelte.html?canton=SG">St. Gallen<b>8</b></a><a href="anwaeltinnen-anwaelte.html?canton=GR">Graubünden<b>2</b></a><a href="anwaeltinnen-anwaelte.html?canton=AG">Aargau<b>5</b></a><a href="anwaeltinnen-anwaelte.html?canton=TG">Thurgau<b>5</b></a><a href="anwaeltinnen-anwaelte.html?canton=TI">Tessin<b>2</b></a><a href="anwaeltinnen-anwaelte.html?canton=VD">Waadt<b>27</b></a><a href="anwaeltinnen-anwaelte.html?canton=VS">Wallis<b>1</b></a><a href="anwaeltinnen-anwaelte.html?canton=NE">Neuenburg<b>2</b></a><a href="anwaeltinnen-anwaelte.html?canton=GE">Genf<b>24</b></a></div>
+    </div>
+  </div>
 </section>
 </main>
 <footer class="foot">
-  <div class="foot-top">
-    <div class="foot-cta">
-      <h2 class="foot-h" data-reveal>Fachanwalt finden</h2>
-      <p class="foot-sub" data-reveal>Die passende Fachanwältin, den passenden Fachanwalt finden</p>
-      <a class="btn btn-accent" href="anwaeltinnen-anwaelte.html" data-reveal>Anwältinnen / Anwälte</a>
-    </div>
-    <div class="foot-links" data-reveal><a href="wer-wir-sind.html">Wer wir sind</a><a href="taetigkeitsgebiete.html">Tätigkeitsgebiete</a><a href="anwaeltinnen-anwaelte.html">Anwältinnen / Anwälte</a><a href="kontakt.html">Kontakt</a><a href="disclaimer.html">Disclaimer</a></div>
-    <div class="foot-links" data-reveal><a href="../fr/portrait.html" lang="fr" data-keepquery>Français</a><a href="../de/wer-wir-sind.html" lang="de" data-keepquery>Deutsch</a><a href="../it/chi-siamo.html" lang="it" data-keepquery>Italiano</a><a href="../en/who-we-are.html" lang="en" data-keepquery>English</a></div>
+  <div class="foot-cta">
+    <h2 class="h-l" data-reveal>Die passende Fachanwältin, den passenden Fachanwalt finden</h2>
+    <a class="btn light" href="anwaeltinnen-anwaelte.html" data-reveal>Fachanwalt finden<span class="arr"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3 11L11 3M4.5 3H11v6.5"/></svg></span></a>
   </div>
-  <div class="foot-legal">
-    <p>202 Fachanwältinnen und Fachanwälte in 17 Kantonen · © Fachanwältinnen und Fachanwälte SAV Arbeitsrecht</p>
-    <p class="credits">Bilder: <a href="https://commons.wikimedia.org/w/index.php?curid=97323256">Schweizerisches Bundesgericht (roter Saal, ca. 1990)</a> · Comet Photo AG (Zürich), CC BY-SA 4.0; <a href="https://commons.wikimedia.org/w/index.php?curid=97322413">Bibliothek des schweizerischen Bundesgerichts (ca. 1990)</a> · Comet Photo AG (Zürich), CC BY-SA 4.0; <a href="https://commons.wikimedia.org/w/index.php?curid=76596832">Winterthurer Bibliotheken 071824 Sennhof Spinnerei Buehler FabrikarbeiterInnen</a>, CC BY 4.0; <a href="https://www.kimnet.ch/objects/8bfa5b1a-5d67-42ed-9db0-ac9fad4aa6d6">Fotografie, Bandfabrik, Binderei</a>, CC BY-SA 4.0</p>
+  <div class="foot-grid">
+    <div><h3>Fachanwältinnen und Fachanwälte SAV Arbeitsrecht</h3><p>202 Fachanwältinnen und Fachanwälte in 17 Kantonen. Zertifiziert durch den Schweizerischen Anwaltsverband SAV.</p></div>
+    <nav aria-label="Seiten"><h3>Seiten</h3><a href="wer-wir-sind.html">Wer wir sind</a><a href="taetigkeitsgebiete.html">Tätigkeitsgebiete</a><a href="anwaeltinnen-anwaelte.html">Anwältinnen / Anwälte</a><a href="kontakt.html">Kontakt</a><a href="disclaimer.html">Disclaimer</a></nav>
+    <nav aria-label="Nach Kanton"><h3>Nach Kanton</h3><a href="anwaeltinnen-anwaelte.html?canton=ZH">Zürich <span style="opacity:.5">89</span></a><a href="anwaeltinnen-anwaelte.html?canton=VD">Waadt <span style="opacity:.5">27</span></a><a href="anwaeltinnen-anwaelte.html?canton=GE">Genf <span style="opacity:.5">24</span></a><a href="anwaeltinnen-anwaelte.html?canton=BS">Basel-Stadt <span style="opacity:.5">14</span></a><a href="anwaeltinnen-anwaelte.html?canton=BE">Bern <span style="opacity:.5">8</span></a><a href="anwaeltinnen-anwaelte.html?canton=SG">St. Gallen <span style="opacity:.5">8</span></a></nav>
+    <nav aria-label="Sprache"><h3>Sprache</h3><a href="../fr/portrait.html" lang="fr" data-keepquery>Français</a><a href="../de/wer-wir-sind.html" lang="de" data-keepquery>Deutsch</a><a href="../it/chi-siamo.html" lang="it" data-keepquery>Italiano</a><a href="../en/who-we-are.html" lang="en" data-keepquery>English</a></nav>
   </div>
+  <div class="foot-legal"><p>© 2026 Fachanwältinnen und Fachanwälte SAV Arbeitsrecht</p><p><a href="disclaimer.html">Disclaimer</a> · <a href="kontakt.html">Kontakt</a></p></div>
+  <p class="credits">Bilder: <a href="https://commons.wikimedia.org/w/index.php?curid=97323256">Schweizerisches Bundesgericht (roter Saal, ca. 1990)</a> · Comet Photo AG (Zürich), CC BY-SA 4.0; <a href="https://commons.wikimedia.org/w/index.php?curid=97322413">Bibliothek des schweizerischen Bundesgerichts (ca. 1990)</a> · Comet Photo AG (Zürich), CC BY-SA 4.0; <a href="https://commons.wikimedia.org/w/index.php?curid=76596832">Winterthurer Bibliotheken 071824 Sennhof Spinnerei Buehler FabrikarbeiterInnen</a>, CC BY 4.0; <a href="https://www.kimnet.ch/objects/8bfa5b1a-5d67-42ed-9db0-ac9fad4aa6d6">Fotografie, Bandfabrik, Binderei</a>, CC BY-SA 4.0; <a href="https://commons.wikimedia.org/w/index.php?curid=55666535">Legal Contract &amp; Signature - Warm Tones</a> · Blogtrepreneur, CC BY 2.0; <a href="https://commons.wikimedia.org/w/index.php?curid=61304385">The scales of justice</a> · James Cridland, CC BY 2.0; <a href="https://commons.wikimedia.org/w/index.php?curid=3990805">Lausanne Bundesgericht</a> · Ikiwaner, CC BY-SA 3.0; <a href="https://commons.wikimedia.org/w/index.php?curid=97322706">Plenarsaal des schweizerischen Bundesgerichts (ca. 1990)</a> · Comet Photo AG (Zürich), CC BY-SA 4.0</p>
   <p class="foot-word" aria-hidden="true">Arbeitsrecht</p>
 </footer>
 <script src="../assets/site.js" defer></script>

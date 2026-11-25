@@ -9,50 +9,61 @@
 <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders:wght@800&family=Public+Sans:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../assets/site.css">
 <script>document.documentElement.classList.add('js')</script>
 
 </head>
 <body>
 <a class="skip" href="#main">Zum Inhalt</a>
-<header class="top">
-  <a class="mark" href="wer-wir-sind.html"><span>Fachanwältinnen &amp; Fachanwälte SAV</span> <b>Arbeitsrecht</b></a>
-  <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu">Menü</button>
-  <div class="menu" id="menu">
-    <nav class="nav" aria-label="Fachanwältinnen und Fachanwälte SAV Arbeitsrecht"><a href="wer-wir-sind.html">Wer wir sind</a><a href="taetigkeitsgebiete.html" aria-current="page">Tätigkeitsgebiete</a><a href="anwaeltinnen-anwaelte.html">Anwältinnen / Anwälte</a><a href="kontakt.html">Kontakt</a><a href="disclaimer.html">Disclaimer</a></nav>
-    <nav class="langs" aria-label="Sprache"><a href="../fr/domaines-dactivite.html" hreflang="fr" lang="fr" data-keepquery title="Français">FR</a><a href="../de/taetigkeitsgebiete.html" hreflang="de" lang="de" data-keepquery title="Deutsch" aria-current="true">DE</a><a href="../it/campi-di-attivita.html" hreflang="it" lang="it" data-keepquery title="Italiano">IT</a><a href="../en/spheres-of-activity.html" hreflang="en" lang="en" data-keepquery title="English">EN</a></nav>
+<header class="hero sub">
+  <div class="hero-bg"><img src="../assets/winterthurer-bibliotheken-071824-sennhof-spinnerei-buehler-f.jpg" alt="Belegschaft der Spinnerei Bühler in Sennhof, historische Fotografie" width="1920" height="1280" decoding="async"></div>
+  <div class="bar">
+    <a class="brand" href="wer-wir-sind.html"><img src="../assets/favicon.svg" alt="" width="40" height="40"><span>Arbeitsrecht<small>FSA · SAV</small></span></a>
+    <nav class="pills" id="menu" aria-label="Fachanwältinnen und Fachanwälte SAV Arbeitsrecht"><a href="wer-wir-sind.html">Wer wir sind</a><a href="taetigkeitsgebiete.html" aria-current="page">Tätigkeitsgebiete</a><a href="anwaeltinnen-anwaelte.html">Anwältinnen / Anwälte</a><a href="kontakt.html">Kontakt</a><a href="disclaimer.html">Disclaimer</a></nav>
+    <div class="bar-right">
+      <nav class="langs" aria-label="Sprache"><a href="../fr/domaines-dactivite.html" hreflang="fr" lang="fr" data-keepquery title="Français">FR</a><a href="../de/taetigkeitsgebiete.html" hreflang="de" lang="de" data-keepquery title="Deutsch" aria-current="true">DE</a><a href="../it/campi-di-attivita.html" hreflang="it" lang="it" data-keepquery title="Italiano">IT</a><a href="../en/spheres-of-activity.html" hreflang="en" lang="en" data-keepquery title="English">EN</a></nav>
+      <a class="btn small light" href="anwaeltinnen-anwaelte.html">Fachanwalt finden<span class="arr"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3 11L11 3M4.5 3H11v6.5"/></svg></span></a>
+      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu">Menü</button>
+    </div>
+  </div>
+  <div class="hero-main"><h1 id="h1" class="hero-h h-xl"><span class="l"><span style="--i:0">Tätigkeitsgebiete</span></span></h1></div>
+  <div class="hero-foot">
+    <p class="hero-sub" data-load>Die Fachanwältinnen und Fachanwälte beraten Sie in allen oder einzelnen Gebieten des Arbeits- rechts, namentlich in den folgenden Bereichen:</p>
+    <a class="btn light" href="anwaeltinnen-anwaelte.html" data-load>Fachanwalt finden<span class="arr"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3 11L11 3M4.5 3H11v6.5"/></svg></span></a>
   </div>
 </header>
 <main id="main">
-<section class="phead" aria-labelledby="h1">
-  <h1 id="h1" class="phead-h mask"><span>Tätigkeitsgebiete</span></h1>
-  <p class="phead-lead" data-load>Die Fachanwältinnen und Fachanwälte beraten Sie in allen oder einzelnen Gebieten des Arbeits- rechts, namentlich in den folgenden Bereichen:</p>
+<section class="panel" aria-label="Tätigkeitsgebiete">
+  <div class="row-head"><h2 class="h-l" data-reveal>Fachanwältinnen und Fachanwälte SAV Arbeitsrecht</h2><p class="muted" data-reveal>11 Tätigkeitsgebiete</p></div>
+  <ol class="cards">
+    <li class="acard" id="a0" data-reveal><span class="ac-top"><span class="ac-num">01</span></span><h3>Privates Arbeitsrecht (Einzelarbeitsvertragsrecht)</h3></li><li class="acard" id="a1" data-reveal><span class="ac-top"><span class="ac-num">02</span></span><h3>Kollektives Arbeitsrecht (Gesamtarbeitsverträge)</h3></li><li class="acard" id="a2" data-reveal><span class="ac-top"><span class="ac-num">03</span></span><h3>Öffentliches Arbeitsrecht (Personalrecht)</h3></li><li class="acard" id="a3" data-reveal><span class="ac-top"><span class="ac-num">04</span></span><h3>Internationales Arbeitsrecht, Ausländerrecht</h3></li><li class="acard" id="a4" data-reveal><span class="ac-top"><span class="ac-num">05</span></span><h3>Arbeitsschutz, Mitwirkungsrechte</h3></li><li class="acard" id="a5" data-reveal><span class="ac-top"><span class="ac-num">06</span></span><h3>Gleichstellungsrecht</h3></li><li class="acard" id="a6" data-reveal><span class="ac-top"><span class="ac-num">07</span></span><h3>Datenschutzrecht, unlauterer Wettbewerb und Urheberrecht</h3></li><li class="acard" id="a7" data-reveal><span class="ac-top"><span class="ac-num">08</span></span><h3>Versicherungen (BVG, Sozialversicherungen, Privatversicherungen)</h3></li><li class="acard" id="a8" data-reveal><span class="ac-top"><span class="ac-num">09</span></span><h3>Arbeitsvermittlung</h3></li><li class="acard" id="a9" data-reveal><span class="ac-top"><span class="ac-num">10</span></span><h3>Prozessrecht</h3></li><li class="acard" id="a10" data-reveal><span class="ac-top"><span class="ac-num">11</span></span><h3>Steuerrecht, Schuldbetreibungs- und Konkursrecht</h3></li>
+  </ol>
 </section>
-<section class="areas" aria-label="Tätigkeitsgebiete">
-  <div class="areas-wrap">
-  <ul class="area-list">
-    <li data-reveal>Privates Arbeitsrecht (Einzelarbeitsvertragsrecht)</li><li data-reveal>Kollektives Arbeitsrecht (Gesamtarbeitsverträge)</li><li data-reveal>Öffentliches Arbeitsrecht (Personalrecht)</li><li data-reveal>Internationales Arbeitsrecht, Ausländerrecht</li><li data-reveal>Arbeitsschutz, Mitwirkungsrechte</li><li data-reveal>Gleichstellungsrecht</li><li data-reveal>Datenschutzrecht, unlauterer Wettbewerb und Urheberrecht</li><li data-reveal>Versicherungen (BVG, Sozialversicherungen, Privatversicherungen)</li><li data-reveal>Arbeitsvermittlung</li><li data-reveal>Prozessrecht</li><li data-reveal>Steuerrecht, Schuldbetreibungs- und Konkursrecht</li>
-  </ul>
-  <figure class="areas-pic" data-reveal><img class="pic" src="../assets/winterthurer-bibliotheken-071824-sennhof-spinnerei-buehler-f.jpg" alt="Belegschaft der Spinnerei Bühler in Sennhof, historische Fotografie" width="1920" height="1299" loading="lazy" decoding="async"></figure>
+<section class="panel soft" aria-label="Fachanwalt finden">
+  <div class="split">
+    <figure class="photo" data-reveal><img src="../assets/fotografie-bandfabrik-binderei.jpg" alt="Arbeiterin in einer Bandfabrik, historische Fotografie" width="1938" height="1280" loading="lazy" decoding="async"><span class="ph-in"><span class="ph-role">Arbeiterin in einer Bandfabrik, historische Fotografie</span></span></figure>
+    <div class="sec-head left" style="margin:0">
+      <h2 class="h-l" data-reveal>Die passende Fachanwältin, den passenden Fachanwalt finden</h2>
+      <p class="lead" data-reveal>202 Fachanwältinnen und Fachanwälte in 17 Kantonen</p>
+      <a class="btn" href="anwaeltinnen-anwaelte.html" data-reveal>Fachanwalt finden<span class="arr"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3 11L11 3M4.5 3H11v6.5"/></svg></span></a>
+    </div>
   </div>
 </section>
-<figure class="band" data-reveal><img class="pic band-img" src="../assets/bibliothek-des-schweizerischen-bundesgerichts-ca-1990.jpg" alt="Bibliothek des Schweizerischen Bundesgerichts" width="1920" height="1253" loading="lazy" decoding="async"></figure>
 </main>
 <footer class="foot">
-  <div class="foot-top">
-    <div class="foot-cta">
-      <h2 class="foot-h" data-reveal>Fachanwalt finden</h2>
-      <p class="foot-sub" data-reveal>Die passende Fachanwältin, den passenden Fachanwalt finden</p>
-      <a class="btn btn-accent" href="anwaeltinnen-anwaelte.html" data-reveal>Anwältinnen / Anwälte</a>
-    </div>
-    <div class="foot-links" data-reveal><a href="wer-wir-sind.html">Wer wir sind</a><a href="taetigkeitsgebiete.html">Tätigkeitsgebiete</a><a href="anwaeltinnen-anwaelte.html">Anwältinnen / Anwälte</a><a href="kontakt.html">Kontakt</a><a href="disclaimer.html">Disclaimer</a></div>
-    <div class="foot-links" data-reveal><a href="../fr/domaines-dactivite.html" lang="fr" data-keepquery>Français</a><a href="../de/taetigkeitsgebiete.html" lang="de" data-keepquery>Deutsch</a><a href="../it/campi-di-attivita.html" lang="it" data-keepquery>Italiano</a><a href="../en/spheres-of-activity.html" lang="en" data-keepquery>English</a></div>
+  <div class="foot-cta">
+    <h2 class="h-l" data-reveal>Die passende Fachanwältin, den passenden Fachanwalt finden</h2>
+    <a class="btn light" href="anwaeltinnen-anwaelte.html" data-reveal>Fachanwalt finden<span class="arr"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3 11L11 3M4.5 3H11v6.5"/></svg></span></a>
   </div>
-  <div class="foot-legal">
-    <p>202 Fachanwältinnen und Fachanwälte in 17 Kantonen · © Fachanwältinnen und Fachanwälte SAV Arbeitsrecht</p>
-    <p class="credits">Bilder: <a href="https://commons.wikimedia.org/w/index.php?curid=97323256">Schweizerisches Bundesgericht (roter Saal, ca. 1990)</a> · Comet Photo AG (Zürich), CC BY-SA 4.0; <a href="https://commons.wikimedia.org/w/index.php?curid=97322413">Bibliothek des schweizerischen Bundesgerichts (ca. 1990)</a> · Comet Photo AG (Zürich), CC BY-SA 4.0; <a href="https://commons.wikimedia.org/w/index.php?curid=76596832">Winterthurer Bibliotheken 071824 Sennhof Spinnerei Buehler FabrikarbeiterInnen</a>, CC BY 4.0; <a href="https://www.kimnet.ch/objects/8bfa5b1a-5d67-42ed-9db0-ac9fad4aa6d6">Fotografie, Bandfabrik, Binderei</a>, CC BY-SA 4.0</p>
+  <div class="foot-grid">
+    <div><h3>Fachanwältinnen und Fachanwälte SAV Arbeitsrecht</h3><p>202 Fachanwältinnen und Fachanwälte in 17 Kantonen. Zertifiziert durch den Schweizerischen Anwaltsverband SAV.</p></div>
+    <nav aria-label="Seiten"><h3>Seiten</h3><a href="wer-wir-sind.html">Wer wir sind</a><a href="taetigkeitsgebiete.html">Tätigkeitsgebiete</a><a href="anwaeltinnen-anwaelte.html">Anwältinnen / Anwälte</a><a href="kontakt.html">Kontakt</a><a href="disclaimer.html">Disclaimer</a></nav>
+    <nav aria-label="Nach Kanton"><h3>Nach Kanton</h3><a href="anwaeltinnen-anwaelte.html?canton=ZH">Zürich <span style="opacity:.5">89</span></a><a href="anwaeltinnen-anwaelte.html?canton=VD">Waadt <span style="opacity:.5">27</span></a><a href="anwaeltinnen-anwaelte.html?canton=GE">Genf <span style="opacity:.5">24</span></a><a href="anwaeltinnen-anwaelte.html?canton=BS">Basel-Stadt <span style="opacity:.5">14</span></a><a href="anwaeltinnen-anwaelte.html?canton=BE">Bern <span style="opacity:.5">8</span></a><a href="anwaeltinnen-anwaelte.html?canton=SG">St. Gallen <span style="opacity:.5">8</span></a></nav>
+    <nav aria-label="Sprache"><h3>Sprache</h3><a href="../fr/domaines-dactivite.html" lang="fr" data-keepquery>Français</a><a href="../de/taetigkeitsgebiete.html" lang="de" data-keepquery>Deutsch</a><a href="../it/campi-di-attivita.html" lang="it" data-keepquery>Italiano</a><a href="../en/spheres-of-activity.html" lang="en" data-keepquery>English</a></nav>
   </div>
+  <div class="foot-legal"><p>© 2026 Fachanwältinnen und Fachanwälte SAV Arbeitsrecht</p><p><a href="disclaimer.html">Disclaimer</a> · <a href="kontakt.html">Kontakt</a></p></div>
+  <p class="credits">Bilder: <a href="https://commons.wikimedia.org/w/index.php?curid=97323256">Schweizerisches Bundesgericht (roter Saal, ca. 1990)</a> · Comet Photo AG (Zürich), CC BY-SA 4.0; <a href="https://commons.wikimedia.org/w/index.php?curid=97322413">Bibliothek des schweizerischen Bundesgerichts (ca. 1990)</a> · Comet Photo AG (Zürich), CC BY-SA 4.0; <a href="https://commons.wikimedia.org/w/index.php?curid=76596832">Winterthurer Bibliotheken 071824 Sennhof Spinnerei Buehler FabrikarbeiterInnen</a>, CC BY 4.0; <a href="https://www.kimnet.ch/objects/8bfa5b1a-5d67-42ed-9db0-ac9fad4aa6d6">Fotografie, Bandfabrik, Binderei</a>, CC BY-SA 4.0; <a href="https://commons.wikimedia.org/w/index.php?curid=55666535">Legal Contract &amp; Signature - Warm Tones</a> · Blogtrepreneur, CC BY 2.0; <a href="https://commons.wikimedia.org/w/index.php?curid=61304385">The scales of justice</a> · James Cridland, CC BY 2.0; <a href="https://commons.wikimedia.org/w/index.php?curid=3990805">Lausanne Bundesgericht</a> · Ikiwaner, CC BY-SA 3.0; <a href="https://commons.wikimedia.org/w/index.php?curid=97322706">Plenarsaal des schweizerischen Bundesgerichts (ca. 1990)</a> · Comet Photo AG (Zürich), CC BY-SA 4.0</p>
   <p class="foot-word" aria-hidden="true">Arbeitsrecht</p>
 </footer>
 <script src="../assets/site.js" defer></script>

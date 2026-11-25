@@ -9,89 +9,126 @@
 <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders:wght@800&family=Public+Sans:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../assets/site.css">
 <script>document.documentElement.classList.add('js')</script>
 
 </head>
 <body class="home">
 <a class="skip" href="#main">Vai al contenuto</a>
-<header class="top">
-  <a class="mark" href="chi-siamo.html"><span>Avvocati specialisti FSA in</span> <b>Diritto del lavoro</b></a>
-  <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu">Menu</button>
-  <div class="menu" id="menu">
-    <nav class="nav" aria-label="Avvocati specialisti FSA in diritto del lavoro"><a href="chi-siamo.html" aria-current="page">Chi siamo</a><a href="campi-di-attivita.html">Campi di attività</a><a href="elenco-degli-avvocati.html">Elenco degli avvocati</a><a href="contatti.html">Contatti</a><a href="disclaimer-41.html">Disclaimer</a></nav>
-    <nav class="langs" aria-label="Lingua"><a href="../fr/portrait.html" hreflang="fr" lang="fr" data-keepquery title="Français">FR</a><a href="../de/wer-wir-sind.html" hreflang="de" lang="de" data-keepquery title="Deutsch">DE</a><a href="../it/chi-siamo.html" hreflang="it" lang="it" data-keepquery title="Italiano" aria-current="true">IT</a><a href="../en/who-we-are.html" hreflang="en" lang="en" data-keepquery title="English">EN</a></nav>
+<header class="hero">
+  <div class="hero-bg"><img src="../assets/contract.jpg" alt="Contratto di lavoro e penna stilografica" width="1920" height="1440" decoding="async"></div>
+  <div class="bar">
+    <a class="brand" href="chi-siamo.html"><img src="../assets/favicon.svg" alt="" width="40" height="40"><span>Diritto del lavoro<small>FSA · SAV</small></span></a>
+    <nav class="pills" id="menu" aria-label="Avvocati specialisti FSA in diritto del lavoro"><a href="chi-siamo.html" aria-current="page">Chi siamo</a><a href="campi-di-attivita.html">Campi di attività</a><a href="elenco-degli-avvocati.html">Elenco degli avvocati</a><a href="contatti.html">Contatti</a><a href="disclaimer-41.html">Disclaimer</a></nav>
+    <div class="bar-right">
+      <nav class="langs" aria-label="Lingua"><a href="../fr/portrait.html" hreflang="fr" lang="fr" data-keepquery title="Français">FR</a><a href="../de/wer-wir-sind.html" hreflang="de" lang="de" data-keepquery title="Deutsch">DE</a><a href="../it/chi-siamo.html" hreflang="it" lang="it" data-keepquery title="Italiano" aria-current="true">IT</a><a href="../en/who-we-are.html" hreflang="en" lang="en" data-keepquery title="English">EN</a></nav>
+      <a class="btn small light" href="elenco-degli-avvocati.html">Trovare un avvocato<span class="arr"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3 11L11 3M4.5 3H11v6.5"/></svg></span></a>
+      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu">Menu</button>
+    </div>
+  </div>
+  <div class="hero-main"><h1 id="h1" class="hero-h h-xl"><span class="l"><span style="--i:0">Avvocati specialisti</span></span><span class="l"><span style="--i:1">FSA in</span></span><span class="l"><span style="--i:3" class="hl">Diritto del lavoro</span></span></h1></div>
+  <div class="hero-foot">
+    <p class="hero-sub" data-load>Gli avvocati che possiedono il titolo di «avvocato specialista FSA in diritto del lavoro» sono esperti di comprovate capacità nel campo del diritto del lavoro.</p>
+    <div class="widget-wrap" data-load>
+      <form class="widget glass quick" action="elenco-degli-avvocati.html" method="get">
+        <p class="w-label">Scelga l’avvocato specialista in funzione delle sue esigenze:</p>
+        <label for="q-canton" class="vh">Cantone</label>
+        <select id="q-canton" name="canton"><option value="">Tutti i cantoni</option><option value="ZH">Zurigo (89)</option><option value="BE">Berna (8)</option><option value="LU">Lucerna (5)</option><option value="UR">Uri (0)</option><option value="SZ">Svitto (0)</option><option value="OW">Obvaldo (0)</option><option value="NW">Nidvaldo (0)</option><option value="GL">Glarona (0)</option><option value="ZG">Zugo (3)</option><option value="FR">Friburgo (4)</option><option value="SO">Soletta (1)</option><option value="BS">Basilea Città (14)</option><option value="BL">Basilea Campagna (2)</option><option value="SH">Sciaffusa (0)</option><option value="AR">Appenzello Esterno (0)</option><option value="AI">Appenzello Interno (0)</option><option value="SG">San Gallo (8)</option><option value="GR">Grigioni (2)</option><option value="AG">Argovia (5)</option><option value="TG">Turgovia (5)</option><option value="TI">Ticino (2)</option><option value="VD">Vaud (27)</option><option value="VS">Vallese (1)</option><option value="NE">Neuchâtel (2)</option><option value="GE">Ginevra (24)</option><option value="JU">Giura (0)</option></select>
+        <button class="w-row w-main" type="submit" data-label-all="Mostra {n} avvocati specialisti" data-label-c="Mostra {n} nel cantone {c}" data-total="202"><span class="ic"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="7" cy="7" r="5"/><path d="M11 11l3.5 3.5"/></svg></span><span class="t">Mostra 202 avvocati specialisti</span><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3 11L11 3M4.5 3H11v6.5"/></svg></button>
+        <a class="w-row" href="elenco-degli-avvocati.html?result_type=rand">Scelta casuale, al massimo 8 risposte<svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3 11L11 3M4.5 3H11v6.5"/></svg></a>
+      </form>
+    </div>
+    <div class="hero-right" data-load>
+      <div class="avatars glass chip"><span class="faces"><img src="../img/lawyers/68.jpg" alt="" width="38" height="38"><img src="../img/lawyers/225.jpg" alt="" width="38" height="38"><img src="../img/lawyers/77.jpg" alt="" width="38" height="38"><img src="../img/lawyers/50.jpg" alt="" width="38" height="38"></span><span>202 · 17 Cantoni</span></div>
+      <p>Certificati dalla Federazione Svizzera degli Avvocati FSA.</p>
+    </div>
   </div>
 </header>
 <main id="main">
-<section class="hero" aria-labelledby="h1">
-  <h1 id="h1" class="hero-h"><span class="hero-small mask"><span>Avvocati specialisti FSA in</span></span><span class="hero-big mask"><span>Diritto del lavoro</span></span></h1>
-  <div class="hero-foot">
-    <p class="hero-sub" data-load>Scelga l’avvocato specialista in funzione delle sue esigenze:</p>
-    <form class="quick" action="elenco-degli-avvocati.html" method="get" data-load>
-      <label for="q-canton" class="vh">Cantone</label>
-      <select id="q-canton" name="canton"><option value="">Tutti i cantoni</option><option value="ZH">Zurigo (89)</option><option value="BE">Berna (8)</option><option value="LU">Lucerna (5)</option><option value="UR">Uri (0)</option><option value="SZ">Svitto (0)</option><option value="OW">Obvaldo (0)</option><option value="NW">Nidvaldo (0)</option><option value="GL">Glarona (0)</option><option value="ZG">Zugo (3)</option><option value="FR">Friburgo (4)</option><option value="SO">Soletta (1)</option><option value="BS">Basilea Città (14)</option><option value="BL">Basilea Campagna (2)</option><option value="SH">Sciaffusa (0)</option><option value="AR">Appenzello Esterno (0)</option><option value="AI">Appenzello Interno (0)</option><option value="SG">San Gallo (8)</option><option value="GR">Grigioni (2)</option><option value="AG">Argovia (5)</option><option value="TG">Turgovia (5)</option><option value="TI">Ticino (2)</option><option value="VD">Vaud (27)</option><option value="VS">Vallese (1)</option><option value="NE">Neuchâtel (2)</option><option value="GE">Ginevra (24)</option><option value="JU">Giura (0)</option></select>
-      <button class="btn btn-ink" type="submit" data-label-all="Mostra {n} avvocati specialisti" data-label-c="Mostra {n} nel cantone {c}" data-total="202">Mostra 202 avvocati specialisti</button>
-    </form>
+<section class="panel" aria-labelledby="ab-h">
+  <div class="sec-head">
+    <h2 id="ab-h" class="h-l" data-reveal>Che cosa contraddistingue un avvocato specialista</h2>
+    <p class="lead center" data-reveal>Per facilitare i cittadini nella ricerca di un patrocinatore qualificato, nel 2006 la Federazione Svizzera degli Avvocati FSA ha introdotto, con il titolo di «avvocato specialista FSA», un nuovo marchio di qualità in diversi ambiti: diritto del lavoro, diritto successorio, diritto della costruzione e immobiliare, diritto di famiglia e diritto della responsabilità civile e delle assicurazioni.</p>
+  </div>
+  <div class="bento">
+    <figure class="photo" data-reveal><img src="../assets/plenar.jpg" alt="Sala plenaria del Tribunale federale" width="1920" height="1269" loading="lazy" decoding="async">
+      <div class="stats">
+        <div class="stat glass"><b>202</b><span>Specialisti</span></div>
+        <div class="stat glass"><b>17</b><span>Cantoni</span></div>
+        <div class="stat glass"><b>4</b><span>Lingue</span></div>
+      </div>
+    </figure>
+    <div class="quote-card" data-reveal>
+      <blockquote class="long"><p>Gli avvocati che hanno ottenuto il titolo di «avvocato specialista FSA in diritto del lavoro» adempiono precise condizioni: oltre a vantare un’esperienza pratica superiore alla media nel settore e una pluriennale esperienza nell’esercizio dell’avvocatura, hanno assolto un corso di specializzazione intensivo e di indirizzo pragmatico e hanno superato un esame scritto e un colloquio professionale. Una volta ottenuto il titolo, hanno inoltre l’obbligo di partecipare a corsi periodici di formazione permanente.</p></blockquote>
+      <div class="who"><span class="mono">SAV</span><span><b>Avvocati specialisti FSA in diritto del lavoro</b><span>Chi siamo</span></span></div>
+    </div>
+    <a class="photo" href="elenco-degli-avvocati.html" data-reveal><img src="../assets/schweizerisches-bundesgericht-roter-saal-ca-1990.jpg" alt="Sala rossa del Tribunale federale a Losanna" width="1920" height="1276" loading="lazy" decoding="async"><span class="tag">Elenco degli avvocati<i><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3 11L11 3M4.5 3H11v6.5"/></svg></i></span><span class="ph-in"><span class="ph-name">Trovare un avvocato</span><span class="ph-role">202 avvocati specialisti in 17 cantoni</span></span></a>
   </div>
 </section>
 
-<section class="stairs-sec" aria-label="Chi siamo">
-  <p class="stairs-text" data-reveal><span class="stair s0">Gli avvocati che possiedono il</span><span class="stair s1">titolo di «avvocato specialista FSA</span><span class="stair s2">in diritto del lavoro» sono</span><span class="stair s3">esperti di comprovate capacità nel</span><span class="stair s4">campo del diritto del lavoro.</span></p>
-  <figure class="stairs-pics" data-reveal>
-    <img class="pic" src="../assets/winterthurer-bibliotheken-071824-sennhof-spinnerei-buehler-f.jpg" alt="Personale della filanda Bühler a Sennhof, fotografia storica" width="1920" height="1299" loading="lazy" decoding="async">
-    <img class="pic" src="../assets/fotografie-bandfabrik-binderei.jpg" alt="Operaia in una fabbrica di nastri, fotografia storica" width="1938" height="1280" loading="lazy" decoding="async">
-  </figure>
-</section>
-
-<section class="sav" aria-labelledby="sav-h">
-  <h2 id="sav-h" class="h2" data-reveal>Chi siamo</h2>
-  <div class="sav-cols">
-    <p data-reveal>Per facilitare i cittadini nella ricerca di un patrocinatore qualificato, nel 2006 la Federazione Svizzera degli Avvocati FSA ha introdotto, con il titolo di «avvocato specialista FSA», un nuovo marchio di qualità in diversi ambiti: diritto del lavoro, diritto successorio, diritto della costruzione e immobiliare, diritto di famiglia e diritto della responsabilità civile e delle assicurazioni.</p><p data-reveal>Gli avvocati che hanno ottenuto il titolo di «avvocato specialista FSA in diritto del lavoro» adempiono precise condizioni: oltre a vantare un’esperienza pratica superiore alla media nel settore e una pluriennale esperienza nell’esercizio dell’avvocatura, hanno assolto un corso di specializzazione intensivo e di indirizzo pragmatico e hanno superato un esame scritto e un colloquio professionale. Una volta ottenuto il titolo, hanno inoltre l’obbligo di partecipare a corsi periodici di formazione permanente.</p>
+<section class="panel" aria-labelledby="st-h">
+  <div class="steps">
+    <figure class="photo" data-reveal><img src="../assets/scales1.jpg" alt="Statua della Giustizia con la bilancia" width="1920" height="1440" loading="lazy" decoding="async"></figure>
+    <div class="steps-mid">
+      <div class="sec-head left" style="margin:0">
+        <h2 id="st-h" class="h-m" data-reveal>Avvocati specialisti FSA in diritto del lavoro</h2>
+        
+      </div>
+      <div class="bignum" data-reveal><b>202</b><span>202 avvocati specialisti in 17 cantoni</span></div>
+    </div>
+    <div class="acc" data-reveal>
+      <details open><summary>Vantaggi per i clienti<span class="pm" aria-hidden="true"></span></summary><div class="acc-body"><p>Di fronte a questioni giuridiche complesse, i clienti traggono enorme vantaggio dalla grande competenza dell’avvocato specialista, il quale è spesso in grado, grazie alle conoscenze specifiche che possiede, di fornire ai suoi assistiti un aiuto più pronto ed efficace.</p></div></details><details><summary>Profonde conoscenze, vasta esperienza<span class="pm" aria-hidden="true"></span></summary><div class="acc-body"><p>L’avvocato specialista è comunque anche un generalista e in quanto tale è in grado di svolgere tutte le funzioni di un comune avvocato, poiché possiede sempre profonde conoscenze ed una vasta esperienza riguardo all’ordinamento giuridico svizzero. A parte della sua specializzazione, è in grado di fornire ai suoi assistiti un appoggio completo anche in tutti gli altri campi del diritto.</p></div></details>
+    </div>
   </div>
 </section>
 
-<div class="fields">
-  <section class="field f-dark " aria-labelledby="f0">
-    <p class="field-text" data-reveal>Di fronte a questioni giuridiche complesse, i clienti traggono enorme vantaggio dalla grande competenza dell’avvocato specialista, il quale è spesso in grado, grazie alle conoscenze specifiche che possiede, di fornire ai suoi assistiti un aiuto più pronto ed efficace.</p>
-    <h2 id="f0" class="field-h" data-reveal>Vantaggi per i clienti</h2>
-  </section>
-  <section class="field f-accent mirror" aria-labelledby="f1">
-    <p class="field-text" data-reveal>L’avvocato specialista è comunque anche un generalista e in quanto tale è in grado di svolgere tutte le funzioni di un comune avvocato, poiché possiede sempre profonde conoscenze ed una vasta esperienza riguardo all’ordinamento giuridico svizzero. A parte della sua specializzazione, è in grado di fornire ai suoi assistiti un appoggio completo anche in tutti gli altri campi del diritto.</p>
-    <h2 id="f1" class="field-h" data-reveal>Profonde conoscenze, vasta esperienza</h2>
-  </section>
-  <section class="field f-surface " aria-labelledby="f2">
-    <p class="field-text" data-reveal>Gli avvocati specialisti consigliano i loro clienti in un ambito preciso o in tutti gli ambiti del diritto del lavoro, in particolare nei seguenti settori: <a class="field-link" href="campi-di-attivita.html">Campi di attività →</a></p>
-    <h2 id="f2" class="field-h" data-reveal>Campi di attività</h2>
-  </section>
-</div>
-<figure class="band" data-reveal><img class="pic band-img" src="../assets/bibliothek-des-schweizerischen-bundesgerichts-ca-1990.jpg" alt="Biblioteca del Tribunale federale" width="1920" height="1253" loading="lazy" decoding="async"></figure>
-
-<section class="cantons" aria-labelledby="ct-h">
-  <div class="cantons-col">
-    <h2 id="ct-h" class="h3" data-reveal>Per cantone</h2>
-    <ul class="rows">
-      <li data-reveal><a href="elenco-degli-avvocati.html?canton=ZH"><span class="code">ZH</span><span class="name">Zurigo</span><span class="val">89</span></a></li><li data-reveal><a href="elenco-degli-avvocati.html?canton=BE"><span class="code">BE</span><span class="name">Berna</span><span class="val">8</span></a></li><li data-reveal><a href="elenco-degli-avvocati.html?canton=LU"><span class="code">LU</span><span class="name">Lucerna</span><span class="val">5</span></a></li><li data-reveal><a href="elenco-degli-avvocati.html?canton=ZG"><span class="code">ZG</span><span class="name">Zugo</span><span class="val">3</span></a></li><li data-reveal><a href="elenco-degli-avvocati.html?canton=FR"><span class="code">FR</span><span class="name">Friburgo</span><span class="val">4</span></a></li><li data-reveal><a href="elenco-degli-avvocati.html?canton=SO"><span class="code">SO</span><span class="name">Soletta</span><span class="val">1</span></a></li><li data-reveal><a href="elenco-degli-avvocati.html?canton=BS"><span class="code">BS</span><span class="name">Basilea Città</span><span class="val">14</span></a></li><li data-reveal><a href="elenco-degli-avvocati.html?canton=BL"><span class="code">BL</span><span class="name">Basilea Campagna</span><span class="val">2</span></a></li><li data-reveal><a href="elenco-degli-avvocati.html?canton=SG"><span class="code">SG</span><span class="name">San Gallo</span><span class="val">8</span></a></li><li data-reveal><a href="elenco-degli-avvocati.html?canton=GR"><span class="code">GR</span><span class="name">Grigioni</span><span class="val">2</span></a></li><li data-reveal><a href="elenco-degli-avvocati.html?canton=AG"><span class="code">AG</span><span class="name">Argovia</span><span class="val">5</span></a></li><li data-reveal><a href="elenco-degli-avvocati.html?canton=TG"><span class="code">TG</span><span class="name">Turgovia</span><span class="val">5</span></a></li><li data-reveal><a href="elenco-degli-avvocati.html?canton=TI"><span class="code">TI</span><span class="name">Ticino</span><span class="val">2</span></a></li><li data-reveal><a href="elenco-degli-avvocati.html?canton=VD"><span class="code">VD</span><span class="name">Vaud</span><span class="val">27</span></a></li><li data-reveal><a href="elenco-degli-avvocati.html?canton=VS"><span class="code">VS</span><span class="name">Vallese</span><span class="val">1</span></a></li><li data-reveal><a href="elenco-degli-avvocati.html?canton=NE"><span class="code">NE</span><span class="name">Neuchâtel</span><span class="val">2</span></a></li><li data-reveal><a href="elenco-degli-avvocati.html?canton=GE"><span class="code">GE</span><span class="name">Ginevra</span><span class="val">24</span></a></li>
-    </ul>
+<section class="panel dark" aria-labelledby="tm-h">
+  <div class="row-head">
+    <div class="sec-head left" style="margin:0"><h2 id="tm-h" class="h-l" data-reveal>Specialisti in tutta la Svizzera</h2></div>
+    <div class="rail-ctl"><button type="button" data-rail="-1" aria-label="‹"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M9 2L4 7l5 5"/></svg></button><button type="button" data-rail="1" aria-label="›"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 2l5 5-5 5"/></svg></button></div>
   </div>
-  <figure class="cantons-pic" data-reveal><img class="pic" src="../assets/schweizerisches-bundesgericht-roter-saal-ca-1990.jpg" alt="Sala rossa del Tribunale federale a Losanna" width="1920" height="1276" loading="lazy" decoding="async"></figure>
+  <div class="rail" id="rail"><a class="pcard" href="elenco-degli-avvocati-profilo.html?id=68"><span class="pc-top"><img src="../img/lawyers/68.jpg" alt="" width="96" height="120" loading="lazy"><span class="circ"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3 11L11 3M4.5 3H11v6.5"/></svg></span></span><span class="pc-name">Meyer Thomas M. lic.iur.</span><span class="pc-role">Meyer &amp; Wipf</span><span class="pc-city">Zürich · ZH</span></a><a class="pcard" href="elenco-degli-avvocati-profilo.html?id=225"><span class="pc-top"><img src="../img/lawyers/225.jpg" alt="" width="96" height="120" loading="lazy"><span class="circ"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3 11L11 3M4.5 3H11v6.5"/></svg></span></span><span class="pc-name">Geel Gian lic. iur., LL.M.</span><span class="pc-role">Reichenbach Rechtsanwälte AG</span><span class="pc-city">Zürich · ZH</span></a><a class="pcard" href="elenco-degli-avvocati-profilo.html?id=77"><span class="pc-top"><img src="../img/lawyers/77.jpg" alt="" width="96" height="120" loading="lazy"><span class="circ"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3 11L11 3M4.5 3H11v6.5"/></svg></span></span><span class="pc-name">Raess-Eichenberger Susanne Dr. iur.</span><span class="pc-role">Nötzli Raess Bächtold Rechtsanwälte</span><span class="pc-city">Zürich · ZH</span></a><a class="pcard" href="elenco-degli-avvocati-profilo.html?id=50"><span class="pc-top"><img src="../img/lawyers/50.jpg" alt="" width="96" height="120" loading="lazy"><span class="circ"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3 11L11 3M4.5 3H11v6.5"/></svg></span></span><span class="pc-name">Binder Erich</span><span class="pc-role">Binder Sutter Mumenthaler Wiget</span><span class="pc-city">Zürich · ZH</span></a><a class="pcard" href="elenco-degli-avvocati-profilo.html?id=48"><span class="pc-top"><img src="../img/lawyers/48.jpg" alt="" width="96" height="120" loading="lazy"><span class="circ"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3 11L11 3M4.5 3H11v6.5"/></svg></span></span><span class="pc-name">Bächtold Rahel lic. iur.</span><span class="pc-role">Nötzli Raess Bächtold Rechtsanwälte</span><span class="pc-city">Zürich · ZH</span></a><a class="pcard" href="elenco-degli-avvocati-profilo.html?id=35"><span class="pc-top"><img src="../img/lawyers/35.jpg" alt="" width="96" height="120" loading="lazy"><span class="circ"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3 11L11 3M4.5 3H11v6.5"/></svg></span></span><span class="pc-name">Chavanne Michel</span><span class="pc-role">r &amp; associés, avocats</span><span class="pc-city">Lausanne · VD</span></a><a class="pcard" href="elenco-degli-avvocati-profilo.html?id=71"><span class="pc-top"><img src="../img/lawyers/71.jpg" alt="" width="96" height="120" loading="lazy"><span class="circ"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3 11L11 3M4.5 3H11v6.5"/></svg></span></span><span class="pc-name">Nötzli Harry F. Dr. iur.</span><span class="pc-role">Nötzli Raess Bächtold Rechtsanwälte</span><span class="pc-city">Zürich · ZH</span></a><a class="pcard" href="elenco-degli-avvocati-profilo.html?id=100"><span class="pc-top"><img src="../img/lawyers/100.jpg" alt="" width="96" height="120" loading="lazy"><span class="circ"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3 11L11 3M4.5 3H11v6.5"/></svg></span></span><span class="pc-name">Bonard Aline</span><span class="pc-role">CBWM &amp; Associés</span><span class="pc-city">Lausanne · VD</span></a><a class="pcard" href="elenco-degli-avvocati-profilo.html?id=46"><span class="pc-top"><img src="../img/lawyers/46.jpg" alt="" width="96" height="120" loading="lazy"><span class="circ"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3 11L11 3M4.5 3H11v6.5"/></svg></span></span><span class="pc-name">Wyler Rémy</span><span class="pc-role">CBWM &amp; Associés</span><span class="pc-city">Lausanne · VD</span></a><a class="pcard" href="elenco-degli-avvocati-profilo.html?id=60"><span class="pc-top"><img src="../img/lawyers/60.jpg" alt="" width="96" height="120" loading="lazy"><span class="circ"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3 11L11 3M4.5 3H11v6.5"/></svg></span></span><span class="pc-name">Heller Heinz Dr.iur.</span><span class="pc-role">Heller Rechtsanwälte AG</span><span class="pc-city">Zürich · ZH</span></a></div>
+  <p style="margin-top:28px"><a class="btn light" href="elenco-degli-avvocati.html">Mostra 202 avvocati specialisti<span class="arr"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3 11L11 3M4.5 3H11v6.5"/></svg></span></a></p>
+</section>
+
+<section class="panel" aria-labelledby="ar-h">
+  <div class="split top">
+    <div class="sec-head left" style="margin:0">
+      <h2 id="ar-h" class="h-l" data-reveal>Campi di attività</h2>
+      <p class="lead" data-reveal>Gli avvocati specialisti consigliano i loro clienti in un ambito preciso o in tutti gli ambiti del diritto del lavoro, in particolare nei seguenti settori:</p>
+      <a class="btn" href="campi-di-attivita.html" data-reveal>Campi di attività<span class="arr"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3 11L11 3M4.5 3H11v6.5"/></svg></span></a>
+    </div>
+    <div class="cards two">
+      <a class="acard" href="campi-di-attivita.html#a0" data-reveal><span class="ac-top"><h3>diritto privato del lavoro (contratto individuale di lavoro)</h3><span class="circ"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3 11L11 3M4.5 3H11v6.5"/></svg></span></span></a><a class="acard" href="campi-di-attivita.html#a1" data-reveal><span class="ac-top"><h3>diritto collettivo del lavoro (contratti collettivi di lavoro)</h3><span class="circ"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3 11L11 3M4.5 3H11v6.5"/></svg></span></span></a><a class="acard" href="campi-di-attivita.html#a2" data-reveal><span class="ac-top"><h3>diritto pubblico del lavoro (diritto del personale)</h3><span class="circ"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3 11L11 3M4.5 3H11v6.5"/></svg></span></span></a><a class="acard" href="campi-di-attivita.html#a3" data-reveal><span class="ac-top"><h3>diritto internazionale del lavoro, diritto degli stranieri</h3><span class="circ"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3 11L11 3M4.5 3H11v6.5"/></svg></span></span></a><a class="acard" href="campi-di-attivita.html#a4" data-reveal><span class="ac-top"><h3>tutela dei lavoratori, diritti di partecipazione</h3><span class="circ"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3 11L11 3M4.5 3H11v6.5"/></svg></span></span></a><a class="acard" href="campi-di-attivita.html#a5" data-reveal><span class="ac-top"><h3>pari opportunità</h3><span class="circ"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3 11L11 3M4.5 3H11v6.5"/></svg></span></span></a>
+    </div>
+  </div>
+</section>
+
+<section class="panel soft" aria-labelledby="ct-h">
+  <div class="split">
+    <figure class="photo" data-reveal><img src="../assets/lausanne.jpg" alt="Sede del Tribunale federale a Losanna" width="1920" height="1280" loading="lazy" decoding="async"><span class="ph-in"><span class="ph-name">Sede del Tribunale federale a Losanna</span></span></figure>
+    <div class="sec-head left" style="margin:0">
+      <h2 id="ct-h" class="h-l" data-reveal>Per cantone</h2>
+      <p class="lead" data-reveal>202 avvocati specialisti in 17 cantoni</p>
+      <div class="chips" data-reveal><a href="elenco-degli-avvocati.html?canton=ZH">Zurigo<b>89</b></a><a href="elenco-degli-avvocati.html?canton=BE">Berna<b>8</b></a><a href="elenco-degli-avvocati.html?canton=LU">Lucerna<b>5</b></a><a href="elenco-degli-avvocati.html?canton=ZG">Zugo<b>3</b></a><a href="elenco-degli-avvocati.html?canton=FR">Friburgo<b>4</b></a><a href="elenco-degli-avvocati.html?canton=SO">Soletta<b>1</b></a><a href="elenco-degli-avvocati.html?canton=BS">Basilea Città<b>14</b></a><a href="elenco-degli-avvocati.html?canton=BL">Basilea Campagna<b>2</b></a><a href="elenco-degli-avvocati.html?canton=SG">San Gallo<b>8</b></a><a href="elenco-degli-avvocati.html?canton=GR">Grigioni<b>2</b></a><a href="elenco-degli-avvocati.html?canton=AG">Argovia<b>5</b></a><a href="elenco-degli-avvocati.html?canton=TG">Turgovia<b>5</b></a><a href="elenco-degli-avvocati.html?canton=TI">Ticino<b>2</b></a><a href="elenco-degli-avvocati.html?canton=VD">Vaud<b>27</b></a><a href="elenco-degli-avvocati.html?canton=VS">Vallese<b>1</b></a><a href="elenco-degli-avvocati.html?canton=NE">Neuchâtel<b>2</b></a><a href="elenco-degli-avvocati.html?canton=GE">Ginevra<b>24</b></a></div>
+    </div>
+  </div>
 </section>
 </main>
 <footer class="foot">
-  <div class="foot-top">
-    <div class="foot-cta">
-      <h2 class="foot-h" data-reveal>Trovare un avvocato</h2>
-      <p class="foot-sub" data-reveal>Trovare l’avvocato specialista adatto a voi</p>
-      <a class="btn btn-accent" href="elenco-degli-avvocati.html" data-reveal>Elenco degli avvocati</a>
-    </div>
-    <div class="foot-links" data-reveal><a href="chi-siamo.html">Chi siamo</a><a href="campi-di-attivita.html">Campi di attività</a><a href="elenco-degli-avvocati.html">Elenco degli avvocati</a><a href="contatti.html">Contatti</a><a href="disclaimer-41.html">Disclaimer</a></div>
-    <div class="foot-links" data-reveal><a href="../fr/portrait.html" lang="fr" data-keepquery>Français</a><a href="../de/wer-wir-sind.html" lang="de" data-keepquery>Deutsch</a><a href="../it/chi-siamo.html" lang="it" data-keepquery>Italiano</a><a href="../en/who-we-are.html" lang="en" data-keepquery>English</a></div>
+  <div class="foot-cta">
+    <h2 class="h-l" data-reveal>Trovare l’avvocato specialista adatto a voi</h2>
+    <a class="btn light" href="elenco-degli-avvocati.html" data-reveal>Trovare un avvocato<span class="arr"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3 11L11 3M4.5 3H11v6.5"/></svg></span></a>
   </div>
-  <div class="foot-legal">
-    <p>202 avvocati specialisti in 17 cantoni · © Avvocati specialisti FSA in diritto del lavoro</p>
-    <p class="credits">Immagini: <a href="https://commons.wikimedia.org/w/index.php?curid=97323256">Schweizerisches Bundesgericht (roter Saal, ca. 1990)</a> · Comet Photo AG (Zürich), CC BY-SA 4.0; <a href="https://commons.wikimedia.org/w/index.php?curid=97322413">Bibliothek des schweizerischen Bundesgerichts (ca. 1990)</a> · Comet Photo AG (Zürich), CC BY-SA 4.0; <a href="https://commons.wikimedia.org/w/index.php?curid=76596832">Winterthurer Bibliotheken 071824 Sennhof Spinnerei Buehler FabrikarbeiterInnen</a>, CC BY 4.0; <a href="https://www.kimnet.ch/objects/8bfa5b1a-5d67-42ed-9db0-ac9fad4aa6d6">Fotografie, Bandfabrik, Binderei</a>, CC BY-SA 4.0</p>
+  <div class="foot-grid">
+    <div><h3>Avvocati specialisti FSA in diritto del lavoro</h3><p>202 avvocati specialisti in 17 cantoni. Certificati dalla Federazione Svizzera degli Avvocati FSA.</p></div>
+    <nav aria-label="Pagine"><h3>Pagine</h3><a href="chi-siamo.html">Chi siamo</a><a href="campi-di-attivita.html">Campi di attività</a><a href="elenco-degli-avvocati.html">Elenco degli avvocati</a><a href="contatti.html">Contatti</a><a href="disclaimer-41.html">Disclaimer</a></nav>
+    <nav aria-label="Per cantone"><h3>Per cantone</h3><a href="elenco-degli-avvocati.html?canton=ZH">Zurigo <span style="opacity:.5">89</span></a><a href="elenco-degli-avvocati.html?canton=VD">Vaud <span style="opacity:.5">27</span></a><a href="elenco-degli-avvocati.html?canton=GE">Ginevra <span style="opacity:.5">24</span></a><a href="elenco-degli-avvocati.html?canton=BS">Basilea Città <span style="opacity:.5">14</span></a><a href="elenco-degli-avvocati.html?canton=BE">Berna <span style="opacity:.5">8</span></a><a href="elenco-degli-avvocati.html?canton=SG">San Gallo <span style="opacity:.5">8</span></a></nav>
+    <nav aria-label="Lingua"><h3>Lingua</h3><a href="../fr/portrait.html" lang="fr" data-keepquery>Français</a><a href="../de/wer-wir-sind.html" lang="de" data-keepquery>Deutsch</a><a href="../it/chi-siamo.html" lang="it" data-keepquery>Italiano</a><a href="../en/who-we-are.html" lang="en" data-keepquery>English</a></nav>
   </div>
+  <div class="foot-legal"><p>© 2026 Avvocati specialisti FSA in diritto del lavoro</p><p><a href="disclaimer-41.html">Disclaimer</a> · <a href="contatti.html">Contatti</a></p></div>
+  <p class="credits">Immagini: <a href="https://commons.wikimedia.org/w/index.php?curid=97323256">Schweizerisches Bundesgericht (roter Saal, ca. 1990)</a> · Comet Photo AG (Zürich), CC BY-SA 4.0; <a href="https://commons.wikimedia.org/w/index.php?curid=97322413">Bibliothek des schweizerischen Bundesgerichts (ca. 1990)</a> · Comet Photo AG (Zürich), CC BY-SA 4.0; <a href="https://commons.wikimedia.org/w/index.php?curid=76596832">Winterthurer Bibliotheken 071824 Sennhof Spinnerei Buehler FabrikarbeiterInnen</a>, CC BY 4.0; <a href="https://www.kimnet.ch/objects/8bfa5b1a-5d67-42ed-9db0-ac9fad4aa6d6">Fotografie, Bandfabrik, Binderei</a>, CC BY-SA 4.0; <a href="https://commons.wikimedia.org/w/index.php?curid=55666535">Legal Contract &amp; Signature - Warm Tones</a> · Blogtrepreneur, CC BY 2.0; <a href="https://commons.wikimedia.org/w/index.php?curid=61304385">The scales of justice</a> · James Cridland, CC BY 2.0; <a href="https://commons.wikimedia.org/w/index.php?curid=3990805">Lausanne Bundesgericht</a> · Ikiwaner, CC BY-SA 3.0; <a href="https://commons.wikimedia.org/w/index.php?curid=97322706">Plenarsaal des schweizerischen Bundesgerichts (ca. 1990)</a> · Comet Photo AG (Zürich), CC BY-SA 4.0</p>
   <p class="foot-word" aria-hidden="true">Diritto del lavoro</p>
 </footer>
 <script src="../assets/site.js" defer></script>

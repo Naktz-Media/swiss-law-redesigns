@@ -11,7 +11,7 @@ Both are static HTML/CSS/JS, served by GitHub Pages from the repository root.
 
 ## Rebuilding
 
-The pages are generated from the content in `_data/`:
+The pages are generated from the content in `_data/`. The shared stylesheet is `_src/law.css`; each site adds its own theme and `_src/fa.css` or `_src/zl.css`. The build scripts are assembled from `_src/*_top.py` and `_src/*_rest.py`.
 
 ```
 python build_fa.py   # avocat-droit-du-travail/{fr,de,it,en}/

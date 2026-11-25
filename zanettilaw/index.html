@@ -9,105 +9,132 @@
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/site.css">
 <script>document.documentElement.classList.add('js')</script>
 </head>
 <body class="home">
 <a class="skip" href="#main">Zum Inhalt</a>
-<header class="band-head is-home">
-  <div class="bh-row">
-    <nav class="langs" aria-label="Sprache"><a href="./" hreflang="de" lang="de" aria-current="true">DE</a><a href="en/" hreflang="en" lang="en">EN</a></nav>
-    <a class="logo" href="./" aria-label="Zanetti Rechtsanwälte – Startseite"><img src="img/logo-white.svg" alt="Zanetti Rechtsanwälte" width="220" height="46"></a>
-    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="tabs">Menü</button>
+<header class="hero">
+  <div class="hero-bg"><img src="img/handshake3.jpg" alt="" width="1920" height="1280"></div>
+  <div class="bar">
+    <a class="brand" href="./" aria-label="Zanetti Rechtsanwälte – Startseite"><img src="img/logo-white.svg" alt="Zanetti Rechtsanwälte" width="220" height="46"></a>
+    <nav class="pills" id="menu" aria-label="Zanetti Rechtsanwälte"><a href="dienstleistung/">Dienstleistungen</a><a href="beurkundungen/">Beurkundungen</a><a href="team/">Team</a><a href="publikationen/">Publikationen</a><a href="kontakt/">Kontakt</a><a href="mitgliedschaften/">Mitgliedschaften</a></nav>
+    <div class="bar-right">
+      <nav class="langs" aria-label="Sprache"><a href="./" hreflang="de" lang="de" aria-current="true">DE</a><a href="en/" hreflang="en" lang="en">EN</a></nav>
+      <a class="btn small light" href="kontakt/">Kontakt aufnehmen<span class="arr"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3 11L11 3M4.5 3H11v6.5"/></svg></span></a>
+      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu">Menü</button>
+    </div>
   </div>
-  <nav class="tabs" id="tabs" aria-label="Zanetti Rechtsanwälte"><a class="tab" href="dienstleistung/">Dienstleistungen</a><a class="tab" href="beurkundungen/">Beurkundungen</a><a class="tab" href="team/">Team</a><a class="tab" href="publikationen/">Publikationen</a><a class="tab" href="kontakt/">Kontakt</a><a class="tab" href="mitgliedschaften/">Mitgliedschaften</a></nav>
-</header>
-<main id="main">
-<section class="hero" aria-labelledby="h1">
-  <div class="hero-text">
-    <h1 id="h1" class="hero-h"><span class="mask"><span>Zanetti Rechtsanwälte</span></span></h1>
+  <div class="hero-main"><h1 id="h1" class="hero-h h-xl"><span class="l"><span style="--i:0">Zanetti</span></span><span class="l"><span style="--i:1">Rechtsanwälte</span></span></h1></div>
+  <div class="hero-foot">
     <p class="hero-sub" data-load>Zanetti Rechtsanwälte ist ein gewachsener Zusammenschluss erfahrener und spezialisierter Rechtsanwälte.</p>
-  </div>
-  <div class="stack" aria-label="Zanetti Rechtsanwälte"><a class="folder-band f0" href="mitgliedschaften/" style="--c:#1b4466"><span class="ftab">Mitgliedschaften</span></a><a class="folder-band f1" href="publikationen/" style="--c:#2f5a80"><span class="ftab">Publikationen</span></a><a class="folder-band f2" href="team/" style="--c:#7d96ab"><span class="ftab">Team</span></a><a class="folder-band f3" href="beurkundungen/" style="--c:#c9c1b1"><span class="ftab">Beurkundungen</span></a><a class="folder-band f4" href="dienstleistung/" style="--c:#f1efea"><span class="ftab">Dienstleistungen</span></a></div>
-</section>
-
-<section class="front" aria-label="Dienstleistungen">
-  <figure class="quote" data-reveal>
-    <blockquote><p>«Wenn du im Recht bist, kannst du es dir leisten, die Ruhe zu bewahren; und wenn du im Unrecht bist, kannst du es dir nicht leisten, sie zu verlieren.»</p></blockquote>
-    <figcaption>Mahatma Gandhi (1869 – 1948)</figcaption>
-  </figure>
-  <a class="btn btn-navy" href="dienstleistung/" data-reveal>Dienstleistungen</a>
-</section>
-
-<section class="awards" aria-labelledby="aw-h">
-  <div class="aw-head">
-    <h2 id="aw-h" class="h2" data-reveal>Top Anwaltskanzlei</h2>
-    <p data-reveal>2019, 2022, 2023, 2024 und 2025 wurden wir von Bilanz und Le Temps (2019 und 2022) bzw. Bilanz und PME (2023, 2024 und 2025) als «Top Anwaltskanzlei» ausgezeichnet.</p>
-  </div>
-  <div class="aw-tiles">
-    <figure class="tile t0" data-reveal><div class="tile-box"><img src="img/1037_pme_bilanz_takch2026_logo_de_ausgabe.jpg" alt="Top Anwaltskanzlei 2026 – Bilanz & PME" width="900" height="900" loading="lazy"></div><figcaption><b>Top Anwaltskanzlei 2026</b><span>Bilanz &amp; PME</span></figcaption></figure><figure class="tile t1" data-reveal><div class="tile-box"><img src="img/1038_pme_bilanz_takch2025_logo_de_ausgabe_zugeschnitten.jpg" alt="Top Anwaltskanzlei 2025 – Bilanz & PME" width="900" height="900" loading="lazy"></div><figcaption><b>Top Anwaltskanzlei 2025</b><span>Bilanz &amp; PME</span></figcaption></figure><figure class="tile t2" data-reveal><div class="tile-box"><img src="img/1039_pme_bilanz_takch2024_logo_de_ausgabe.png" alt="Top Anwaltskanzlei 2024 – Bilanz & PME" width="900" height="900" loading="lazy"></div><figcaption><b>Top Anwaltskanzlei 2024</b><span>Bilanz &amp; PME</span></figcaption></figure>
-  </div>
-</section>
-
-<section class="panel" aria-labelledby="pn-h">
-  <div class="panel-left">
-    <h2 id="pn-h" class="panel-h" data-reveal>Unsere Arbeitsweise</h2>
-    <p class="panel-p" data-reveal>Unsere fachkundige Expertise ist die handwerkliche Basis, auf der wir für unsere Klienten einen wirtschaftlichen Mehrwert erarbeiten. Es freut uns, möglichst frühzeitig mit der Strukturierung der Aufgaben mandatiert zu werden, denn in diesem frühen Stadium der Beratung führt unsere Tätigkeit erfahrungsgemäss zum grössten Nutzen für unsere Klienten.</p>
-    <figure class="panel-pic" data-reveal><img class="folder" src="img/1_zanetti_home_2x-2.jpg" alt="" width="2000" height="1111" loading="lazy"></figure>
-  </div>
-  <div class="panel-right">
-    <div class="pblock" data-reveal><h3>Wir denken unternehmerisch</h3><p>Aufgrund der Gegebenheit, dass unsere Anwälte und Notare eng mit Unternehmungen kollaborieren (und als Organe in Gesellschaften tätig sind), werden Sie in uns einen konstruktiven und unternehmerisch denkenden Partner für Ihr Vorhaben gewinnen können. Wir verfügen über eine umfangreiche Erfahrung bei der Behandlung komplexer Prozesse in mannigfaltigen Bereichen des Rechts – sei es bei der Beratung in Fragen des Gesellschaftsrechts, des Arbeits- und Mietrechts, des Vertragsrechts, des Familienrechts, des Strafrechts, des Versicherungs- und Haftpflichtrechts sowie auf dem Gebiet der Sozialversicherungen.</p></div><div class="pblock" data-reveal><h3>Experten – auch vor Gericht</h3><p>Unsere forensisch tätigen Anwälte verfügen über einen soliden forensischen Erfahrungsschatz, sei dies im Rahmen von Zivilprozessen, Strafverfahren, im Bereich der Schiedsgerichtsbarkeit oder der Verwaltungsrechtspflege. Sollte eine gerichtliche Auseinandersetzung unausweichlich sein, vertreten wir unsere Klienten vor Gericht und sind bestrebt, aufgrund unserer prozessualen Expertise den grösstmöglichen Gewinn zu erzielen.</p></div>
-    <a class="btn btn-paper" href="team/" data-reveal>Team</a>
-  </div>
-</section>
-
-<section class="menu-list" aria-labelledby="sv-h">
-  <h2 id="sv-h" class="h2" data-reveal>Unsere Dienstleistungen</h2>
-  <div class="mgroup">
-    <div class="mg-head" data-reveal><h3>Beratung</h3><span>8 Gebiete</span></div>
-    <ul class="mitems">
-      <li data-reveal><a href="dienstleistung/#arbeitsrecht-0"><img src="img/1045_arbeitsrecht.svg" alt="" width="52" height="52"><span><b>Arbeitsrecht und Sozialversicherungen</b><span>Unsere Anwälte beraten Gesellschaften und Privatpersonen in allen Bereichen des Individualarbeitsrechts und des kollektiven Arbeitsrechts.</span></span></a></li><li data-reveal><a href="dienstleistung/#familienrecht-1"><img src="img/1048_familienrecht.svg" alt="" width="52" height="52"><span><b>Familienrecht</b><span>Wir beraten unsere Klienten bei den mannigfaltigen Fragestellungen, die sich im Familienrecht stellen.</span></span></a></li><li data-reveal><a href="dienstleistung/#familienrecht-2"><img src="img/1048_familienrecht.svg" alt="" width="52" height="52"><span><b>Erbrecht, Sachenrecht</b><span>Eine akkurate Nachlassplanung setzt voraus, dass der involvierte Berater die ökonomischen und persönlichen Umstände des Klienten und dessen Zielsetzung minutiös eruiert.</span></span></a></li><li data-reveal><a href="dienstleistung/#vertragsrecht-3"><img src="img/1049_vertragsrecht.svg" alt="" width="52" height="52"><span><b>Vertragsrecht</b><span>Unsere Anwälte beschäftigen sich intensiv mit dem Ausgestalten von Verträgen aus allen Bereichen des Obligationenrechts.</span></span></a></li><li data-reveal><a href="dienstleistung/#gesellschaftsrecht-4"><img src="img/1044_gesellschaftsrecht.svg" alt="" width="52" height="52"><span><b>Gesellschaftsrecht</b><span>Ein wichtiger Schwerpunkt unserer Tätigkeit liegt in der fachlichen Beratung von Gesellschaften, Unternehmern und natürlichen Personen im Bereich des Gesellschaftsrechts.</span></span></a></li><li data-reveal><a href="dienstleistung/#strafrecht-5"><img src="img/1046_strafrecht.svg" alt="" width="52" height="52"><span><b>Strafrecht</b><span>Auf keinem anderen Rechtsgebiet sind die Machtverhältnisse derart ungleich verteilt wie auf dem Gebiet des Strafrechts.</span></span></a></li><li data-reveal><a href="dienstleistung/#steuerrecht-6"><img src="img/1047_steuerrecht.svg" alt="" width="52" height="52"><span><b>Steuerrecht</b><span>Die kontinuierliche Veränderung und die - trotz internationaler Koordinationsbestrebungen - stetig wachsende Komplexität der Steuersysteme erhöht die …</span></span></a></li><li data-reveal><a href="dienstleistung/#notariat-7"><img src="img/1050_notariat.svg" alt="" width="52" height="52"><span><b>Notariat</b><span>Unsere Anwälte (RA Werner Räber, RAin Sandra Kammerbauer, RA Joël Brochon und RA Alessandro Gerlach) sind Urkundspersonen der Kantone Schwyz (W. Räber) und Zug (S. Kammerbauer, J. Brochon und A. Gerlach).</span></span></a></li>
-    </ul>
-  </div><div class="mgroup">
-    <div class="mg-head" data-reveal><h3>Prozessführung</h3><span>3 Gebiete</span></div>
-    <ul class="mitems">
-      <li data-reveal><a href="dienstleistung/#zivilprozess-8"><img src="img/1052_zivilprozess.svg" alt="" width="52" height="52"><span><b>Zivilprozess</b><span>Neben unserer beratenden Tätigkeit vertreten wir unsere Klienten auch vor den Zivil- und Verwaltungsgerichten.</span></span></a></li><li data-reveal><a href="dienstleistung/#schuldbetreibung-9"><img src="img/1053_schuldbetreuung.svg" alt="" width="52" height="52"><span><b>Schuldbetreibung und Konkurs</b><span>Auf dem Gebiet des Zwangsvollstreckungsrechts stellen wir sicher, dass unsere Klienten ihre Rechte rasch und erfolgreich wahren können.</span></span></a></li><li data-reveal><a href="dienstleistung/#schiedsverfahren-10"><img src="img/1051_schiedsverfahren.svg" alt="" width="52" height="52"><span><b>Schiedsverfahren</b><span>Wir beraten und vertreten unsere Klienten bei Schiedsgerichtsverfahren und damit einhergehenden Vollstreckungsverfahren.</span></span></a></li>
-    </ul>
-  </div>
-</section>
-<section class="coupon-wrap" aria-labelledby="cp-h">
-  <form class="coupon" data-mailto="info@zanettilaw.ch" data-reveal>
-    <span class="notch n1" aria-hidden="true"></span><span class="notch n2" aria-hidden="true"></span>
-    <div class="cp-left">
-      <h2 id="cp-h" class="cp-h">Schreiben Sie uns</h2>
-      <div class="cp-contact">
-        <p>Zanetti Rechtsanwälte AG<br>Blegistrasse 9, 6340 Baar</p>
-        <p><a href="tel:+41417663585">T +41 41 766 35 85</a><br>F +41 41 766 35 80<br><a href="mailto:info@zanettilaw.ch">info@zanettilaw.ch</a></p>
+    <div class="widget-wrap" data-load>
+      <div class="widget glass">
+        <a class="w-row" href="dienstleistung/">Dienstleistungen<svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3 11L11 3M4.5 3H11v6.5"/></svg></a>
+        <a class="w-row w-main" href="kontakt/"><span class="ic"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3.5 1.8h2.6l1.2 3.2-1.8 1.2a8.6 8.6 0 0 0 4.3 4.3l1.2-1.8 3.2 1.2v2.6a1.6 1.6 0 0 1-1.7 1.6A12.6 12.6 0 0 1 1.9 3.5a1.6 1.6 0 0 1 1.6-1.7z"/></svg></span><span class="t">Kontakt aufnehmen</span><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3 11L11 3M4.5 3H11v6.5"/></svg></a>
+        <a class="w-row" href="team/">Team<svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3 11L11 3M4.5 3H11v6.5"/></svg></a>
+        <a class="w-row w-tel" href="tel:+41417663585"><span>T +41 41 766 35 85</span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3.5 1.8h2.6l1.2 3.2-1.8 1.2a8.6 8.6 0 0 0 4.3 4.3l1.2-1.8 3.2 1.2v2.6a1.6 1.6 0 0 1-1.7 1.6A12.6 12.6 0 0 1 1.9 3.5a1.6 1.6 0 0 1 1.6-1.7z"/></svg></a>
       </div>
     </div>
-    <div class="cp-right">
-      <label class="vh" for="cp-name">Name</label><input id="cp-name" name="name" placeholder="Name" autocomplete="name" required>
-      <label class="vh" for="cp-mail">E-Mail</label><input id="cp-mail" name="email" type="email" placeholder="E-Mail" autocomplete="email">
-      <label class="vh" for="cp-phone">Telefon</label><input id="cp-phone" name="phone" type="tel" placeholder="Telefon" autocomplete="tel">
-      <label class="vh" for="cp-msg">Ihr Anliegen</label><textarea id="cp-msg" name="message" rows="3" placeholder="Ihr Anliegen" required></textarea>
-      <button class="cp-send" type="submit">Nachricht vorbereiten</button>
-      <p class="cp-note" id="cp-note">Ihre Nachricht öffnet sich in Ihrem E-Mail-Programm, adressiert an info@zanettilaw.ch.</p>
+    <div class="hero-right" data-load>
+      <div class="avatars glass chip"><span class="faces badges"><img src="img/1037_pme_bilanz_takch2026_logo_de_ausgabe.jpg" alt="Top Anwaltskanzlei 2026" width="38" height="38"><img src="img/1038_pme_bilanz_takch2025_logo_de_ausgabe_zugeschnitten.jpg" alt="Top Anwaltskanzlei 2025" width="38" height="38"><img src="img/1039_pme_bilanz_takch2024_logo_de_ausgabe.png" alt="Top Anwaltskanzlei 2024" width="38" height="38"></span><span>Top Anwaltskanzlei</span></div>
+      <p>Ausgezeichnet 2024 · 2025 · 2026 · Bilanz &amp; PME</p>
     </div>
-  </form>
+  </div>
+</header>
+<main id="main">
+<section class="panel" aria-labelledby="ab-h">
+  <div class="sec-head">
+    <h2 id="ab-h" class="h-l" data-reveal>Unsere Arbeitsweise</h2>
+    <p class="lead center" data-reveal>Unsere fachkundige Expertise ist die handwerkliche Basis, auf der wir für unsere Klienten einen wirtschaftlichen Mehrwert erarbeiten. Es freut uns, möglichst frühzeitig mit der Strukturierung der Aufgaben mandatiert zu werden, denn in diesem frühen Stadium der Beratung führt unsere Tätigkeit erfahrungsgemäss zum grössten Nutzen für unsere Klienten.</p>
+  </div>
+  <div class="bento">
+    <figure class="photo" data-reveal><img src="img/1_zanetti_home_2x-2.jpg" alt="" width="2000" height="1111" loading="lazy">
+      <div class="stats">
+        <div class="stat glass"><b>3</b><span>Standorte</span></div>
+        <div class="stat glass"><b>15</b><span>Juristinnen und Juristen</span></div>
+        <div class="stat glass"><b>11</b><span>Rechtsgebiete</span></div>
+      </div>
+    </figure>
+    <div class="quote-card" data-reveal>
+      <blockquote><p>«Wenn du im Recht bist, kannst du es dir leisten, die Ruhe zu bewahren; und wenn du im Unrecht bist, kannst du es dir nicht leisten, sie zu verlieren.»</p></blockquote>
+      <div class="who"><span class="mono">MG</span><span><b>Mahatma Gandhi</b><span>1869 – 1948</span></span></div>
+    </div>
+    <div data-reveal style="display:grid"><a class="photo person" href="team/#m0" data-open="m0"><img src="img/1057_gianni_zanetti-1.jpg" alt="" width="800" height="660" loading="lazy"><span class="tag">Werdegang<i><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3 11L11 3M4.5 3H11v6.5"/></svg></i></span><span class="ph-in"><span class="ph-name">Gianni F. Zanetti</span><span class="ph-role">Managing Partner</span></span></a></div>
+  </div>
+</section>
+
+<section class="panel" aria-labelledby="st-h">
+  <div class="steps">
+    <figure class="photo" data-reveal><img src="img/1032_zanetti_kontakt_2x-1.jpg" alt="" width="2000" height="833" loading="lazy"></figure>
+    <div class="steps-mid">
+      <div class="sec-head left" style="margin:0">
+        <h2 id="st-h" class="h-m" data-reveal>Top Anwaltskanzlei Bilanz &amp; PME</h2>
+        <p class="muted" data-reveal>2019, 2022, 2023, 2024 und 2025 wurden wir von Bilanz und Le Temps (2019 und 2022) bzw. Bilanz und PME (2023, 2024 und 2025) als «Top Anwaltskanzlei» ausgezeichnet.</p>
+      </div>
+      <div class="awards" data-reveal><figure><img src="img/1037_pme_bilanz_takch2026_logo_de_ausgabe.jpg" alt="Top Anwaltskanzlei 2026 – Bilanz & PME" width="300" height="300" loading="lazy"><figcaption>2026</figcaption></figure><figure><img src="img/1038_pme_bilanz_takch2025_logo_de_ausgabe_zugeschnitten.jpg" alt="Top Anwaltskanzlei 2025 – Bilanz & PME" width="300" height="300" loading="lazy"><figcaption>2025</figcaption></figure><figure><img src="img/1039_pme_bilanz_takch2024_logo_de_ausgabe.png" alt="Top Anwaltskanzlei 2024 – Bilanz & PME" width="300" height="300" loading="lazy"><figcaption>2024</figcaption></figure></div>
+    </div>
+    <div class="acc" data-reveal>
+      <details open><summary>Wir denken unternehmerisch<span class="pm" aria-hidden="true"></span></summary><div class="acc-body"><p>Aufgrund der Gegebenheit, dass unsere Anwälte und Notare eng mit Unternehmungen kollaborieren (und als Organe in Gesellschaften tätig sind), werden Sie in uns einen konstruktiven und unternehmerisch denkenden Partner für Ihr Vorhaben gewinnen können. Wir verfügen über eine umfangreiche Erfahrung bei der Behandlung komplexer Prozesse in mannigfaltigen Bereichen des Rechts – sei es bei der Beratung in Fragen des Gesellschaftsrechts, des Arbeits- und Mietrechts, des Vertragsrechts, des Familienrechts, des Strafrechts, des Versicherungs- und Haftpflichtrechts sowie auf dem Gebiet der Sozialversicherungen.</p></div></details><details><summary>Experten – auch vor Gericht<span class="pm" aria-hidden="true"></span></summary><div class="acc-body"><p>Unsere forensisch tätigen Anwälte verfügen über einen soliden forensischen Erfahrungsschatz, sei dies im Rahmen von Zivilprozessen, Strafverfahren, im Bereich der Schiedsgerichtsbarkeit oder der Verwaltungsrechtspflege. Sollte eine gerichtliche Auseinandersetzung unausweichlich sein, vertreten wir unsere Klienten vor Gericht und sind bestrebt, aufgrund unserer prozessualen Expertise den grösstmöglichen Gewinn zu erzielen.</p></div></details>
+    </div>
+  </div>
+</section>
+
+<section class="panel dark" aria-labelledby="tm-h">
+  <div class="row-head">
+    <h2 id="tm-h" class="h-l" data-reveal>Unser Team</h2>
+    <div class="rail-ctl"><button type="button" data-rail="-1" aria-label="‹"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M9 2L4 7l5 5"/></svg></button><button type="button" data-rail="1" aria-label="›"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 2l5 5-5 5"/></svg></button></div>
+  </div>
+  <div class="rail" id="rail"><a class="photo person" href="team/#m1" data-open="m1"><img src="img/1060_philipboeni_0007_bearbeitet.jpg" alt="" width="800" height="660" loading="lazy"><span class="tag">Werdegang<i><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3 11L11 3M4.5 3H11v6.5"/></svg></i></span><span class="ph-in"><span class="ph-name">Sandra M. Kammerbauer</span><span class="ph-role">Partnerin</span></span></a><a class="photo person" href="team/#m2" data-open="m2"><img src="img/1059_thomas_locher-1.jpg" alt="" width="800" height="660" loading="lazy"><span class="tag">Werdegang<i><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3 11L11 3M4.5 3H11v6.5"/></svg></i></span><span class="ph-in"><span class="ph-name">Thomas Locher</span><span class="ph-role">Partner</span></span></a><a class="photo person" href="team/#m3" data-open="m3"><img src="img/1062_joel_brochon-1.jpg" alt="" width="800" height="660" loading="lazy"><span class="tag">Werdegang<i><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3 11L11 3M4.5 3H11v6.5"/></svg></i></span><span class="ph-in"><span class="ph-name">Joël E. Brochon</span><span class="ph-role">Partner</span></span></a><a class="photo person" href="team/#m4" data-open="m4"><img src="img/1153_claudia_villiger_028_bearbeitet.jpg" alt="" width="800" height="660" loading="lazy"><span class="tag">Werdegang<i><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3 11L11 3M4.5 3H11v6.5"/></svg></i></span><span class="ph-in"><span class="ph-name">Claudia Schuler-Villiger</span><span class="ph-role">MLaw, Rechtsanwältin</span></span></a><a class="photo person" href="team/#m5" data-open="m5"><img src="img/1140_alessandro_gerlach.jpg" alt="" width="800" height="660" loading="lazy"><span class="tag">Werdegang<i><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3 11L11 3M4.5 3H11v6.5"/></svg></i></span><span class="ph-in"><span class="ph-name">Alessandro L. Gerlach</span><span class="ph-role">MLaw, Rechtsanwalt und Urkundsperson des Kantons Zug</span></span></a><a class="photo person" href="team/#m6" data-open="m6"><img src="img/1196_formatiertimg_9417-2_1.jpg" alt="" width="800" height="660" loading="lazy"><span class="tag">Werdegang<i><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3 11L11 3M4.5 3H11v6.5"/></svg></i></span><span class="ph-in"><span class="ph-name">Gregor A. Zaugg</span><span class="ph-role">MLaw, Rechtsanwalt</span></span></a><a class="photo person" href="team/#m7" data-open="m7"><img src="img/1180_img_1528.jpg" alt="" width="800" height="660" loading="lazy"><span class="tag">Werdegang<i><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3 11L11 3M4.5 3H11v6.5"/></svg></i></span><span class="ph-in"><span class="ph-name">Lara Surer</span><span class="ph-role">MLaw, Rechtsanwältin und Urkundsperson des Kantons Zug</span></span></a><a class="photo person" href="team/#m8" data-open="m8"><img src="img/1209_ziegler_zacharias-01_neu.jpg" alt="" width="800" height="660" loading="lazy"><span class="tag">Werdegang<i><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3 11L11 3M4.5 3H11v6.5"/></svg></i></span><span class="ph-in"><span class="ph-name">Zacharias Ziegler</span><span class="ph-role">Fachanwalt SAV Familienrecht/CAS Familienrecht</span></span></a><a class="photo person" href="team/#m9" data-open="m9"><img src="img/1061_daniel_isenegger-1.jpg" alt="" width="800" height="660" loading="lazy"><span class="tag">Werdegang<i><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3 11L11 3M4.5 3H11v6.5"/></svg></i></span><span class="ph-in"><span class="ph-name">Daniel Isenegger</span><span class="ph-role">Treuhänder mit eidg. Fachausweis, dipl. Treuhandexperte</span></span></a><a class="photo person" href="team/#m10" data-open="m10"><img src="img/1203_formatiertimg_9585-3.jpg" alt="" width="800" height="660" loading="lazy"><span class="tag">Werdegang<i><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3 11L11 3M4.5 3H11v6.5"/></svg></i></span><span class="ph-in"><span class="ph-name">Camille Gottraux</span><span class="ph-role">MLaw, Juristische Mitarbeiterin</span></span></a><a class="photo person" href="team/#m11" data-open="m11"><img src="img/1159_final_quer-img_6783.jpg" alt="" width="800" height="660" loading="lazy"><span class="tag">Werdegang<i><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3 11L11 3M4.5 3H11v6.5"/></svg></i></span><span class="ph-in"><span class="ph-name">Marco Näpflin</span><span class="ph-role">Juristischer Mitarbeiter</span></span></a><a class="photo person" href="team/#m12" data-open="m12"><img src="img/1157_vera_sutter_067_bearbeitet.jpg" alt="" width="800" height="660" loading="lazy"><span class="tag">Werdegang<i><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3 11L11 3M4.5 3H11v6.5"/></svg></i></span><span class="ph-in"><span class="ph-name">Vera Suter</span><span class="ph-role">Office Managerin</span></span></a><a class="photo person" href="team/#m13" data-open="m13"><img src="img/1178_portraitdk.jpg" alt="" width="800" height="660" loading="lazy"><span class="tag">Werdegang<i><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3 11L11 3M4.5 3H11v6.5"/></svg></i></span><span class="ph-in"><span class="ph-name">Delvina Kuci</span><span class="ph-role">Rechtsanwalts- und Notariatsassistentin</span></span></a><a class="photo person" href="team/#m14" data-open="m14"><img src="img/1064_ramona_palatucci_033_bearbeitet.jpg" alt="" width="800" height="660" loading="lazy"><span class="tag">Werdegang<i><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3 11L11 3M4.5 3H11v6.5"/></svg></i></span><span class="ph-in"><span class="ph-name">Ramona Gaudio</span><span class="ph-role">Verantwortliche Buchhaltung und Personalwesen</span></span></a></div>
+  <p style="margin-top:28px"><a class="btn light" href="team/">Ganzes Team<span class="arr"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3 11L11 3M4.5 3H11v6.5"/></svg></span></a></p>
+</section>
+
+<section class="panel" aria-labelledby="sv-h">
+  <div class="row-head">
+    <h2 id="sv-h" class="h-l" data-reveal>Unsere Dienstleistungen</h2>
+    <a class="btn" href="dienstleistung/" data-reveal>Alle Dienstleistungen<span class="arr"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3 11L11 3M4.5 3H11v6.5"/></svg></span></a>
+  </div>
+  <div class="sgroup"><h3 class="h-s" data-reveal>Beratung <span class="muted">· 8 Gebiete</span></h3><div class="cards">
+    <a class="acard" href="dienstleistung/#arbeitsrecht-0" data-reveal><span class="ac-top"><span class="ac-ico"><img src="img/1045_arbeitsrecht.svg" alt="" width="34" height="34"></span><span class="circ"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3 11L11 3M4.5 3H11v6.5"/></svg></span></span><h3>Arbeitsrecht und Sozialversicherungen</h3><p>Unsere Anwälte beraten Gesellschaften und Privatpersonen in allen Bereichen des Individualarbeitsrechts und des kollektiven Arbeitsrechts.</p></a><a class="acard" href="dienstleistung/#familienrecht-1" data-reveal><span class="ac-top"><span class="ac-ico"><img src="img/1048_familienrecht.svg" alt="" width="34" height="34"></span><span class="circ"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3 11L11 3M4.5 3H11v6.5"/></svg></span></span><h3>Familienrecht</h3><p>Wir beraten unsere Klienten bei den mannigfaltigen Fragestellungen, die sich im Familienrecht stellen.</p></a><a class="acard" href="dienstleistung/#familienrecht-2" data-reveal><span class="ac-top"><span class="ac-ico"><img src="img/1048_familienrecht.svg" alt="" width="34" height="34"></span><span class="circ"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3 11L11 3M4.5 3H11v6.5"/></svg></span></span><h3>Erbrecht, Sachenrecht</h3><p>Eine akkurate Nachlassplanung setzt voraus, dass der involvierte Berater die ökonomischen und persönlichen Umstände des Klienten und dessen Zielsetzung minutiös eruiert.</p></a><a class="acard" href="dienstleistung/#vertragsrecht-3" data-reveal><span class="ac-top"><span class="ac-ico"><img src="img/1049_vertragsrecht.svg" alt="" width="34" height="34"></span><span class="circ"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3 11L11 3M4.5 3H11v6.5"/></svg></span></span><h3>Vertragsrecht</h3><p>Unsere Anwälte beschäftigen sich intensiv mit dem Ausgestalten von Verträgen aus allen Bereichen des Obligationenrechts.</p></a><a class="acard" href="dienstleistung/#gesellschaftsrecht-4" data-reveal><span class="ac-top"><span class="ac-ico"><img src="img/1044_gesellschaftsrecht.svg" alt="" width="34" height="34"></span><span class="circ"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3 11L11 3M4.5 3H11v6.5"/></svg></span></span><h3>Gesellschaftsrecht</h3><p>Ein wichtiger Schwerpunkt unserer Tätigkeit liegt in der fachlichen Beratung von Gesellschaften, Unternehmern und natürlichen Personen im Bereich des Gesellschaftsrechts.</p></a><a class="acard" href="dienstleistung/#strafrecht-5" data-reveal><span class="ac-top"><span class="ac-ico"><img src="img/1046_strafrecht.svg" alt="" width="34" height="34"></span><span class="circ"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3 11L11 3M4.5 3H11v6.5"/></svg></span></span><h3>Strafrecht</h3><p>Auf keinem anderen Rechtsgebiet sind die Machtverhältnisse derart ungleich verteilt wie auf dem Gebiet des Strafrechts.</p></a><a class="acard" href="dienstleistung/#steuerrecht-6" data-reveal><span class="ac-top"><span class="ac-ico"><img src="img/1047_steuerrecht.svg" alt="" width="34" height="34"></span><span class="circ"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3 11L11 3M4.5 3H11v6.5"/></svg></span></span><h3>Steuerrecht</h3><p>Die kontinuierliche Veränderung und die - trotz internationaler Koordinationsbestrebungen - stetig wachsende Komplexität der Steuersysteme …</p></a><a class="acard" href="dienstleistung/#notariat-7" data-reveal><span class="ac-top"><span class="ac-ico"><img src="img/1050_notariat.svg" alt="" width="34" height="34"></span><span class="circ"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3 11L11 3M4.5 3H11v6.5"/></svg></span></span><h3>Notariat</h3><p>Unsere Anwälte (RA Werner Räber, RAin Sandra Kammerbauer, RA Joël Brochon und RA Alessandro Gerlach) sind Urkundspersonen der Kantone …</p></a>
+  </div></div><div class="sgroup"><h3 class="h-s" data-reveal>Prozessführung <span class="muted">· 3 Gebiete</span></h3><div class="cards">
+    <a class="acard" href="dienstleistung/#zivilprozess-8" data-reveal><span class="ac-top"><span class="ac-ico"><img src="img/1052_zivilprozess.svg" alt="" width="34" height="34"></span><span class="circ"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3 11L11 3M4.5 3H11v6.5"/></svg></span></span><h3>Zivilprozess</h3><p>Neben unserer beratenden Tätigkeit vertreten wir unsere Klienten auch vor den Zivil- und Verwaltungsgerichten.</p></a><a class="acard" href="dienstleistung/#schuldbetreibung-9" data-reveal><span class="ac-top"><span class="ac-ico"><img src="img/1053_schuldbetreuung.svg" alt="" width="34" height="34"></span><span class="circ"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3 11L11 3M4.5 3H11v6.5"/></svg></span></span><h3>Schuldbetreibung und Konkurs</h3><p>Auf dem Gebiet des Zwangsvollstreckungsrechts stellen wir sicher, dass unsere Klienten ihre Rechte rasch und erfolgreich wahren können.</p></a><a class="acard" href="dienstleistung/#schiedsverfahren-10" data-reveal><span class="ac-top"><span class="ac-ico"><img src="img/1051_schiedsverfahren.svg" alt="" width="34" height="34"></span><span class="circ"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3 11L11 3M4.5 3H11v6.5"/></svg></span></span><h3>Schiedsverfahren</h3><p>Wir beraten und vertreten unsere Klienten bei Schiedsgerichtsverfahren und damit einhergehenden Vollstreckungsverfahren.</p></a>
+  </div></div>
+</section>
+<section class="panel contact-panel" aria-labelledby="cp-h">
+  <div class="form-panel">
+    <div class="sec-head left" style="margin:0">
+      <h2 id="cp-h" class="h-l" data-reveal>Schreiben Sie uns</h2>
+      <p class="lead" data-reveal>Ihre Nachricht öffnet sich in Ihrem E-Mail-Programm, adressiert an info@zanettilaw.ch.</p>
+      <div class="cinfo" data-reveal>
+        <a href="tel:+41417663585"><span class="circ"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3.5 1.8h2.6l1.2 3.2-1.8 1.2a8.6 8.6 0 0 0 4.3 4.3l1.2-1.8 3.2 1.2v2.6a1.6 1.6 0 0 1-1.7 1.6A12.6 12.6 0 0 1 1.9 3.5a1.6 1.6 0 0 1 1.6-1.7z"/></svg></span><span><small>Anrufen</small>+41 41 766 35 85</span></a>
+        <a href="mailto:info@zanettilaw.ch"><span class="circ"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3 11L11 3M4.5 3H11v6.5"/></svg></span><span><small>E-Mail schreiben</small>info@zanettilaw.ch</span></a>
+      </div>
+    </div>
+    <form class="coupon fields" data-mailto="info@zanettilaw.ch" data-reveal>
+      <label class="vh" for="cp-name">Name</label><input class="inp" id="cp-name" name="name" placeholder="Name" autocomplete="name" required>
+      <label class="vh" for="cp-phone">Telefon</label><input class="inp" id="cp-phone" name="phone" type="tel" placeholder="Telefon" autocomplete="tel">
+      <label class="vh" for="cp-mail">E-Mail</label><input class="inp full" id="cp-mail" name="email" type="email" placeholder="E-Mail" autocomplete="email">
+      <label class="vh" for="cp-msg">Ihr Anliegen</label><textarea class="inp full" id="cp-msg" name="message" rows="4" placeholder="Ihr Anliegen" required></textarea>
+      <div class="full"><button class="btn" type="submit">Nachricht vorbereiten<span class="arr"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3 11L11 3M4.5 3H11v6.5"/></svg></span></button></div>
+    </form>
+  </div>
 </section>
 </main>
 <footer class="foot">
-  <div class="blocks" aria-hidden="true"><span style="--h:100%">Z</span><span style="--h:78%">A</span><span style="--h:92%">N</span><span style="--h:66%">E</span><span style="--h:86%">T</span><span style="--h:72%">T</span><span style="--h:96%">I</span></div>
+  <div class="foot-cta">
+    <h2 class="h-l" data-reveal>Unsere Arbeitsweise</h2>
+    <a class="btn light" href="kontakt/" data-reveal>Kontakt aufnehmen<span class="arr"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3 11L11 3M4.5 3H11v6.5"/></svg></span></a>
+  </div>
   <div class="foot-grid">
-    <nav class="foot-links" aria-label="Zanetti Rechtsanwälte"><a href="dienstleistung/">Dienstleistungen</a><a href="beurkundungen/">Beurkundungen</a><a href="team/">Team</a><a href="publikationen/">Publikationen</a><a href="kontakt/">Kontakt</a><a href="mitgliedschaften/">Mitgliedschaften</a></nav>
-    <div class="foot-offices"><div><b>Zug</b><br>Blegistrasse 9<br>6340 Baar, Zug</div><div><b>Zürich</b><br>Allmendstrasse 2<br>8105 Regensdorf, Zürich</div><div><b>Schwyz</b><br>Dorfplatz 2b<br>6405 Immensee</div></div>
-    <div class="foot-contact"><a href="tel:+41417663585">T +41 41 766 35 85</a><br>F +41 41 766 35 80<br><a href="mailto:info@zanettilaw.ch">info@zanettilaw.ch</a></div>
+    <div><img src="img/logo-white.svg" alt="Zanetti Rechtsanwälte" width="220" height="46" style="height:44px;width:auto;margin-bottom:18px"><p><a href="tel:+41417663585">T +41 41 766 35 85</a>F +41 41 766 35 80<br><a href="mailto:info@zanettilaw.ch">info@zanettilaw.ch</a></p></div>
+    <nav aria-label="Seiten"><h3>Seiten</h3><a href="dienstleistung/">Dienstleistungen</a><a href="beurkundungen/">Beurkundungen</a><a href="team/">Team</a><a href="publikationen/">Publikationen</a><a href="kontakt/">Kontakt</a><a href="mitgliedschaften/">Mitgliedschaften</a></nav>
+    <div class="foot-offs"><h3>Büros</h3><p><b>Zug</b><br>Blegistrasse 9<br>6340 Baar, Zug</p><p><b>Zürich</b><br>Allmendstrasse 2<br>8105 Regensdorf, Zürich</p><p><b>Schwyz</b><br>Dorfplatz 2b<br>6405 Immensee</p></div>
+    <nav aria-label="Sprache"><h3>Sprache</h3><a href="./" lang="de">Deutsch</a><a href="en/" lang="en">English</a></nav>
   </div>
-  <div class="foot-last">
-    <p>© 2026 Zanetti Rechtsanwälte · <a href="impressum/">Impressum</a> · <a href="datenschutz/">Datenschutz</a></p>
-    <a class="btn btn-paper" href="kontakt/">Kontakt aufnehmen</a>
-  </div>
+  <div class="foot-legal"><p>© 2026 Zanetti Rechtsanwälte</p><p><a href="impressum/">Impressum</a> · <a href="datenschutz/">Datenschutz</a></p></div>
+  <p class="credits">Bilder: <a href="https://commons.wikimedia.org/wiki/File:Business_man_and_woman_handshake_in_work_office.jpg">Business man and woman handshake in work office</a> · perzon seo, CC BY 2.0</p>
+  <p class="foot-word" aria-hidden="true">Zanetti</p>
 </footer>
 <script src="assets/site.js" defer></script>
 </body>

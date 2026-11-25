@@ -96,9 +96,52 @@ def credits_html(l):
     return f'<p class="credits">{UI[l]["pics"]}: ' + '; '.join(items) + '</p>'
 
 
+X = {
+ 'de': dict(spec='Fachanwälte', cant='Kantone', langs_n='Sprachen', profile='Profil', open='Profil ansehen', all='Alle anzeigen',
+            certified='Zertifiziert durch den Schweizerischen Anwaltsverband SAV', why='Was eine Fachanwältin, einen Fachanwalt auszeichnet',
+            team='Spezialistinnen und Spezialisten aus der ganzen Schweiz', pick='Kanton wählen', site='Seiten', search='Suche'),
+ 'fr': dict(spec='Spécialistes', cant='Cantons', langs_n='Langues', profile='Profil', open='Voir le profil', all='Tout afficher',
+            certified='Certifiés par la Fédération Suisse des Avocats FSA', why='Ce qui distingue une avocate ou un avocat spécialiste',
+            team='Des spécialistes dans toute la Suisse', pick='Choisir un canton', site='Pages', search='Recherche'),
+ 'it': dict(spec='Specialisti', cant='Cantoni', langs_n='Lingue', profile='Profilo', open='Vedi il profilo', all='Mostra tutti',
+            certified='Certificati dalla Federazione Svizzera degli Avvocati FSA', why='Che cosa contraddistingue un avvocato specialista',
+            team='Specialisti in tutta la Svizzera', pick='Scegliere un cantone', site='Pagine', search='Ricerca'),
+ 'en': dict(spec='Specialists', cant='Cantons', langs_n='Languages', profile='Profile', open='View profile', all='Show all',
+            certified='Certified by the Swiss Bar Association SBA', why='What sets a certified specialist apart',
+            team='Specialists across Switzerland', pick='Choose a canton', site='Pages', search='Search'),
+}
+ARR = '<svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3 11L11 3M4.5 3H11v6.5"/></svg>'
+SEARCH = '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="7" cy="7" r="5"/><path d="M11 11l3.5 3.5"/></svg>'
+LEFT = '<svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M9 2L4 7l5 5"/></svg>'
+RIGHT = '<svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 2l5 5-5 5"/></svg>'
+IMG.update(contract='contract.jpg', scales='scales1.jpg', lausanne='lausanne.jpg', plenar='plenar.jpg', books='books.jpg')
+for _l, _d in {
+ 'de': dict(contract='Arbeitsvertrag mit Füllfederhalter', scales='Justitia mit Waage', lausanne='Gebäude des Bundesgerichts in Lausanne', plenar='Plenarsaal des Bundesgerichts', books='Juristische Fachbücher im Regal'),
+ 'fr': dict(contract='Contrat de travail et stylo-plume', scales='Statue de la Justice avec sa balance', lausanne='Bâtiment du Tribunal fédéral à Lausanne', plenar='Salle plénière du Tribunal fédéral', books='Ouvrages juridiques sur une étagère'),
+ 'it': dict(contract='Contratto di lavoro e penna stilografica', scales='Statua della Giustizia con la bilancia', lausanne='Sede del Tribunale federale a Losanna', plenar='Sala plenaria del Tribunale federale', books='Libri giuridici su uno scaffale'),
+ 'en': dict(contract='Employment contract and fountain pen', scales='Statue of Justice holding scales', lausanne='Swiss Federal Supreme Court building in Lausanne', plenar='Plenary hall of the Federal Supreme Court', books='Law books on a shelf'),
+}.items():
+    ALT[_l].update(_d)
+
+PAGEIMG = dict(about='contract', areas='workers', lawyers='plenar', contact='lausanne', disclaimer='court')
+
+
 def url(l, key, frm=None):
-    s = P[l]['slugs'][key]
-    return f'{s}.html'
+    return f"{P[l]['slugs'][key]}.html"
+
+
+def city(x):
+    a = x['addr'][-1] if x['addr'] else ''
+    return re.sub(r'^\d{4}\s*', '', a)
+
+
+def initials(n):
+    return ''.join(w[0] for w in n.split()[:2])
+
+
+WITH_PHOTO = [x for x in L if x.get('img')]
+_r = random.Random(7)
+FEATURED = _r.sample(WITH_PHOTO, 10)
 
 
 def head(l, title, desc, extra=''):
@@ -114,7 +157,7 @@ def head(l, title, desc, extra=''):
 <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders:wght@800&family=Public+Sans:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../assets/site.css">
 <script>document.documentElement.classList.add('js')</script>
 {extra}
@@ -122,24 +165,41 @@ def head(l, title, desc, extra=''):
 '''
 
 
-def topbar(l, active, page_key, profile=False):
+def bar(l, active, page_key, profile=False):
     nav = P[l]['nav']
     keys = ['about', 'areas', 'lawyers', 'contact', 'disclaimer']
-    links = ''.join(
-        f'<a href="{url(l,k)}"{" aria-current=\"page\"" if k == active else ""}>{e(n)}</a>'
-        for k, n in zip(keys, nav))
-    langs = []
-    for x in LANGS:
-        target = (PROFILE[x] + '.html') if profile else url(x, page_key)
-        cur = ' aria-current="true"' if x == l else ''
-        langs.append(f'<a href="../{x}/{target}" hreflang="{x}" lang="{x}" data-keepquery title="{LANG_LABEL[x]}"{cur}>{x.upper()}</a>')
-    return f'''<a class="skip" href="#main">{UI[l]["skip"]}</a>
-<header class="top">
-  <a class="mark" href="{url(l,'about')}"><span>{e(banner_small(l))}</span> <b>{e(BIG[l])}</b></a>
-  <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu">{UI[l]["menu"]}</button>
-  <div class="menu" id="menu">
-    <nav class="nav" aria-label="{e(UI[l]['law'])}">{links}</nav>
-    <nav class="langs" aria-label="{UI[l]['lang']}">{''.join(langs)}</nav>
+    links = ''.join(f'<a href="{url(l,k)}"{" aria-current=\"page\"" if k == active else ""}>{e(n)}</a>' for k, n in zip(keys, nav))
+    langs = ''.join(
+        f'<a href="../{x}/{(PROFILE[x] + ".html") if profile else url(x, page_key)}" hreflang="{x}" lang="{x}" data-keepquery title="{LANG_LABEL[x]}"{" aria-current=\"true\"" if x == l else ""}>{x.upper()}</a>'
+        for x in LANGS)
+    return f'''<div class="bar">
+    <a class="brand" href="{url(l,'about')}"><img src="../assets/favicon.svg" alt="" width="40" height="40"><span>{e(BIG[l])}<small>FSA · SAV</small></span></a>
+    <nav class="pills" id="menu" aria-label="{e(UI[l]['law'])}">{links}</nav>
+    <div class="bar-right">
+      <nav class="langs" aria-label="{UI[l]['lang']}">{langs}</nav>
+      <a class="btn small light" href="{url(l,'lawyers')}">{e(UI[l]['find'])}<span class="arr">{ARR}</span></a>
+      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu">{UI[l]['menu']}</button>
+    </div>
+  </div>'''
+
+
+def lines(t):
+    """Split a headline into reveal lines of roughly equal length."""
+    w = t.split()
+    n = 1 if len(t) < 22 else 2 if len(t) < 48 else 3
+    per = -(-len(w) // n)
+    out = [' '.join(w[i:i + per]) for i in range(0, len(w), per)]
+    return ''.join(f'<span class="l"><span style="--i:{i}">{e(x)}</span></span>' for i, x in enumerate(out))
+
+
+def page_hero(l, key, title, sub='', profile=False, right=''):
+    return f'''<header class="hero sub">
+  <div class="hero-bg">{img(l, PAGEIMG[key], '', 1920, 1280, False)}</div>
+  {bar(l, key, key, profile)}
+  <div class="hero-main"><h1 id="h1" class="hero-h h-xl">{lines(title)}</h1></div>
+  <div class="hero-foot">
+    <p class="hero-sub" data-load>{e(sub)}</p>
+    {right}
   </div>
 </header>
 '''
@@ -150,21 +210,22 @@ def footer(l, page_key, profile=False):
     keys = ['about', 'areas', 'lawyers', 'contact', 'disclaimer']
     links = ''.join(f'<a href="{url(l,k)}">{e(n)}</a>' for k, n in zip(keys, nav))
     langs = ''.join(f'<a href="../{x}/{(PROFILE[x] + ".html") if profile else url(x, page_key)}" lang="{x}" data-keepquery>{LANG_LABEL[x]}</a>' for x in LANGS)
-    cantons = len({x['canton'] for x in L})
+    cc = canton_counts(l)
+    top = sorted(cc, key=lambda t: -t[2])[:6]
+    cl = ''.join(f'<a href="{url(l,"lawyers")}?canton={k}">{e(n)} <span style="opacity:.5">{c}</span></a>' for k, n, c in top)
     return f'''<footer class="foot">
-  <div class="foot-top">
-    <div class="foot-cta">
-      <h2 class="foot-h" data-reveal>{e(UI[l]['find'])}</h2>
-      <p class="foot-sub" data-reveal>{e(UI[l]['cta'])}</p>
-      <a class="btn btn-accent" href="{url(l,'lawyers')}" data-reveal>{e(P[l]['nav'][2])}</a>
-    </div>
-    <div class="foot-links" data-reveal>{links}</div>
-    <div class="foot-links" data-reveal>{langs}</div>
+  <div class="foot-cta">
+    <h2 class="h-l" data-reveal>{e(UI[l]['cta'])}</h2>
+    <a class="btn light" href="{url(l,'lawyers')}" data-reveal>{e(UI[l]['find'])}<span class="arr">{ARR}</span></a>
   </div>
-  <div class="foot-legal">
-    <p>{e(UI[l]['count'].format(n=len(L), k=cantons))} · © {e(UI[l]['law'])}</p>
-    {credits_html(l)}
+  <div class="foot-grid">
+    <div><h3>{e(UI[l]['law'])}</h3><p>{e(UI[l]['count'].format(n=len(L), k=len(cc)))}. {e(X[l]['certified'])}.</p></div>
+    <nav aria-label="{e(X[l]['site'])}"><h3>{e(X[l]['site'])}</h3>{links}</nav>
+    <nav aria-label="{e(UI[l]['bycanton'])}"><h3>{e(UI[l]['bycanton'])}</h3>{cl}</nav>
+    <nav aria-label="{UI[l]['lang']}"><h3>{UI[l]['lang']}</h3>{langs}</nav>
   </div>
+  <div class="foot-legal"><p>© 2026 {e(UI[l]['law'])}</p><p><a href="{url(l,'disclaimer')}">{e(nav[4])}</a> · <a href="{url(l,'contact')}">{e(nav[3])}</a></p></div>
+  {credits_html(l)}
   <p class="foot-word" aria-hidden="true">{e(BIG[l])}</p>
 </footer>
 <script src="../assets/site.js" defer></script>
@@ -174,7 +235,7 @@ def footer(l, page_key, profile=False):
 
 
 def img(l, key, cls='', w=1600, h=1000, lazy=True, sizes='100vw'):
-    return (f'<img class="{cls}" src="../assets/{IMG[key]}" alt="{e(ALT[l][key])}" width="{w}" height="{h}"'
+    return (f'<img{f" class={chr(34)}{cls}{chr(34)}" if cls else ""} src="../assets/{IMG[key]}" alt="{e(ALT[l][key])}" width="{w}" height="{h}"'
             f'{" loading=\"lazy\"" if lazy else ""} decoding="async">')
 
 
@@ -183,28 +244,28 @@ def canton_counts(l):
     c = {}
     for x in L:
         c[x['canton']] = c.get(x['canton'], 0) + 1
-    order = list(names.keys())
-    return [(k, names[k], c.get(k, 0)) for k in order if c.get(k)]
+    return [(k, names[k], c.get(k, 0)) for k in names if c.get(k)]
 
 
-def canton_select(l, sid, with_counts=False):
+def canton_select(l, sid, with_counts=False, cls=''):
     names = P[l]['form']['cantons']
     counts = {k: n for k, _, n in canton_counts(l)}
     opts = [f'<option value="">{e(UI[l]["all"])}</option>']
     for k, n in names.items():
         lab = f'{n} ({counts.get(k,0)})' if with_counts else n
         opts.append(f'<option value="{k}">{e(lab)}</option>')
-    return f'<select id="{sid}" name="canton">{"".join(opts)}</select>'
+    return f'<select id="{sid}" name="canton"{f" class={chr(34)}{cls}{chr(34)}" if cls else ""}>{"".join(opts)}</select>'
 
 
-def stairs(sentence, n=5):
-    w = sentence.split()
-    per = max(1, round(len(w) / n))
-    lines = [' '.join(w[i:i + per]) for i in range(0, len(w), per)]
-    if len(lines) > n:
-        lines[n - 1] = ' '.join(lines[n - 1:])
-        lines = lines[:n]
-    return ''.join(f'<span class="stair s{i}">{e(t)}</span>' for i, t in enumerate(lines))
+def person_mini(l, x):
+    return (f'<a class="pcard" href="{PROFILE[l]}.html?id={x["id"]}"><span class="pc-top"><img src="../img/lawyers/{x["img"]}" alt="" width="96" height="120" loading="lazy"><span class="circ">{ARR}</span></span>'
+            f'<span class="pc-name">{e(x["name"])}</span><span class="pc-role">{e(x["firm"])}</span><span class="pc-city">{e(city(x))} · {e(x["canton"])}</span></a>')
+
+
+def person_card(l, x, tag=True):
+    return (f'<a class="photo" href="{PROFILE[l]}.html?id={x["id"]}"><img src="../img/lawyers/{x["img"]}" alt="" width="440" height="550" loading="lazy">'
+            + (f'<span class="tag">{e(X[l]["profile"])}<i>{ARR}</i></span>' if tag else '')
+            + f'<span class="ph-in"><span class="ph-name">{e(x["name"])}</span><span class="ph-role">{e(x["firm"])} · {e(city(x))}</span></span></a>')
 
 
 # ---------------------------------------------------------------- pages
@@ -222,61 +283,104 @@ def page_about(l):
         else:
             i += 1
     areas_lead = paras(p['areas'][0])[0][1]
-    fields.append((p['nav'][1], areas_lead, url(l, 'areas')))
+    areas = [strip(x) for x in re.findall(r'<li>(.*?)</li>', p['areas'][1], re.S)]
     form_intro = p['form']['intro'] or strip(p['lawyers'][0])
-    cantons = canton_counts(l)
+    cc = canton_counts(l)
+    faces = ''.join(f'<img src="../img/lawyers/{x["img"]}" alt="" width="38" height="38">' for x in FEATURED[:4])
     title = f'{banner_small(l)} {BIG[l]}'
+    feat = FEATURED[0]
     s = head(l, title, lead)
-    s += '<body class="home">\n' + topbar(l, 'about', 'about')
-    s += f'''<main id="main">
-<section class="hero" aria-labelledby="h1">
-  <h1 id="h1" class="hero-h"><span class="hero-small mask"><span>{e(banner_small(l))}</span></span><span class="hero-big mask"><span>{e(BIG[l])}</span></span></h1>
+    s += '<body class="home">\n' + f'<a class="skip" href="#main">{UI[l]["skip"]}</a>\n'
+    s += f'''<header class="hero">
+  <div class="hero-bg">{img(l,'contract','', 1920, 1440, False)}</div>
+  {bar(l, 'about', 'about')}
+  <div class="hero-main"><h1 id="h1" class="hero-h h-xl">{lines(banner_small(l))}<span class="l"><span style="--i:3" class="hl">{e(BIG[l])}</span></span></h1></div>
   <div class="hero-foot">
-    <p class="hero-sub" data-load>{e(form_intro)}</p>
-    <form class="quick" action="{url(l,'lawyers')}" method="get" data-load>
-      <label for="q-canton" class="vh">{e(p['form']['canton'] if 'canton' in p['form'] else 'Kanton')}</label>
-      {canton_select(l, 'q-canton', True)}
-      <button class="btn btn-ink" type="submit" data-label-all="{e(UI[l]['show'])}" data-label-c="{e(UI[l]['showc'])}" data-total="{len(L)}">{e(UI[l]['show'].format(n=len(L)))}</button>
-    </form>
+    <p class="hero-sub" data-load>{e(lead)}</p>
+    <div class="widget-wrap" data-load>
+      <form class="widget glass quick" action="{url(l,'lawyers')}" method="get">
+        <p class="w-label">{e(form_intro)}</p>
+        <label for="q-canton" class="vh">{e(p['form']['canton'])}</label>
+        {canton_select(l, 'q-canton', True)}
+        <button class="w-row w-main" type="submit" data-label-all="{e(UI[l]['show'])}" data-label-c="{e(UI[l]['showc'])}" data-total="{len(L)}"><span class="ic">{SEARCH}</span><span class="t">{e(UI[l]['show'].format(n=len(L)))}</span>{ARR}</button>
+        <a class="w-row" href="{url(l,'lawyers')}?result_type=rand">{e(p['form']['radios'][0])}{ARR}</a>
+      </form>
+    </div>
+    <div class="hero-right" data-load>
+      <div class="avatars glass chip"><span class="faces">{faces}</span><span>{len(L)} · {len(cc)} {e(X[l]['cant'])}</span></div>
+      <p>{e(X[l]['certified'])}.</p>
+    </div>
+  </div>
+</header>
+<main id="main">
+<section class="panel" aria-labelledby="ab-h">
+  <div class="sec-head">
+    <h2 id="ab-h" class="h-l" data-reveal>{e(X[l]['why'])}</h2>
+    <p class="lead center" data-reveal>{e(body[0][1])}</p>
+  </div>
+  <div class="bento">
+    <figure class="photo" data-reveal>{img(l,'plenar','', 1920, 1269)}
+      <div class="stats">
+        <div class="stat glass"><b>{len(L)}</b><span>{e(X[l]['spec'])}</span></div>
+        <div class="stat glass"><b>{len(cc)}</b><span>{e(X[l]['cant'])}</span></div>
+        <div class="stat glass"><b>4</b><span>{e(X[l]['langs_n'])}</span></div>
+      </div>
+    </figure>
+    <div class="quote-card" data-reveal>
+      <blockquote class="long"><p>{e(body[1][1] if len(body) > 1 else lead)}</p></blockquote>
+      <div class="who"><span class="mono">SAV</span><span><b>{e(UI[l]['law'])}</b><span>{e(p['title']['about'])}</span></span></div>
+    </div>
+    <a class="photo" href="{url(l,'lawyers')}" data-reveal>{img(l,'court','', 1920, 1276)}<span class="tag">{e(p['nav'][2])}<i>{ARR}</i></span><span class="ph-in"><span class="ph-name">{e(UI[l]['find'])}</span><span class="ph-role">{e(UI[l]['count'].format(n=len(L), k=len(cc)))}</span></span></a>
   </div>
 </section>
 
-<section class="stairs-sec" aria-label="{e(p['title']['about'])}">
-  <p class="stairs-text" data-reveal>{stairs(lead)}</p>
-  <figure class="stairs-pics" data-reveal>
-    {img(l,'workers','pic', 1920, 1299)}
-    {img(l,'ribbon','pic', 1938, 1280)}
-  </figure>
-</section>
-
-<section class="sav" aria-labelledby="sav-h">
-  <h2 id="sav-h" class="h2" data-reveal>{e(p['title']['about'])}</h2>
-  <div class="sav-cols">
-    {''.join(f'<p data-reveal>{e(t)}</p>' for _, t in body)}
+<section class="panel" aria-labelledby="st-h">
+  <div class="steps">
+    <figure class="photo" data-reveal>{img(l,'scales','', 1920, 1440)}</figure>
+    <div class="steps-mid">
+      <div class="sec-head left" style="margin:0">
+        <h2 id="st-h" class="h-m" data-reveal>{e(p['title']['about2'] if p['title']['about2'] != p['title']['about'] else UI[l]['law'])}</h2>
+        {''.join(f'<p class="muted" data-reveal>{e(t)}</p>' for _, t in body[2:4])}
+      </div>
+      <div class="bignum" data-reveal><b>{len(L)}</b><span>{e(UI[l]['count'].format(n=len(L), k=len(cc)))}</span></div>
+    </div>
+    <div class="acc" data-reveal>
+      {''.join(f'<details{" open" if k == 0 else ""}><summary>{e(h)}<span class="pm" aria-hidden="true"></span></summary><div class="acc-body"><p>{e(t)}</p></div></details>' for k, (h, t) in enumerate(fields))}
+    </div>
   </div>
 </section>
 
-<div class="fields">
-'''
-    tones = ['f-dark', 'f-accent', 'f-surface']
-    for k, f in enumerate(fields):
-        link = f'<a class="field-link" href="{f[2]}">{e(f[0])} →</a>' if len(f) > 2 else ''
-        s += f'''  <section class="field {tones[k % 3]} {'mirror' if k % 2 else ''}" aria-labelledby="f{k}">
-    <p class="field-text" data-reveal>{e(f[1])}{(' ' + link) if link else ''}</p>
-    <h2 id="f{k}" class="field-h" data-reveal>{e(f[0])}</h2>
-  </section>
-'''
-    s += f'''</div>
-<figure class="band" data-reveal>{img(l,'library','pic band-img', 1920, 1253)}</figure>
-
-<section class="cantons" aria-labelledby="ct-h">
-  <div class="cantons-col">
-    <h2 id="ct-h" class="h3" data-reveal>{e(UI[l]['bycanton'])}</h2>
-    <ul class="rows">
-      {''.join(f'<li data-reveal><a href="{url(l,"lawyers")}?canton={k}"><span class="code">{k}</span><span class="name">{e(n)}</span><span class="val">{c}</span></a></li>' for k, n, c in cantons)}
-    </ul>
+<section class="panel dark" aria-labelledby="tm-h">
+  <div class="row-head">
+    <div class="sec-head left" style="margin:0"><h2 id="tm-h" class="h-l" data-reveal>{e(X[l]['team'])}</h2></div>
+    <div class="rail-ctl"><button type="button" data-rail="-1" aria-label="‹">{LEFT}</button><button type="button" data-rail="1" aria-label="›">{RIGHT}</button></div>
   </div>
-  <figure class="cantons-pic" data-reveal>{img(l,'court','pic', 1920, 1276)}</figure>
+  <div class="rail" id="rail">{''.join(person_mini(l, x) for x in FEATURED)}</div>
+  <p style="margin-top:28px"><a class="btn light" href="{url(l,'lawyers')}">{e(UI[l]['show'].format(n=len(L)))}<span class="arr">{ARR}</span></a></p>
+</section>
+
+<section class="panel" aria-labelledby="ar-h">
+  <div class="split top">
+    <div class="sec-head left" style="margin:0">
+      <h2 id="ar-h" class="h-l" data-reveal>{e(p['nav'][1])}</h2>
+      <p class="lead" data-reveal>{e(areas_lead)}</p>
+      <a class="btn" href="{url(l,'areas')}" data-reveal>{e(p['nav'][1])}<span class="arr">{ARR}</span></a>
+    </div>
+    <div class="cards two">
+      {''.join(f'<a class="acard" href="{url(l,"areas")}#a{k}" data-reveal><span class="ac-top"><h3>{e(t)}</h3><span class="circ">{ARR}</span></span></a>' for k, t in enumerate(areas[:6]))}
+    </div>
+  </div>
+</section>
+
+<section class="panel soft" aria-labelledby="ct-h">
+  <div class="split">
+    <figure class="photo" data-reveal>{img(l,'lausanne','', 1920, 1280)}<span class="ph-in"><span class="ph-name">{e(ALT[l]['lausanne'])}</span></span></figure>
+    <div class="sec-head left" style="margin:0">
+      <h2 id="ct-h" class="h-l" data-reveal>{e(UI[l]['bycanton'])}</h2>
+      <p class="lead" data-reveal>{e(UI[l]['count'].format(n=len(L), k=len(cc)))}</p>
+      <div class="chips" data-reveal>{''.join(f'<a href="{url(l,"lawyers")}?canton={k}">{e(n)}<b>{c}</b></a>' for k, n, c in cc)}</div>
+    </div>
+  </div>
 </section>
 </main>
 '''
@@ -289,21 +393,25 @@ def page_areas(l):
     lead = paras(p['areas'][0])[0][1]
     items = [strip(x) for x in re.findall(r'<li>(.*?)</li>', p['areas'][1], re.S)]
     s = head(l, f"{p['nav'][1]} · {UI[l]['law']}", lead)
-    s += '<body>\n' + topbar(l, 'areas', 'areas')
+    s += '<body>\n' + f'<a class="skip" href="#main">{UI[l]["skip"]}</a>\n'
+    s += page_hero(l, 'areas', p['nav'][1], lead, right=f'<a class="btn light" href="{url(l,"lawyers")}" data-load>{e(UI[l]["find"])}<span class="arr">{ARR}</span></a>')
     s += f'''<main id="main">
-<section class="phead" aria-labelledby="h1">
-  <h1 id="h1" class="phead-h mask"><span>{e(p['nav'][1])}</span></h1>
-  <p class="phead-lead" data-load>{e(lead)}</p>
+<section class="panel" aria-label="{e(p['nav'][1])}">
+  <div class="row-head"><h2 class="h-l" data-reveal>{e(UI[l]['law'])}</h2><p class="muted" data-reveal>{len(items)} {e(p['nav'][1])}</p></div>
+  <ol class="cards">
+    {''.join(f'<li class="acard" id="a{k}" data-reveal><span class="ac-top"><span class="ac-num">{k+1:02d}</span></span><h3>{e(t)}</h3></li>' for k, t in enumerate(items))}
+  </ol>
 </section>
-<section class="areas" aria-label="{e(p['nav'][1])}">
-  <div class="areas-wrap">
-  <ul class="area-list">
-    {''.join(f'<li data-reveal>{e(t)}</li>' for t in items)}
-  </ul>
-  <figure class="areas-pic" data-reveal>{img(l,'workers','pic', 1920, 1299)}</figure>
+<section class="panel soft" aria-label="{e(UI[l]['find'])}">
+  <div class="split">
+    <figure class="photo" data-reveal>{img(l,'ribbon','', 1938, 1280)}<span class="ph-in"><span class="ph-role">{e(ALT[l]['ribbon'])}</span></span></figure>
+    <div class="sec-head left" style="margin:0">
+      <h2 class="h-l" data-reveal>{e(UI[l]['cta'])}</h2>
+      <p class="lead" data-reveal>{e(UI[l]['count'].format(n=len(L), k=len(canton_counts(l))))}</p>
+      <a class="btn" href="{url(l,'lawyers')}" data-reveal>{e(UI[l]['find'])}<span class="arr">{ARR}</span></a>
+    </div>
   </div>
 </section>
-<figure class="band" data-reveal>{img(l,'library','pic band-img', 1920, 1253)}</figure>
 </main>
 '''
     s += footer(l, 'areas')
@@ -318,37 +426,35 @@ def page_lawyers(l):
     data = [dict(id=x['id'], n=x['name'], f=x['firm'], t=x['title'], c=x['canton'], g=x['gender'],
                  a=x['addr'][-1] if x['addr'] else '', i=x.get('img', '')) for x in L]
     s = head(l, f"{p['nav'][2]} · {UI[l]['law']}", intro)
-    s += '<body class="dir">\n' + topbar(l, 'lawyers', 'lawyers')
+    s += '<body class="dir">\n' + f'<a class="skip" href="#main">{UI[l]["skip"]}</a>\n'
+    s += page_hero(l, 'lawyers', p['nav'][2], intro)
     s += f'''<main id="main">
-<section class="phead" aria-labelledby="h1">
-  <h1 id="h1" class="phead-h mask"><span>{e(p['nav'][2])}</span></h1>
-  <p class="phead-lead" data-load>{e(intro)}</p>
-</section>
-<section class="finder" aria-label="{e(p['nav'][2])}">
+<section class="panel finder" aria-label="{e(p['nav'][2])}">
   <form class="filters" id="filters" role="search">
-    <div class="fld"><label for="f-last">{e(f['lastname'])}</label><input id="f-last" name="lastname" type="search" autocomplete="off"></div>
-    <div class="fld"><label for="f-first">{e(f['firstname'])}</label><input id="f-first" name="firstname" type="search" autocomplete="off"></div>
-    <div class="fld"><label for="f-canton">{e(f['canton'])}</label>{canton_select(l,'f-canton')}</div>
-    <div class="fld"><label for="f-gender">{e(f['gender'])}</label><select id="f-gender" name="gender"><option value="">{e(UI[l]['any'])}</option>{genders}</select></div>
+    <h2 class="h-s">{e(X[l]['search'])}</h2>
+    <label class="lab" for="f-last">{e(f['lastname'])}<input class="inp" id="f-last" name="lastname" type="search" autocomplete="off"></label>
+    <label class="lab" for="f-first">{e(f['firstname'])}<input class="inp" id="f-first" name="firstname" type="search" autocomplete="off"></label>
+    <label class="lab" for="f-canton">{e(f['canton'])}{canton_select(l,'f-canton', cls='inp')}</label>
+    <label class="lab" for="f-gender">{e(f['gender'])}<select class="inp" id="f-gender" name="gender"><option value="">{e(UI[l]['any'])}</option>{genders}</select></label>
     <fieldset class="mode">
       <legend class="vh">{e(f['radios'][1])}</legend>
-      <label><input type="radio" name="result_type" value="all" checked> {e(f['radios'][1])}</label>
-      <label><input type="radio" name="result_type" value="rand"> {e(f['radios'][0])}</label>
+      <label><input type="radio" name="result_type" value="all" checked><span>{e(f['radios'][1])}</span></label>
+      <label><input type="radio" name="result_type" value="rand"><span>{e(f['radios'][0])}</span></label>
     </fieldset>
     <div class="actions">
-      <button class="btn btn-ghost" type="reset">{e(f['buttons'][0])}</button>
-      <button class="btn btn-ink" type="submit">{e(f['buttons'][1])}</button>
+      <button class="btn line" type="reset">{e(f['buttons'][0])}</button>
+      <button class="btn" type="submit">{e(f['buttons'][1])}<span class="arr">{SEARCH}</span></button>
     </div>
   </form>
   <div class="results">
-    <p class="count" id="count" aria-live="polite" data-one="{e(UI[l]['one'])}" data-many="{e(UI[l]['results'])}"></p>
+    <p class="count h-m" id="count" aria-live="polite" data-one="{e(UI[l]['one'])}" data-many="{e(UI[l]['results'])}"></p>
     <ol class="lawyers" id="list"></ol>
     <p class="empty" id="empty" hidden>{e(UI[l]['none'])}</p>
-    <noscript><ol class="lawyers">{''.join(f'<li><a href="{PROFILE[l]}.html?id={x["id"]}"><span class="who"><b>{e(x["name"])}</b><span>{e(x["firm"])}</span></span><span class="where">{e(x["addr"][-1] if x["addr"] else "")}</span></a></li>' for x in L)}</ol></noscript>
+    <noscript><ol class="lawyers">{''.join(f'<li><a class="lrow" href="{PROFILE[l]}.html?id={x["id"]}"><span class="who"><b>{e(x["name"])}</b><span>{e(x["firm"])}</span></span><span class="where">{e(x["addr"][-1] if x["addr"] else "")}</span></a></li>' for x in L)}</ol></noscript>
   </div>
 </section>
 </main>
-<script>window.LAWYERS={json.dumps(data, ensure_ascii=False)};window.PROFILE="{PROFILE[l]}.html";window.CANTONS={json.dumps(f['cantons'], ensure_ascii=False)};</script>
+<script>window.LAWYERS={json.dumps(data, ensure_ascii=False)};window.PROFILE="{PROFILE[l]}.html";window.CANTONS={json.dumps(f['cantons'], ensure_ascii=False)};window.ARR='{ARR}';</script>
 '''
     s += footer(l, 'lawyers')
     return s
@@ -358,14 +464,20 @@ def page_profile(l):
     p = P[l]
     full = {str(x['id']): x for x in L}
     s = head(l, f"{p['nav'][2]} · {UI[l]['law']}", UI[l]['law'])
-    s += '<body class="profile-page">\n' + topbar(l, 'lawyers', 'lawyers', profile=True)
-    s += f'''<main id="main">
-<article class="profile" id="profile" data-labels='{e(json.dumps({k: UI[l][k] for k in ("phone","fax","email","web","back","notfound","addr","canton_title")}, ensure_ascii=False))}'>
-  <h1 class="phead-h" id="p-name">{e(p['nav'][2])}</h1>
-  <p><a class="btn btn-ink" href="{url(l,'lawyers')}">{e(UI[l]['back'])}</a></p>
+    s += '<body class="profile-page">\n' + f'<a class="skip" href="#main">{UI[l]["skip"]}</a>\n'
+    s += f'''<header class="hero sub slim">
+  <div class="hero-bg">{img(l,'library','', 1920, 1253, False)}</div>
+  {bar(l, 'lawyers', 'lawyers', True)}
+  <div class="hero-main"><p class="hero-sub">{e(UI[l]['law'])}</p></div>
+  <div class="hero-foot"></div>
+</header>
+<main id="main">
+<article class="panel profile" id="profile" data-labels='{e(json.dumps({k: UI[l][k] for k in ("phone","fax","email","web","back","notfound","addr","canton_title")}, ensure_ascii=False))}'>
+  <h1 class="h-l" id="p-name">{e(p['nav'][2])}</h1>
+  <p><a class="btn" href="{url(l,'lawyers')}">{e(UI[l]['back'])}<span class="arr">{ARR}</span></a></p>
 </article>
 </main>
-<script>window.PEOPLE={json.dumps(full, ensure_ascii=False)};window.CANTONS={json.dumps(p['form']['cantons'], ensure_ascii=False)};window.LIST="{url(l,'lawyers')}";</script>
+<script>window.PEOPLE={json.dumps(full, ensure_ascii=False)};window.CANTONS={json.dumps(p['form']['cantons'], ensure_ascii=False)};window.LIST="{url(l,'lawyers')}";window.ARR='{ARR}';</script>
 '''
     s += footer(l, 'lawyers', profile=True)
     return s
@@ -374,27 +486,24 @@ def page_profile(l):
 def page_contact(l):
     p = P[l]
     txt = ' '.join(t for _, t in paras(''.join(p['contact'])))
+    cc = canton_counts(l)
     s = head(l, f"{p['nav'][3]} · {UI[l]['law']}", txt)
-    s += '<body>\n' + topbar(l, 'contact', 'contact')
+    s += '<body>\n' + f'<a class="skip" href="#main">{UI[l]["skip"]}</a>\n'
+    s += page_hero(l, 'contact', p['nav'][3], UI[l]['law'])
     s += f'''<main id="main">
-<section class="phead" aria-labelledby="h1">
-  <h1 id="h1" class="phead-h mask"><span>{e(p['nav'][3])}</span></h1>
-  <p class="phead-sub" data-load>{e(UI[l]['law'])}</p>
-</section>
-<section class="contact" aria-label="{e(p['nav'][3])}">
-  <div class="contact-text">
-    <p class="statement" data-reveal>{e(txt)}</p>
-    <a class="btn btn-ink" href="{url(l,'lawyers')}" data-reveal>{e(p['nav'][2])}</a>
+<section class="panel" aria-label="{e(p['nav'][3])}">
+  <div class="split">
+    <div class="sec-head left" style="margin:0">
+      <p class="h-m" data-reveal>{e(txt)}</p>
+      <a class="btn" href="{url(l,'lawyers')}" data-reveal>{e(UI[l]['find'])}<span class="arr">{ARR}</span></a>
+    </div>
+    <figure class="photo" data-reveal>{img(l,'court','', 1920, 1276)}<span class="ph-in"><span class="ph-role">{e(ALT[l]['court'])}</span></span></figure>
   </div>
-  <figure class="contact-pic" data-reveal>{img(l,'library','pic', 1920, 1253)}</figure>
 </section>
-<section class="cantons-rows" aria-labelledby="ctr-h">
-  <h2 id="ctr-h" class="h3" data-reveal>{e(UI[l]['bycanton'])}</h2>
-  <ul class="display-rows">
-    {''.join(f'<li data-reveal><a href="{url(l,"lawyers")}?canton={k}"><span>{e(n)}</span><span class="n">{c}</span></a></li>' for k, n, c in canton_counts(l)[:6])}
-  </ul>
+<section class="panel soft" aria-labelledby="ct-h">
+  <div class="row-head"><h2 id="ct-h" class="h-l" data-reveal>{e(UI[l]['bycanton'])}</h2><p class="muted" data-reveal>{e(UI[l]['count'].format(n=len(L), k=len(cc)))}</p></div>
+  <div class="chips" data-reveal>{''.join(f'<a href="{url(l,"lawyers")}?canton={k}">{e(n)}<b>{c}</b></a>' for k, n, c in cc)}</div>
 </section>
-<figure class="band" data-reveal>{img(l,'court','pic band-img', 1920, 1276)}</figure>
 </main>
 '''
     s += footer(l, 'contact')
@@ -406,20 +515,19 @@ def page_disclaimer(l):
     parts = paras(''.join(p['disclaimer']))
     body = ''
     for _, t in parts:
-        if len(t) < 40:
-            body += f'<h2 class="h3" data-reveal>{e(t)}</h2>'
-        else:
-            body += f'<p data-reveal>{e(t)}</p>'
+        body += f'<h2>{e(t)}</h2>' if len(t) < 40 else f'<p>{e(t)}</p>'
     s = head(l, f"{p['nav'][4]} · {UI[l]['law']}", parts[0][1][:150] if parts else '')
-    s += '<body>\n' + topbar(l, 'disclaimer', 'disclaimer')
+    s += '<body>\n' + f'<a class="skip" href="#main">{UI[l]["skip"]}</a>\n'
+    s += page_hero(l, 'disclaimer', p['nav'][4], UI[l]['law'])
     s += f'''<main id="main">
-<section class="phead" aria-labelledby="h1">
-  <h1 id="h1" class="phead-h mask"><span>{e(p['nav'][4])}</span></h1>
-  <p class="phead-sub" data-load>{e(UI[l]['law'])}</p>
-</section>
-<section class="legal">
-  <div class="legal-text">{body}</div>
-  <figure class="legal-pic" data-reveal>{img(l,'court','pic', 1920, 1276)}</figure>
+<section class="panel">
+  <div class="textgrid">
+    <div class="rich" data-reveal>{body}</div>
+    <aside class="aside" data-reveal>
+      <figure class="photo">{img(l,'library','', 1920, 1253)}</figure>
+      <div class="infocard"><h2 class="h-s">{e(UI[l]['find'])}</h2><p>{e(UI[l]['count'].format(n=len(L), k=len(canton_counts(l))))}</p><a class="btn small light" href="{url(l,'lawyers')}">{e(p['nav'][2])}<span class="arr">{ARR}</span></a></div>
+    </aside>
+  </div>
 </section>
 </main>
 '''
@@ -431,6 +539,16 @@ def write(path, s):
     os.makedirs(os.path.dirname(path), exist_ok=True)
     open(path, 'w', encoding='utf-8', newline='\n').write(s)
 
+
+THEME = ''':root {
+  --bg: #ebeae6; --panel: #fff; --soft: #f4f3f0; --ink: #121211; --ink-2: #3b3a37; --muted: #6b6a66;
+  --line: #e3e1dc; --line-strong: #cbc9c3; --dark: #111110; --on-dark: #f3f2ee; --on-dark-2: rgba(243,242,238,.64);
+  --accent: #dcc897; --accent-strong: #a8893f; --font: "Inter Tight", system-ui, sans-serif;
+  --r-xl: 32px; --r-l: 22px; --ease: cubic-bezier(.22,1,.36,1);
+}
+'''
+css = THEME + open(os.path.join(ROOT, '_src/law.css'), encoding='utf-8').read() + open(os.path.join(ROOT, '_src/fa.css'), encoding='utf-8').read()
+write(os.path.join(OUT, 'assets/site.css'), css)
 
 for l in LANGS:
     d = os.path.join(OUT, l)

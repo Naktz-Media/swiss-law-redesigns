@@ -2,11 +2,11 @@
   var doc = document.documentElement;
   requestAnimationFrame(function () { requestAnimationFrame(function () { doc.classList.add('loaded'); }); });
 
-  var mb = document.querySelector('.menu-btn'), tabs = document.getElementById('tabs');
-  if (mb) mb.addEventListener('click', function () { var o = tabs.classList.toggle('open'); mb.setAttribute('aria-expanded', o); });
+  var mb = document.querySelector('.menu-btn');
+  if (mb) mb.addEventListener('click', function () { var o = document.body.classList.toggle('menu-open'); mb.setAttribute('aria-expanded', o); });
 
   // staggered reveals per section
-  document.querySelectorAll('section, footer, article, .mgroup').forEach(function (sec) {
+  document.querySelectorAll('section, footer, .bento, .cards, .team-grid').forEach(function (sec) {
     var i = 0; sec.querySelectorAll('[data-reveal]').forEach(function (k) { k.style.setProperty('--d', Math.min(i++, 8)); });
   });
   var els = document.querySelectorAll('[data-reveal]');
@@ -15,20 +15,21 @@
     els.forEach(function (el) { io.observe(el); });
   } else els.forEach(function (el) { el.classList.add('in'); });
 
-  // team: index with preview + dialog
-  var prev = document.getElementById('t-preview');
-  document.querySelectorAll('.t-row').forEach(function (row) {
-    function show() {
-      if (!prev || prev.getAttribute('src') === row.dataset.img) return;
-      prev.classList.add('swap');
-      setTimeout(function () { prev.src = row.dataset.img; prev.classList.remove('swap'); }, 120);
-    }
-    row.addEventListener('mouseenter', show); row.addEventListener('focus', show);
-    row.addEventListener('click', function () { var d = document.getElementById(row.dataset.dialog); if (d && d.showModal) d.showModal(); });
+  // people rail
+  var rail = document.getElementById('rail');
+  document.querySelectorAll('[data-rail]').forEach(function (b) {
+    b.addEventListener('click', function () { rail.scrollBy({ left: +b.dataset.rail * rail.clientWidth * 0.8, behavior: 'smooth' }); });
+  });
+
+  // team dialogs: open from a card, or from #m3 in the address
+  function openDialog(id) { var d = document.getElementById(id); if (d && d.showModal) { d.showModal(); return true; } return false; }
+  document.querySelectorAll('[data-open]').forEach(function (b) {
+    b.addEventListener('click', function (ev) { if (openDialog(b.dataset.open)) ev.preventDefault(); });
   });
   document.querySelectorAll('.t-dialog').forEach(function (d) {
     d.addEventListener('click', function (ev) { if (ev.target === d) d.close(); });
   });
+  if (/^#m\d+$/.test(location.hash)) openDialog(location.hash.slice(1));
 
   // services index: mark the section in view
   var links = document.querySelectorAll('.index a');
@@ -40,7 +41,7 @@
     document.querySelectorAll('.svc').forEach(function (s) { so.observe(s); });
   }
 
-  // coupon: compose an e-mail
+  // contact form: compose an e-mail
   document.querySelectorAll('form.coupon').forEach(function (f) {
     f.addEventListener('submit', function (ev) {
       ev.preventDefault();
