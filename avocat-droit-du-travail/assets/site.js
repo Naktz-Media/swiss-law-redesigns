@@ -45,6 +45,8 @@
     });
   }
 
+  function norm(s) { return (s || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z]/g, ''); }
+  function same(a, b) { a = norm(a); b = norm(b); return !!a && !!b && (a === b || a.indexOf(b) === 0 || b.indexOf(a) === 0); }
   function esc(s) { var d = document.createElement('div'); d.textContent = s || ''; return d.innerHTML; }
   function initials(n) { return n.split(/\s+/).slice(0, 2).map(function (w) { return w[0]; }).join(''); }
 
@@ -52,7 +54,7 @@
   var list = document.getElementById('list');
   if (list && window.LAWYERS) {
     var form = document.getElementById('filters'), count = document.getElementById('count'), empty = document.getElementById('empty');
-    var norm = function (s) { return (s || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, ''); };
+    var norm = function (s) { return (s || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, ''); };
     var params = new URLSearchParams(location.search);
     ['lastname', 'firstname', 'canton', 'gender'].forEach(function (k) { if (params.get(k)) form.elements[k].value = params.get(k); });
     if (params.get('result_type') === 'rand') form.querySelector('[value="rand"]').checked = true;
@@ -72,10 +74,11 @@
       count.textContent = res.length === 1 ? count.dataset.one : count.dataset.many.replace('{n}', res.length);
       empty.hidden = res.length > 0;
       list.innerHTML = res.map(function (x, i) {
+        var town = x.a.replace(/^\d{4}\s*/, '').replace(/\s+\d+$/, ''), cn = CANTONS[x.c] || x.c;
         var face = x.i ? '<img class="face" src="../img/lawyers/' + x.i + '" alt="" width="64" height="64" loading="lazy">' : '<span class="face none" aria-hidden="true">' + esc(initials(x.n)) + '</span>';
         return '<li style="--i:' + Math.min(i, 30) + '"><a class="lrow" href="' + PROFILE + '?id=' + x.id + '">' + face +
           '<span class="who"><b>' + esc(x.n) + '</b><span>' + esc(x.f) + '</span></span>' +
-          '<span class="where"><b>' + esc(x.a.replace(/^\d{4}\s*/, '')) + '</b><span>' + esc(CANTONS[x.c] || x.c) + '</span></span><span class="circ">' + ARR + '</span></a></li>';
+          '<span class="where"><b>' + esc(town) + '</b>' + (same(town, cn) ? '' : '<span>' + esc(cn) + '</span>') + '</span><span class="circ">' + ARR + '</span></a></li>';
       }).join('');
       var qs = new URLSearchParams();
       ['lastname', 'firstname', 'canton', 'gender'].forEach(function (k) { if (form.elements[k].value) qs.set(k, form.elements[k].value); });
@@ -113,5 +116,11 @@
       '<div class="p-body"><h1 class="h-l">' + esc(x.name) + '</h1>' + (x.title ? '<p class="p-title">' + esc(x.title) + '</p>' : '') +
       '<p class="p-firm">' + esc(x.firm) + '</p>' + acts + '<dl class="p-dl">' + dl + '</dl>' +
       '<p><a class="back" href="' + LIST + '">' + (window.LEFT || '') + esc(lab.back) + '</a></p></div>';
+  }
+  // directory: extra filters open on wide screens, or when one of them is in use
+  var more = document.getElementById('more');
+  if (more) {
+    var q = new URLSearchParams(location.search);
+    if (window.matchMedia('(min-width: 901px)').matches || q.get('lastname') || q.get('firstname') || q.get('gender') || q.get('result_type') === 'rand') more.open = true;
   }
 })();

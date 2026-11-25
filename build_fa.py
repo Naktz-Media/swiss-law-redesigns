@@ -131,6 +131,45 @@ def url(l, key, frm=None):
     return f"{P[l]['slugs'][key]}.html"
 
 
+# salutations that crept into the name field ("Buchzik Bertram Herr")
+for _x in L:
+    _x['name'] = re.sub(r'\s+(Herr|Frau|Monsieur|Madame)$', '', _x['name']).strip()
+
+# role words in the title field are in the lawyer's own language; show them in the page language
+TITLE_TR = {
+    'fr': [('Fachanwalt SAV Arbeitsrecht', 'avocat spécialiste FSA droit du travail'), ('Mediatorin SAV', 'médiatrice FSA'),
+           ('nicht praktizierend', 'non pratiquant'), ('öffentlicher Notar', 'notaire'), ('Rechtsanwältin', 'Avocate'),
+           ('Rechtsanwalt', 'Avocat'), ('Fürsprecher', 'Avocat'), ('Advokat', 'Avocat'), ('Avvocata', 'Avocate'),
+           ('Partnerin', 'associée'), ('Partner', 'associé'), ('Notar', 'notaire'), (' und ', ' et '), ('Senior Attorney', 'Avocat senior')],
+    'it': [('Fachanwalt SAV Arbeitsrecht', 'avvocato specialista FSA diritto del lavoro'), ('Mediatorin SAV', 'mediatrice FSA'),
+           ('nicht praktizierend', 'non praticante'), ('öffentlicher Notar', 'notaio'), ('Rechtsanwältin', 'Avvocata'),
+           ('Rechtsanwalt', 'Avvocato'), ('Fürsprecher', 'Avvocato'), ('Advokat', 'Avvocato'), ('Avocate', 'Avvocata'),
+           ('Avocat', 'Avvocato'), ('Partnerin', 'socia'), ('Partner', 'socio'), ('Notar', 'notaio'), (' und ', ' e '),
+           ('Dr en droit', 'Dr. iur.'), ('Dr. en droit', 'Dr. iur.'), ('lic. en droit', 'lic. iur.'), ('lic.en droit', 'lic. iur.'), (' avec thèse', '')],
+    'en': [('Fachanwalt SAV Arbeitsrecht', 'certified specialist SBA employment law'), ('Mediatorin SAV', 'mediator SBA'),
+           ('nicht praktizierend', 'non-practising'), ('öffentlicher Notar', 'notary public'), ('Rechtsanwältin', 'Attorney'),
+           ('Rechtsanwalt', 'Attorney'), ('Fürsprecher', 'Attorney'), ('Advokat', 'Attorney'), ('Avocate', 'Attorney'),
+           ('Avocat', 'Attorney'), ('Avvocata', 'Attorney'), ('Partnerin', 'Partner'), ('Notar', 'notary'), (' und ', ' and '),
+           ('Dr en droit', 'Dr. iur.'), ('Dr. en droit', 'Dr. iur.'), ('lic. en droit', 'lic. iur.'), ('lic.en droit', 'lic. iur.'), (' avec thèse', '')],
+    'de': [('Avocate', 'Rechtsanwältin'), ('Avocat', 'Rechtsanwalt'), ('Avvocata', 'Rechtsanwältin'), ('Legale', 'Rechtsanwalt'),
+           ('Dr en droit', 'Dr. iur.'), ('Dr. en droit', 'Dr. iur.'), ('lic. en droit', 'lic. iur.'), ('lic.en droit', 'lic. iur.'), (' avec thèse', '')],
+}
+
+
+SIT = {'de': ('Ihre Situation', 'Fachanwältinnen und Fachanwälte für Arbeitsrecht beraten Sie unter anderem bei:', 'Weitere Filter', ['Kündigung', 'Lohn nicht bezahlt', 'Überstunden', 'Arbeitszeugnis', 'Mobbing und Belästigung', 'Lohngleichheit', 'Arbeitsvertrag', 'Konkurrenzverbot']), 'fr': ('Votre situation', 'Les avocates et avocats spécialistes en droit du travail vous conseillent notamment en cas de :', 'Plus de filtres', ['Licenciement', 'Salaire impayé', 'Heures supplémentaires', 'Certificat de travail', 'Harcèlement au travail', 'Égalité salariale', 'Contrat de travail', 'Clause de non-concurrence']), 'it': ('La vostra situazione', 'Gli avvocati specialisti in diritto del lavoro vi consigliano tra l’altro in caso di:', 'Altri filtri', ['Licenziamento', 'Salario non pagato', 'Ore straordinarie', 'Certificato di lavoro', 'Mobbing e molestie', 'Parità salariale', 'Contratto di lavoro', 'Divieto di concorrenza']), 'en': ('Your situation', 'Certified employment law specialists advise you on matters such as:', 'More filters', ['Dismissal', 'Unpaid wages', 'Overtime', 'Reference letter', 'Harassment at work', 'Equal pay', 'Employment contract', 'Non-compete clause'])}
+
+
+def tr_title(l, t):
+    for a, b in TITLE_TR.get(l, []):
+        t = t.replace(a, b)
+    t = re.sub(r'(?<=\w) ?\| ?', ', ', t)
+    return t
+
+
+def localised(l, x):
+    return dict(x, title=tr_title(l, x['title']))
+
+
 def city(x):
     a = x['addr'][-1] if x['addr'] else ''
     return re.sub(r'^\d{4}\s*', '', a)
@@ -312,6 +351,12 @@ def page_about(l):
   </div>
 </header>
 <main id="main">
+<section class="panel sit" aria-labelledby="si-h">
+  <div class="sit-in">
+    <div><h2 id="si-h" class="h-l" data-reveal>{e(SIT[l][0])}</h2><p class="lead" data-reveal>{e(SIT[l][1])}</p></div>
+    <ul class="sits" data-reveal>{''.join(f'<li><a href="{url(l,"lawyers")}">{e(t)}<span class="arr">{ARR}</span></a></li>' for t in SIT[l][3])}</ul>
+  </div>
+</section>
 <section class="panel" aria-labelledby="ab-h">
   <div class="sec-head">
     <h2 id="ab-h" class="h-l" data-reveal>{e(X[l]['why'])}</h2>
@@ -422,7 +467,7 @@ def page_lawyers(l):
     f = p['form']
     intro = f['intro'] or strip(p['lawyers'][0])
     genders = ''.join(f'<option value="{k}">{e(v)}</option>' for k, v in f['genders'].items())
-    data = [dict(id=x['id'], n=x['name'], f=x['firm'], t=x['title'], c=x['canton'], g=x['gender'],
+    data = [dict(id=x['id'], n=x['name'], f=x['firm'], t=tr_title(l, x['title']), c=x['canton'], g=x['gender'],
                  a=x['addr'][-1] if x['addr'] else '', i=x.get('img', '')) for x in L]
     s = head(l, f"{p['nav'][2]} · {UI[l]['law']}", intro)
     s += '<body class="dir">\n' + f'<a class="skip" href="#main">{UI[l]["skip"]}</a>\n'
@@ -431,15 +476,17 @@ def page_lawyers(l):
 <section class="panel finder" aria-label="{e(p['nav'][2])}">
   <form class="filters" id="filters" role="search">
     <h2 class="h-s">{e(X[l]['search'])}</h2>
+    <label class="lab" for="f-canton">{e(f['canton'])}{canton_select(l,'f-canton', cls='inp')}</label>
+    <details class="more" id="more"><summary>{e(SIT[l][2])}</summary><div class="more-in">
     <label class="lab" for="f-last">{e(f['lastname'])}<input class="inp" id="f-last" name="lastname" type="search" autocomplete="off"></label>
     <label class="lab" for="f-first">{e(f['firstname'])}<input class="inp" id="f-first" name="firstname" type="search" autocomplete="off"></label>
-    <label class="lab" for="f-canton">{e(f['canton'])}{canton_select(l,'f-canton', cls='inp')}</label>
     <label class="lab" for="f-gender">{e(f['gender'])}<select class="inp" id="f-gender" name="gender"><option value="">{e(UI[l]['any'])}</option>{genders}</select></label>
     <fieldset class="mode">
       <legend class="vh">{e(f['radios'][1])}</legend>
       <label><input type="radio" name="result_type" value="all" checked><span>{e(f['radios'][1])}</span></label>
       <label><input type="radio" name="result_type" value="rand"><span>{e(f['radios'][0])}</span></label>
     </fieldset>
+    </div></details>
     <div class="actions">
       <button class="btn line" type="reset">{e(f['buttons'][0])}</button>
       <button class="btn" type="submit">{e(f['buttons'][1])}<span class="arr">{SEARCH}</span></button>
@@ -461,7 +508,7 @@ def page_lawyers(l):
 
 def page_profile(l):
     p = P[l]
-    full = {str(x['id']): x for x in L}
+    full = {str(x['id']): localised(l, x) for x in L}
     s = head(l, f"{p['nav'][2]} · {UI[l]['law']}", UI[l]['law'])
     s += '<body class="profile-page">\n' + f'<a class="skip" href="#main">{UI[l]["skip"]}</a>\n'
     s += f'''<header class="hero sub slim">
