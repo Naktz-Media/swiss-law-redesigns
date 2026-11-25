@@ -420,3 +420,4 @@ html { accent-color: var(--accent-strong); caret-color: var(--accent-strong); }
   .foot-cta .h-l { font-size: 1.75rem; }
 }
 .foot-cta .h-l { max-width: 32ch; font-size: clamp(2rem, 1.1rem + 2.4vw, 3.4rem); text-wrap: balance; }
+.bar-right .btn { white-space: nowrap; }
