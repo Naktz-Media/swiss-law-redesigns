@@ -115,12 +115,12 @@ ARR = '<svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="
 SEARCH = '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="7" cy="7" r="5"/><path d="M11 11l3.5 3.5"/></svg>'
 LEFT = '<svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M9 2L4 7l5 5"/></svg>'
 RIGHT = '<svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 2l5 5-5 5"/></svg>'
-IMG.update(contract='contract.jpg', scales='scales1.jpg', lausanne='lausanne.jpg', plenar='plenar.jpg', books='books.jpg')
+IMG.update(consult='consultation.jpg', contract='contract.jpg', scales='scales1.jpg', lausanne='lausanne.jpg', plenar='plenar.jpg', books='books.jpg')
 for _l, _d in {
- 'de': dict(contract='Arbeitsvertrag mit Füllfederhalter', scales='Justitia mit Waage', lausanne='Gebäude des Bundesgerichts in Lausanne', plenar='Plenarsaal des Bundesgerichts', books='Juristische Fachbücher im Regal'),
- 'fr': dict(contract='Contrat de travail et stylo-plume', scales='Statue de la Justice avec sa balance', lausanne='Bâtiment du Tribunal fédéral à Lausanne', plenar='Salle plénière du Tribunal fédéral', books='Ouvrages juridiques sur une étagère'),
- 'it': dict(contract='Contratto di lavoro e penna stilografica', scales='Statua della Giustizia con la bilancia', lausanne='Sede del Tribunale federale a Losanna', plenar='Sala plenaria del Tribunale federale', books='Libri giuridici su uno scaffale'),
- 'en': dict(contract='Employment contract and fountain pen', scales='Statue of Justice holding scales', lausanne='Swiss Federal Supreme Court building in Lausanne', plenar='Plenary hall of the Federal Supreme Court', books='Law books on a shelf'),
+ 'de': dict(consult='Beratungsgespräch am Tisch, im Fenster die Kathedrale von Lausanne', contract='Arbeitsvertrag mit Füllfederhalter', scales='Justitia mit Waage', lausanne='Gebäude des Bundesgerichts in Lausanne', plenar='Plenarsaal des Bundesgerichts', books='Juristische Fachbücher im Regal'),
+ 'fr': dict(consult='Entretien autour d’une table, la cathédrale de Lausanne dans la fenêtre', contract='Contrat de travail et stylo-plume', scales='Statue de la Justice avec sa balance', lausanne='Bâtiment du Tribunal fédéral à Lausanne', plenar='Salle plénière du Tribunal fédéral', books='Ouvrages juridiques sur une étagère'),
+ 'it': dict(consult='Colloquio attorno a un tavolo, nella finestra la cattedrale di Losanna', contract='Contratto di lavoro e penna stilografica', scales='Statua della Giustizia con la bilancia', lausanne='Sede del Tribunale federale a Losanna', plenar='Sala plenaria del Tribunale federale', books='Libri giuridici su uno scaffale'),
+ 'en': dict(consult='A consultation at a table, Lausanne Cathedral in the window', contract='Employment contract and fountain pen', scales='Statue of Justice holding scales', lausanne='Swiss Federal Supreme Court building in Lausanne', plenar='Plenary hall of the Federal Supreme Court', books='Law books on a shelf'),
 }.items():
     ALT[_l].update(_d)
 
@@ -335,7 +335,7 @@ def page_about(l):
     s = head(l, title, lead)
     s += '<body class="home">\n' + f'<a class="skip" href="#main">{UI[l]["skip"]}</a>\n'
     s += f'''<header class="hero">
-  <div class="hero-bg">{img(l,'workers','', 1920, 1440, False)}</div>
+  <div class="hero-bg">{img(l,'consult','', 2400, 1340, False)}</div>
   {bar(l, 'about', 'about')}
   <div class="hero-main"><h1 id="h1" class="hero-h h-xl home-h"><span class="l"><span style="--i:0">{e(banner_small(l))}</span></span> <span class="l"><span style="--i:1" class="hl">{e(BIG[l])}</span></span></h1></div>
   <div class="hero-foot">

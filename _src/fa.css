@@ -134,3 +134,12 @@ html { accent-color: var(--accent-strong); caret-color: var(--accent-strong); }
 @media (min-width: 901px) {
   .more summary { display: none; }
 }
+/* home hero: the consultation photo is light, so the scrim carries more weight on the text side */
+.home .hero::after { background:
+  linear-gradient(90deg, rgba(10,10,9,.62) 0%, rgba(10,10,9,.34) 45%, rgba(10,10,9,0) 75%),
+  linear-gradient(180deg, rgba(10,10,9,.5) 0%, rgba(10,10,9,.08) 24%, rgba(10,10,9,.3) 52%, rgba(10,10,9,.86) 100%); }
+.home .hero-bg img { object-position: 62% 40%; }
+@media (max-width: 700px) {
+  .home .hero::after { background: linear-gradient(180deg, rgba(10,10,9,.55) 0%, rgba(10,10,9,.45) 30%, rgba(10,10,9,.6) 55%, rgba(10,10,9,.88) 100%); }
+  .home .hero-bg img { object-position: 58% 30%; }
+}

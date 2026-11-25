@@ -1,5 +1,13 @@
 [
  {
+  "file": "assets/consultation.jpg",
+  "media": "image",
+  "title": "Consultation (illustration)",
+  "creator": "generated with LetzAI",
+  "license": "AI-generated illustration",
+  "page": "https://letz.ai/"
+ },
+ {
   "file": "assets/schweizerisches-bundesgericht-roter-saal-ca-1990.jpg",
   "media": "image",
   "ref": "openverse:0021c476-6594-4cf7-8810-7a42d1871f01",
@@ -92,13 +100,6 @@
    "Share-alike: an altered version (recoloured, combined with other pictures) must be shared under the same licence."
   ],
   "saved": "2026-11-25T20:03:38.022Z"
- },
- {
-  "file": "assets/contract.jpg",
-  "title": "Legal Contract & Signature - Warm Tones",
-  "creator": "Blogtrepreneur",
-  "license": "CC BY 2.0",
-  "page": "https://commons.wikimedia.org/w/index.php?curid=55666535"
  },
  {
   "file": "assets/scales1.jpg",
