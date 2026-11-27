@@ -24,6 +24,17 @@
     b.addEventListener('click', function () { rail.scrollBy({ left: +b.dataset.rail * rail.clientWidth * 0.8, behavior: 'smooth' }); });
   });
 
+  // explore: the hovered or focused page shows its photo
+  var ex = document.querySelectorAll('.ex-list a');
+  ex.forEach(function (a) {
+    var go = function () {
+      var i = a.dataset.ex;
+      ex.forEach(function (b) { b.classList.toggle('on', b === a); });
+      document.querySelectorAll('.ex-media img').forEach(function (m) { m.classList.toggle('on', m.dataset.ex === i); });
+    };
+    a.addEventListener('mouseenter', go); a.addEventListener('focus', go);
+  });
+
   // team dialogs: open from a card, or from #m3 in the address
   function openDialog(id) { var d = document.getElementById(id); if (d && d.showModal) { d.showModal(); return true; } return false; }
   document.querySelectorAll('[data-open]').forEach(function (b) {

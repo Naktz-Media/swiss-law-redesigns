@@ -224,11 +224,11 @@ def svc_rows(pg, items):
 
 # ------------------------------------------------------------------ home
 H = {
- 'de': dict(team_n='Fachleute im Team', offices_n='Standorte', offices_l='Zug · Zürich · Schwyz', awards='Top Anwaltskanzlei', awards_l='Bilanz & PME 2024 – 2026', intro_l='Beratung und Prozessführung aus einer Hand – in Baar, Regensdorf und Immensee.',
+ 'de': dict(team_n='Fachleute im Team', offices_n='Standorte', offices_l='Zug · Zürich · Schwyz', awards='Top Anwaltskanzlei', awards_l='Bilanz & PME 2024 – 2026', ex_fields='Rechtsgebiete', ex_pubs='Publikationen', intro_l='Beratung und Prozessführung aus einer Hand – in Baar, Regensdorf und Immensee.',
             fields='Unsere Rechtsgebiete', fields_sub='Von der Beratung bis zur Prozessführung – wählen Sie ein Gebiet für die ausführliche Beschreibung.',
             partners='Die Partner', partners_sub='Ein gewachsener Zusammenschluss erfahrener und spezialisierter Rechtsanwälte.', see='Zum ganzen Team',
             where='Drei Standorte, ein Team', where_sub='Sie erreichen uns wie folgt:', explore='Mehr entdecken'),
- 'en': dict(team_n='people on the team', offices_n='offices', offices_l='Zug · Zürich · Schwyz', awards='Top Law Firm', awards_l='Bilanz & PME 2024 – 2026', intro_l='Advice and litigation from one team – in Baar, Regensdorf and Immensee.',
+ 'en': dict(team_n='people on the team', offices_n='offices', offices_l='Zug · Zürich · Schwyz', awards='Top Law Firm', awards_l='Bilanz & PME 2024 – 2026', ex_fields='areas of law', ex_pubs='publications', intro_l='Advice and litigation from one team – in Baar, Regensdorf and Immensee.',
             fields='Our areas of law', fields_sub='From advice to litigation – choose an area for the full description.',
             partners='The partners', partners_sub='An established association of experienced and specialised lawyers.', see='Meet the whole team',
             where='Three offices, one team', where_sub='You can reach us as follows:', explore='Explore'),
@@ -264,7 +264,18 @@ def page_home(l):
     fields += f'<a class="field field-cta" href="{pg.href("services")}" data-reveal><b>{e(d["services_title"])}</b><span>{e(UI[l]["groups"][0])} · {e(UI[l]["groups"][1])}</span>{ARR}</a>'
     partners = [(i, m) for i, m in enumerate(d['team']) if 'Partner' in ' '.join(roles(m))]
     pcards = ''.join(f'<li data-reveal>{person_card(pg, m, i, True)}</li>' for i, m in partners)
-    tiles = ''.join(f'<a class="tile" href="{pg.href(k)}" data-reveal><img src="{pg.b}img/{im}" alt="" width="2000" height="833" loading="lazy"><span class="glass">{e(n[k])}{ARR}</span></a>' for k, im in pages)
+    heads = lambda k: [T(x) for x in re.findall(r'<h2>(.*?)</h2>', d[k], re.S)]
+    desc = {
+        'services': f"{len(svc)} {h['ex_fields']} · {UI[l]['groups'][0]} & {UI[l]['groups'][1]}",
+        'notary': heads('notary')[-1],
+        'team': f"{len(d['team'])} {h['team_n']}",
+        'pubs': f"{sum(len(x['items']) for x in d['pubs'])} {h['ex_pubs']}",
+        'contact': f"{h['offices_l']} · {TEL_H}",
+        'members': heads('members')[0],
+    }
+    rows = ''.join(f'<li><a href="{pg.href(k)}" data-ex="{j}"{" class=\"on\"" if j == 0 else ""}><span class="ex-n">{j + 1:02d}</span><span class="ex-t"><b>{e(n[k])}</b><small>{e(desc[k])}</small></span>'
+                   f'<img class="ex-thumb" src="{pg.b}img/{im}" alt="" width="2000" height="833" loading="lazy">{ARR}</a></li>' for j, (k, im) in enumerate(pages))
+    frames = ''.join(f'<img src="{pg.b}img/{im}" alt="" width="2000" height="833" loading="lazy" data-ex="{j}"{" class=\"on\"" if j == 0 else ""}>' for j, (k, im) in enumerate(pages))
     s = head(pg, f"{UI[l]['name']} – Zug · Zürich · Schwyz", T(d['home_title']))
     s += '<body class="home">\n'
     s += f"""<div class="ph home-ph">
@@ -305,9 +316,9 @@ def page_home(l):
   <div class="sec-head light"><h2 id="o-h" class="h2" data-reveal>{e(h['where'])}</h2><p class="lead" data-reveal>{e(h['where_sub'])} <a href="tel:{TEL}">{TEL_H}</a> · <a href="mailto:{MAIL}">{MAIL}</a></p></div>
   {offices_block(pg, 'offs glassy', True)}
 </div></section>
-<section class="sec" aria-labelledby="t-h"><div class="wrap">
-  <h2 id="t-h" class="h2 sec-head" data-reveal>{e(h['explore'])}</h2>
-  <div class="tiles">{tiles}</div>
+<section class="sec explore" aria-labelledby="t-h"><div class="wrap ex-in">
+  <div class="ex-list"><h2 id="t-h" class="h2" data-reveal>{e(h['explore'])}</h2><ol>{rows}</ol></div>
+  <div class="ex-media" aria-hidden="true" data-reveal>{frames}</div>
 </div></section>
 </main>
 """
