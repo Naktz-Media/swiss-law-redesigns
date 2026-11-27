@@ -46,7 +46,7 @@ button { font: inherit; color: inherit; }
 .link:hover { text-decoration-color: currentColor; }
 
 /* header bar over the photo */
-.bar { position: fixed; inset: 0 0 auto; z-index: 20; color: #fff; transition: background .4s var(--ease), box-shadow .4s var(--ease); }
+.bar { position: fixed; inset: 0 0 auto; z-index: 100; color: #fff; transition: background .4s var(--ease), box-shadow .4s var(--ease); }
 .scrolled .bar { background: rgba(0, 32, 56, .86); -webkit-backdrop-filter: blur(20px) saturate(1.6); backdrop-filter: blur(20px) saturate(1.6); box-shadow: 0 1px 0 rgba(255, 255, 255, .12), 0 16px 40px -24px rgba(0, 15, 30, .6); }
 .bar-in { display: flex; align-items: center; justify-content: space-between; gap: 32px; height: 96px; transition: height .4s var(--ease); }
 .scrolled .bar-in { height: 72px; }
@@ -62,11 +62,11 @@ button { font: inherit; color: inherit; }
 .menu-btn { display: none; }
 
 /* photo header, as on every page of the original */
-.ph { position: relative; min-height: clamp(440px, 64vh, 640px); display: flex; align-items: flex-end; color: #fff; background: var(--navy); isolation: isolate; }
-.ph-bg { position: absolute; inset: 0; z-index: -1; overflow: hidden; }
+.ph { position: relative; min-height: clamp(440px, 64vh, 640px); display: flex; align-items: flex-end; color: #fff; background: var(--navy); }
+.ph-bg { position: absolute; inset: 0; z-index: 0; overflow: hidden; }
 .ph-bg img { width: 100%; height: 100%; object-fit: cover; }
 .ph-bg::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0, 22, 38, .62) 0%, rgba(0, 22, 38, .12) 30%, rgba(0, 22, 38, .18) 55%, rgba(0, 22, 38, .82) 100%); }
-.ph-in { padding-top: 150px; padding-bottom: clamp(44px, 7vh, 84px); }
+.ph-in { position: relative; z-index: 1; padding-top: 150px; padding-bottom: clamp(44px, 7vh, 84px); }
 .ph .h1 { max-width: 16ch; }
 .ph-lead { margin-top: 20px; max-width: 58ch; font-size: 1.15rem; line-height: 1.55; color: rgba(255, 255, 255, .86); }
 .home-ph { min-height: 100svh; }
