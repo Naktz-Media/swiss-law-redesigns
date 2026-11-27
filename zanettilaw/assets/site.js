@@ -2,6 +2,9 @@
   var doc = document.documentElement;
   requestAnimationFrame(function () { requestAnimationFrame(function () { doc.classList.add('loaded'); }); });
 
+  var sc = function () { doc.classList.toggle('scrolled', window.scrollY > 40); };
+  window.addEventListener('scroll', sc, { passive: true }); sc();
+
   var mb = document.querySelector('.menu-btn');
   if (mb) mb.addEventListener('click', function () { var o = document.body.classList.toggle('menu-open'); mb.setAttribute('aria-expanded', o); });
 

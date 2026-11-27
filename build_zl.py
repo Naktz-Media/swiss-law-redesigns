@@ -166,7 +166,7 @@ def offices_block(pg, cls='offs', maps=False):
     for name, ln in OFFICES[l]:
         q = '+'.join(ln[1:]).replace(' ', '+')
         route = f'<a class="route" href="https://www.google.com/maps/search/?api=1&amp;query={e(q)}" rel="noopener">{e(X[l]["maps"])}</a>' if maps else ''
-        out += (f'<div class="off"><h3>{e(name)}</h3><p>{"<br>".join(e(x) for x in ln)}</p>'
+        out += (f'<div class="off" data-reveal><h3>{e(name)}</h3><p>{"<br>".join(e(x) for x in ln)}</p>'
                 f'<p>T <a href="tel:{TEL}">{TEL_H}</a><br>F {FAX_H}<br><a href="mailto:{MAIL}">{MAIL}</a></p>{route}</div>')
     return f'<div class="{cls}">{out}</div>'
 
@@ -223,10 +223,30 @@ def svc_rows(pg, items):
 
 
 # ------------------------------------------------------------------ home
+H = {
+ 'de': dict(team_n='Fachleute im Team', offices_n='Standorte', offices_l='Zug · Zürich · Schwyz', awards='Top Anwaltskanzlei', awards_l='Bilanz & PME 2024 – 2026',
+            fields='Unsere Rechtsgebiete', fields_sub='Von der Beratung bis zur Prozessführung – wählen Sie ein Gebiet für die ausführliche Beschreibung.',
+            partners='Die Partner', partners_sub='Ein gewachsener Zusammenschluss erfahrener und spezialisierter Rechtsanwälte.', see='Zum ganzen Team',
+            where='Drei Standorte, ein Team', where_sub='Sie erreichen uns wie folgt:', explore='Mehr entdecken'),
+ 'en': dict(team_n='people on the team', offices_n='offices', offices_l='Zug · Zürich · Schwyz', awards='Top Law Firm', awards_l='Bilanz & PME 2024 – 2026',
+            fields='Our areas of law', fields_sub='From advice to litigation – choose an area for the full description.',
+            partners='The partners', partners_sub='An established association of experienced and specialised lawyers.', see='Meet the whole team',
+            where='Three offices, one team', where_sub='You can reach us as follows:', explore='Explore'),
+}
+
+
+def excerpt(h, n=150):
+    t = T(re.search(r'<p>(.*?)</p>', h, re.S).group(1)) if re.search(r'<p>(.*?)</p>', h, re.S) else T(h)
+    m = re.match(r'(.+?[.!?])(\s|$)', t)
+    t = m.group(1) if m and len(m.group(1)) > 40 else t
+    return t if len(t) <= n else t[:n].rsplit(' ', 1)[0] + ' …'
+
+
 def page_home(l):
     pg = Page(l, 'home')
     d = D[l]
     n = nav_labels(l)
+    h = H[l]
     q = re.search(r'<h3>(.*?)</h3>', d['quote'] or '', re.S)
     q = q.group(1) if q else d['quote']
     q_lines = [T(x) for x in re.split(r'<br\s*/?>', q) if T(x)]
@@ -234,11 +254,17 @@ def page_home(l):
     paras = [[T(x) for x in re.findall(r'<p>(.*?)</p>', x['html'], re.S) if T(x)] for x in w]
     pages = [('services', HEADIMG['services']), ('notary', HEADIMG['notary']), ('team', HEADIMG['team']),
              ('pubs', HEADIMG['pubs']), ('contact', HEADIMG['contact']), ('members', HEADIMG['members'])]
+    svc = services_list(l)
+    awards = ''.join(f'<img src="{pg.b}img/{f}" alt="{e(UI[l]["award"])} {y}" width="64" height="64">' for f, y in AWARDS)
     wid = ''
     for x, ps, (f, y) in zip(w, paras, AWARDS):
-        wid += (f'<article class="widget" data-reveal><img class="w-award" src="{pg.b}img/{f}" alt="{e(UI[l]["award"])} {y} – {UI[l]["award_by"]}" width="132" height="132" loading="lazy">'
-                f'<h2 class="h3">{e(x["title"].rstrip(":"))}</h2>' + ''.join(f'<p>{e(t)}</p>' for t in ps) + '</article>')
-    tiles = ''.join(f'<a class="tile" href="{pg.href(k)}" data-reveal><img src="{pg.b}img/{im}" alt="" width="2000" height="833" loading="lazy"><span>{e(n[k])}{ARR}</span></a>' for k, im in pages)
+        wid += (f'<article class="widget glass" data-reveal><img class="w-award" src="{pg.b}img/{f}" alt="{e(UI[l]["award"])} {y} – {UI[l]["award_by"]}" width="132" height="132" loading="lazy">'
+                f'<h3 class="h3">{e(x["title"].rstrip(":"))}</h3>' + ''.join(f'<p>{e(t)}</p>' for t in ps) + '</article>')
+    fields = ''.join(f'<a class="field glass" href="{pg.href("services")}#{x["uid"]}"{" lang=\"de\"" if x["de_only"] else ""} data-reveal><img src="{pg.b}img/{x["icon"]}" alt="" width="40" height="40"><b>{e(x["title"])}</b><span>{e(excerpt(x["html"]))}</span>{ARR}</a>' for x in svc)
+    fields += f'<a class="field field-cta" href="{pg.href("services")}" data-reveal><b>{e(d["services_title"])}</b><span>{e(UI[l]["groups"][0])} · {e(UI[l]["groups"][1])}</span>{ARR}</a>'
+    partners = [(i, m) for i, m in enumerate(d['team']) if 'Partner' in ' '.join(roles(m))]
+    pcards = ''.join(f'<li data-reveal>{person_card(pg, m, i, True)}</li>' for i, m in partners)
+    tiles = ''.join(f'<a class="tile" href="{pg.href(k)}" data-reveal><img src="{pg.b}img/{im}" alt="" width="2000" height="833" loading="lazy"><span class="glass">{e(n[k])}{ARR}</span></a>' for k, im in pages)
     s = head(pg, f"{UI[l]['name']} – Zug · Zürich · Schwyz", T(d['home_title']))
     s += '<body class="home">\n'
     s += f"""<div class="ph home-ph">
@@ -246,6 +272,11 @@ def page_home(l):
   {top(pg)}
   <div class="wrap ph-in">
     <blockquote class="hq"><p data-load>{e(" ".join(q_lines))}</p><footer data-load style="--d:2">{e(UI[l]['quote_by'])}</footer></blockquote>
+    <div class="facts glass" data-load style="--d:3">
+      <div><b>{len(d['team'])}</b><span>{e(h['team_n'])}</span></div>
+      <div><b>{len(OFFICES[l])}</b><span>{e(h['offices_n'])} · {e(h['offices_l'])}</span></div>
+      <div class="f-aw"><span class="aw">{awards}</span><span>{e(h['awards'])}<br>{e(h['awards_l'])}</span></div>
+    </div>
   </div>
 </div>
 <main id="main">
@@ -253,8 +284,26 @@ def page_home(l):
   <h1 id="h1" class="h2" data-reveal>{e(T(d['home_title']))}</h1>
   <p class="intro-acts" data-reveal><a class="btn" href="{pg.href('contact')}">{e(UI[l]['contact_cta'])}{ARR}</a><a class="btn line" href="{pg.href('services')}">{e(d['services_title'])}</a></p>
 </div></section>
-<section class="sec tint"><div class="wrap"><div class="widgets">{wid}</div></div></section>
-<section class="sec"><div class="wrap"><div class="tiles">{tiles}</div></div></section>
+<section class="sec photo-sec" aria-labelledby="w-h"><div class="sec-bg"><img src="{pg.b}img/{HEADIMG['services']}" alt="" width="2000" height="833" loading="lazy"></div><div class="wrap">
+  <h2 id="w-h" class="vh">{e(UI[l]['name'])}</h2>
+  <div class="widgets">{wid}</div>
+</div></section>
+<section class="sec mesh" aria-labelledby="f-h"><div class="wrap">
+  <div class="sec-head"><h2 id="f-h" class="h2" data-reveal>{e(h['fields'])}</h2><p class="lead" data-reveal>{e(h['fields_sub'])}</p></div>
+  <div class="fields">{fields}</div>
+</div></section>
+<section class="sec" aria-labelledby="p-h"><div class="wrap">
+  <div class="sec-head row"><div><h2 id="p-h" class="h2" data-reveal>{e(h['partners'])}</h2><p class="lead" data-reveal>{e(h['partners_sub'])}</p></div><a class="btn line" href="{pg.href('team')}" data-reveal>{e(h['see'])}{ARR}</a></div>
+  <ul class="partners">{pcards}</ul>
+</div></section>
+<section class="sec photo-sec where" aria-labelledby="o-h"><div class="sec-bg"><img src="{pg.b}img/{HEADIMG['contact']}" alt="" width="2000" height="833" loading="lazy"></div><div class="wrap">
+  <div class="sec-head light"><h2 id="o-h" class="h2" data-reveal>{e(h['where'])}</h2><p class="lead" data-reveal>{e(h['where_sub'])} <a href="tel:{TEL}">{TEL_H}</a> · <a href="mailto:{MAIL}">{MAIL}</a></p></div>
+  {offices_block(pg, 'offs glassy', True)}
+</div></section>
+<section class="sec" aria-labelledby="t-h"><div class="wrap">
+  <h2 id="t-h" class="h2 sec-head" data-reveal>{e(h['explore'])}</h2>
+  <div class="tiles">{tiles}</div>
+</div></section>
 </main>
 """
     s += footer(pg)
