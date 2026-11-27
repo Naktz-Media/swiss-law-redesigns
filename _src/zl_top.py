@@ -49,7 +49,7 @@ T = lambda s: re.sub(r'\s+', ' ', html.unescape(re.sub(r'<[^>]+>', ' ', s or '')
 
 def body_html(h):
     """Tidy imported rich text: demote headings, drop empty nodes and asset paths."""
-    h = re.sub(r'</?(div|section|main|picture|source)[^>]*>', '', h)
+    h = re.sub(r'</?(div|section|main|article|picture|source)[^>]*>', '', h)
     h = re.sub(r'<h1>(.*?)</h1>', r'<h3>\1</h3>', h)
     h = re.sub(r'<h4>(.*?)</h4>', r'<h3>\1</h3>', h)
     h = re.sub(r'<p>\s*(<br\s*/?>\s*)*</p>', '', h)
