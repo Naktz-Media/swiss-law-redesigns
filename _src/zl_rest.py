@@ -137,11 +137,11 @@ def svc_rows(pg, items):
 
 # ------------------------------------------------------------------ home
 H = {
- 'de': dict(team_n='Fachleute im Team', offices_n='Standorte', offices_l='Zug · Zürich · Schwyz', awards='Top Anwaltskanzlei', awards_l='Bilanz & PME 2024 – 2026',
+ 'de': dict(team_n='Fachleute im Team', offices_n='Standorte', offices_l='Zug · Zürich · Schwyz', awards='Top Anwaltskanzlei', awards_l='Bilanz & PME 2024 – 2026', intro_l='Beratung und Prozessführung aus einer Hand – in Baar, Regensdorf und Immensee.',
             fields='Unsere Rechtsgebiete', fields_sub='Von der Beratung bis zur Prozessführung – wählen Sie ein Gebiet für die ausführliche Beschreibung.',
             partners='Die Partner', partners_sub='Ein gewachsener Zusammenschluss erfahrener und spezialisierter Rechtsanwälte.', see='Zum ganzen Team',
             where='Drei Standorte, ein Team', where_sub='Sie erreichen uns wie folgt:', explore='Mehr entdecken'),
- 'en': dict(team_n='people on the team', offices_n='offices', offices_l='Zug · Zürich · Schwyz', awards='Top Law Firm', awards_l='Bilanz & PME 2024 – 2026',
+ 'en': dict(team_n='people on the team', offices_n='offices', offices_l='Zug · Zürich · Schwyz', awards='Top Law Firm', awards_l='Bilanz & PME 2024 – 2026', intro_l='Advice and litigation from one team – in Baar, Regensdorf and Immensee.',
             fields='Our areas of law', fields_sub='From advice to litigation – choose an area for the full description.',
             partners='The partners', partners_sub='An established association of experienced and specialised lawyers.', see='Meet the whole team',
             where='Three offices, one team', where_sub='You can reach us as follows:', explore='Explore'),
@@ -193,9 +193,14 @@ def page_home(l):
   </div>
 </div>
 <main id="main">
-<section class="sec intro"><div class="wrap intro-in">
-  <h1 id="h1" class="h2" data-reveal>{e(T(d['home_title']))}</h1>
-  <p class="intro-acts" data-reveal><a class="btn" href="{pg.href('contact')}">{e(UI[l]['contact_cta'])}{ARR}</a><a class="btn line" href="{pg.href('services')}">{e(d['services_title'])}</a></p>
+<section class="sec intro mesh"><div class="wrap intro-in">
+  <div class="intro-l"><h1 id="h1" class="h2" data-reveal>{e(T(d['home_title']))}</h1><p class="lead" data-reveal>{e(h['intro_l'])}</p></div>
+  <div class="intro-card glass" data-reveal>
+    <h2 class="h3">{e(OFFICES[l][0][0])}</h2>
+    <address>{"<br>".join(e(x) for x in OFFICES[l][0][1])}</address>
+    <div class="ic-lines"><a href="tel:{TEL}"><span>{e(X[l]['call'])}</span>{TEL_H}</a><a href="mailto:{MAIL}"><span>{e(X[l]['mail'])}</span>{MAIL}</a></div>
+    <p class="intro-acts"><a class="btn" href="{pg.href('contact')}">{e(UI[l]['contact_cta'])}{ARR}</a><a class="btn line" href="{pg.href('services')}">{e(d['services_title'])}</a></p>
+  </div>
 </div></section>
 <section class="sec photo-sec" aria-labelledby="w-h"><div class="sec-bg"><img src="{pg.b}img/{HEADIMG['services']}" alt="" width="2000" height="833" loading="lazy"></div><div class="wrap">
   <h2 id="w-h" class="vh">{e(UI[l]['name'])}</h2>
