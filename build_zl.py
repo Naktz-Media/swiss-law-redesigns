@@ -280,13 +280,13 @@ def page_home(l):
   </div>
 </div>
 <main id="main">
-<section class="sec intro mesh"><div class="wrap intro-in">
+<section class="sec intro mesh"><div class="wrap">
   <div class="intro-l"><h1 id="h1" class="h2" data-reveal>{e(T(d['home_title']))}</h1><p class="lead" data-reveal>{e(h['intro_l'])}</p></div>
-  <div class="intro-card glass" data-reveal>
-    <h2 class="h3">{e(OFFICES[l][0][0])}</h2>
-    <address>{"<br>".join(e(x) for x in OFFICES[l][0][1])}</address>
-    <div class="ic-lines"><a href="tel:{TEL}"><span>{e(X[l]['call'])}</span>{TEL_H}</a><a href="mailto:{MAIL}"><span>{e(X[l]['mail'])}</span>{MAIL}</a></div>
-    <p class="intro-acts"><a class="btn" href="{pg.href('contact')}">{e(UI[l]['contact_cta'])}{ARR}</a><a class="btn line" href="{pg.href('services')}">{e(d['services_title'])}</a></p>
+  <div class="strip glass-light" data-reveal>
+    <div class="st-cell"><small>{e(OFFICES[l][0][0])}</small><address>{e(OFFICES[l][0][1][1])}, {e(OFFICES[l][0][1][2])}</address></div>
+    <a class="st-cell" href="tel:{TEL}"><small>{e(X[l]['call'])}</small><b>{TEL_H}</b></a>
+    <a class="st-cell" href="mailto:{MAIL}"><small>{e(X[l]['mail'])}</small><b>{MAIL}</b></a>
+    <div class="st-acts"><a class="btn" href="{pg.href('contact')}">{e(UI[l]['contact_cta'])}{ARR}</a><a class="btn line" href="{pg.href('services')}">{e(d['services_title'])}</a></div>
   </div>
 </div></section>
 <section class="sec photo-sec" aria-labelledby="w-h"><div class="sec-bg"><img src="{pg.b}img/{HEADIMG['services']}" alt="" width="2000" height="833" loading="lazy"></div><div class="wrap">
@@ -323,11 +323,10 @@ def page_services(l):
     groups = [(UI[l]['groups'][0], [x for x in svc if x['group'] == 'beratung']), (UI[l]['groups'][1], [x for x in svc if x['group'] == 'prozess'])]
     idx = ''
     for g, items in groups:
-        idx += f'<div class="ix-g"><h2 class="ix-h">{e(g)}</h2><div class="ix">'
         for x in items:
             lang = ' lang="de"' if x['de_only'] else ''
-            idx += f'<a href="#{x["uid"]}"{lang}><img src="{pg.b}img/{x["icon"]}" alt="" width="40" height="40"><span>{e(x["title"])}</span></a>'
-        idx += '</div></div>'
+            idx += f'<a href="#{x["uid"]}"{lang}><span class="ix-ic"><img src="{pg.b}img/{x["icon"]}" alt="" width="40" height="40"></span><span class="ix-t"><b>{e(x["title"])}</b><small lang="{l}">{e(g)}</small></span>{ARR}</a>'
+    idx += f'<a class="ix-cta" href="{pg.href("contact")}"><span class="ix-t"><b>{e(UI[l]["contact_cta"])}</b><small>{TEL_H}</small></span>{ARR}</a>'
     secs = ''
     for x in svc:
         lang = ' lang="de"' if x['de_only'] else ''
@@ -338,8 +337,8 @@ def page_services(l):
 </article>
 """
     s = head(pg, f"{d['nav'][0]} · {UI[l]['name']}", d['services_title'])
-    s += '<body>\n' + page_head(pg, d['services_title'], '', HEADIMG['services'])
-    s += f'<main id="main">\n<section class="sec"><div class="wrap"><nav class="index" aria-label="{e(d["services_title"])}">{idx}</nav></div></section>\n<section class="sec tint"><div class="wrap svcs">{secs}</div></section>\n'
+    s += '<body class="has-over">\n' + page_head(pg, d['services_title'], '', HEADIMG['services'])
+    s += f'<main id="main">\n<section class="over"><div class="wrap"><nav class="index glass-light" aria-label="{e(d["services_title"])}">{idx}</nav></div></section>\n<section class="sec tint"><div class="wrap svcs">{secs}</div></section>\n'
     s += '</main>\n' + footer(pg)
     return s
 
@@ -392,16 +391,22 @@ def page_members(l):
     return s
 
 
+TEAM_G = {'de': ['Partner', 'Rechtsanwältinnen und Rechtsanwälte', 'Fachleute und Mitarbeitende'],
+          'en': ['Partners', 'Attorneys', 'Specialists and staff']}
+
+
 def page_team(l):
     pg = Page(l, 'team')
     d = D[l]
-    cards, dialogs = '', ''
+    groups = {k: '' for k in TEAM_G[l]}
+    dialogs = ''
     for i, m in enumerate(d['team']):
         f = team_img(m)
         rs = roles(m)
         tl = teaser_lines(m)
         mail = f'<p><a href="mailto:{e(m["email"])}">{e(m["email"])}</a></p>' if m['email'] else ''
-        cards += f'''<li class="member" data-reveal>
+        g = 0 if 'Partner' in ' '.join(roles(m)) else 1 if re.search(r'Rechtsanw|Attorney|Lawyer', m['role']) else 2
+        groups[list(TEAM_G[l])[g]] += f'''<li class="member" data-reveal>
   <button class="m-pic" type="button" data-open="m{i}" aria-haspopup="dialog" aria-label="{e(X[l]['bio'])}: {e(m['name'])}"><img src="{pg.b}img/{f}" alt="" width="800" height="660" loading="lazy"></button>
   <h2 class="h3">{e(m['name'])}</h2>
   <p class="m-role">{e(', '.join(rs))}</p>
@@ -419,7 +424,8 @@ def page_team(l):
 '''
     s = head(pg, f"{d['nav'][2]} · {UI[l]['name']}", d['team_title'])
     s += '<body class="team-page">\n' + page_head(pg, d['team_title'], UI[l]['team_hint'], HEADIMG['team'])
-    s += f'<main id="main">\n<section class="sec"><div class="wrap"><ol class="members">{cards}</ol></div></section>\n{dialogs}'
+    body = ''.join(f'<section class="tg" aria-labelledby="tg{j}"><h2 id="tg{j}" class="tg-h" data-reveal>{e(t)}<span>{c.count("<li class=")}</span></h2><ul class="members">{c}</ul></section>' for j, (t, c) in enumerate(groups.items()) if c)
+    s += f'<main id="main">\n<section class="sec tint team-sec"><div class="wrap">{body}</div></section>\n{dialogs}'
     s += '</main>\n' + footer(pg)
     return s
 
