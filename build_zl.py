@@ -121,7 +121,7 @@ def head(pg, title, desc):
 <link rel="icon" href="{pg.b}assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="{pg.b}assets/site.css?v={VER}">
 <script>document.documentElement.classList.add('js')</script>
 </head>
@@ -132,26 +132,26 @@ def top(pg):
     l = pg.l
     n = nav_labels(l)
     links = ''.join(f'<a href="{pg.href(k)}"{" aria-current=\"page\"" if k == pg.key else ""}>{e(n[k])}</a>' for k in KEYS)
-    lg = ''.join(f'<a href="{pg.href(pg.key, x)}" hreflang="{x}" lang="{x}"{" aria-current=\"true\"" if x == l else ""}>{x.upper()}</a>' for x in ('de', 'en'))
+    lg = ''.join(f'<a href="{pg.href(pg.key, x)}" hreflang="{x}" lang="{x}"{" aria-current=\"true\"" if x == l else ""}>{"D" if x == "de" else "E"}</a>' for x in ('de', 'en'))
     return f'''<a class="skip" href="#main">{UI[l]["skip"]}</a>
 <header class="bar">
   <div class="wrap bar-in">
-    <a class="logo" href="{pg.href('home')}" aria-label="{e(UI[l]['name'])} – {UI[l]['home']}"><img src="{pg.b}img/logo.svg" alt="{e(UI[l]['name'])}" width="200" height="42"></a>
+    <a class="logo" href="{pg.href('home')}" aria-label="{e(UI[l]['name'])} – {UI[l]['home']}"><img src="{pg.b}img/logo-white.svg" alt="{e(UI[l]['name'])}" width="200" height="42"></a>
     <nav class="nav" id="menu" aria-label="{e(UI[l]['name'])}">{links}<span class="langs">{lg}</span></nav>
-    <a class="tel" href="tel:{TEL}">{TEL_H}</a>
-    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu">{UI[l]['menu']}</button>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu"><span></span><span></span><span class="vh">{UI[l]['menu']}</span></button>
   </div>
 </header>'''
 
 
 def page_head(pg, title, lead='', img=None, alt=''):
-    pic = f'<figure class="band" data-load style="--d:2"><img src="{pg.b}img/{img}" alt="{e(alt)}" width="2000" height="833"></figure>' if img else ''
-    return f'''{top(pg)}
-<div class="wrap phead">
-  <h1 id="h1" class="h1" data-load>{e(title)}</h1>
-  {f'<p class="lead" data-load style="--d:1">{e(lead)}</p>' if lead else ''}
+    return f'''<div class="ph">
+  <div class="ph-bg"><img src="{pg.b}img/{img or HEADIMG['home']}" alt="{e(alt)}" width="2000" height="833"></div>
+  {top(pg)}
+  <div class="wrap ph-in">
+    <h1 id="h1" class="h1" data-load>{e(title)}</h1>
+    {f'<p class="ph-lead" data-load style="--d:1">{e(lead)}</p>' if lead else ''}
+  </div>
 </div>
-{pic}
 '''
 
 
@@ -171,50 +171,25 @@ def offices_block(pg, cls='offs', maps=False):
     return f'<div class="{cls}">{out}</div>'
 
 
-def contact_band(pg):
-    l = pg.l
-    u = UI[l]
-    return f'''<section class="sec ask" aria-labelledby="cp-h"><div class="wrap ask-in">
-  <div>
-    <h2 id="cp-h" class="h2" data-reveal>{e(X[l]['ready'])}</h2>
-    <p class="lead" data-reveal>{e(X[l]['ready_sub'])}</p>
-    <p class="direct" data-reveal><a href="tel:{TEL}">{TEL_H}</a><a href="mailto:{MAIL}">{MAIL}</a></p>
-  </div>
-  <form class="coupon form" data-mailto="{MAIL}" data-reveal>
-    <label for="cp-name">{e(u['f_name'])}<input class="inp" id="cp-name" name="name" autocomplete="name" required></label>
-    <label for="cp-phone">{e(u['f_phone'])}<input class="inp" id="cp-phone" name="phone" type="tel" autocomplete="tel"></label>
-    <label class="full" for="cp-mail">{e(u['f_mail'])}<input class="inp" id="cp-mail" name="email" type="email" autocomplete="email"></label>
-    <label class="full" for="cp-msg">{e(u['f_msg'])}<textarea class="inp" id="cp-msg" name="message" rows="4" required></textarea></label>
-    <button class="btn full" type="submit">{e(u['send'])}{ARR}</button>
-    <p class="full note">{e(u['write_sub'])}</p>
-  </form>
-</div></section>
-'''
-
-
 def footer(pg):
     l = pg.l
-    n = nav_labels(l)
-    links = ''.join(f'<a href="{pg.href(k)}">{e(n[k])}</a>' for k in KEYS)
-    return f'''<footer class="foot">
+    offs = ''.join(f'<div class="f-off"><h3>{e(nm.replace("Head Office ", "").replace("Office ", ""))}</h3><p>{"<br>".join(e(x) for x in ln)}</p>'
+                   f'<p>T <a href="tel:{TEL}">{TEL_H}</a><br>F {FAX_H}<br><a href="mailto:{MAIL}">{MAIL}</a></p></div>' for nm, ln in OFFICES[l])
+    other = 'en' if l == 'de' else 'de'
+    return f"""<footer class="foot">
   <div class="wrap">
-    <div class="foot-top">
-      <img src="{pg.b}img/logo-white.svg" alt="{e(UI[l]['name'])}" width="220" height="46" class="foot-logo">
-      {offices_block(pg, 'offs foot-offs')}
+    <div class="foot-grid">
+      {offs}
+      <div class="f-off"><h3>{e(X[l]['links'])}</h3><p><a href="{pg.href('imprint')}">{e(UI[l]['imprint'])}</a><br><a href="{pg.href('privacy')}">{e(UI[l]['privacy'])}</a><br><a href="{pg.href(pg.key, other)}" lang="{other}" hreflang="{other}">{'English' if l == 'de' else 'Deutsch'}</a></p></div>
     </div>
-    <div class="foot-mid">
-      <nav aria-label="{e(X[l]['site'])}">{links}</nav>
-      <nav aria-label="{e(X[l]['links'])}"><a href="{pg.href('imprint')}">{e(UI[l]['imprint'])}</a><a href="{pg.href('privacy')}">{e(UI[l]['privacy'])}</a></nav>
-      <nav aria-label="{UI[l]['lang']}"><a href="{pg.href(pg.key, 'de')}" lang="de">Deutsch</a><a href="{pg.href(pg.key, 'en')}" lang="en">English</a></nav>
-    </div>
-    <div class="foot-legal"><p>©2026 Zanetti Rechtsanwälte</p><a class="made" href="https://naktz.com/" rel="noopener"><span>{MADE_BY[l]}</span><img src="{pg.b}img/naktz-logo.png" alt="Naktz Media" width="105" height="30"></a></div>
+    <div class="foot-legal"><img src="{pg.b}img/logo-white.svg" alt="{e(UI[l]['name'])}" width="160" height="34" class="foot-logo"><p>©2026 Zanetti Rechtsanwälte</p><a class="made" href="https://naktz.com/" rel="noopener"><span>{MADE_BY[l]}</span><img src="{pg.b}img/naktz-logo.png" alt="Naktz Media" width="105" height="30"></a></div>
     {credits_html(pg)}
   </div>
 </footer>
 <script src="{pg.b}assets/site.js?v={VER}" defer></script>
 </body>
 </html>
-'''
+"""
 
 
 def services_list(l):
@@ -252,72 +227,36 @@ def page_home(l):
     pg = Page(l, 'home')
     d = D[l]
     n = nav_labels(l)
-    quote = T(re.search(r'<h3>(.*?)</h3>', d['quote'] or '', re.S).group(1))
+    q = re.search(r'<h3>(.*?)</h3>', d['quote'] or '', re.S)
+    q = q.group(1) if q else d['quote']
+    q_lines = [T(x) for x in re.split(r'<br\s*/?>', q) if T(x)]
     w = d['widgets']
     paras = [[T(x) for x in re.findall(r'<p>(.*?)</p>', x['html'], re.S) if T(x)] for x in w]
-    award_txt = paras[0][1] if len(paras[0]) > 1 else ''
-    paras[0] = paras[0][:1]
-    svc = services_list(l)
-    groups = [(UI[l]['groups'][0], [s for s in svc if s['group'] == 'beratung' and not s['de_only']]),
-              (UI[l]['groups'][1], [s for s in svc if s['group'] == 'prozess'])]
-    notary_txt = T(section_parts(d['notary'])[1])
-    more = [('notary', HEADIMG['notary'], notary_txt[:notary_txt.find('.', 120) + 1] if '.' in notary_txt[120:] else notary_txt[:180]),
-            ('pubs', HEADIMG['pubs'], d['pubs_title'] + ': ' + ', '.join(p['name'] for p in d['pubs']) + '.'),
-            ('members', HEADIMG['members'], ' '.join(section_parts(d['members'])[0]))]
-
+    pages = [('services', HEADIMG['services']), ('notary', HEADIMG['notary']), ('team', HEADIMG['team']),
+             ('pubs', HEADIMG['pubs']), ('contact', HEADIMG['contact']), ('members', HEADIMG['members'])]
+    wid = ''
+    for x, ps, (f, y) in zip(w, paras, AWARDS):
+        wid += (f'<article class="widget" data-reveal><img class="w-award" src="{pg.b}img/{f}" alt="{e(UI[l]["award"])} {y} – {UI[l]["award_by"]}" width="132" height="132" loading="lazy">'
+                f'<h2 class="h3">{e(x["title"].rstrip(":"))}</h2>' + ''.join(f'<p>{e(t)}</p>' for t in ps) + '</article>')
+    tiles = ''.join(f'<a class="tile" href="{pg.href(k)}" data-reveal><img src="{pg.b}img/{im}" alt="" width="2000" height="833" loading="lazy"><span>{e(n[k])}{ARR}</span></a>' for k, im in pages)
     s = head(pg, f"{UI[l]['name']} – Zug · Zürich · Schwyz", T(d['home_title']))
-    s += '<body class="home">\n' + top(pg)
-    s += f'''
+    s += '<body class="home">\n'
+    s += f"""<div class="ph home-ph">
+  <div class="ph-bg"><img src="{pg.b}img/{HEADIMG['home']}" alt="" width="2000" height="1111"></div>
+  {top(pg)}
+  <div class="wrap ph-in">
+    <blockquote class="hq"><p data-load>{e(" ".join(q_lines))}</p><footer data-load style="--d:2">{e(UI[l]['quote_by'])}</footer></blockquote>
+  </div>
+</div>
 <main id="main">
-<section class="hero" aria-labelledby="h1"><div class="wrap hero-in">
-  <div class="hero-text">
-    <h1 id="h1" class="h1" data-load>Zanetti<br>Rechtsanwälte</h1>
-    <p class="lead" data-load style="--d:1">{e(T(d['home_title']))}</p>
-    <p class="acts" data-load style="--d:2"><a class="btn" href="{pg.href('contact')}">{e(UI[l]['contact_cta'])}{ARR}</a><a class="link" href="{pg.href('services')}">{e(d['services_title'])}</a></p>
-    <div class="award" data-load style="--d:3">
-      <div class="award-logos">{''.join(f'<img src="{pg.b}img/{f}" alt="{e(UI[l]["award"])} {y}" width="72" height="72">' for f, y in AWARDS)}</div>
-      <p>{e(award_txt)}</p>
-    </div>
-  </div>
-  <figure class="hero-pic" data-load style="--d:1"><img src="{pg.b}img/{HEADIMG['home']}" alt="" width="2000" height="1111"></figure>
+<section class="sec intro"><div class="wrap intro-in">
+  <h1 id="h1" class="h2" data-reveal>{e(T(d['home_title']))}</h1>
+  <p class="intro-acts" data-reveal><a class="btn" href="{pg.href('contact')}">{e(UI[l]['contact_cta'])}{ARR}</a><a class="btn line" href="{pg.href('services')}">{e(d['services_title'])}</a></p>
 </div></section>
-
-<section class="sec" aria-labelledby="ab-h"><div class="wrap">
-  <h2 id="ab-h" class="vh">{e(X[l]['about'])}</h2>
-  <div class="tri">
-    {''.join(f'<article data-reveal><h3 class="h3">{e(x["title"].rstrip(":"))}</h3>' + ''.join(f'<p>{e(p)}</p>' for p in ps) + '</article>' for x, ps in zip(w, paras))}
-  </div>
-</div></section>
-
-<section class="quote" aria-label="Mahatma Gandhi"><div class="wrap">
-  <blockquote data-reveal><p>{e(quote)}</p><footer>{e(UI[l]['quote_by'])}</footer></blockquote>
-</div></section>
-
-<section class="sec" aria-labelledby="sv-h"><div class="wrap">
-  <div class="sec-h"><h2 id="sv-h" class="h2" data-reveal>{e(d['services_title'])}</h2><a class="link" href="{pg.href('services')}" data-reveal>{e(X[l]['all_services'])}</a></div>
-  <div class="svc-cols">
-    {''.join(f'<div data-reveal><h3 class="grp">{e(g)}</h3><ul class="rows">{svc_rows(pg, items)}</ul></div>' for g, items in groups)}
-  </div>
-</div></section>
-
-<section class="sec tint" aria-labelledby="tm-h"><div class="wrap">
-  <div class="sec-h"><h2 id="tm-h" class="h2" data-reveal>{e(d['team_title'])}</h2><a class="link" href="{pg.href('team')}" data-reveal>{e(X[l]['all_team'])} ({len(d['team'])})</a></div>
-  <div class="people">{''.join(f'<div data-reveal>{person_card(pg, m, i, True)}</div>' for i, m in enumerate(d['team'][:8]))}</div>
-</div></section>
-
-<section class="sec" aria-label="{e(n['notary'])}, {e(n['pubs'])}, {e(n['members'])}"><div class="wrap">
-  <div class="more">
-    {''.join(f'<a class="mcard" href="{pg.href(k)}" data-reveal><span class="mc-img"><img src="{pg.b}img/{im}" alt="" width="2000" height="833" loading="lazy"></span><span class="h3">{e(n[k])}</span><span class="mc-t">{e(t)}</span><span class="link">{e(X[l]["read"])}</span></a>' for k, im, t in more)}
-  </div>
-</div></section>
-'''
-    s += contact_band(pg)
-    s += f'''<section class="sec tint" aria-labelledby="of-h"><div class="wrap">
-  <h2 id="of-h" class="h2" data-reveal>{e(X[l]['our_offices'])}</h2>
-  <div data-reveal>{offices_block(pg, 'offs big', True)}</div>
-</div></section>
+<section class="sec tint"><div class="wrap"><div class="widgets">{wid}</div></div></section>
+<section class="sec"><div class="wrap"><div class="tiles">{tiles}</div></div></section>
 </main>
-'''
+"""
     s += footer(pg)
     return s
 
@@ -327,32 +266,28 @@ def page_services(l):
     pg = Page(l, 'services')
     d = D[l]
     svc = services_list(l)
-    groups = [(UI[l]['groups'][0], [s for s in svc if s['group'] == 'beratung']), (UI[l]['groups'][1], [s for s in svc if s['group'] == 'prozess'])]
-    idx = ''.join(f'<div><p class="grp">{e(g)}</p>' + ''.join(f'<a href="#{x["uid"]}"{" lang=\"de\"" if x["de_only"] else ""}>{e(x["title"])}</a>' for x in items) + '</div>' for g, items in groups)
+    groups = [(UI[l]['groups'][0], [x for x in svc if x['group'] == 'beratung']), (UI[l]['groups'][1], [x for x in svc if x['group'] == 'prozess'])]
+    idx = ''
+    for g, items in groups:
+        idx += f'<div class="ix-g"><h2 class="ix-h">{e(g)}</h2><div class="ix">'
+        for x in items:
+            lang = ' lang="de"' if x['de_only'] else ''
+            idx += f'<a href="#{x["uid"]}"{lang}><img src="{pg.b}img/{x["icon"]}" alt="" width="40" height="40"><span>{e(x["title"])}</span></a>'
+        idx += '</div></div>'
     secs = ''
     for x in svc:
         lang = ' lang="de"' if x['de_only'] else ''
         note = f'<p class="de-note" lang="{l}">{e(X[l]["de_note"])}</p>' if x['de_only'] else ''
-        secs += f'''<article class="svc" id="{x['uid']}"{lang}>
-  <div class="svc-h"><img src="{pg.b}img/{x['icon']}" alt="" width="34" height="34"><h2 class="h2">{e(x['title'])}</h2></div>
-  {note}<div class="rich">{body_html(x['html'])}</div>
+        secs += f"""<article class="svc" id="{x['uid']}"{lang}>
+  <div class="svc-h"><img src="{pg.b}img/{x['icon']}" alt="" width="40" height="40"><h2 class="h3">{e(x['title'])}</h2></div>
+  <div class="svc-b">{note}<div class="rich">{body_html(x['html'])}</div></div>
 </article>
-'''
+"""
     s = head(pg, f"{d['nav'][0]} · {UI[l]['name']}", d['services_title'])
-    s += '<body>\n' + page_head(pg, d['services_title'], ' · '.join(x['title'] for x in svc if not x['de_only']), HEADIMG['services'])
-    s += f'<main id="main">\n<section class="sec"><div class="wrap layout"><nav class="index" aria-label="{e(d["services_title"])}">{idx}</nav><div class="svcs">{secs}</div></div></section>\n'
-    s += contact_band(pg) + '</main>\n' + footer(pg)
+    s += '<body>\n' + page_head(pg, d['services_title'], '', HEADIMG['services'])
+    s += f'<main id="main">\n<section class="sec"><div class="wrap"><nav class="index" aria-label="{e(d["services_title"])}">{idx}</nav></div></section>\n<section class="sec tint"><div class="wrap svcs">{secs}</div></section>\n'
+    s += '</main>\n' + footer(pg)
     return s
-
-
-def side_box(pg):
-    l = pg.l
-    return f'''<aside class="side" data-reveal>
-    <h2 class="h3">{e(UI[l]['contact_cta'])}</h2>
-    <p>Zanetti Rechtsanwälte AG<br>Blegistrasse 9<br>6340 Baar, Zug</p>
-    <p>T <a href="tel:{TEL}">{TEL_H}</a><br>F {FAX_H}<br><a href="mailto:{MAIL}">{MAIL}</a></p>
-    <a class="btn" href="{pg.href('contact')}">{e(nav_labels(l)['contact'])}{ARR}</a>
-  </aside>'''
 
 
 def page_generic(l, key, src, img=None):
@@ -363,7 +298,7 @@ def page_generic(l, key, src, img=None):
     lead = ' '.join(heads[1:]) if len(heads) > 1 else ''
     s = head(pg, f"{title} · {UI[l]['name']}", T(body)[:200])
     s += '<body>\n' + page_head(pg, title, lead, img)
-    s += f'<main id="main">\n<section class="sec"><div class="wrap layout right"><div class="rich" data-reveal>{body}</div>{side_box(pg)}</div></section>\n'
+    s += f'<main id="main">\n<section class="sec"><div class="wrap"><div class="rich wide" data-reveal>{body}</div></div></section>\n'
     s += '</main>\n' + footer(pg)
     return s
 
@@ -429,9 +364,9 @@ def page_team(l):
 </dialog>
 '''
     s = head(pg, f"{d['nav'][2]} · {UI[l]['name']}", d['team_title'])
-    s += '<body class="team-page">\n' + page_head(pg, d['team_title'], UI[l]['team_hint'])
-    s += f'<main id="main">\n<section class="sec" style="padding-top:0"><div class="wrap"><ol class="members">{cards}</ol></div></section>\n{dialogs}'
-    s += contact_band(pg) + '</main>\n' + footer(pg)
+    s += '<body class="team-page">\n' + page_head(pg, d['team_title'], UI[l]['team_hint'], HEADIMG['team'])
+    s += f'<main id="main">\n<section class="sec"><div class="wrap"><ol class="members">{cards}</ol></div></section>\n{dialogs}'
+    s += '</main>\n' + footer(pg)
     return s
 
 
@@ -459,9 +394,9 @@ def page_contact(l):
     notes = re.findall(r'<p>\((.*?)\)</p>', body, re.S)
     note = f'({T(notes[0])})' if notes else ''
     s = head(pg, f"{d['nav'][4]} · {UI[l]['name']}", intro)
-    s += '<body>\n' + page_head(pg, heads[0] if heads else d['nav'][4], intro)
+    s += '<body>\n' + page_head(pg, heads[0] if heads else d['nav'][4], intro, HEADIMG['contact'])
     s += f'''<main id="main">
-<section class="sec" style="padding-top:0"><div class="wrap">
+<section class="sec"><div class="wrap">
   <div class="lines">
     <a href="tel:{TEL}" data-reveal><span>{e(X[l]['call'])}</span><b>{TEL_H}</b></a>
     <a href="mailto:{MAIL}" data-reveal><span>{e(X[l]['mail'])}</span><b>{MAIL}</b></a>
@@ -474,7 +409,7 @@ def page_contact(l):
   <div class="map" data-reveal><iframe title="Google Maps – Zanetti Rechtsanwälte AG, Baar" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10840.119222836278!2d8.5708996!3d47.2159991!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xa08f4c2cdbca22ee!2sZanetti+Rechtsanw%C3%A4lte+AG!5e0!3m2!1sde!2sch!4v1552574030713" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
 </div></section>
 '''
-    s += contact_band(pg) + '</main>\n' + footer(pg)
+    s += '</main>\n' + footer(pg)
     return s
 
 
@@ -484,7 +419,7 @@ def write(rel, s):
     open(p, 'w', encoding='utf-8', newline='\n').write(s)
 
 
-css = open(os.path.join(ROOT, '_src/zl3.css'), encoding='utf-8').read()
+css = open(os.path.join(ROOT, '_src/zl4.css'), encoding='utf-8').read()
 VER = __import__('hashlib').md5((css + open(os.path.join(OUT, 'assets/site.js'), encoding='utf-8').read() + open(__file__, encoding='utf-8').read()).encode()).hexdigest()[:8]
 open(os.path.join(OUT, 'assets/site.css'), 'w', encoding='utf-8', newline='\n').write(css)
 
