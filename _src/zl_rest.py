@@ -11,12 +11,12 @@ X = {
  'de': dict(about='Über uns', offices='Standorte', bio='Werdegang', all_team='Ganzes Team', pics='Bilder', site='Seiten',
             our_offices='Unsere Standorte', read='Mehr erfahren', ready='Bereit für ein erstes Gespräch?',
             ready_sub='Schildern Sie uns Ihr Anliegen. Wir melden uns rasch und sagen Ihnen offen, wie wir Ihnen helfen können.',
-            maps='Route planen', call='Telefon', mail='E-Mail', fax='Fax', links='Links', all_services='Alle Dienstleistungen',
+            maps='Route planen', readmore='Weiterlesen', less='Weniger anzeigen', call='Telefon', mail='E-Mail', fax='Fax', links='Links', all_services='Alle Dienstleistungen',
             de_note='Dieser Abschnitt ist auf der englischen Seite der Kanzlei nur auf Deutsch verfügbar.', mail_person='E-Mail an'),
  'en': dict(about='About us', offices='Offices', bio='Background', all_team='Whole team', pics='Pictures', site='Pages',
             our_offices='Our offices', read='Learn more', ready='Ready for a first conversation?',
             ready_sub='Tell us about your matter. We will get back to you quickly and tell you openly how we can help.',
-            maps='Plan route', call='Phone', mail='E-mail', fax='Fax', links='Links', all_services='All services',
+            maps='Plan route', readmore='Read more', less='Show less', call='Phone', mail='E-mail', fax='Fax', links='Links', all_services='All services',
             de_note='This section is only available in German.', mail_person='E-mail'),
 }
 
@@ -267,7 +267,8 @@ def page_services(l):
         note = f'<p class="de-note" lang="{l}">{e(X[l]["de_note"])}</p>' if x['de_only'] else ''
         secs += f"""<article class="svc" id="{x['uid']}"{lang}>
   <div class="svc-h"><img src="{pg.b}img/{x['icon']}" alt="" width="40" height="40"><h2 class="h3">{e(x['title'])}</h2></div>
-  <div class="svc-b">{note}<div class="rich">{body_html(x['html'])}</div></div>
+  <div class="svc-b" id="{x['uid']}-b">{note}<div class="rich">{body_html(x['html'])}</div></div>
+  <button class="svc-more" type="button" aria-expanded="false" aria-controls="{x['uid']}-b" data-less="{e(X[l]['less'])}">{e(X[l]['readmore'])}</button>
 </article>
 """
     s = head(pg, f"{d['nav'][0]} · {UI[l]['name']}", d['services_title'])

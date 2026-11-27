@@ -45,6 +45,21 @@
   });
   if (/^#m\d+$/.test(location.hash)) openDialog(location.hash.slice(1));
 
+  // services on phones: each area opens in full on demand
+  document.querySelectorAll('.svc-more').forEach(function (b) {
+    var lbl = b.textContent, svc = b.closest('.svc');
+    var set = function (o) { svc.classList.toggle('open', o); b.setAttribute('aria-expanded', o); b.textContent = o ? b.dataset.less : lbl; };
+    b.addEventListener('click', function () {
+      var o = !svc.classList.contains('open'); set(o);
+      if (!o && svc.getBoundingClientRect().top < 0) svc.scrollIntoView({ block: 'start' });
+    });
+    svc._open = set;
+    var fit = function () { var bd = svc.querySelector('.svc-b'); b.hidden = !svc.classList.contains('open') && bd.scrollHeight <= bd.clientHeight + 24; if (b.hidden) bd.style.maskImage = bd.style.webkitMaskImage = 'none'; else bd.style.maskImage = bd.style.webkitMaskImage = ''; };
+    fit(); window.addEventListener('resize', fit);
+  });
+  var openHash = function () { var t = location.hash && document.getElementById(location.hash.slice(1)); if (t && t._open) t._open(true); };
+  window.addEventListener('hashchange', openHash); openHash();
+
   // contact form: compose an e-mail
   document.querySelectorAll('form.coupon').forEach(function (f) {
     f.addEventListener('submit', function (ev) {
