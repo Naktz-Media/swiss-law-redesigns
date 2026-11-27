@@ -45,16 +45,6 @@
   });
   if (/^#m\d+$/.test(location.hash)) openDialog(location.hash.slice(1));
 
-  // services index: mark the section in view
-  var links = document.querySelectorAll('.index a');
-  if (links.length && 'IntersectionObserver' in window) {
-    var map = {}; links.forEach(function (a) { map[a.getAttribute('href').slice(1)] = a; });
-    var so = new IntersectionObserver(function (es) {
-      es.forEach(function (en) { if (en.isIntersecting) { links.forEach(function (a) { a.classList.remove('on'); }); var a = map[en.target.id]; if (a) a.classList.add('on'); } });
-    }, { rootMargin: '-30% 0px -60% 0px' });
-    document.querySelectorAll('.svc').forEach(function (s) { so.observe(s); });
-  }
-
   // contact form: compose an e-mail
   document.querySelectorAll('form.coupon').forEach(function (f) {
     f.addEventListener('submit', function (ev) {

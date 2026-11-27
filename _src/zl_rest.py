@@ -171,9 +171,11 @@ def page_home(l):
     svc = services_list(l)
     awards = ''.join(f'<img src="{pg.b}img/{f}" alt="{e(UI[l]["award"])} {y}" width="64" height="64">' for f, y in AWARDS)
     wid = ''
-    for x, ps, (f, y) in zip(w, paras, AWARDS):
-        wid += (f'<article class="widget glass" data-reveal><img class="w-award" src="{pg.b}img/{f}" alt="{e(UI[l]["award"])} {y} – {UI[l]["award_by"]}" width="132" height="132" loading="lazy">'
+    for j, (x, ps) in enumerate(zip(w, paras)):
+        wid += (f'<article class="widget glass" data-reveal><span class="w-n">{j + 1:02d}</span>'
                 f'<h3 class="h3">{e(x["title"].rstrip(":"))}</h3>' + ''.join(f'<p>{e(t)}</p>' for t in ps) + '</article>')
+    seals = ''.join(f'<li data-reveal><img src="{pg.b}img/{f}" alt="{e(UI[l]["award"])} {y} – {UI[l]["award_by"]}" width="900" height="900" loading="lazy"><span>{y}</span></li>' for f, y in AWARDS)
+    yrs = sorted(y for f, y in AWARDS)
     fields = ''.join(f'<a class="field glass" href="{pg.href("services")}#{x["uid"]}"{" lang=\"de\"" if x["de_only"] else ""} data-reveal><img src="{pg.b}img/{x["icon"]}" alt="" width="40" height="40"><b>{e(x["title"])}</b><span>{e(excerpt(x["html"]))}</span>{ARR}</a>' for x in svc)
     fields += f'<a class="field field-cta" href="{pg.href("services")}" data-reveal><b>{e(d["services_title"])}</b><span>{e(UI[l]["groups"][0])} · {e(UI[l]["groups"][1])}</span>{ARR}</a>'
     partners = [(i, m) for i, m in enumerate(d['team']) if 'Partner' in ' '.join(roles(m))]
@@ -219,7 +221,10 @@ def page_home(l):
   </div>
 </div></section>
 <section class="sec photo-sec" aria-labelledby="w-h"><div class="sec-bg"><img src="{pg.b}img/{HEADIMG['services']}" alt="" width="2000" height="833" loading="lazy"></div><div class="wrap">
-  <h2 id="w-h" class="vh">{e(UI[l]['name'])}</h2>
+  <div class="aw-band glass">
+    <div class="aw-copy" data-reveal><small>{e(UI[l]['award_by'])} · Statista</small><h2 id="w-h" class="h2">{e(UI[l]['award'])}</h2><p>{' · '.join(AWARD_YEARS)}</p></div>
+    <ul class="aw-seals">{seals}</ul>
+  </div>
   <div class="widgets">{wid}</div>
 </div></section>
 <section class="sec mesh" aria-labelledby="f-h"><div class="wrap">

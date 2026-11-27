@@ -17,6 +17,7 @@ HEADIMG = dict(home='1_zanetti_home_2x-2.jpg', services='1028_zanetti_dienstleis
                members='1033_zanetti_mitgliedschaften_2x.jpg')
 ICONS = ['1045_arbeitsrecht.svg', '1048_familienrecht.svg', '1048_familienrecht.svg', '1049_vertragsrecht.svg', '1044_gesellschaftsrecht.svg',
          '1046_strafrecht.svg', '1047_steuerrecht.svg', '1050_notariat.svg', '1052_zivilprozess.svg', '1053_schuldbetreuung.svg', '1051_schiedsverfahren.svg']
+AWARD_YEARS = ['2019', '2022', '2023', '2024', '2025', '2026']
 AWARDS = [('1037_pme_bilanz_takch2026_logo_de_ausgabe.jpg', '2026'), ('1038_pme_bilanz_takch2025_logo_de_ausgabe_zugeschnitten.jpg', '2025'),
           ('1039_pme_bilanz_takch2024_logo_de_ausgabe.png', '2024')]
 OFFICES = {
