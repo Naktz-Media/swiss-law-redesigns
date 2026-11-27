@@ -57,6 +57,7 @@ def top(pg):
 
 
 def page_head(pg, title, lead='', img=None, alt=''):
+    title = title.replace('Gesellschaftsgründungen', 'Gesellschafts­gründungen')
     return f'''<div class="ph">
   <div class="ph-bg"><img src="{pg.b}img/{img or HEADIMG['home']}" alt="{e(alt)}" width="2000" height="833"></div>
   {top(pg)}
@@ -271,15 +272,61 @@ def page_services(l):
     return s
 
 
+def doc_blocks(body):
+    """Split an imported text page into (intro html, [(title, html)], closing line)."""
+    body = re.sub(r'<li>\s*<ul>(.*?)</ul>\s*</li>', r'\1', body, flags=re.S)
+    body = re.sub(r'<p><strong>([^<]+)</strong>\s*<br\s*/?>\s*', r'<p><strong>\1</strong></p><p>', body)
+    parts = re.split(r'<p><strong>([^<]+)</strong></p>', body)
+    intro, blocks, closing = parts[0].strip(), [], ''
+    for t, h in zip(parts[1::2], parts[2::2]):
+        t = T(t).rstrip(':').strip()
+        blocks.append([t, h.strip()])
+    if blocks and not blocks[-1][1]:
+        closing = blocks.pop()[0]
+    if blocks:
+        last = blocks[-1][1]
+        m = re.search(r'<p>([^<]{8,80})</p>\s*$', last)
+        if m and '</ul>' in last:
+            closing, blocks[-1][1] = T(m.group(1)), last[:m.start()].strip()
+    return intro, blocks, closing
+
+
 def page_generic(l, key, src, img=None):
     pg = Page(l, key)
     d = D[l]
     heads, body = section_parts(d[src])
     title = heads[0].rstrip(' –') if heads else nav_labels(l).get(key, key)
     lead = ' '.join(heads[1:]) if len(heads) > 1 else ''
+    intro, blocks, closing = doc_blocks(body)
     s = head(pg, f"{title} · {UI[l]['name']}", T(body)[:200])
-    s += '<body>\n' + page_head(pg, title, lead, img)
-    s += f'<main id="main">\n<section class="sec"><div class="wrap"><div class="rich wide" data-reveal>{body}</div></div></section>\n'
+    if key == 'notary':
+        label = next((t for t, h in blocks if not h), '')
+        blocks = [(t, h) for t, h in blocks if h]
+        icons = ['1044_gesellschaftsrecht.svg', '1048_familienrecht.svg', '1050_notariat.svg']
+        paras = re.findall(r'<p>(.*?)</p>', intro, re.S)
+        kicker = T(paras[0]) if paras and len(T(paras[0])) < 110 else ''
+        paras = paras[1:] if kicker else paras
+        cards = ''.join(f'<article class="nb glass-light" data-reveal><img src="{pg.b}img/{icons[i % 3]}" alt="" width="48" height="48"><h3 class="h3">{e(t)}</h3><div class="rich">{h}</div></article>' for i, (t, h) in enumerate(blocks))
+        s += '<body>\n' + page_head(pg, title, lead, img)
+        s += f"""<main id="main">
+<section class="sec"><div class="wrap n-intro">
+  <div class="n-lead" data-reveal>{f'<p class="n-kicker">{e(kicker)}</p>' if kicker else ''}{''.join(f'<p>{e(T(x))}</p>' for x in paras)}</div>
+  <aside class="n-side glass" data-reveal><img src="{pg.b}img/1050_notariat.svg" alt="" width="56" height="56"><p class="n-close">{e(closing)}</p><a class="btn white" href="{pg.href('contact')}">{e(UI[l]['contact_cta'])}{ARR}</a><a class="link light" href="{pg.href('team')}">{e(nav_labels(l)['team'])}</a></aside>
+</div></section>
+<section class="sec tint"><div class="wrap">
+  {f'<h2 class="h2 sec-head" data-reveal>{e(label)}</h2>' if label else ''}
+  <div class="nbs">{cards}</div>
+</div></section>
+"""
+    else:
+        toc = ''.join(f'<a href="#b{i}">{e(t)}</a>' for i, (t, h) in enumerate(blocks))
+        secs = ''.join(f'<section class="db" id="b{i}" data-reveal><h2 class="h3">{e(t)}</h2><div class="rich">{h}</div></section>' for i, (t, h) in enumerate(blocks))
+        long = len(T(body)) > 900
+        s += '<body>\n' + page_head(pg, title, lead, img)
+        if long:
+            s += f'<main id="main">\n<section class="sec tint"><div class="wrap doc">{"<nav class=\"doc-toc\" aria-label=\"" + e(title) + "\">" + toc + "</nav>" if len(blocks) > 1 else ""}<div class="doc-body glass-light">{f"<div class=\"rich\">{intro}</div>" if intro else ""}{secs}</div></div></section>\n'
+        else:
+            s += f'<main id="main">\n<section class="sec tint"><div class="wrap"><div class="dcards">{"".join(f"<section class=\"db glass-light\" data-reveal><h2 class=\"h3\">{e(t)}</h2><div class=\"rich\">{h}</div></section>" for t, h in blocks)}</div></div></section>\n'
     s += '</main>\n' + footer(pg)
     return s
 
@@ -303,16 +350,16 @@ def page_members(l):
     title = ' '.join(heads)
     lna_href = re.search(r'href="([^"]+)"', lna.group(3)).group(1)
     s = head(pg, f"{d['nav'][5]} · {UI[l]['name']}", title)
-    s += '<body>\n' + page_head(pg, d['nav'][5], title, HEADIMG['members'])
+    s += '<body class="has-over">\n' + page_head(pg, d['nav'][5], title, HEADIMG['members'])
     s += f'''<main id="main">
-<section class="sec"><div class="wrap lna">
-  <img class="lna-logo" src="{pg.b}img/1033_lna_logo_500px.180x0-is.jpg" alt="Legal Netlink Alliance" width="180" height="62" data-reveal>
+<section class="over"><div class="wrap"><div class="lna glass-light">
+  <span class="lna-tile"><img class="lna-logo" src="{pg.b}img/1033_lna_logo_500px.180x0-is.jpg" alt="Legal Netlink Alliance" width="180" height="62"></span>
   <div>
-    <h2 class="h2" data-reveal>{e(T(lna.group(1)))}</h2>
-    <p class="lead" data-reveal>{e(T(lna.group(2)))}</p>
-    <p data-reveal><a class="btn" href="{e(lna_href)}" rel="noopener">{e(T(lna.group(3)))}{ARR}</a></p>
+    <h2 class="h2">{e(T(lna.group(1)))}</h2>
+    <p class="lead">{e(T(lna.group(2)))}</p>
+    <p><a class="btn" href="{e(lna_href)}" rel="noopener">{e(T(lna.group(3)))}{ARR}</a></p>
   </div>
-</div></section>
+</div></div></section>
 <section class="sec tint"><div class="wrap assocs">{cards}</div></section>
 '''
     s += '</main>\n' + footer(pg)
@@ -367,10 +414,10 @@ def page_pubs(l):
         items = ''.join(f'<li data-reveal><span class="y">{e(y)}</span><span><b>{e(t)}</b><span>{e(src)}</span></span></li>' for y, t, src in p['items'])
         i = idx.get(p['name'])
         who = person_card(pg, d['team'][i], i, True) if i is not None else f'<h2 class="h3">{e(p["name"])}</h2>'
-        blocks += f'<section class="pub" aria-label="{e(p["name"])}"><div class="pub-who" data-reveal>{who}</div><ol class="plist">{items}</ol></section>'
+        blocks += f'<section class="pub glass-light" aria-label="{e(p["name"])}"><div class="pub-who" data-reveal>{who}</div><ol class="plist">{items}</ol></section>'
     s = head(pg, f"{d['nav'][3]} · {UI[l]['name']}", d['pubs_title'])
     s += '<body>\n' + page_head(pg, d['pubs_title'], ' · '.join(p['name'] for p in d['pubs']), HEADIMG['pubs'])
-    s += f'<main id="main">\n<section class="sec"><div class="wrap pubs">{blocks}</div></section>\n</main>\n' + footer(pg)
+    s += f'<main id="main">\n<section class="sec tint"><div class="wrap pubs">{blocks}</div></section>\n</main>\n' + footer(pg)
     return s
 
 
@@ -382,15 +429,15 @@ def page_contact(l):
     notes = re.findall(r'<p>\((.*?)\)</p>', body, re.S)
     note = f'({T(notes[0])})' if notes else ''
     s = head(pg, f"{d['nav'][4]} · {UI[l]['name']}", intro)
-    s += '<body>\n' + page_head(pg, heads[0] if heads else d['nav'][4], intro, HEADIMG['contact'])
+    s += '<body class="has-over">\n' + page_head(pg, heads[0] if heads else d['nav'][4], intro, HEADIMG['contact'])
     s += f'''<main id="main">
-<section class="sec"><div class="wrap">
-  <div class="lines">
+<section class="over"><div class="wrap">
+  <div class="lines glass-light">
     <a href="tel:{TEL}" data-reveal><span>{e(X[l]['call'])}</span><b>{TEL_H}</b></a>
     <a href="mailto:{MAIL}" data-reveal><span>{e(X[l]['mail'])}</span><b>{MAIL}</b></a>
     <div data-reveal><span>{e(X[l]['fax'])}</span><b>{FAX_H}</b></div>
   </div>
-  <p class="note" data-reveal>{e(note)}</p>
+  <p class="note">{e(note)}</p>
 </div></section>
 <section class="sec tint"><div class="wrap contact-grid">
   <div>{offices_block(pg, 'offs stack', True)}</div>
