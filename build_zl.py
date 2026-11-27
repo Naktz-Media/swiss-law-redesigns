@@ -224,11 +224,11 @@ def svc_rows(pg, items):
 
 # ------------------------------------------------------------------ home
 H = {
- 'de': dict(team_n='Fachleute im Team', offices_n='Standorte', offices_l='Zug · Zürich · Schwyz', awards='Top Anwaltskanzlei', awards_l='Bilanz & PME 2024 – 2026', ex_fields='Rechtsgebiete', ex_pubs='Publikationen', intro_l='Beratung und Prozessführung aus einer Hand – in Baar, Regensdorf und Immensee.',
+ 'de': dict(team_n='Fachleute im Team', offices_n='Standorte', offices_l='Zug · Zürich · Schwyz', awards='Top Anwaltskanzlei', awards_l='Bilanz & PME 2024 – 2026', partners_n='Partner', ex_fields='Rechtsgebiete', ex_fields_t='Rechtsgebiete', ex_pubs='Publikationen', intro_l='Beratung und Prozessführung aus einer Hand – in Baar, Regensdorf und Immensee.',
             fields='Unsere Rechtsgebiete', fields_sub='Von der Beratung bis zur Prozessführung – wählen Sie ein Gebiet für die ausführliche Beschreibung.',
             partners='Die Partner', partners_sub='Ein gewachsener Zusammenschluss erfahrener und spezialisierter Rechtsanwälte.', see='Zum ganzen Team',
             where='Drei Standorte, ein Team', where_sub='Sie erreichen uns wie folgt:', explore='Mehr entdecken'),
- 'en': dict(team_n='people on the team', offices_n='offices', offices_l='Zug · Zürich · Schwyz', awards='Top Law Firm', awards_l='Bilanz & PME 2024 – 2026', ex_fields='areas of law', ex_pubs='publications', intro_l='Advice and litigation from one team – in Baar, Regensdorf and Immensee.',
+ 'en': dict(team_n='people on the team', offices_n='offices', offices_l='Zug · Zürich · Schwyz', awards='Top Law Firm', awards_l='Bilanz & PME 2024 – 2026', partners_n='Partners', ex_fields='areas of law', ex_fields_t='Areas of law', ex_pubs='publications', intro_l='Advice and litigation from one team – in Baar, Regensdorf and Immensee.',
             fields='Our areas of law', fields_sub='From advice to litigation – choose an area for the full description.',
             partners='The partners', partners_sub='An established association of experienced and specialised lawyers.', see='Meet the whole team',
             where='Three offices, one team', where_sub='You can reach us as follows:', explore='Explore'),
@@ -263,6 +263,7 @@ def page_home(l):
     fields = ''.join(f'<a class="field glass" href="{pg.href("services")}#{x["uid"]}"{" lang=\"de\"" if x["de_only"] else ""} data-reveal><img src="{pg.b}img/{x["icon"]}" alt="" width="40" height="40"><b>{e(x["title"])}</b><span>{e(excerpt(x["html"]))}</span>{ARR}</a>' for x in svc)
     fields += f'<a class="field field-cta" href="{pg.href("services")}" data-reveal><b>{e(d["services_title"])}</b><span>{e(UI[l]["groups"][0])} · {e(UI[l]["groups"][1])}</span>{ARR}</a>'
     partners = [(i, m) for i, m in enumerate(d['team']) if 'Partner' in ' '.join(roles(m))]
+    intro_faces = ''.join(f'<img src="{pg.b}img/{team_img(m)}" alt="" width="800" height="660" loading="lazy">' for i, m in partners)
     pcards = ''.join(f'<li data-reveal>{person_card(pg, m, i, True)}</li>' for i, m in partners)
     heads = lambda k: [T(x) for x in re.findall(r'<h2>(.*?)</h2>', d[k], re.S)]
     desc = {
@@ -291,13 +292,16 @@ def page_home(l):
   </div>
 </div>
 <main id="main">
-<section class="sec intro mesh"><div class="wrap">
-  <div class="intro-l"><h1 id="h1" class="h2" data-reveal>{e(T(d['home_title']))}</h1><p class="lead" data-reveal>{e(h['intro_l'])}</p></div>
-  <div class="strip glass-light" data-reveal>
-    <div class="st-cell"><small>{e(OFFICES[l][0][0])}</small><address>{e(OFFICES[l][0][1][1])}, {e(OFFICES[l][0][1][2])}</address></div>
-    <a class="st-cell" href="tel:{TEL}"><small>{e(X[l]['call'])}</small><b>{TEL_H}</b></a>
-    <a class="st-cell" href="mailto:{MAIL}"><small>{e(X[l]['mail'])}</small><b>{MAIL}</b></a>
-    <div class="st-acts"><a class="btn" href="{pg.href('contact')}">{e(UI[l]['contact_cta'])}{ARR}</a><a class="btn line" href="{pg.href('services')}">{e(d['services_title'])}</a></div>
+<section class="sec intro mesh"><div class="wrap intro-in">
+  <div class="intro-l">
+    <h1 id="h1" class="h2" data-reveal>{e(T(d['home_title']))}</h1>
+    <p class="lead" data-reveal>{e(h['intro_l'])}</p>
+    <p class="intro-acts" data-reveal><a class="btn" href="{pg.href('services')}">{e(d['services_title'])}{ARR}</a><a class="btn line" href="{pg.href('team')}">{e(h['see'])}</a></p>
+  </div>
+  <div class="intro-art" data-reveal>
+    <div class="ia-photo"><img src="{pg.b}img/{HEADIMG['pubs']}" alt="" width="2000" height="833" loading="lazy"></div>
+    <a class="ia-badge ia-team glass" href="{pg.href('team')}"><span class="ia-faces">{intro_faces}</span><span><b>{len(partners)} {e(h['partners_n'])}</b><small>{len(d['team'])} {e(h['team_n'])}</small></span></a>
+    <a class="ia-badge ia-fields glass" href="{pg.href('services')}"><b>{len(svc)}</b><span><b>{e(h['ex_fields_t'])}</b><small>{e(UI[l]['groups'][0])} &amp; {e(UI[l]['groups'][1])}</small></span></a>
   </div>
 </div></section>
 <section class="sec photo-sec" aria-labelledby="w-h"><div class="sec-bg"><img src="{pg.b}img/{HEADIMG['services']}" alt="" width="2000" height="833" loading="lazy"></div><div class="wrap">
